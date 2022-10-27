@@ -59,6 +59,23 @@ export default function NormalService({ openModal, closeModal }) {
                   </option>
                 </select>
 
+                <div className="variants">
+                  <select name="variant-one" className="variantDropdown">
+                    <option value="" defaultValue={true}>Size...</option>
+                    <option value="">Small</option>
+                    <option value="">Medium</option>
+                    <option value="">Big</option>
+                  </select>
+                  <select name="variant-two" className="variantDropdown">
+                    <option value="" defaultValue={true}>Length...</option>
+                    <option value="">Collarbone</option>
+                    <option value="">Armpit</option>
+                    <option value="">Brastrap</option>
+                    <option value="">Mid-Back</option>
+                    <option value="">Waist</option>
+                  </select>
+                </div>
+
                 <div className="selectDate">
                   <HiOutlineCalendar className="HiOutlineCalendar" />
                   <button className="select" onClick={(e) => e.preventDefault()}>

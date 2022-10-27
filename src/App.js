@@ -46,8 +46,8 @@ function App() {
     {/* <InfoForm/> */}
     {/* <CustomService/> */}
     {/* <AppointmentConfirmation/> */}
-    <AppointmentStepOne/>
-    {/* <NormalService/> */}
+    {/* <AppointmentStepOne/> */}
+    <NormalService/>
     </div>
   );
 }

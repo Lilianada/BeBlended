@@ -1,13 +1,15 @@
 .normalService {
     .dialogContent {
         background-color: var(--white);
-        width: 90%;
-        height: 12.375rem;
+        width: 95%;
+        height: fit-content;
         margin: 0 auto;
-        border-radius: 12px;
+        border-radius: 10px;
 
         @media screen and (min-width: 500px) {
-            width: 27rem;
+            border-radius: 12px;
+            width: 29.75rem;
+            height: fit-content;
         }
 
         .modalHeader {
@@ -42,7 +44,7 @@
             margin: 1rem;
 
             @media screen and (min-width: 768px) {
-                margin: 0 2rem;
+                margin: 1rem 2rem 2rem;
             }
 
             .appointmentForm {
@@ -72,6 +74,24 @@
                             border: none;
                             outline: none;
                         }
+                    }
+                }
+
+                .variants{
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    margin: 0.5rem 0 0;
+
+                    .variantDropdown{
+                        width: 48%;
+                        margin: 1rem 0;
+                        outline: none;
+                        padding: .75rem;
+                        border: 1px solid #E0E0E0;
+                        border-radius: 5px;
+                        font-size: var(--sixteen);
                     }
                 }
 
