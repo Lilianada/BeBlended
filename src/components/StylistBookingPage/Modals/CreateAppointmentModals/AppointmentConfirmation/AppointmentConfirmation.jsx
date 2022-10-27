@@ -28,7 +28,7 @@ export default function AppointmentConfirmation({ openModal, closeModal }) {
                         <header className="modalHeader">
                             <h5> </h5>
                             <button className="closeButton" onClick={closeModal}>
-                                <AiOutlineClose size={20} />
+                                <AiOutlineClose size={24} />
                             </button>
                         </header>
 
