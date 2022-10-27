@@ -4,6 +4,7 @@ import 'react-calendar/dist/Calendar.css';
 import ManageBookings from "./components/StylistBookingPage/ManageBookingsPage/ManageBookings";
 import InfoForm from "./components/StylistBookingPage/Modals/CreateAppointmentModals/ClientInfoForm/InfoForm";
 import AppointmentStepOne from "./components/StylistBookingPage/Modals/CreateAppointmentModals/AppointementStepOne/AppointmentStepOne";
+import CustomService from "./components/StylistBookingPage/Modals/CreateAppointmentModals/CustomService/CustomService";
 // import {
 //   Home,
 //   Client,
@@ -40,7 +41,8 @@ function App() {
 
     {/* <BookingPage/> */}
     {/* <ManageBookings/> */}
-    <InfoForm/>
+    {/* <InfoForm/> */}
+    <CustomService/>
     {/* <AppointmentStepOne/> */}
     </div>
   );

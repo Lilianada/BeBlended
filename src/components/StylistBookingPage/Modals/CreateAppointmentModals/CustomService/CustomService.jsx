@@ -1,20 +1,46 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import ReactDOM from "react-dom";
+import CurrencyInput from "react-currency-input-field";
 import { Backdrop } from "../../../../../components";
 import { motion } from "framer-motion";
-import { AiOutlineClose } from "react-icons/ai";
-// import 
+import { AiOutlineClose, AiFillInfoCircle } from "react-icons/ai";
+import { useForm } from "react-hook-form";
+import "./CustomService.scss";
 
 export default function CustomService({ openModal, closeModal }) {
-  const handleClick = (e) => {
-    e.preventDefault();
+  //useform hooks
+  const { register, handleSubmit } = useForm();
+  const handleRegistration = (data) => { console.log(data) };
+
+  const [active, setActive] = useState(false);
+  const [field, setField] = useState("");
+  const handleInput = (e) => {
+    setField(e.target.value)
+    if (setField !== "") {
+      setActive(true);
+    }
+  }
+
+  //switch buttons
+  const [isSwitch, setIsSwitch] = useState(1);
+  const handleSwitch = (index) => {
+    setIsSwitch(index);
   };
 
-  return ReactDOM.createPortal(
+  const [textArea, setTextArea] = useState("")
+  const inputRef = useRef(null);
+  const handleClick = (e) => {
+    e.preventDefault();
+    inputRef.current.value = ""
+    setTextArea(e.target.value);
+
+  }
+
+  return (
     <>
       {" "}
       {/* {openModal ? ( */}
-      <div className="modalWrap">
+      <div className="customService_Wrap">
         <Backdrop>
           <motion.div
             className="dialogContent"
@@ -35,7 +61,115 @@ export default function CustomService({ openModal, closeModal }) {
               </button>
             </header>
 
-            <div className="modalContent"></div>
+            <div className="modalContent">
+              <form
+                action=""
+                className="modalForm_Column"
+                onSubmit={handleSubmit(handleRegistration)}
+              >
+                <div className="formField">
+                  <label className="formLabel" htmlFor="name">
+                    Service Name (*)
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    {...register("name")}
+                    className="serviceInput"
+                    required
+                  />
+                </div>
+                
+                <div className="fields">
+                  <div className="formField">
+                    <label className="formLabel" htmlFor="price">
+                      Price (*){" "}
+                    </label>
+                    <CurrencyInput
+                      name="price"
+                      {...register("price", { required: true })}
+                      className="serviceInput"
+                      placeholder="$0.00"
+                      prefix="$"
+                      decimalSeparator=","
+                      groupSeparator="."
+                      onValueChange={(value, name) =>
+                        console.log(value, name)
+                      }
+                      required={true}
+                    />
+                  </div>
+                  <div className="formField">
+                    <label className="formLabel" htmlFor="deposit">
+                      Deposit (*) <AiFillInfoCircle />{" "}
+                    </label>
+                    <div className="row">
+                      <input
+                        type="number"
+                        name="deposit"
+                        {...register("deposit")}
+                        className="serviceInput"
+                        placeholder="0"
+                        min={0}
+                      />
+                        <select name="" className="selectSigns">
+                          <option value="">%</option>
+                          <option value="">$</option>
+                        </select>
+                    </div>
+                  </div>
+                </div>
+                <div className="formField">
+                  <label className="formLabel" htmlFor="duration">
+                    Duration (*) <AiFillInfoCircle />{" "}
+                  </label>
+                  <div className="fields">
+                    <input
+                      type="text|number"
+                      name="hours"
+                      {...register("hours", { required: true })}
+                      className="serviceInput"
+                      placeholder="0 hours"
+                      min="0"
+                      max="23"
+                      maxLength="2"
+                      style={{ marginRight: "1.5rem" }}
+                      required
+                    />
+                    <input
+                      type="text|number"
+                      name="minutes"
+                      {...register("minutes", { required: true })}
+                      className="serviceInput"
+                      placeholder="0 minutes"
+                      min="0"
+                      max="59"
+                      maxLength="2"
+                      required
+                    />
+                  </div>
+                </div>
+                <div className="formField">
+                  <label className="formLabel" htmlFor="name">
+                    Note
+                  </label>
+                  <textarea
+                    type="text"
+                    name="text"
+                    {...register("text")}
+                    rows="3"
+                    maxLength={140}
+                    className="textInput"
+                    ref={inputRef}
+                    placeholder="i.e. client will bring her own hair to the appointment. "
+                    required
+                  />
+                </div>
+                <button className="saveBtn" type="submit">
+                    Save
+                  </button>
+              </form>
+            </div>
           </motion.div>
         </Backdrop>
       </div>
