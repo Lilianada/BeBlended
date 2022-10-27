@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import CurrencyInput from "react-currency-input-field";
 import { Backdrop } from "../../../../../components";
 import { motion } from "framer-motion";
-import { AiOutlineClose, AiFillInfoCircle } from "react-icons/ai";
+import { AiOutlineClose } from "react-icons/ai";
 import { useForm } from "react-hook-form";
 import "./CustomService.scss";
 
@@ -14,7 +14,7 @@ export default function CustomService({ openModal, closeModal }) {
 
   const [active, setActive] = useState(false);
   const [field, setField] = useState("");
-  const handleInput = (e) => {
+  const handleChange = (e) => {
     setField(e.target.value)
     if (setField !== "") {
       setActive(true);
@@ -69,13 +69,14 @@ export default function CustomService({ openModal, closeModal }) {
               >
                 <div className="formField">
                   <label className="formLabel" htmlFor="name">
-                    Service Name (*)
+                    Service Name  (*)
                   </label>
                   <input
                     type="text"
                     name="name"
                     {...register("name")}
                     className="serviceInput"
+                    onChange={handleChange}
                     required
                   />
                 </div>
@@ -83,12 +84,13 @@ export default function CustomService({ openModal, closeModal }) {
                 <div className="fields">
                   <div className="formField">
                     <label className="formLabel" htmlFor="price">
-                      Price (*){" "}
+                      Price  (*)
                     </label>
                     <CurrencyInput
                       name="price"
                       {...register("price", { required: true })}
                       className="serviceInput"
+                      onChange={handleChange}
                       placeholder="$0.00"
                       prefix="$"
                       decimalSeparator=","
@@ -101,7 +103,7 @@ export default function CustomService({ openModal, closeModal }) {
                   </div>
                   <div className="formField">
                     <label className="formLabel" htmlFor="deposit">
-                      Deposit (*) <AiFillInfoCircle />{" "}
+                      Deposit  (*)
                     </label>
                     <div className="row">
                       <input
@@ -109,8 +111,10 @@ export default function CustomService({ openModal, closeModal }) {
                         name="deposit"
                         {...register("deposit")}
                         className="serviceInput"
+                        onChange={handleChange}
                         placeholder="0"
                         min={0}
+                        required
                       />
                         <select name="" className="selectSigns">
                           <option value="">%</option>
@@ -121,7 +125,7 @@ export default function CustomService({ openModal, closeModal }) {
                 </div>
                 <div className="formField">
                   <label className="formLabel" htmlFor="duration">
-                    Duration (*) <AiFillInfoCircle />{" "}
+                    Duration  (*)
                   </label>
                   <div className="fields">
                     <input
@@ -129,6 +133,7 @@ export default function CustomService({ openModal, closeModal }) {
                       name="hours"
                       {...register("hours", { required: true })}
                       className="serviceInput"
+                      onChange={handleChange}
                       placeholder="0 hours"
                       min="0"
                       max="23"
@@ -141,6 +146,7 @@ export default function CustomService({ openModal, closeModal }) {
                       name="minutes"
                       {...register("minutes", { required: true })}
                       className="serviceInput"
+                      onChange={handleChange}
                       placeholder="0 minutes"
                       min="0"
                       max="59"
@@ -162,10 +168,11 @@ export default function CustomService({ openModal, closeModal }) {
                     className="textInput"
                     ref={inputRef}
                     placeholder="i.e. client will bring her own hair to the appointment. "
+                    onChange={handleChange}
                     required
                   />
                 </div>
-                <button className="saveBtn" type="submit">
+                <button className={`saveBtn ${active ? "activeBtn" : "inActiveBtn"}`} type="submit">
                     Save
                   </button>
               </form>

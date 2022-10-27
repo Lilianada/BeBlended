@@ -8,7 +8,7 @@
 
         @media screen and (min-width: 500px) {
             border-radius: 12px;
-            width: 33rem;
+            width: 30rem;
             height: 90%;
             max-height: 44rem;
         }
@@ -108,19 +108,7 @@
                     width: 100%;
 
                     .formField {
-                        &:first-child {
-                            width: 55%;
-                            @media screen and (min-width: 600px) {
-                                width: 60%;
-                            }
-                        }
-
-                        &:nth-child(2) {
-                            width: 40%;
-                            @media screen and (min-width: 600px) {
-                                width: 35%;
-                            }
-                        }
+                        width: 45%;
 
                         .row {
                             display: flex;
@@ -133,7 +121,7 @@
 
                             .selectSigns{
                                 height: 3rem;
-                                width: 4rem;
+                                width: 6rem;
                                 border: 1px solid #DEDDDD;
                                 border-radius: 0 12px 12px 0;
                                 outline: none;
@@ -149,11 +137,9 @@
                 height: 2.5rem;
                 padding: 0.75rem;
                 text-align: center;
-                color: var(--white);
-                background-color: var(--black);
                 border: none;
                 border-radius: 0.5625rem;
-                transition: 0.3s ease;
+                transition: 0.5s all;
                 font-size: var(--sixteen);
                 z-index: 1;
                 cursor: pointer;
@@ -162,6 +148,7 @@
 
                 &:hover {
                     background-color: var(--black);
+                    transform: scale(.95, .95);
                 }
 
                 @media screen and (min-width: 768px) {
