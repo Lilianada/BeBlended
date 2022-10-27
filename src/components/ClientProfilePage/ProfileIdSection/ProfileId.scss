@@ -1,0 +1,79 @@
+.profileId_Wrap{
+    padding: 1rem;
+
+    @media screen and (min-width: 768px){
+        padding: 3rem 1rem .5rem;
+    }
+
+    .stylistName{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+            align-items: flex-end;
+            width: fit-content;
+            padding-left: 1rem;
+        }
+
+        .profilePicture{
+            background-color: #DFDFDF;
+            border-radius: 50%;
+            width: 5rem;
+            height: 5rem;
+            margin-right: 1rem;
+            margin-bottom: .75rem;
+
+            @media screen and (min-width: 768px) {
+                margin-bottom: 0;
+            }
+
+            .MdEdit{
+                width: 1.75rem;
+                height: 1.5rem;
+                fill: var(--black);
+            }
+        }
+
+        .name{
+            font-size: var(--twentyEight);
+        }
+
+        .rating{
+            margin-top: .5rem;
+            display: flex;
+            align-items: baseline;
+
+            @media screen and (min-width: 768px) {
+                margin-top: 1rem;
+            }
+
+
+            .BsStarFill{
+                fill: #893583;
+                width: 1.35rem;
+                height: 1.35rem;
+                margin-right: .5rem;
+            }
+
+            .rate{
+                font-size: var(--twenty);
+                font-weight: 400;
+                margin-right: .5rem;
+            }
+
+            .review{
+                font-size: var(--eighteen);
+                color: var(--grey);
+                text-decoration: underline;
+
+                @media screen and (min-width: 768px) {
+                    font-size: var(--sixteen);
+                }
+
+            }
+        }
+    }
+}

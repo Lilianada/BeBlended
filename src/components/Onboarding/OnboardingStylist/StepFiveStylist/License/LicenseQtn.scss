@@ -1,0 +1,223 @@
+.licenseQtn__Wrap{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    //Head
+    .licenseQtn_Head{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 10%;
+        padding: 1rem 1.5rem;
+        
+        .rowBack{
+            text-align: left;
+            display: flex;
+            align-items: center;
+            border: none;
+            background: none;
+    
+            .angleLeft{
+                margin-right: .75rem;
+                size: 1.5rem;
+            }
+        }
+    
+        .logo{
+            width: 9rem;
+            display: none;
+        }
+    }
+
+    
+    .desktopTopVector {
+        display: none;
+        z-index: 0;
+    }
+
+    .mobileTopVector {
+        display: block;
+        position: absolute;
+        right: 0%;
+    } 
+
+    //Question
+    .questionWrap{
+        height: 70%;
+        width: 100%;
+        margin: 4rem auto 0;
+        padding: 0 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+
+        .question{
+            h4{
+                font-size: var(--thirty);
+                font-weight: 500;
+                line-height: 2rem;
+                padding: 0 2rem;
+            }
+        }
+
+        .options{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1.5rem 0;
+
+            .option{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 1.5rem;
+                height: 8rem;
+                width: 8rem;
+                text-align: center;
+                margin: 0.5rem;
+                background: #FFFBFF;
+                border: 1px solid #C984C2;
+                border-radius: 50%;
+                transition: .3s ease;
+            
+                &:hover{
+                    background: rgba(250, 193, 247, 0.155);
+                    border: 1px solid #893583;
+                }
+
+                .optionText{
+                    font-size: var(--thirty);
+                    color: var(--black);
+                }
+            }
+        }
+
+        .subText{
+            width: 16rem;
+            font-size: var(--eighteen);
+        }
+    }
+    
+
+    footer{
+        height: 20%;
+        margin: auto;
+        display: flex;
+            
+        .mobileBottomVector {
+            display: block;
+            position: absolute;
+            bottom: 0%;
+            left: 0%;
+            height: 10rem;
+            z-index: 0;
+        }
+
+       .desktopBottomVector {
+            display: none;
+        }
+    }
+}
+
+
+
+@media screen and (min-width: 900px) {
+    .licenseQtn__Wrap{
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        grid-template-columns:100%;
+        grid-template-areas:
+            "header"
+            "body"
+            "footer"
+        ;
+        grid-template-rows: 10% 70% 10%;
+        
+        //Head
+        .licenseQtn_Head{
+            grid-area: header;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto 0;
+            height: 10%;
+            padding: 1rem 2rem;
+
+            .logo{
+                margin: 0 auto;
+                display: block;
+                z-index: 1;
+            }
+        }
+
+        .mobileTopVector {
+            display: none;
+        }
+
+        .desktopTopVector {
+            display: block;
+            position: absolute;
+            right: 0%;
+            top: 0%;
+            z-index: 0;
+        }
+        //Question
+        .questionWrap{
+            grid-area: body;
+            height: 70%;
+            margin: 7rem auto 0;
+
+            .question{
+                h4{
+                    line-height: 3rem;
+                    font-size: var(--fourty);
+                }
+            }
+    
+            .options{
+                margin: 2rem auto;
+
+                .option{
+                    height: 9rem;
+                    width: 9rem;
+                }
+            }
+
+            .subText{
+                width: 100%;
+            }
+        }
+    
+        footer{
+            grid-area: footer;
+            height: 10%;
+            margin: auto 0;
+            display: block;
+           
+            .mobileBottomVector {
+                display: none;
+            }
+
+            .desktopBottomVector {
+                display: block;
+                position: absolute;
+                bottom: 0%;
+                left: 0%;
+            }
+        }
+    }
+}
+

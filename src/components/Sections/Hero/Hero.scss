@@ -1,0 +1,181 @@
+.heroWrapper {
+    height: 80vh;
+    position: relative;
+    top: -1px;
+}
+
+.ellipse3, .ellipse4, .ellipse5{
+    display: none;
+}
+
+.backdrop {
+    position: relative;
+    background-image: url(../../../assets/MobileBG.svg) ;
+    background-color: var(--purple);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.desktop {
+    display: none;
+}
+
+.mobile {
+    display: block;
+    height: 100%;
+}
+
+.heroTexts {
+    min-width: 250px;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+
+    .smallHead {
+        text-transform: uppercase;
+        font-weight: 400;
+        font-family: var(--font-text);
+        letter-spacing: 4px;
+        margin-bottom: 1rem;
+        color: var(--white);
+    }
+
+    .heroHead {
+        font-family: var(--font-head);
+        color: var(--white);
+        font-weight: 500;
+    }
+
+    .heroButton {
+        width: 10rem;
+        height: 3rem;
+        padding: 0.5rem 1rem;
+        margin-top: 2rem;
+        border: none;
+        border-radius: 10px;
+        background-color: var(--white);
+        color: var(--black);
+        font-size: var(--twenty);
+        font-family: var(--font-text);
+        cursor: pointer;
+        text-transform: capitalize;
+        transition: 0.4s ease-in;
+
+        & :hover {
+            background-color: var(--purple);
+        }
+    }
+}
+
+.heroImage{
+    display: block;
+    align-self: flex-end;
+    line-height: 10px;
+}
+
+@media screen and (min-width: 450px) {
+    .heroWrapper{
+        height: 31rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .heroWrapper{
+        background-color: var(--purple);
+        height: 100%;
+    }
+    
+    .backdrop {
+        background: none;
+        height: 100%;
+    }
+
+    
+    .ellipse4 {
+        display: block;
+        position: absolute;
+        top: 20%;
+        bottom: 10.87%;
+        left: 0%;
+        height: fit-content;
+        z-index: 0;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+
+        .heroTexts {
+            width: 35%;
+            display: block;
+            margin: 0;
+            text-align: left;
+            position: relative;
+            z-index: 1;
+            padding: 2rem 0;
+
+            .heroButton {
+                width: 12rem;
+                height: 4rem;
+                padding: 0.75rem 1rem;
+            }
+        }
+
+        .heroImage {
+            width: 45%;
+        }
+    }
+
+    .ellipse3 {
+        display: block;
+        position: absolute;
+        right: 0%;
+        top: 14%;
+        bottom: 21.97%;
+        height: fit-content;
+    }
+
+    .ellipse5 {
+        display: block;
+        position: absolute;
+        right: 0%;
+        top: 70%;
+        bottom: 2.12%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .desktop {
+        .heroTexts {
+            width: 470px;
+
+            .heroButton {
+                width: 15rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .desktop {
+        .heroTexts {
+
+            .heroButton {
+                width: 15rem;
+            }
+        }
+    }
+}

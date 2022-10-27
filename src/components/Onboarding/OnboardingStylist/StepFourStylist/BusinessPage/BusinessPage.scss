@@ -1,0 +1,67 @@
+.sectionWrapper{
+    width: 100%;
+    position: relative;
+    display: grid;
+    align-items: center;
+    place-items: center;
+    margin-top: 6rem;
+
+    .smallText{
+        text-transform: uppercase;
+        margin-bottom: .25rem;
+    }
+
+    h3{
+        font-weight: 500;
+        font-size: var(--thirtyTwo);
+    }
+
+    .addBtn{
+        width: 12.25rem;
+        height: 3.1875rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: .75rem;
+        text-align: center;
+        text-transform: capitalize;
+        margin-top: 2rem;
+        margin-right: 0%;
+        background-color: #FFFFFF;
+        color: var(--black);
+        border: 1px solid var(--black);
+        border-radius: .5625rem;
+        transition: .3s ease;
+        font-size: var(--sixteen);
+        z-index: 1;
+        cursor: pointer;
+
+        &:hover{
+            border-color: var(--purple);
+        }
+    }
+
+    .pinkNote{
+        width: 300px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 1.5rem .5rem;
+        margin: 2rem auto;
+        background: rgba(226, 202, 219, 0.25);
+        border: 1px solid #893583;
+        border-radius: 12px;
+        line-height: 1.1rem;
+    }
+}
+
+@media screen and(min-width: 768px) {
+    .sectionWrapper{
+        .pinkNote{
+            width: 410px;
+            padding: 1.5rem 3rem;
+        }
+    }   
+}

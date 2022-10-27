@@ -1,0 +1,162 @@
+.accordion {
+    display: block;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1.5px solid #DFDFDF;
+
+    .accordionHeader {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        .accordionCol {
+            .headText {
+                font-size: var(--fourteen);
+                color: var(--black);
+
+                @media screen and (min-width: 480px) {
+                    font-size: var(--twentyTwo);
+                }
+            }
+
+            .serviceDuration {
+                display: flex;
+                align-items: center;
+                margin-top: 0.35rem;
+
+                p {
+                    font-size: var(--fourteen);
+                    font-weight: 500;
+
+                    @media screen and (min-width: 480px) {
+                        font-size: var(--twentyTwo);
+                    }
+                }
+                span {
+                    margin: 0 0.5rem;
+                }
+            }
+
+            .accordionIcon{
+                width: 1rem;
+                height: 1rem;
+
+               @media screen and (min-width: 480px) {
+                    width: 1.5rem;
+                    height: 1.5rem;
+               }
+            }
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+
+            p {
+                font-weight: 600;
+                font-size: var(--fourteen);
+                margin-right: 1rem;
+
+                @media screen and (min-width: 480px) {
+                    font-size: var(--twentyTwo);
+                    margin-right: 1.5rem;
+                }
+
+                @media screen and (min-width: 768px) {
+                    margin-right: 3.5rem;
+                }
+            }
+        }
+    }
+    .accordionBody {
+        .description {
+            width: 100%;
+            padding: 0 0 1rem;
+
+            @media screen and (min-width: 768px) {
+                width: 55%;
+            }
+
+            p {
+                font-size: var(--fourteen);
+                margin-top: 0.65rem;
+
+                @media screen and (min-width: 480px) {
+                    font-size: var(--eighteen);
+                }
+            }
+        }
+
+        .selectWrap {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            justify-content: space-between;
+            
+            @media screen and (min-width: 768px) {
+                align-items: center;
+            }
+
+            .selectList {
+                display: block;
+
+                @media screen and (min-width: 768px) {
+                    display: grid;
+                    grid-template-columns: repeat(2, 330px);
+                    grid-template-rows: auto;
+                }
+
+                .variantaccordion {
+                    width: 18.75rem;
+                    height: 2.5rem;
+                    padding: 0.5rem;
+                    margin-bottom: 0.75rem;
+                    margin-right: 2rem;
+                    border: 1.5px solid #dfdfdf;
+                    border-radius: 5px;
+                    outline: none;
+                    font-family: var(--font-head);
+
+                    select::after {
+                        margin-right: 0.75rem;
+                        font-size: 24px;
+                    }
+
+                    option {
+                        font-family: var(--font-text);
+                    }
+                }
+            }
+
+            .servicePrice {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 0.75rem;
+
+                .price {
+                    font-size: var(--twentyTwo);
+                    font-weight: 700;
+                    color: var(--black);
+                    margin-right: 1rem;
+                }
+
+                .selected {
+                    background: var(--black);
+                    color: var(--white);
+                    font-size: var(--eighteen);
+                    height: 2rem;
+                    width: 7.875rem;
+                    border: none;
+                    border-radius: 10px;
+
+                    @media screen and (min-width: 550px) {
+                        height: 3rem;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,246 @@
+.startedWrap {
+    .modalWrap {
+        width: 100%;
+        height: 100vh;
+        background-color: var(--purple);
+        overflow-y: scroll;
+        animation: animate 0.3s;
+
+        .closeWrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--purple);
+            padding: 2rem;
+            animation: closeAnimate 0.3s;
+
+            img {
+                width: 7rem;
+            }
+
+            .submitBtn {
+                border: none;
+                background: none;
+                cursor: pointer;
+            }
+        }
+
+        .startedBody {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 3rem;
+
+            .startedHead {
+                text-align: left;
+                color: var(--white);
+
+                h5 {
+                    color: var(--white);
+                    font-family: var(--font-text);
+                    font-size: var(--thirty);
+                    font-weight: 700;
+                    line-height: 2.1875rem;
+                }
+
+                p {
+                    font-size: var(--eighteen);
+                    color: var(--white);
+                    line-height: 1.75rem;
+                    margin-top: 0.75rem;
+                    margin-bottom: 1.5rem;
+                }
+            }
+
+            .accounts {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+
+                .acctBox {
+                    width: 100%;
+                    max-width: 450px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 2rem;
+                    margin-bottom: 1rem;
+                    border-radius: 6px;
+                    box-shadow: 0px 2px 14px 1px rgba(0, 0, 0, 0.06);
+                    cursor: pointer;
+                    background-color: var(--white);
+
+                    &:hover,
+                    :focus {
+                        background-color: #e8e8e8;
+                        border: 1.5px solid var(--black);
+                        border-radius: 5px;
+                    }
+
+                    .acctBox_text {
+                        margin: 0 2rem;
+                        display: flex;
+                        align-items: flex-start;
+                        flex-direction: column;
+
+                        h6 {
+                            font-family: var(--font-text);
+                        }
+
+                        p {
+                            color: #707070;
+                            text-align: left;
+                        }
+                    }
+
+                    .submitBtn {
+                        border: none;
+                        background: none;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .startedFooter {
+                margin-top: 1rem;
+                display: flex;
+                font-weight: 600;
+                background: none;
+                border: none;
+
+                p {
+                    text-align: center;
+                    color: var(--white);
+                    font-weight: 400;
+                }
+
+                .submitBtn {
+                    color: var(--white);
+                    margin-left: 0.5rem;
+                    font-weight: 500;
+                    border: none;
+                    background: none;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: var(--pink);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes animate {
+    from {
+        transform: scale(0.5);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .startedWrap {
+        .modalWrap {
+            width: 34.375rem;
+            max-height: 90%;
+            background-color: var(--white);
+            position: absolute;
+            top: 5%;
+            z-index: 1;
+            border-radius: 10px 10px 0px 0px;
+
+            .closeWrap {
+                background: #f2f2f2;
+                padding: 1rem;
+                justify-content: flex-end;
+                img {
+                    display: none;
+                }
+            }
+
+            .startedBody {
+                margin-top: 0;
+                padding: 3rem;
+                width: calc(100% - 3rem);
+
+                .startedHead {
+                    h5 {
+                        color: var(--black);
+                    }
+
+                    p {
+                        color: #6c6c6c;
+                    }
+                }
+
+                .accounts {
+                    .acctBox {
+                        .acctBox_text {
+                            margin: 0 2rem;
+                            display: flex;
+                            align-items: flex-start;
+                            flex-direction: column;
+
+                            h6 {
+                                font-family: var(--font-text);
+                            }
+
+                            p {
+                                color: #707070;
+                            }
+                        }
+
+                        .submitBtn {
+                            border: none;
+                            background: none;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .startedFooter {
+                    p {
+                        color: #bebebe;
+                    }
+
+                    .submitBtn {
+                        color: var(--black);
+
+                        &:hover {
+                            color: var(--purple);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .startedWrap {
+        .modalWrap {
+            width: 40rem;
+
+            .startedBody {
+                .accounts {
+                    .acctBox {
+                        padding: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .startedWrap {
+        .modalWrap {
+            max-height: 37.5rem;
+            overflow: hidden;
+        }
+    }
+}

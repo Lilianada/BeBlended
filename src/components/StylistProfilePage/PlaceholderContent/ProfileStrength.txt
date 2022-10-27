@@ -1,0 +1,44 @@
+{/* Profile Strength */}
+
+
+<div className="profileStrength">
+    <div className="profileStrength_Head">
+    <p>
+        Profile Strength: <strong> Beginner</strong>
+    </p>
+    <FaChevronDown className="FaChevronDown" />
+    </div>
+    <div className="profileStrength_Body">
+    <div className="progressBars">
+        <div className="progressBar"></div>
+        <div className="progressBar"></div>
+        <div className="progressBar"></div>
+        <div className="progressBar"></div>
+        <div className="progressBar"></div>
+        <div className="progressBar"></div>
+    </div>
+
+    <div className="options">
+        <div className="opt">
+        <BsCheckSquareFill size={21} fill=" #C4C4C4" />
+        <label htmlFor="passport">Add pictures of your work</label>
+        </div>
+        <div className="opt">
+        <BsCheckSquareFill size={21} fill=" #C4C4C4" />
+        <label htmlFor="license">Add your services</label>
+        </div>
+        <div className="opt">
+        <BsCheckSquareFill size={21} fill=" #C4C4C4" />
+        <label htmlFor="card">Upload your logo/profile picture</label>
+        </div>
+        <div className="opt">
+        <BsCheckSquareFill size={21} fill=" #C4C4C4" />
+        <label htmlFor="card">Update About section</label>
+        </div>
+        <div className="opt">
+        <BsCheckSquareFill size={21} fill=" #C4C4C4" />
+        <label htmlFor="card">Add cancellation policy</label>
+        </div>
+    </div>
+    </div>
+</div>

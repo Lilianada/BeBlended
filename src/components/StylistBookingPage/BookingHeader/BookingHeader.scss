@@ -1,0 +1,126 @@
+.bookingHeader{
+    background: #FCFCFC;
+    border: 1px solid #EAEAEA;
+    
+    .stylistMobile__Header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1.5rem 1rem;
+        position: relative;
+    }
+    
+    .stylistDesktop__Header{
+        display: none;
+    }
+    
+    
+    @media screen and (min-width: 768px) {
+        .stylistMobile__Header{
+            display: none;
+        }
+    
+        .stylistDesktop__Header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 3rem;
+            background-color: var(--white);
+            position: relative;
+            width: 100%;
+        
+            .navWrap{
+                display: flex;
+                align-items: center;
+        
+                .headBtn{
+                    height: 2.5rem;
+                    padding: .5rem 1rem;
+                    border: none;
+                    border-radius: 10px;
+                    background: none;
+                    color: var(--black);
+                    cursor: pointer;
+                    font-size: var(--sixteen);
+                    margin-right: 1.5rem;
+                }
+        
+                .navItems{
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    border: 1.5px solid var(--black);
+                    border-radius: 2rem;
+                    padding: 0.45rem 1rem;
+                    width: 7.5rem;
+        
+                    .profileIcon{
+                        width: 2rem;
+                        height: 2rem;
+                        display: flex;
+                        border-radius: 50%;
+                        background-color: var(--grey);
+                    }
+                }
+    
+                .navList{
+                    display: none;
+                    width: 12rem;
+                    padding: 1rem 0;
+                    position: absolute;
+                    z-index: 1;
+                    top: 100%;
+                    right: 5%;
+                    background: var(--white);
+                    border: 1px solid var(--greyPro);
+                    border-radius: 2px;
+                    animation: animate .3s ;
+            
+                    .navItem{
+                        padding: .75rem 1rem;
+                        display: inline-flex;
+                        align-items: center;
+            
+                        &:hover{
+                            background-color: #DEDEDE;
+                        }
+    
+                        .navLink{ 
+                            font-size: var(--eighteen);
+                        }
+    
+                        .alert{
+                            color: red;
+                            font-weight: 600;
+                            margin-left: .5rem;
+                            font-size: var(--eighteen);
+                       }
+                    }
+            
+                    hr{
+                        border: none;
+                        background-color: #DEDEDE;
+                        height: 1px;
+                        width: 100%;
+                        margin: .75rem 0;
+                    }
+                }
+            
+                .show{
+                    display: flex;
+                    flex-direction: column;
+                }
+            
+                @keyframes animate {
+                    from {
+                        transform: scale(0.5);
+                      }
+                      to {
+                        transform: scale(1);
+                      }
+                }
+        
+            }
+        }
+    }
+}

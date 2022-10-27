@@ -1,0 +1,145 @@
+.policyModal {
+    .dialogContent {
+        background-color: var(--white);
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        overflow-y: scroll;
+
+        @media screen and (min-width: 500px) {
+            border-radius: 12px;
+            width: 90%;
+            height: 80%;
+        }
+
+        @media screen and (min-width: 768px) {
+            width: 80%;
+            height: 80%;
+        }
+
+        @media screen and (min-width: 1000px) {
+            width: 60%;
+            height: 34.7rem;
+        }
+
+        .modalHeader {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            border-radius: 10px 10px 0 0;
+            background: #f2f2f2;
+
+            h5 {
+                font-size: var(--fourty);
+
+                @media screen and (min-width: 900px) {
+                    font-size: var(--twentyFour);
+                }
+            }
+
+            .closeButton {
+                background: none;
+                border: none;
+                outline: none;
+                cursor: pointer;
+            }
+        }
+
+        
+        .modalContent {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            margin: 2rem 1rem;
+
+            @media screen and (min-width: 768px) {
+                margin: 2rem;
+            }
+
+            .title {
+                font-size: 1.6rem;
+                font-family: var(--font-text);
+
+                @media screen and (min-width: 768px) {
+                    font-size: var(--twentyFour);
+                }
+            }
+
+            .rowItems {
+                margin-top: 1.5rem;
+
+                .selectOption {
+                    margin-left: 0.5rem;
+                    padding: 0.5rem;
+                    outline: none;
+                    width: 6.625rem;
+                    background: #ffffff;
+                    border: 1px solid #dfdfdf;
+                    border-radius: 5px;
+
+                    @media screen and (min-width: 768px) {
+                        width: 8.625rem;
+                    }
+                }
+
+                .lateFee {
+                    width: 3.5rem;
+                    height: 1.5rem;
+                    background: #d9d9d9;
+                    border: none;
+                    border-radius: 2px;
+                    padding: 0.3rem;
+                    outline: none;
+                    margin: 0 0.35rem;
+                }
+            }
+
+            .colNone {
+                display: none;
+            }
+
+            .colShow {
+                display: flex;
+                flex-direction: column;
+                margin-top: 1.5rem;
+
+                .colHead {
+                    font-size: var(--eighteen);
+                    font-family: var(--font-text);
+                    line-height: 1.4rem;
+                }
+
+                .colList {
+                    margin-left: 1rem;
+                }
+
+                .colList li {
+                    list-style: disc;
+                }
+
+                .textArea {
+                    font-family: var(--font-text);
+                    padding: 1rem;
+                    margin-right: 5%;
+                    background: #f2f2f2;
+                    border: none;
+                    outline: none;
+                    margin-top: 0.75rem;
+                    font-size: var(--eighteen);
+                }
+            }
+
+            .btn-primary {
+                width: 7.5rem;
+                background: var(--black);
+                color: var(--white);
+                margin-top: 2rem;
+                margin-left: auto;
+                margin-right: 4%;
+                font-size: var(--sixteen);
+                padding: 0.75rem;
+            }
+        }
+    }
+}

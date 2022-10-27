@@ -1,0 +1,71 @@
+.deleteModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.13);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .deleteContent {
+        display: grid;
+        background-color: var(--white);
+        width: 90%;
+        height: 14rem;
+        margin: 0 auto;
+        border-radius: 12px;
+
+        @media screen and (min-width: 500px) {
+            width: 75%;
+        }
+
+        @media screen and (min-width: 768px) {
+            width: 450px;
+            height: 15rem;
+        }
+
+        .dialogHeader {
+            display: grid;
+            place-items: center;
+        }
+
+        .dialogBody {
+            display: block;
+            text-align: center;
+            padding: 0 1rem;
+
+            p {
+                font-size: var(--twenty);
+                font-weight: 500;
+            }
+        }
+
+        .dialogFooter {
+            display: block;
+            text-align: center;
+            margin: 0rem auto 1rem;
+
+            .btn-primary {
+                background-color: #893583;
+                color: var(--white);
+                border: none;
+                width: 8rem;
+            }
+
+            .btn-secondary {
+                background-color: var(--white);
+                color: var(--black);
+                border: 1.5px solid #bebebe;
+                width: 8rem;
+                margin-right: 1rem;
+
+                @media screen and (min-width: 768px) {
+                    margin-right: 1.5rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&display=swap");
+
+
+$white: #ffffff;
+$text: #555555;
+$purple: #786090;
+$litePurple: #eadaf0;
+$pink: #ebcce9;
+$hotPink: #893583;
+$litePink: #faeff9;
+$black: #050205;
+$grey: #b8b8b8;
+$greyPro: #dedddd;
+$assets: rgba(137, 53, 131, 0.3);
+
+@use "sass:string";
+$headFont: "butlermedium";
+$textFont: "Karla", sans-serif;
+
+/*------------ [_Root] -----------*/
+:root {
+    /* Colors */
+    --white: #{$white};
+    --text: #{$text};
+    --purple: #{$purple};
+    --litePurple: #{$litePurple};
+    --pink: #{$pink};
+    --hotPink: #{$hotPink};
+    --litePink: #{$litePink};
+    --black: #{$black};
+    --grey: #{$grey};
+    --greyPro: #{$greyPro};
+    --assets: #{$assets};
+
+    /* FontStyle*/
+    --font-head: #{$headFont};
+    --font-text: #{$textFont};
+
+    /* Font Sizes */
+    --eighty: 2.5rem;
+    --sixty: 3rem;
+    --fiftyEight: 2.8rem;
+    --fourtyEight: 2rem;
+    --fourty: 1.5rem;
+    --thirtyEight: 1.125rem;
+    --thirtyTwo: 1.2rem;
+    --thirty: 1.375rem;
+    --twentyEight: 1.3rem;
+    --twentyFour: 1.2rem;
+    --twentyTwo: 1.125rem;
+    --twenty: 1.15rem;
+    --eighteen: 1rem;
+    --sixteen: 0.875rem;
+    --fourteen: 0.88rem;
+    --twelve: 0.75rem;
+    --ten: 0.625rem;
+}
+
+@media screen and (min-width: 900px) {
+    :root {
+        --eighty: 5rem;
+        --sixty: 3.75rem;
+        --fiftyEight: 3.625rem;
+        --fourtyEight: 3rem;
+        --fourty: 2.5rem;
+        --thirtyEight: 2.375rem;
+        --thirtyTwo: 2rem;
+        --thirty: 1.875rem;
+        --twentyEight: 1.75rem;
+        --twentyFour: 1.5rem;
+        --twentyTwo: 1.375rem;
+        --twenty: 1.25rem;
+        --eighteen: 1.125rem;
+        --sixteen: 1rem;
+        --fourteen: 0.88rem;
+        --twelve: 0.75rem;
+        --ten: 0.625rem;
+    }
+}
+
+/*========================================*/
+/*------------ [_Reset_Styles] -----------*/
+/*========================================*/
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: "butlermedium";
+    src: url("assets/Butler-Font/butler_medium-webfont.woff2") format("woff2"),
+        url("assets/Butler-Font/butler_medium-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*========================================*/
+/*--------------- [_Utility] -------------*/
+/*========================================*/
+body {
+    max-width: 100vw;
+    max-height: 100vh;
+    background: var(--white);
+    font-family: var(--font-text);
+    color: var(--black);
+    letter-spacing: -0.5px;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+    margin: 0;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--black);
+    font-family: var(--font-head);
+}
+
+p {
+    font-size: var(--sixteen);
+    line-height: 1.5rem;
+    color: var(--black);
+    font-family: var(--font-text);
+}
+
+h1 {
+    font-size: var(--eighty);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 40px;
+    color: var(--white);
+    letter-spacing: 0px;
+}
+
+h2 {
+    font-size: var(--sixty);
+    line-height: 2rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: var(--fiftyEight);
+    line-height: 2rem;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: var(--fourtyEight);
+    line-height: 2.5rem;
+    font-weight: 600;
+}
+
+h5 {
+    font-size: var(--twentyFour);
+    font-weight: 500;
+    line-height: 1.5rem;
+}
+
+h6 {
+    font-size: var(--eighteen);
+    line-height: 1.2rem;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: inherit ;
+    font-family: var(--font-text);
+}
+
+button {
+    color: var();
+    font-family: var(--font-text);
+    cursor: pointer;
+    transition: all .3s;
+}
+
+img {
+    border: none;
+    max-width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+abbr{
+    text-decoration: none;
+}
+
+@media screen and (min-width: 900px) {
+    h1 {
+        line-height: 75px;
+    }
+}
+
+/*--------------- [Body Wrapper] -------------*/
+.mainWrapper {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 100%;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    height: 100vh;
+    overflow: scroll;
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.name{
+    color: var(--black);
+    font-size: var(--twentyFour);
+    font-weight: 600;
+    font-family: var(--font-head);
+}
+
+@media screen and (min-width: 1440px) {
+    .mainWrapper {
+        height: max-content;
+    }
+}
+
+.errorMsg {
+    background: rgba(255, 61, 0, 0.15);
+    border-radius: 12px;
+    color: #ff3d00;
+    padding: 0.5rem 1rem;
+    font-size: var(--twenty);
+    margin-top: 0.5rem;
+    display: none;
+}
+
+.successMsg {
+    background: #7ef1b6;
+    border-radius: 12px;
+    color: #0f9851;
+    padding: 0.5rem 1rem;
+    font-size: var(--twenty);
+    margin-top: 0.5rem;
+    display: none;
+}
+
+.activeBtn {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.inactiveBtn {
+    background-color: #BEBEBE;
+    color: var(--white);
+}
+
+.buttonClicked {
+    color: var(--black);
+}
+
+.btn-primary {
+    padding: 0.5rem 0.75rem;
+    font-size: var(--twenty);
+    font-weight: 500;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.btn-secondary {
+    padding: 0.5rem 0.75rem;
+    font-size: var(--twenty);
+    font-weight: 500;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.stylistProfile_Footer {
+    display: none;
+
+    @media (min-width: 768px) {
+        display: block;
+    }
+} 
+

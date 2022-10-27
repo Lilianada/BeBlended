@@ -1,0 +1,100 @@
+.blogSection_wrap {
+    background-color: var(--white);
+    padding: 2rem 1.5rem 10rem;
+
+    .blogSection_header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1rem;
+
+        .blogHead {
+            font-weight: 400;
+            font-size: var(--twentyFour);
+        }
+
+        p {
+            padding-bottom: 0.35rem;
+            border-bottom: 1px solid var(--black);
+            font-size: var(--fourteen);
+        }
+    }
+
+    .blogItems_row {
+        margin-top: 2rem;
+
+        .blogItem {
+            display: block;
+            padding: 1rem;
+
+            .blogImage {
+                margin-bottom: 1rem;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .blogTitle {
+                font-family: var(--font-text);
+                margin-bottom: 1rem;
+                width: 100%;
+            }
+
+            .readMore {
+                padding-bottom: 0.15rem;
+                border-bottom: 1px solid var(--black);
+                font-size: var(--eighteen);
+            }
+
+            .timer {
+                display: flex;
+                align-items: center;
+                margin-top: 1rem;
+
+                p {
+                    margin-left: 0.5rem;
+                    font-size: var(--fourteen);
+                }
+            }
+        }
+
+        .slick-prev {
+            display: none;
+        }
+        .slick-next {
+            display: none;
+        }
+
+        .slick-dots li button:before {
+            font-size: 12px;
+        }
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .blogSection_wrap {
+
+        .blogSection_header{
+            .blogHead{
+                font-size: var(--fourtyEight);
+            }
+
+            p{
+                font-size: var(--twentyFour);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .blogSection_wrap {
+        padding: 3rem;
+
+        .blogSection_header{
+            p{
+                padding-bottom: .75rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,237 @@
+.addOn_Modal {
+    .dialogContent {
+        background-color: var(--white);
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        overflow-y: scroll;
+
+        @media screen and (min-width: 500px) {
+            border-radius: 12px;
+            width: 90%;
+            height: 80%;
+        }
+
+        @media screen and (min-width: 768px) {
+            width: 80%;
+            height: 70%;
+        }
+
+        @media screen and (min-width: 1000px) {
+            width: 65%;
+            height: 80%;
+        }
+
+        .modalHeader {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            border-radius: 10px 10px 0 0;
+            background: #f2f2f2;
+
+            h5 {
+                font-size: var(--fourty);
+
+                @media screen and (min-width: 900px) {
+                    font-size: var(--twentyFour);
+                }
+            }
+
+            .closeButton {
+                background: none;
+                border: none;
+                outline: none;
+                cursor: pointer;
+            }
+        }
+
+        .modalContent {
+            display: block;
+            padding: 2rem;
+
+            .modalForm_Column {
+                display: block;
+
+                .formField {
+                    display: block;
+                    margin-bottom: 1.5rem;
+
+                    .formLabel {
+                        display: block;
+                        margin-bottom: 0.75rem;
+                    }
+
+                    .add-onInput {
+                        display: block;
+                        width: 100%;
+                        height: 4.5rem;
+                        padding: 1rem;
+                        border: 1px solid #dedddd;
+                        border-radius: 0.75rem;
+                        box-sizing: border-box;
+                        font-size: var(--sixteen);
+                        font-family: var(--font-text);
+                        color: var(--black);
+                        outline: none;
+
+                        &::placeholder {
+                            color: #b8b8b8;
+                        }
+                    }
+
+                    .row {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+                }
+
+                .fields {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+                }
+
+                // Variant
+                .variant {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    position: relative;
+                    margin: 1.5rem 0 1rem;
+
+                    .variantCheckbox {
+                        min-width: 1.35rem;
+                        min-height: 1.35rem;
+                        border: 2px solid var(--black);
+                        border-radius: 50%;
+                        margin-right: 0.5rem;
+                        margin-top: 3px;
+                        cursor: pointer;
+                    }
+
+                    .checkBox {
+                        position: absolute;
+                        top: 5px;
+                        left: 2.5px;
+                        z-index: 2;
+                        opacity: 0;
+                        width: 1rem;
+                        height: 1rem;
+                        cursor: pointer;
+                    }
+
+                    .checkBox[type="checkbox" i]:checked ~ .variantCheckbox::after {
+                        content: "\2714";
+                        font-size: 12px;
+                        color: var(--black);
+                        position: relative;
+                        z-index: 0;
+                        top: -1px;
+                        left: 0px;
+                        padding: 0 3.5px;
+
+                        @media screen and (min-width: 768px) {
+                            top: -0.5px;
+                        }
+                    }
+
+                    .formLabel {
+                        display: flex;
+                        align-items: center;
+
+                        strong {
+                            margin-right: 0.5rem;
+                        }
+                    }
+                }
+                .variantContent {
+                    .variantHead {
+                        margin-bottom: 0.75rem;
+                        font-size: var(--eighteen);
+                    }
+
+                    .variantForm {
+                        display: block;
+
+                        .variantFields {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            .variantType {
+                                width: 35%;
+                                height: 3rem;
+                                display: block;
+                                padding: 1rem;
+                                border: 1px solid #dedddd;
+                                border-radius: 0.75rem;
+                                box-sizing: border-box;
+                                font-size: var(--sixteen);
+                                font-family: var(--font-text);
+                                color: var(--black);
+                                outline: none;
+
+                                &::placeholder {
+                                    color: #b8b8b8;
+                                }
+                            }
+
+                            .variantOptions {
+                                display: block;
+                                width: 60%;
+                                height: 4.5rem;
+                                padding: 1rem;
+                                border: 1px solid #dedddd;
+                                border-radius: 0.75rem;
+                                box-sizing: border-box;
+                                font-size: var(--sixteen);
+                                font-family: var(--font-text);
+                                color: var(--black);
+                                outline: none;
+
+                                &::placeholder {
+                                    color: #b8b8b8;
+                                }
+                            }
+                        }
+                    }
+                    .btn-primary {
+                        // background: var();
+                        margin-top: 1rem;
+                        border: none;
+                        font-size: var(--sixteen);
+                        padding: 0.75rem;
+                    }
+                }
+            }
+            .saveBtn {
+                width: 8rem;
+                height: 2.5rem;
+                padding: 0.75rem;
+                text-align: center;
+                color: var(--white);
+                background-color: var(--black);
+                border: none;
+                border-radius: 0.5625rem;
+                transition: 0.3s ease;
+                font-size: var(--sixteen);
+                z-index: 1;
+                cursor: pointer;
+                margin: 2rem 0 0 auto;
+                display: grid;
+
+                &:hover {
+                    background-color: var(--black);
+                }
+
+                @media screen and (min-width: 768px) {
+                    margin-right: 4%;
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,72 @@
+.exploreWrap {
+    background-color: var(--white);
+    padding: 2rem 1rem;
+
+    .exploreHead {
+        text-align: center;
+        font-weight: 500;
+        font-size: calc(var(--fourtyEight) + 6px);
+        margin-top: 1rem;
+    }
+
+    .exploreFlex {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 1rem 2rem;
+
+        .flexItem {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 1rem 0;
+
+            .flexTitle {
+                margin-top: 1.5rem;
+                font-weight: 500;
+                font-size: calc(var(--thirty) - 2px);
+            }
+
+            .flexBtn {
+                // width: 8rem;
+                height: 3rem;
+                padding: 0.57rem 1rem;
+                margin-top: 1rem;
+                border: none;
+                border-radius: 5px;
+                background-color: var(--black);
+                color: var(--white);
+                font-size: var(--eighteen);
+                font-family: var(--font-text);
+                cursor: pointer;
+                transition: 0.4s ease-in;
+
+                & :hover {
+                    background-color: none;
+                    border: solid 1px black;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .exploreWrap {
+        padding: 2rem;
+
+        .exploreHead{
+            margin: 2rem;
+        }
+
+        .exploreFlex {
+            flex-direction: row;
+            margin: 3rem 2rem;
+
+            .flexItem {
+                margin: 1rem;
+            }
+        }
+    }
+}

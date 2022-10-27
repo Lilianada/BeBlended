@@ -1,0 +1,109 @@
+.cancellation_Body {
+    padding: 1rem;
+
+    @media screen and (min-width: 768px) {
+        padding: 1.5rem;
+    }
+
+    @media screen and (min-width: 768px) {
+        padding: 2rem 3rem;
+    }
+}
+
+.backBtn {
+    margin: 1rem 0;
+    background: none;
+    display: flex;
+    outline: none;
+    border: none;
+    font-weight: 600;
+    height: fit-content;
+}
+
+.head {
+    .confirmText {
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+        font-size: var(--twentyFour);
+        margin-top: 2rem;
+
+        .purpleText {
+            color: #893583;
+        }
+
+        .greeting {
+            color: #5e5e5e;
+            font-size: var(--sixteen);
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+    .itemOne {
+        width: 100%;
+        margin-top: 1rem;
+
+        .headText {
+            font-weight: 400;
+            margin-bottom: 2rem;
+            letter-spacing: 1px;
+            text-decoration: line-through;
+        }
+
+        @media screen and (min-width: 900px) {
+            width: 50%;
+        }
+
+        .body {
+            .bodyAppointment {
+                display: flex;
+                align-items: flex-start;
+                margin-top: 2rem;
+
+                .appointmentList {
+                    .list {
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 1rem;
+
+                        .ball {
+                            width: 0.75rem;
+                            height: 0.75rem;
+                            border-radius: 50%;
+                            background: var(--black);
+                            margin-right: 1rem;
+                        }
+
+                        .head {
+                            font-family: var(--font-text);
+                            font-weight: 400;
+                            margin-right: 2rem;
+                        }
+
+                        .text {
+                            font-family: var(--font-text);
+                            font-weight: 600;
+                            text-decoration: line-through;
+                        }
+                    }
+                }
+            }
+        }
+
+        .btnPrimary {
+            width: 14rem;
+            display: inline;
+            height: 2.5rem;
+            padding: 0.75rem;
+            margin-top: 0.76rem;
+            background: var(--white);
+            color: var(--black);
+            border: 1px solid #050205;
+            border-radius: 10px;
+            outline: none;
+            font-weight: 500;
+            font-size: var(--sixteen);
+            margin-right: 2rem;
+            cursor: pointer;
+        }
+}

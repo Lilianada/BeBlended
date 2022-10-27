@@ -1,0 +1,126 @@
+.stylistHero__Wrapper {
+    height: 70vh;
+    width: 100vw;
+    background-image: url(../../../assets/MobileBG.svg);
+    background-color: var(--purple);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+
+    .stylistHero__Texts {
+        height: 75%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        .smallHead {
+            text-transform: uppercase;
+            font-weight: 500;
+            font-family: var(--font-text);
+            letter-spacing: 4px;
+            margin-bottom: 2rem;
+            color: var(--white);
+        }
+
+        .stylistHero__Head {
+            font-family: var(--font-head);
+            color: var(--white);
+            letter-spacing: 0px;
+            font-weight: 500;
+            line-height: 3rem;
+            font-size: 40px;
+        }
+
+        .stylistHero__Button {
+            width: 10rem;
+            height: 3rem;
+            padding: 0.5rem 1rem;
+            margin-top: 2rem;
+            border: none;
+            border-radius: 10px;
+            background-color: var(--white);
+            color: var(--black);
+            font-size: var(--twenty);
+            font-family: var(--font-text);
+            cursor: pointer;
+            text-transform: capitalize;
+            transition: 0.4s ease-in;
+
+            & :hover {
+                background-color: var(--purple);
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .stylistHero__Wrapper{
+        height: 70vh;
+        width: 100vw;
+        display: block;
+        line-height: 9px;
+        background-image: url(../../../assets/StylistBG.svg);
+        background-color: var(--purple);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+
+        .ellipse3 {
+            display: block;
+            position: absolute;
+            right: 0%;
+            top: 14%;
+            bottom: 21.97%;
+            height: fit-content;
+            z-index: 0;
+        }
+
+        .ellipse4 {
+            display: block;
+            position: absolute;
+            top: 20%;
+            bottom: 10.87%;
+            left: 0%;
+            height: fit-content;
+            z-index: 0;
+        }
+
+        .stylistHero__Texts{
+            width: 50%;
+            height: 100%;
+            align-items: flex-start;
+            margin-left: 3rem;
+            margin-top: 3rem;
+            position: relative;
+            z-index: 2;
+
+            .smallHead {
+                color: var(--black);
+            }
+
+            .stylistHero__Head{
+                line-height: 4rem;
+                font-size: var(--sixty);
+                color: var(--black);
+                text-align: left;
+            }
+
+            .stylistHero__Button {
+                background-color: var(--black);
+                color: var(--white);
+            }
+            
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .stylistHero__Wrapper{
+        height: 100vh;
+    }
+}

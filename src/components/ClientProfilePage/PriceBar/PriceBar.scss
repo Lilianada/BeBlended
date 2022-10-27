@@ -1,0 +1,128 @@
+.priceBar{
+    @media screen and (min-width: 768px) {
+        
+        .desktop{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 6.25rem;
+            width: 100%;
+            background: #893583;
+            padding: 1rem 2rem;
+            color: var(--white);
+            
+            .priceItems{
+                height: 100%;
+                display: flex;
+                .row{
+                    display: flex;
+                    align-items: center;
+            
+                    .item{
+                        font-size: var(--twenty);
+                        color: var(--white);
+                    }
+            
+                    .bar{
+                        width: 32.12px;
+                        height: 1.5px;
+                        background: #fff;
+                        margin: 0 1rem;
+                    }
+
+                    .price{
+                        font-size: var(--twenty);
+                        font-weight: 500;
+                        color: var(--white);
+                    }
+                }
+            }
+        
+            .datePicker{
+                height: 80%;
+                width: 15rem;
+                border-radius: 10px;
+                color: var(--black);     
+                background: var(--white);   
+                font-size: var(--twentyFour);
+                border: none;
+                font-weight: 600;
+            }
+        }
+        
+    }
+
+
+.mobile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4.5rem;
+    width: 100%;
+    position: fixed;
+    bottom: 4.5rem;
+    z-index: 10;
+    
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+    
+    .priceItems{
+        display: flex;
+        width: 65%;
+        height: 100%;
+        color: var(--black);
+        background: var(--white);
+        padding: 1rem;
+        border: 0.5px solid #B8B8B8;
+
+        .row{
+            display: flex;
+            align-items: center;
+    
+            .item{
+                font-size: var(--twenty);
+                color: var(--black);
+            }
+
+            .price{
+                font-size: var(--twenty);
+                color: var(--black);
+                font-weight: 500;
+            }
+    
+            .bar{
+                width: 2.1rem;
+                height: 1.5px;
+                background: var(--black);
+                margin: 0 1rem;
+            }
+        }
+
+        .text{
+            font-size: var(--fourteen);
+            font-weight: 500;
+            color: var(--black);
+            font-style: italic;
+        }
+
+    }
+
+    .datePicker{
+        padding: 1rem;
+        color: var(--white);
+        border: none;
+        background: #893583;
+        font-size: var(--eighteen);
+        font-weight: 500;
+        width: 50%;
+        height: 100%;
+
+        @media screen and (min-width: 768px) {
+            font-size: var(--twentyTwo);
+        }
+    }
+}
+
+
+}

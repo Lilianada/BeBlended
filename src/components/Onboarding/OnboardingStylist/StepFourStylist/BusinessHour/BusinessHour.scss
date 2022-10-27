@@ -1,0 +1,63 @@
+.sectionWrapper{
+    width: 100%;
+    position: relative;
+    display: grid;
+    align-items: center;
+    place-items: center;
+    margin-top: 6rem;
+
+    .smallText{
+        text-transform: uppercase;
+    }
+
+    h3{
+        font-weight: 500;
+        font-size: var(--thirtyTwo);
+    }
+
+    .note{
+        width: 85%;
+        height: 3.1875rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2.5rem;
+        text-transform: capitalize;
+        margin-top: 3.5rem;
+        margin-right: 0%;
+        background-color: #FFFFFF;
+        color: var(--black);
+        border: 1px solid #DDDDDE;
+        border-radius: .5625rem;
+        transition: .3s ease;
+        font-size: var(--sixteen);
+        z-index: 1;
+    }
+
+    .editBtn{
+        justify-self: flex-end;
+        font-size: var(--sixteen);
+        font-style: italic;  
+        margin-top: 1rem;
+        margin-right: 11%;
+        background: none; 
+        border: none; 
+
+        &:hover{
+            font-weight: 600;
+        }
+    }
+
+}
+
+
+@media screen and (min-width: 768px) {
+    .sectionWrapper{
+        margin-top: 4rem;
+    }
+
+    .note{
+        margin-top: 4rem;
+    }
+}

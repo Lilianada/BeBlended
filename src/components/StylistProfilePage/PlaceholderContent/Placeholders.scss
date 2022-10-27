@@ -1,0 +1,916 @@
+.contentWrap{
+    background-color: var(--white);
+    display: grid;
+    height: 100%;
+    grid-template-columns: 100%;
+    overflow-x: hidden;
+    padding-bottom: 3rem;
+
+    @media screen and (min-width: 768px) {
+        padding: 0;
+    }
+        
+    .content{
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+
+        @media screen and (min-width: 768px) {
+            padding: 2rem;
+        }
+
+        //Stylist Name
+        .stylistName{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            @media screen and (min-width: 768px) {
+                flex-direction: row;
+                align-items: center;
+                width: fit-content;
+            }
+
+            .profilePicture{
+                background-color: #DFDFDF;
+                width: 5rem;
+                height: 5rem;
+                border-radius: 50%;
+                margin-right: 1rem;
+                margin-bottom: .75rem;
+                
+                img{
+                    border-radius: 50%;
+                }
+            }
+
+            .editButton{
+                background-color: #DFDFDF;
+                border: none;
+                border-radius: 50%;
+                width: 5rem;
+                height: 5rem;
+                margin-right: 1rem;
+                margin-bottom: .75rem;
+
+                @media screen and (min-width: 768px) {
+                    margin-bottom: 0;
+                }
+
+                .MdEdit{
+                    width: 1.75rem;
+                    height: 1.5rem;
+                    fill: var(--black);
+                }
+            }
+
+            .name{
+                font-size: var(--twentyEight);
+            }
+
+            .rating{
+                margin-top: .5rem;
+                display: flex;
+                align-items: baseline;
+
+                @media screen and (min-width: 768px) {
+                    margin-top: 1rem;
+                }
+
+
+                .BsStarFill{
+                    fill: #893583;
+                    width: 1.35rem;
+                    height: 1.35rem;
+                    margin-right: .5rem;
+                }
+
+                .rate{
+                    font-size: var(--twenty);
+                    font-weight: 400;
+                    margin-right: .5rem;
+                }
+
+                .review{
+                    font-size: var(--eighteen);
+                    color: var(--grey);
+                    text-decoration: underline;
+
+                    @media screen and (min-width: 768px) {
+                        font-size: var(--sixteen);
+                    }
+    
+                }
+            }
+        }
+
+        //Gallery upload 
+        .galleryUpload_Placeholders{
+            margin-top: 2rem;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .topButtons{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1rem 0;
+
+                @media screen and (min-width: 768px) {
+                    padding: 1rem 1rem 0;
+                }
+
+                .addImage{
+                    background: none;
+                    border: navajowhite;
+                    text-transform: capitalize;
+                    font-style: italic;
+                    font-size: var(--eighteen);
+                    transition: .3s ease-in-out;
+    
+                    .GrAdd{
+                        width: .875rem;
+                        height: .875rem;
+                    }
+
+                    @media screen and (min-width: 768px) {
+                        font-size: var(--twenty);
+                    }
+                }
+    
+                .showImage{
+                    background: #FFEEFB;
+                    padding: 0.5rem;
+                    border: none ;                    
+                    text-transform: capitalize;
+                    border-radius: 10px;
+                    font-size: var(--eighteen);
+                    transition: .3s ease-in-out;
+
+                    &:hover{
+                        background-color: #ffeefbc2;
+                        
+                    }
+
+                    @media screen and (min-width: 768px) {
+                        font-size: var(--twenty);
+                        padding: 0.75rem;
+                    }
+                }
+            }
+
+            .galleryItems{
+                display: none;
+
+                @media screen and (min-width: 800px) {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    justify-items: center;
+                    margin: 1rem 0;
+
+                }
+
+                .image{
+                    max-width: 32rem;
+                    width: 94%;
+                    min-height: 25rem;
+                    height: 25rem;
+                    margin: 0 auto;
+                    border-radius: 10px;
+                    background-color: #EAEAEA;
+                    object-fit: cover;
+                }
+            }
+            .galleryItems_Slide{
+                margin: 1rem;
+
+                @media screen and (min-width: 800px) {
+                    display: none;
+                }
+
+                .image{
+                    // max-width: 32rem;
+                    width: 100%;
+                    height: 25rem;
+                    margin: 0 auto;
+                    border-radius: 10px;
+                    background-color: #EAEAEA;
+                }
+
+            }
+        }
+
+        //Profile Strength
+        .profileStrength{
+            margin: 2rem 0rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid #DEDDDD;
+            border-radius: 10px;
+            padding: 1rem;
+
+            @media screen and (min-width: 768px) {
+                margin: 2rem 1rem;
+                padding: 2rem;
+            }
+
+            .profileStrength_Head{
+                font-size: var(--twenty);
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+
+                p{
+                    font-size: var(--twenty);
+                }
+            }
+
+            .profileStrength_Body{
+                display: flex;
+                flex-direction: column;
+
+                .progressBars{
+                    display: flex;
+                    margin: 1rem 0;
+
+                    .progressBar{
+                        width: 3rem;
+                        height: 1rem;
+                        background-color: #EAEAEA;
+                        border-radius: 3px;
+                        margin-right: 0.5rem;
+
+                        @media screen and (min-width: 768px) {
+                            width: 10rem;
+                            height: 2rem;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+
+                .options{
+                    display: flex;
+                    flex-direction: column;
+    
+                    .opt{
+                        margin-bottom: .75rem;
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+    
+                        label{
+                            margin-left: 1rem;
+                            font-size: var(--sixteen);
+                            font-weight: 700;
+    
+                            a{
+                                text-decoration: underline;
+                                text-underline-offset: .25rem;
+                                margin-left: .1rem;
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+
+        //About 
+        .aboutPlaceholder{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin: 2rem 0;
+            width: 100%;
+
+            @media screen and (min-width: 768px) {
+                flex-direction: row;
+            }
+
+            .aboutPlaceholder_Left{
+                width: 100%;
+
+                @media screen and (min-width: 768px) {
+                    width: 55%;
+                }
+
+                .aboutPlaceholder_Head{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 1rem;
+
+                    .editButton{
+                        background: none;
+                        border: none;
+                        border-radius: 50%;
+                        font-size: var(--twenty);
+                        margin-right: 1rem;
+                        text-decoration: underline;
+                        display: flex;
+                        align-items: flex-end;
+                        transition: .3s ease-in-out;
+
+                        .MdEdit{
+                            width: 1.25rem;
+                            height: 1.25rem;
+                            fill: var(--black);
+                            margin-right: .5rem;
+                        }
+                    }
+                    
+                }
+
+                .aboutPlaceholder_TextBars{
+                    margin-bottom: 2rem;
+
+                    @media screen and (min-width: 768px) {
+                        margin-bottom: 0;
+                    }
+
+                    .aboutPlaceholder_TextBar{
+                        width: 100%;
+                        height: 1.5rem;
+                        background: #EEEEEE;
+                        border-radius: 10px;
+                        margin-bottom: .5rem;
+
+                        @media screen and (min-width: 768px) {
+                            width: 90%;
+                        }
+                    }
+                }
+
+                .aboutTextBox{
+                    margin-bottom: 2rem;
+                    width: 100%;
+                    height: fit-content;
+
+                    @media screen and (min-width: 768px) {
+                        margin-bottom: 0;
+                    }
+
+                    .text{
+                        font-size: var(--eighteen);
+                        color: var(--black);
+                    }
+                }
+            }
+
+            .aboutPlaceholder_Right{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                
+                @media screen and (min-width: 768px) {
+                    width: 30%;
+                    margin-left: 6rem;
+                }
+
+                .listItem{
+                    display: flex;
+                    align-items: flex-end;
+                    margin-bottom: .75rem;
+
+                    .TiLocation, 
+                    .AiFillMessage, 
+                    .AiOutlineFileProtect,
+                    .RiShieldCheckFill{
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        fill: var(--black);
+                        margin-right: 1rem;
+                    }
+
+                    .editButton{
+                        margin-left: .5rem;
+                        background: none;
+                        border: none;
+
+                        .MdEdit{
+                            width: 1rem;
+                            height: 1rem;
+                            fill: var(--black);
+                        }
+                    }
+                }
+            }
+        }
+
+        //Services
+        .servicePlaceholder{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            margin-top: 2rem;
+            width: 100%;
+            margin-bottom: 2rem;
+            
+            .servicePlaceholder_Head{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 1rem;
+
+                .editButton{
+                    background: none;
+                    border: none;
+                    border-radius: 50%;
+                    font-size: var(--twenty);
+                    margin-right: 1rem;
+                    display: flex;
+                    align-items: flex-end;
+
+                    .GrAdd{
+                        width: 1rem;
+                        height: 1.5rem;
+                        fill: var(--black);
+                        margin-right: .5rem;
+                    }
+                }
+                
+            }
+
+            .servicePlaceholder_TextBars{
+                .servicePlaceholder_TextBar{
+                    width: 100%;
+                    height: 1.5rem;
+                    background: #EEEEEE;
+                    border-radius: 10px;
+                    margin-bottom: .5rem;
+                }
+            }
+
+            .serviceListBox{
+                width: 100%;
+                background: #EEEEEE;
+                border-radius: 10px;
+                margin-bottom: .5rem;
+                padding: 1rem 2rem;
+
+                .serviceList{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 1rem;
+                    padding-bottom: 1rem;
+                    border-bottom: 2px solid var(--white);
+
+                    &:last-child{
+                        margin-bottom: 0;
+                        border-bottom: none;
+                    }
+
+                    .list{
+                        display: flex;
+                        align-items: center;
+
+                        .serviceName{
+                            font-size: var(--eighteen);
+                            color: var(--black);
+                        }
+
+                        .bar{
+                            width: 1rem;
+                            height: 1px;
+                            background: var(--black);
+                            margin-left: 1.5rem;
+                            margin-right: 1.5rem;
+                        }
+
+                        .price{
+                            font-size: var(--eighteen);
+                            color: var(--black);
+
+                            span{
+                                font-size: var(--twenty);
+                                color: var(--black);
+                                font-weight: 600;
+                            }
+                        }
+
+                        .editButton{
+                            margin-right: 1.5rem;
+                            background: none;
+                            border: none;
+    
+                            .MdEdit{
+                                width: 1rem;
+                                height: 1rem;
+                                fill: var(--black);
+                            }
+                        }
+
+                        .deleteButton{
+                            margin-left: .5rem;
+                            background: none;
+                            border: none;
+    
+                            .RiDeleteBin7Fill{
+                                width: 1rem;
+                                height: 1rem;
+                                fill: var(--black);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //Add-Ons 
+        .addOnsPlaceholder{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            margin-top: 2rem;
+            width: 100%;
+            margin-bottom: 2rem;
+            
+            .addOnsPlaceholder_Head{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 1rem;
+
+                .editButton{
+                    background: none;
+                    border: none;
+                    border-radius: 50%;
+                    font-size: var(--twenty);
+                    margin-right: 1rem;
+                    display: flex;
+                    align-items: flex-end;
+
+                    .GrAdd{
+                        width: 1rem;
+                        height: 1.5rem;
+                        fill: var(--black);
+                        margin-right: .5rem;
+                    }
+                }
+                
+            }
+
+            .addOnsPlaceholder_TextBars{
+                .addOnsPlaceholder_TextBar{
+                    width: 100%;
+                    height: 1.5rem;
+                    background: #EEEEEE;
+                    border-radius: 10px;
+                    margin-bottom: .5rem;
+                }
+            }
+
+            .addonListBox{
+                width: 100%;
+                background: #EEEEEE;
+                border-radius: 10px;
+                margin-bottom: .5rem;
+                padding: 1rem 2rem;
+
+                .addonList{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 1rem;
+                    padding-bottom: 1rem;
+                    border-bottom: 2px solid var(--white);
+
+                    &:last-child{
+                        margin-bottom: 0;
+                        border-bottom: none;
+                    }
+
+                    .list{
+                        display: flex;
+                        align-items: center;
+
+                        .serviceName{
+                            font-size: var(--eighteen);
+                            color: var(--black);
+                        }
+
+                        .bar{
+                            width: 1rem;
+                            height: 1px;
+                            background: var(--black);
+                            margin-left: 1.5rem;
+                            margin-right: 1.5rem;
+                        }
+
+                        .price{
+                            font-size: var(--eighteen);
+                            color: var(--black);
+
+                            span{
+                                font-size: var(--twenty);
+                                color: var(--black);
+                                font-weight: 600;
+                            }
+                        }
+
+                        .editButton{
+                            margin-right: 1.5rem;
+                            background: none;
+                            border: none;
+    
+                            .MdEdit{
+                                width: 1rem;
+                                height: 1rem;
+                                fill: var(--black);
+                            }
+                        }
+
+                        .deleteButton{
+                            margin-left: .5rem;
+                            background: none;
+                            border: none;
+    
+                            .RiDeleteBin7Fill{
+                                width: 1rem;
+                                height: 1rem;
+                                fill: var(--black);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //Reviews
+        .reviewsPlaceholder{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            margin-top: 2rem;
+            width: 100%;
+            margin-bottom: 2rem;
+            
+            .reviewsPlaceholder_Head{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-bottom: 1rem;
+
+                hr{
+                    width: 100%;
+                    height: 1.25px;
+                    margin-top: 1rem;
+                    background: var(--black);
+                    border: none;
+                }
+            }
+
+            
+            .reviewsPlaceholder_FLex{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 100%;
+                margin-top: 1.5rem;
+
+                @media screen and (min-width: 900px){
+                    flex-direction: row;
+                }
+                
+                .reviewsPlaceholder_Left{
+                    display: flex;
+
+                    .rateNumber{
+                        display: flex;
+                        margin-right: 2rem;
+                    }
+
+                    .reviewsPlaceholder_Row{
+                        display: block;
+
+                        .ratings{
+                            .BsStarFillActive{
+                                fill: #893583;
+                            }
+
+                            .BsStarFill{
+                                width: 1.25rem;
+                                height: 1.25rem;
+                                fill: #B8B8B8;
+                                margin-right: .5rem;
+
+                                @media screen and (min-width: 768px){
+                                    width: 1.5rem;
+                                    height: 1.5rem;
+                                }
+                            }
+
+                        }
+
+                        p{
+                            font-size: var(--fourteen);
+                            color: #BEBEBE;
+                        }
+                    }                    
+
+                }
+
+                .reviewsPlaceholder_Col{
+                    display: block;
+                    width: 100%;
+                    margin-top: 1.5rem;
+
+                    @media screen and (min-width: 768px){
+                        width: 40%;
+                    }
+            
+                    @media screen and (min-width: 900px){
+                        width: 33%;
+                    }
+
+                    @media screen and (min-width: 1024px){
+                        width: 30%;
+                    }
+    
+                    .reviewCategory{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        .BsStarFill{
+                            width: 1.25rem;
+                            height: 1.25rem;
+                            fill: #B8B8B8;
+                            margin-right: .5rem;
+
+                            @media screen and (min-width: 768px){
+                                width: 1.5rem;
+                                height: 1.5rem;
+                            }
+                        }
+    
+                        .BsStarFillActive{
+                            fill: #893583;
+                        }
+                    }
+    
+                    hr{
+                        margin: .5rem 0;
+                        border: none;
+                        background: #E0E0E0;
+                        height: 1px;
+                    }
+                }
+            }            
+        }
+
+        //Location
+        .locationPlaceholder{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            margin-top: 2rem;
+            width: 100%;
+            margin-bottom: 2rem;
+            
+            .locationPlaceholder_Head{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
+
+
+// HEADER
+@media screen and (min-width: 768px) {
+    .contentWrap{
+
+        .stylistMobile__Header{
+            display: none;
+        }
+    
+        .stylistDesktop__Header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 3rem;
+            background-color: var(--white);
+            border-bottom: 1.5px solid #EAEAEA;
+            position: relative;
+            width: 100%;
+            // z-index: 10;
+        
+            .navWrap{
+                display: flex;
+                align-items: center;
+        
+                .headBtn{
+                    height: 2.5rem;
+                    padding: .5rem 1rem;
+                    border: none;
+                    border-radius: 10px;
+                    background: none;
+                    color: var(--black);
+                    cursor: pointer;
+                    font-size: var(--sixteen);
+                    margin-right: 1.5rem;
+                }
+        
+                .navItems{
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    border: 1.5px solid var(--black);
+                    border-radius: 2rem;
+                    padding: 0.45rem 1rem;
+                    width: 7.5rem;
+        
+                    .profileIcon{
+                        width: 1.875rem;
+                        height: 1.875rem;
+                        display: block;
+                        border-radius: 50%;
+                        background-color: #C4C4C4;
+                    }
+
+                    .FiMenu{
+                        width: 1.75rem;
+                        height: 1.75rem;
+                        fill: var(--black);
+                        stroke: var(--black);
+                        margin-right: 1rem;
+                        cursor: pointer;
+                    }
+                }
+    
+                .navList{
+                    display: none;
+                    width: 12rem;
+                    padding: 1rem 0;
+                    position: absolute;
+                    z-index: 1;
+                    top: 100%;
+                    right: 5%;
+                    background: var(--white);
+                    border: 1.5px solid #EAEAEA;
+                    border-radius: 4px;
+                    animation: animate .3s ;
+            
+                    .navItem{
+                        padding: .75rem 1rem;
+                        display: inline-flex;
+                        align-items: center;
+            
+                        &:hover{
+                            background-color: #DEDEDE;
+                        }
+
+                        
+                        .navLink{ 
+                            font-size: var(--eighteen);
+                        }
+    
+                        .alert{
+                            color: red;
+                            font-weight: 600;
+                            margin-left: .5rem;
+                            font-size: var(--eighteen);
+                       }
+                    }
+            
+                    hr{
+                        border: none;
+                        background-color: #DEDEDE;
+                        height: 1px;
+                        width: 100%;
+                        margin: .75rem 0;
+                    }
+                }
+            
+                .show{
+                    display: flex;
+                    flex-direction: column;
+                }
+            
+                @keyframes animate {
+                    from {
+                        transform: scale(0.5);
+                      }
+                      to {
+                        transform: scale(1);
+                      }
+                }
+        
+            }
+        }
+    }
+}

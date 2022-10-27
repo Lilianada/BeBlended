@@ -1,0 +1,32 @@
+.errorImage{
+    width: 70%;
+    height: 70%;
+
+    .errorBody{
+        margin-top: 1rem;
+        text-align: center;
+        .errorHead{
+            font-size: var(--thirtyTwo);
+        }
+        
+        .errorButton{
+            width: 9rem;
+            height: 2.5rem;
+            font-size: var(--eighteen);
+            border: 1px solid #271871;
+            border-radius: 10px;
+            outline: none;
+            margin-top: .5rem;
+            background-color: #fff;
+            color: #271871;
+            cursor: pointer;
+            transition: all .5s;
+            &:hover{
+             transform: scale(.95, .95);
+            }
+        }
+        
+    }
+}
+
+

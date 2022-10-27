@@ -1,0 +1,291 @@
+.sectionModal_Wrap{
+    .modalCol{
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
+        background-color: #F7F7F7;
+
+        .getTime_Header{
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid var(--greyPro);
+            padding: 2rem 1.5rem 1rem;
+
+            h6{
+                font-family: var(--font-text);
+                font-size: var(--twenty);
+                font-weight: 400;
+            }
+
+            .openBtn{
+                border: none;
+                background: none;
+            }
+        }
+        
+        //Inactive mode
+        .inactiveMode{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-around;
+            border: 1px solid var(--greyPro);
+            padding: 1rem;
+
+            .getDay{
+                width: 12rem;
+                margin: 1rem 0;
+                display: flex;
+                align-items: center;
+
+                .checkBox{
+                    width: 1.2rem;
+                    height: 1.2rem;
+                    position: relative;
+                    margin-right: 1rem;
+                    background: var(--greyPro);
+                    border: 1px solid rgba(5, 2, 5, 0.61); 
+                    outline: none;
+                    border-radius: 50%; 
+                    cursor: pointer;
+                }
+
+                input{
+                    width: 1rem;
+                    height: 1rem;
+                    opacity: 0;
+                    position: absolute;
+                    z-index: 5;
+                    cursor: pointer;
+                }
+
+                input:checked ~ .checkBox{
+                    background-color: var(--white);
+                    border: 1.5px solid #050205;
+                }
+
+                input:checked ~ .checkBox:after{
+                    content: "\2714";
+                    font-size: 12px;
+                    color: var(--black);
+                    position: relative;
+                    z-index: 1;
+                    display: block;
+                    padding: 0 3.5px;
+                }
+
+                .dayName{
+                    font-size: var(--sixteen);
+                    color: var(--greyPro);
+                }
+
+            }
+
+            .colItems{
+                display: flex;
+                flex-direction: column;
+
+                .selectOption{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    margin-bottom: 1rem;
+                }                
+
+                .getTime{
+                    border: 1px solid var(--greyPro);
+                    border-radius: 9px;
+                    padding: 1rem;
+                    background: none;
+                    font-size: var(--sixteen);
+                    font-family: inherit;
+                    letter-spacing: 0.1rem;
+                    color: var(--greyPro);
+                }
+
+                .rowItems{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    
+                    .addButton{
+                        display: flex;
+                        align-items: center;
+                        margin-top: 0.5rem;
+                        color: var(--greyPro);
+                        border: none;
+                        background: none;
+                        cursor: pointer;
+                        font-size: var(--sixteen);
+
+                        .addIcon{
+                            size: 12px;
+                            fill: var(--greyPro);
+                            margin-right: .75rem;
+
+                            &:hover{
+                                fill: rgb(154, 241, 154);
+                            }
+                        }
+
+                        &:hover{
+                            color: rgb(154, 241, 154);
+                        }
+                    }
+
+                    .default{
+                        display: none;
+                        text-decoration: underline;
+                        text-underline-offset: 0.25rem;
+                        text-decoration-thickness: from-front;
+                        font-style: italic;
+                        color: var(--greyPro);
+                    }
+                }
+            }
+
+            .bar{
+                width: 1rem;
+                height: 1.5px;
+                background-color: var(--greyPro);
+                margin: 0 .5rem;
+            }
+
+            .closeBtn{
+                size: 20px;
+                fill: var(--greyPro);
+                cursor: pointer;
+                margin-top: .5rem;
+
+                &:hover{
+                    fill: rgb(247, 130, 130);
+                }
+            }
+        }
+
+        .footer{
+            display: flex;
+            justify-content: flex-end;
+
+            .complete{
+                width: 12.25rem;
+                height: 3.1875rem;
+                padding: .75rem;
+                text-align: center;
+                margin-top: 2rem;
+                margin-bottom: 1rem;
+                margin-right: 10%;
+                color: var(--white);
+                border: none;
+                border-radius: .5625rem;
+                transition: .3s ease;
+                font-size: var(--sixteen);
+                z-index: 1;
+                cursor: pointer;
+    
+                &:hover{
+                    background-color: var(--black);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .sectionModal_Wrap{
+        .modalCol{
+            width: 100%;
+
+            .inactiveMode{
+                .colItems{
+                    .getTime{
+                        padding: 0.5rem 2.5rem;
+                    }
+
+                    .bar{
+                        margin: 0 2rem;
+                    }
+                }
+            }
+        }
+    }   
+}
+
+@media screen and (min-width: 768px) {
+    .sectionModal_Wrap{
+        .modalCol{
+            width: 80%;
+            height: 90%;
+            margin: 3rem auto 2rem;
+
+            .inactiveMode{
+                flex-direction: row;
+
+                .colItems{
+                    .getTime{
+                        padding: 0.5rem 1.5rem;
+                    }
+                }
+
+                .getDay{
+                    margin: 1rem 0 0 0;
+                    width: 9rem;
+                } 
+            }
+        }
+    }   
+}
+
+@media screen and (min-width: 900px) {
+    .sectionModal_Wrap{
+        .modalCol{
+            width: 70%;
+            margin: 3rem auto 2rem;
+
+            .inactiveMode{
+                flex-direction: row;
+
+                .getDay{
+                    margin: 1rem 0 0 0;
+                    width: 12rem;
+                } 
+            }
+        }
+    }   
+}
+
+.activeMode{
+    .getDay{
+
+        .dayName{
+            color: var(--black) !important;
+        }
+
+    }
+
+    .colItems{
+        .getTime{
+            color: var(--black) !important;
+        }
+
+        .rowItems{
+            .addButton{
+                color: var(--black) !important;
+
+                .addIcon{
+                    fill: var(--black) !important;
+                }
+            }
+
+            .default{
+                color: var(--black) !important;
+            }
+        }
+    }
+
+    .bar{
+        background-color: var(--black) !important;
+    }
+}
+
+

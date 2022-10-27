@@ -1,0 +1,388 @@
+.serviceModal {
+    .dialogContent {
+        background-color: var(--white);
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        overflow-y: scroll;
+
+        @media screen and (min-width: 500px) {
+            border-radius: 12px;
+            width: 90%;
+            height: 80%;
+        }
+
+        @media screen and (min-width: 768px) {
+            width: 80%;
+            height: 40rem;
+        }
+
+        @media screen and (min-width: 1000px) {
+            width: 65%;
+            height: 80%;
+        }
+
+        .modalHeader {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            border-radius: 10px 10px 0 0;
+            background: #f2f2f2;
+
+            h5 {
+                font-size: var(--fourty);
+
+                @media screen and (min-width: 900px) {
+                    font-size: var(--twentyFour);
+                }
+            }
+
+            .closeButton {
+                background: none;
+                border: none;
+                outline: none;
+                cursor: pointer;
+            }
+        }
+
+        .modalContent {
+            display: block;
+            padding: 2rem 1rem;
+
+            @media screen and (min-width: 600px) {
+                padding: 2rem;
+            }
+
+            .modalForm_Column {
+                display: block;
+
+                .formField {
+                    display: block;
+                    margin-bottom: 1.5rem;
+
+                    .formLabel {
+                        display: flex;
+                        align-items: flex-end;
+                        margin-bottom: 0.75rem;
+                    }
+
+                    .serviceInput {
+                        display: block;
+                        width: 100%;
+                        height: 4.65rem;
+                        padding: 1rem;
+                        border: 1px solid #dedddd;
+                        border-radius: 12px;
+                        box-sizing: border-box;
+                        font-size: var(--sixteen);
+                        font-family: var(--font-text);
+                        color: var(--black);
+                        outline: none;
+
+                        &::placeholder {
+                            color: #b8b8b8;
+                        }
+                    }
+
+                    .row {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+                }
+
+                .fields {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+
+                    .formField {
+                        &:first-child {
+                            width: 55%;
+                            @media screen and (min-width: 600px) {
+                                width: 60%;
+                            }
+                        }
+
+                        &:nth-child(2) {
+                            width: 40%;
+                            @media screen and (min-width: 600px) {
+                                width: 35%;
+                            }
+                        }
+
+                        .row {
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: center;
+
+                            .serviceInput {
+                                border-radius: 0.75rem 0 0 0.75rem;
+                            }
+
+                            .buttonswrap {
+                                display: flex;
+                                flex-direction: column;
+                                background: #f6f6f6;
+                                border-top: 1px solid #dedddd;
+                                border-bottom: 1px solid #dedddd;
+                                border-right: 1px solid #dedddd;
+                                border-left: none;
+                                border-radius: 0px 12px 13px 0px;
+
+                                .percentBtn {
+                                    width: 4rem;
+                                    height: 2.3rem;
+                                    padding: 0.4rem;
+                                    background: var(--white);
+                                    border-radius: 0px 13px 0px 0px;
+                                    color: var(--black);
+                                    border: none;
+                                    outline: none;
+                                    font-size: var(--twenty);
+                                }
+
+                                .dollarBtn {
+                                    width: 4rem;
+                                    height: 2.3rem;
+                                    padding: 0.4rem;
+                                    background: var(--white);
+                                    border-radius: 0px 0px 13px 0px;
+                                    color: var(--black);
+                                    border: none;
+                                    outline: none;
+                                    font-size: var(--twenty);
+                                }
+
+                                .activeBtn{
+                                        
+                                    background: #c4c4c4;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .saveBtn {
+                width: 8rem;
+                height: 2.5rem;
+                padding: 0.75rem;
+                text-align: center;
+                color: var(--white);
+                background-color: var(--black);
+                border: none;
+                border-radius: 0.5625rem;
+                transition: 0.3s ease;
+                font-size: var(--sixteen);
+                z-index: 1;
+                cursor: pointer;
+                margin: 2rem 0 0 auto;
+                display: grid;
+
+                &:hover {
+                    background-color: var(--black);
+                }
+
+                @media screen and (min-width: 768px) {
+                    margin-right: 4%;
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+}
+
+// Variant
+.variant {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    margin: 1.5rem 0 1rem;
+
+    .variantCheckbox {
+        min-width: 1.45rem;
+        min-height: 1.45rem;
+        border: 2px solid var(--black);
+        border-radius: 50%;
+        margin-right: 0.5rem;
+        margin-top: 3px;
+        cursor: pointer;
+    }
+
+    .checkBox {
+        position: absolute;
+        top: 5px;
+        left: 2.5px;
+        z-index: 2;
+        opacity: 0;
+        width: 1rem;
+        height: 1rem;
+        cursor: pointer;
+    }
+
+    .checkBox[type="checkbox" i]:checked ~ .variantCheckbox::after {
+        content: "\2714";
+        font-size: 13px;
+        color: var(--black);
+        position: relative;
+        z-index: 0;
+        top: -.5px;
+        left: 4px;
+    }
+
+    .formLabel {
+        display: flex;
+        align-items: center;
+
+        strong {
+            margin-right: 0.5rem;
+        }
+    }
+}
+
+.variantContent {
+    .variantHead {
+        margin-bottom: 1rem;
+        font-size: var(--eighteen);
+    }
+
+    .variantForm {
+        display: block;
+        margin-bottom: 1rem;
+
+        .formLabel {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-bottom: .75rem;
+
+            .removeBtn {
+                color: #6C6C6C;
+                background: none;
+                border: none;
+                font-size: var(--sixteen);
+                cursor: pointer;
+            }
+        }
+
+        .variantFields {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .variantType {
+                width: 35%;
+                height: 3rem;
+                display: block;
+                padding: 1rem;
+                border: 1px solid #dedddd;
+                border-radius: 0.75rem;
+                box-sizing: border-box;
+                font-size: var(--sixteen);
+                font-family: var(--font-text);
+                color: var(--black);
+                outline: none;
+
+                &::placeholder {
+                    color: #b8b8b8;
+                }
+            }
+        }
+    }
+    .btn-primary {
+        margin-top: 1rem;
+        border: none;
+        font-size: var(--sixteen);
+        padding: 0.75rem;
+    }
+
+    .variantData{
+        .variantTable{
+            width: 100%;
+            margin-bottom: 2rem;
+            
+            .tableHead{
+                
+                .tableRow{
+                    display: grid;
+                    grid-template-columns: 35% 26% 27%;
+                    gap: 6%;
+                    place-items: flex-start;
+                    align-items: center;
+                    padding: 1rem 0;
+                    border-bottom: 1px solid #dedddd;
+                    .dataHead{
+                        font-size: var(--eighteen);
+                    }
+                }
+            }
+            .tableBody{
+                .tableRow{
+                    display: grid;
+                    grid-template-columns: 35% 26% 27%;
+                    gap: 6%;
+                    place-items: flex-start;
+                    padding: 1rem 0;
+
+                    
+                    .tableData{
+                        width: 100%;
+                        font-size: var(--sixteen);
+                        font-family: var(--font-text);
+                        color: var(--black);
+
+                        .priceField{
+                            display: block;
+                            width: 100%;
+                            height: 2.5rem;
+                            padding: 1rem;
+                            border: 1px solid #DEDDDD;
+                            border-radius: 9px;
+                            font-size: var(--sixteen);
+                            font-family: var(--font-text);
+                            color: var(--black);
+                            outline: none;
+
+                            &::placeholder {
+                                color: #b8b8b8;
+                            }
+                        }
+
+                        .timeWrap{
+                            display: flex;
+                            border: 1px solid #DEDDDD;
+                            border-radius: 4px;
+                            
+                            .timeField{
+                                height: 2.5rem;
+                                width: 100%;
+                                display: block;
+                                padding: 0.5rem;
+                                font-size: var(--sixteen);
+                                font-family: var(--font-text);
+                                color: var(--black);
+                                outline: none;
+                                border-left: 1px solid #dedddd;
+                                border-bottom: none;
+                                border-top: none;
+                                border-right: 1px solid #dedddd;
+
+                                &::placeholder {
+                                    color: #b8b8b8;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+
+        }
+    }
+}
+

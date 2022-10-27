@@ -1,0 +1,77 @@
+.aboutSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 2rem 1rem;
+    // width: 100%;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        margin: 2rem;
+    }
+
+    .aboutFilled_Left{
+        width: 100%;
+
+        @media screen and (min-width: 768px) {
+            width: 55%;
+        }
+
+        .aboutFilled_Head{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+
+            h5{
+                font-weight: 700;
+            }
+        }
+
+        .aboutTextBox{
+            margin-bottom: 2rem;
+            width: 100%;
+            height: fit-content;
+
+            @media screen and (min-width: 768px) {
+                margin-bottom: 0;
+            }
+
+            p{
+                font-size: var(--eighteen);
+            }
+        }
+    }
+
+    .aboutFilled_Right{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        
+        @media screen and (min-width: 768px) {
+            width: 30%;
+            margin-left: 6rem;
+        }
+
+        .listItem{
+            display: flex;
+            align-items: flex-end;
+            margin-bottom: .75rem;
+
+            p{
+                font-size: var(--eighteen);
+            }
+
+            .TiLocation, 
+            .AiFillMessage, 
+            .AiOutlineFileProtect,
+            .RiShieldCheckFill{
+                width: 1.5rem;
+                height: 1.5rem;
+                fill: var(--black);
+                margin-right: 1rem;
+            }
+        }
+    }
+}

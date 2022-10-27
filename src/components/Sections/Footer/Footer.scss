@@ -1,0 +1,175 @@
+.footerWrapper{
+    display: block;
+    background-color: #000000;
+    color: var(--white);
+    padding: 3rem 2rem;
+    // margin-bottom: 4rem;
+
+    .footerTop{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+        .footerFlex{
+            margin: .5rem 0 1rem;
+
+            &:first-child{
+                border-bottom: 2px solid var(--white);
+                margin-bottom: 2.5rem;
+            }
+
+            &:nth-child(2){
+                border-bottom: 2px solid var(--white);
+                margin-bottom: 2.5rem;
+            }
+
+            .footerAbout_head{
+                color: var(--white);
+                margin-bottom: 2rem;
+                font-weight: 500;
+                font-size: calc(var(--twenty) + 2px);
+            }
+
+            .formSubtitile{
+                color: var(--white);
+                margin: 0 0 1.5rem;
+            }
+    
+            ul{
+                li{    
+                    margin-bottom: 1.5rem;
+                }
+            }
+    
+            form{
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+    
+                .formColumn{
+                    display: flex;
+                    flex-direction: column;
+
+                    .formWrap{
+                        display: flex;
+                        flex-direction: column;
+
+                        div{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            
+                            label{
+                                margin-bottom: .5rem;
+                                font-weight: 500;
+                            }
+    
+                            .submitForm{
+                                border: none;
+                                background: none;
+                                cursor: pointer;
+                                transition: 0.4s ease-in;
+
+                                & :hover{
+                                    width: 3rem;
+                                    border: 1px solid white;
+                                    border-radius: 5px;
+                                }
+                            }
+                            
+                        }
+        
+                        input{
+                            height: 2rem;
+                            border-bottom: 1.5px solid #FFFFFF;
+                            border-top: none;
+                            border-left: none;
+                            border-right: none;
+                            padding: 0.5rem 0.75rem;
+                            outline: none;
+                            margin-bottom: 3rem;
+                            background: none;
+                            color: var(--white);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footerBottom{
+        margin-top: 3rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        p{
+            color: var(--white);
+            font-size: var(--twelve);
+        }
+
+        .socialWrap{
+            .wrap{
+                margin-left: 1rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px){
+    .footerWrapper{
+        padding: 3rem 2rem;
+        margin-bottom: 0rem;
+
+        .footerTop{
+            flex-direction: row;
+
+            .footerFlex{
+                &:first-child{
+                    border: none;
+                    margin-bottom: 0;
+                }
+    
+                &:nth-child(2){
+                    border-bottom: none;
+                    margin-bottom: 0;
+                }
+
+                form{
+            
+                    .formColumn{
+                        flex-direction: row;
+                        
+                        .formWrap{
+                            margin-right: 0.75rem;
+                            margin-top: .75rem;
+            
+                            input{
+                                max-width: 25rem;
+                                height: 3rem;
+                                margin-bottom: 1rem;
+                            }
+            
+                            .email{
+                                width: 24rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .footerBottom{       
+        padding-bottom: 1.5rem;
+        border-bottom: 1.5px solid #E0E0E0;
+        }
+
+    }
+}
+
+@media screen and (min-width: 900px){
+    .footerWrapper{
+        padding: 3rem 4rem;
+    }
+}

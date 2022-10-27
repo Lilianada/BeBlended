@@ -1,0 +1,97 @@
+.upcomingBookings{
+
+    .upcomingHeader{
+        margin-bottom: 1rem;
+
+        .upcomingHead{
+            font-size: var(--twenty);
+            margin-bottom: .5rem;
+        }
+    
+        .subHead{
+            text-decoration: underline;
+        }
+    }
+
+    .mappedServices{
+        display: block;
+        max-height: 25rem;
+        overflow-y: scroll;
+
+        .serviceCard{
+            width: 18rem;
+            height: 9rem;
+            display: flex;
+            background: var(--white);
+            border: 1px solid #DEDDDD;
+            border-radius: 9px;
+            margin-bottom: 1rem;
+
+            .bar{
+                width: .75rem;
+                height: 100%;
+                background: var(--hotPink);
+                border-radius: 10px 0px 0px 10px;
+            }
+
+            .card{
+                width: 100%;
+                padding: .75rem 1rem;
+
+                .cardHead{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .cardTitle{
+                        font-size: var(--eighteen);
+                        font-family: var(--font-text);
+                    }
+                }
+
+                .cardTexts{
+                    margin-top: .45rem;
+
+                    .text{
+                        font-size: var(--fourteen);
+                        line-height: .9rem;
+                    }
+                }
+
+                .cardButtons{
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: .75rem;
+
+                    .accept{
+                        width: 7rem;
+                        height: 1.75rem;
+                        text-align: center;
+                        background: #C5E9D3;
+                        border-radius: 5px;
+                        border: none;
+                        outline: none;
+
+                        &:hover{
+                            background: #7deaa7;
+                        }
+                    }
+                    
+                    .decline{
+                        width: 7rem;
+                        height: 1.75rem;
+                        text-align: center;
+                        background: #F26A6A4D;
+                        border-radius: 5px;
+                        border: none;
+                        outline: none;
+
+                        &:hover{
+                            background: #fb404080;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
