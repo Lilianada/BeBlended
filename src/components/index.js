@@ -1,3 +1,4 @@
+//Re-exporting components
 export { default as ErrorPage } from "./404Page/404Page";
 
 export { default as CancelModal } from "./ClientBookingPage/CancelModal/CancelModal";
@@ -12,7 +13,7 @@ export { default as TimeRescheduler } from "./ClientBookingPage/TimeScheduler/Ti
 export { default as Cancellation } from "./ClientBookingPage/CancellationPage/Cancellation";
 export { default as BookingHeaderClient } from "./ClientBookingPage/Header/Header";
 export { DeclineAppointment } from "./StylistBookingPage/ManageBookingsPage/ManageBookings";
-export { CancelAppointment, DateReschedule } from "./StylistBookingPage/Modals/AppointmentDetailsModals/AppointmentDetails";
+export { CancelAppointment, DateReschedule } from "./StylistBookingPage/Modals/AppointmentDetailsModal/AppointmentDetails";
 export { default as DuringAppointment } from "./StylistBookingPage/Modals/DuringAppointmentModal/DuringAppointment";
 export {  DeclareNoShow } from "./StylistBookingPage/Modals/DuringAppointmentModal/DuringAppointment";
 export { default as AppointmentSection } from "./StylistBookingPage/Appointment/AppointmentSection";
@@ -22,7 +23,6 @@ export { default as ManageBookings } from "./StylistBookingPage/ManageBookingsPa
 export { default as AppointmentDetails } from "./StylistBookingPage/Modals/AppointmentDetailsModal/AppointmentDetails";
 export { default as UpcomingBookings } from "./StylistBookingPage/UpcomingBookings/UpcomingBookings";
 
-//Re-exporting components
 export { default as AboutFilled } from "./ClientProfilePage/AboutSection/AboutFilled";
 export { default as AboutModal } from "./StylistProfilePage/StylistProfileModals/AboutStylistModal/AboutModal";
 export { default as AddOnFilled } from "./ClientProfilePage/Add-OnSection/AddOnFilled";
