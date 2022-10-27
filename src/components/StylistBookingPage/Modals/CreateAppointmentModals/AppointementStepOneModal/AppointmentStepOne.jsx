@@ -87,7 +87,7 @@ function AppointmentStepOne({ openModal, closeModal }) {
                                 </div>
 
                                 <button className="saveBtn" onClick={handleClick}>
-                                    Done
+                                    Save
                                 </button>
                             </form>
                         </div>
