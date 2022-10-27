@@ -23,7 +23,7 @@ function AppointmentStepOne({ openModal, closeModal }) {
     return ReactDOM.createPortal(
         <>
             {" "}
-            {/* {openModal ? ( */}
+            {openModal ? (
             <div className="modalWrap">
                 <Backdrop>
                     <motion.div
@@ -94,7 +94,7 @@ function AppointmentStepOne({ openModal, closeModal }) {
                     </motion.div>
                 </Backdrop>
             </div>
-            {/* ) : null}{" "} */}
+            ) : null}{" "}
         </>,
         document.getElementById("modal")
     );

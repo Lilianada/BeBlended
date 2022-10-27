@@ -16,10 +16,10 @@ function InfoForm({ openModal, closeModal }) {
         }
     }
 
-  return (
+  return ReactDOM.createPortal (
     <>
       {" "}
-      {/* {openModal ? ( */}
+      {openModal ? (
       <div className="infoWrap">
         <Backdrop>
           <motion.div
@@ -75,8 +75,9 @@ function InfoForm({ openModal, closeModal }) {
           </motion.div>
         </Backdrop>
       </div>
-      {/* ) : null}{" "} */}
-    </>
+      ) : null}{" "} 
+    </>,
+    document.getElementById("modal")
   );
 }
 

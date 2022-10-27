@@ -6,10 +6,12 @@ import { AiOutlineClose, AiFillDelete } from "react-icons/ai";
 import { Calendar } from "react-calendar";
 import Pic from "../../../../assets/BraidedLady.png";
 
-export default function AppointmentDetails({ handleModal }) {
-  return (
+export default function AppointmentDetails({ openModal, closeModal }) {
+  return ReactDOM.createPortal (
+    <>
+    {openModal ? (
     <section className="appointmentDetails">
-      <Backdrop onClick={handleModal}>
+      <Backdrop onClick={closeModal}>
         <motion.div
           className="dialogContent"
           onClick={(e) => e.stopPropagation()}
@@ -23,7 +25,7 @@ export default function AppointmentDetails({ handleModal }) {
           exit="exit"
         >
           <header className="modalHeader">
-            <button className="closeButton" onClick={handleModal}>
+            <button className="closeButton" onClick={closeModal}>
               <AiOutlineClose size={26} />
             </button>
           </header>
@@ -66,11 +68,16 @@ export default function AppointmentDetails({ handleModal }) {
         </motion.div>
       </Backdrop>
     </section>
+    ) : null}{" "}
+    </>,
+    document.getElementById("modal")
   );
 }
 
-export function CancelAppointment() {
-  return (
+export function CancelAppointment({ openModal, closeModal}) {
+  return ReactDOM.createPortal (
+    <>
+    {openModal ? (
     <div className="cancelAppointment">
       <Backdrop>
         <div className="cancelContent">
@@ -91,7 +98,7 @@ export function CancelAppointment() {
             <button
               className="btn-primary"
               type="button"
-            // onClick={}
+            onClick={closeModal}
             >
               No
             </button>
@@ -99,12 +106,16 @@ export function CancelAppointment() {
         </div>
       </Backdrop>
     </div>
-  );
+) : null}{" "}
+</>,
+document.getElementById("modal")  );
 }
 
-export function DateReschedule() {
+export function DateReschedule({ openModal, closeModal}) {
   const [value, onChange] = useState(new Date());
-  return (
+  return ReactDOM.createPortal (
+    <>
+    {openModal ? (
     <div className="dateReschedule">
       <Backdrop>
         <div className="dialogContent">
@@ -115,7 +126,7 @@ export function DateReschedule() {
               </div>
               <h5 className="stylistName">Braids by Becky</h5>
             </div>
-            <button className="closeButton">
+            <button className="closeButton" onClick={closeModal}>
               <AiOutlineClose size={26} />
             </button>
           </div>
@@ -128,6 +139,9 @@ export function DateReschedule() {
         </div>
       </Backdrop>
     </div>
+    ) : null}{" "} 
+    </>,
+    document.getElementById("modal")
   );
 }
 

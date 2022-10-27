@@ -7,10 +7,10 @@ import "./AppointmentConfirmation.scss";
 
 export default function AppointmentConfirmation({ openModal, closeModal }) {
     
-    return (
+    return ReactDOM.createPortal (
         <>
             {" "}
-            {/* {openModal ? ( */}
+            {openModal ? (
             <div className="appointmentConfirmation">
                 <Backdrop>
                     <motion.div
@@ -41,6 +41,7 @@ export default function AppointmentConfirmation({ openModal, closeModal }) {
                     </motion.div>
                 </Backdrop>
             </div>
-        </>
-    )
+) : null}{" "}
+</>,
+    document.getElementById("modal")    )
 }
