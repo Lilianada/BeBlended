@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { ReactDOM } from "react";
 import "./AppointmentDetails.scss";
 import { Backdrop } from "../../../../components";
 import { motion } from "framer-motion";
@@ -7,7 +8,7 @@ import { Calendar } from "react-calendar";
 import Pic from "../../../../assets/BraidedLady.png";
 
 export default function AppointmentDetails({ openModal, closeModal }) {
-  return ReactDOM.createPortal (
+  return ReactDOM .createPortal (
     <>
     {openModal ? (
     <section className="appointmentDetails">

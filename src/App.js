@@ -2,10 +2,10 @@ import BookingPage from "./components/StylistBookingPage/BookingPage/BookingPage
 import "./index.scss";
 import 'react-calendar/dist/Calendar.css';
 import ManageBookings from "./components/StylistBookingPage/ManageBookingsPage/ManageBookings";
-import InfoForm from "./components/StylistBookingPage/Modals/CreateAppointmentModals/ClientInfoForm/InfoForm";
-import AppointmentStepOne from "./components/StylistBookingPage/Modals/CreateAppointmentModals/AppointementStepOneModal/AppointmentStepOne";
-import CustomService from "./components/StylistBookingPage/Modals/CreateAppointmentModals/CustomService/CustomService";
-import AppointmentConfirmation from "./components/StylistBookingPage/Modals/CreateAppointmentModals/AppointmentConfirmationModal/AppointmentConfirmation";
+// import InfoForm from "./components/StylistBookingPage/Modals/CreateAppointmentModals/ClientInfoForm/InfoForm";
+// import AppointmentStepOne from "./components/StylistBookingPage/Modals/CreateAppointmentModals/AppointementStepOneModal/AppointmentStepOne";
+// import CustomService from "./components/StylistBookingPage/Modals/CreateAppointmentModals/CustomService/CustomService";
+// import AppointmentConfirmation from "./components/StylistBookingPage/Modals/CreateAppointmentModals/AppointmentConfirmationModal/AppointmentConfirmation";
 import { PolicyModal } from "./components";
 // import {
 //   Home,

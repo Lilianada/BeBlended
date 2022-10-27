@@ -1,5 +1,5 @@
 import React from "react";
-import "../AppointmentDetailsModals/AppointmentDetails.scss";
+import "../AppointmentDetailsModal/AppointmentDetails.scss";
 import { Backdrop } from "../../..";
 import { motion } from "framer-motion";
 import { AiOutlineClose, AiFillDelete } from "react-icons/ai";

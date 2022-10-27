@@ -19,7 +19,7 @@ export { default as AppointmentSection } from "./StylistBookingPage/Appointment/
 export { default as BookingHeaderStylist } from "./StylistBookingPage/BookingHeader/BookingHeader";
 export { default as BookingPage } from "./StylistBookingPage/BookingPage/BookingPage";
 export { default as ManageBookings } from "./StylistBookingPage/ManageBookingsPage/ManageBookings";
-export { default as AppointmentDetails } from "./StylistBookingPage/Modals/AppointmentDetailsModals/AppointmentDetails";
+export { default as AppointmentDetails } from "./StylistBookingPage/Modals/AppointmentDetailsModal/AppointmentDetails";
 export { default as UpcomingBookings } from "./StylistBookingPage/UpcomingBookings/UpcomingBookings";
 
 //Re-exporting components
