@@ -2,10 +2,24 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import { Backdrop } from "../../../../../components";
 import { motion } from "framer-motion";
-import { AiOutlineClose } from "react-icons/ai";
+import { AiOutlineClose, AiOutlineClockCircle } from "react-icons/ai";
+import { HiOutlineCalendar } from "react-icons/hi";
+import { BsChevronCompactDown } from "react-icons/bs";
+import AfroIcon from "../../../../../assets/AfroVector.svg";
 import "./NormalService.scss";
 
+const services = [
+  "Classic Box Braids",
+  "Knotless Box Braids",
+  "Braided Ponytail",
+  "Crotchet Braids",
+]
+
 export default function NormalService({ openModal, closeModal }) {
+  const handleClick = (e) => {
+    e.preventDefault(); 
+  }
+
   return ReactDOM.createPortal(
     <>
       {" "}

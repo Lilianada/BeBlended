@@ -18,7 +18,7 @@ const services = [
 function AppointmentStepOne({ openModal, closeModal }) {
     const handleClick = (e) => {
         e.preventDefault();
-    };
+    }
 
     return ReactDOM.createPortal(
         <>
