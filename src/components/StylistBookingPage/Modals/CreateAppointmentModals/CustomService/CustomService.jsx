@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { Backdrop } from "../../../../../components";
 import { motion } from "framer-motion";
 import { AiOutlineClose } from "react-icons/ai";
-import 
+// import 
 
 export default function CustomService({ openModal, closeModal }) {
   const handleClick = (e) => {
