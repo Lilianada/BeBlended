@@ -1,0 +1,61 @@
+.appointmentConfirmation {
+    .dialogContent {
+        background-color: var(--white);
+        width: 90%;
+        height: 12.375rem;
+        margin: 0 auto;
+
+        @media screen and (min-width: 500px) {
+            border-radius: 12px;
+            width: 27rem;
+        }
+
+        .modalHeader {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            border-radius: 10px 10px 0 0;
+            background: #f2f2f2;
+
+            h5 {
+                font-size: var(--fourty);
+
+                @media screen and (min-width: 900px) {
+                    font-size: var(--twentyFour);
+                }
+            }
+
+            .closeButton {
+                background: none;
+                border: none;
+                outline: none;
+                cursor: pointer;
+            }
+        }
+
+        .modalContent {
+            display: grid;
+            place-items: center;
+            padding: 1rem;
+
+            .doneBtn {
+                width: 8rem;
+                height: 2.5rem;
+                text-align: center;
+                border: none;
+                border-radius: 0.5625rem;
+                font-size: var(--sixteen);
+                z-index: 1;
+                cursor: pointer;
+                margin: 1rem auto;
+                transition: 0.5s all;
+                text-transform: capitalize;
+
+                &:hover {
+                    transform: scale(.95, .95);
+                }
+            }
+        }
+    }
+}

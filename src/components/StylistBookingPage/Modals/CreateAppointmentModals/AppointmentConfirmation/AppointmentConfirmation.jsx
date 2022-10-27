@@ -3,14 +3,15 @@ import ReactDOM from "react-dom";
 import { Backdrop } from "../../../../../components";
 import { motion } from "framer-motion";
 import { AiOutlineClose } from "react-icons/ai";
+import "./AppointmentConfirmation.scss";
 
 export default function AppointmentConfirmation({ openModal, closeModal }) {
     
-    return ReactDOM.createPortal(
+    return (
         <>
             {" "}
             {/* {openModal ? ( */}
-            <div className="modalWrap">
+            <div className="appointmentConfirmation">
                 <Backdrop>
                     <motion.div
                         className="dialogContent"
@@ -35,7 +36,7 @@ export default function AppointmentConfirmation({ openModal, closeModal }) {
                             <p>
                             Appointment has been sent to Ezinne Okafor!
                             </p>
-                            <button className="done">done</button>
+                            <button className="doneBtn activeBtn">done</button>
                         </div>
                     </motion.div>
                 </Backdrop>

@@ -5,6 +5,7 @@ import ManageBookings from "./components/StylistBookingPage/ManageBookingsPage/M
 import InfoForm from "./components/StylistBookingPage/Modals/CreateAppointmentModals/ClientInfoForm/InfoForm";
 import AppointmentStepOne from "./components/StylistBookingPage/Modals/CreateAppointmentModals/AppointementStepOne/AppointmentStepOne";
 import CustomService from "./components/StylistBookingPage/Modals/CreateAppointmentModals/CustomService/CustomService";
+import AppointmentConfirmation from "./components/StylistBookingPage/Modals/CreateAppointmentModals/AppointmentConfirmation/AppointmentConfirmation";
 // import {
 //   Home,
 //   Client,
@@ -42,7 +43,8 @@ function App() {
     {/* <BookingPage/> */}
     {/* <ManageBookings/> */}
     {/* <InfoForm/> */}
-    <CustomService/>
+    {/* <CustomService/> */}
+    <AppointmentConfirmation/>
     {/* <AppointmentStepOne/> */}
     </div>
   );
