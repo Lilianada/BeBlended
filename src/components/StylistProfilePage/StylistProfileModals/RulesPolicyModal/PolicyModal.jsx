@@ -16,13 +16,11 @@ function PolicyModal({ openModal, closeModal }) {
   const handleChange = (event) => {
     const selected = event.target.value;
     setIsClicked(selected);
-    console.log(selected);
   };
-  console.log(isClicked == options[0].value)
   return ReactDOM.createPortal(
     <>
       {" "}
-      {openModal ? (
+      {/* {openModal ? ( */}
         <div className="policyModal">
           <Backdrop onClick={closeModal}>
             <motion.div
@@ -154,7 +152,7 @@ function PolicyModal({ openModal, closeModal }) {
             </motion.div>
           </Backdrop>
         </div>
-      ) : null}{" "}
+      {/* ) : null}{" "} */}
     </>,
     document.getElementById("modal")
   );

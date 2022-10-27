@@ -13,8 +13,8 @@ export { default as Cancellation } from "./ClientBookingPage/CancellationPage/Ca
 export { default as BookingHeaderClient } from "./ClientBookingPage/Header/Header";
 export { DeclineAppointment } from "./StylistBookingPage/ManageBookingsPage/ManageBookings";
 export { CancelAppointment, DateReschedule } from "./StylistBookingPage/Modals/AppointmentDetailsModals/AppointmentDetails";
-export { default as DuringAppointment } from "./StylistBookingPage/Modals/DuringAppointmentModals/DuringAppointment";
-export {  DeclareNoShow } from "./StylistBookingPage/Modals/DuringAppointmentModals/DuringAppointment";
+export { default as DuringAppointment } from "./StylistBookingPage/Modals/DuringAppointmentModal/DuringAppointment";
+export {  DeclareNoShow } from "./StylistBookingPage/Modals/DuringAppointmentModal/DuringAppointment";
 export { default as AppointmentSection } from "./StylistBookingPage/Appointment/AppointmentSection";
 export { default as BookingHeaderStylist } from "./StylistBookingPage/BookingHeader/BookingHeader";
 export { default as BookingPage } from "./StylistBookingPage/BookingPage/BookingPage";
