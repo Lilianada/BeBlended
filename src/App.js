@@ -6,7 +6,7 @@ import ManageBookings from "./components/StylistBookingPage/ManageBookingsPage/M
 // import AppointmentStepOne from "./components/StylistBookingPage/Modals/CreateAppointmentModals/AppointementStepOneModal/AppointmentStepOne";
 // import CustomService from "./components/StylistBookingPage/Modals/CreateAppointmentModals/CustomService/CustomService";
 // import AppointmentConfirmation from "./components/StylistBookingPage/Modals/CreateAppointmentModals/AppointmentConfirmationModal/AppointmentConfirmation";
-import { PolicyModal } from "./components";
+import NormalService from "./components/StylistBookingPage/Modals/CreateAppointmentModals/NormalServiceModal/NormalService";
 // import {
 //   Home,
 //   Client,
@@ -47,7 +47,7 @@ function App() {
     {/* <CustomService/> */}
     {/* <AppointmentConfirmation/> */}
     {/* <AppointmentStepOne/> */}
-    <PolicyModal/>
+    <NormalService/>
     </div>
   );
 }

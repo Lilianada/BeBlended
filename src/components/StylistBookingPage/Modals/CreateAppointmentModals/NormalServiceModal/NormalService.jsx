@@ -1,11 +1,10 @@
-import React from "react";
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import { Backdrop } from "../../../../../components";
 import { motion } from "framer-motion";
 import { AiOutlineClose } from "react-icons/ai";
 
-export default function NormalService() {
+export default function NormalService({ openModal, closeModal}) {
   return ReactDOM.createPortal (
     <>
       {" "}

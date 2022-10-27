@@ -20,7 +20,7 @@ function PolicyModal({ openModal, closeModal }) {
   return ReactDOM.createPortal(
     <>
       {" "}
-      {/* {openModal ? ( */}
+      {openModal ? (
         <div className="policyModal">
           <Backdrop onClick={closeModal}>
             <motion.div
@@ -152,7 +152,7 @@ function PolicyModal({ openModal, closeModal }) {
             </motion.div>
           </Backdrop>
         </div>
-      {/* ) : null}{" "} */}
+      ) : null}{" "}
     </>,
     document.getElementById("modal")
   );
