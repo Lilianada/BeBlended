@@ -3,13 +3,14 @@ import ReactDOM from "react-dom";
 import { Backdrop } from "../../../../../components";
 import { motion } from "framer-motion";
 import { AiOutlineClose } from "react-icons/ai";
+import "./NormalService.scss";
 
-export default function NormalService({ openModal, closeModal}) {
-  return ReactDOM.createPortal (
+export default function NormalService({ openModal, closeModal }) {
+  return ReactDOM.createPortal(
     <>
       {" "}
-      {openModal ? (
-      <div className="infoWrap">
+      {/* {openModal ? ( */}
+      <div className="normalService">
         <Backdrop>
           <motion.div
             className="dialogContent"
@@ -31,11 +32,55 @@ export default function NormalService({ openModal, closeModal}) {
             </header>
 
             <div className="modalContent">
+              <form action="" className="appointmentForm">
+                <select name="select" className="selectDropdown">
+                  <option value="" className="optHead" defaultValue={true}>Select services...</option>
+                  {services.map((item, id) => (
+                    <option value={id} className="opt" key={id}>
+                      {item}
+                    </option>
+                  ))}
+                  <option value="" className="optButton">
+                    Custom Service
+                  </option>
+                </select>
+
+                <div className="selectDate">
+                  <HiOutlineCalendar className="HiOutlineCalendar" />
+                  <button className="select" onClick={(e) => e.preventDefault()}>
+                    Select a date
+                  </button>
+                </div>
+
+                <div className="selectTime">
+                  <AiOutlineClockCircle className="AiOutlineClockCircle" />
+                  <button disabled className="select">
+                    8:00am
+                    <BsChevronCompactDown fill="#000" size={18} />
+                  </button>
+                  <span className="bar"></span>
+                  <button disabled className="select">
+                    1:00pm
+                    <BsChevronCompactDown fill="#000" size={18} />
+                  </button>
+                </div>
+
+                <div className="clientDetails">
+                  <img src={AfroIcon} alt="Afro Vector" width={34} />
+                  <button className="select" onClick={(e) => e.preventDefault()}>
+                    Click here to add client details.
+                  </button>
+                </div>
+
+                <button className="saveBtn" onClick={handleClick}>
+                  Done
+                </button>
+              </form>
             </div>
-        </motion.div>
+          </motion.div>
         </Backdrop>
       </div>
-    ) : null }
+      {/* ) : null } */}
     </>, document.getElementById('modal')
   );
 }
