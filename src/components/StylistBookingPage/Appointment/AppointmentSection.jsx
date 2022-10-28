@@ -24,7 +24,11 @@ function AppointmentSection() {
             className="searchInput"
           />
           <button className="searchBtn">
-            <FaSearch size={14} fill="#907D7D" stroke="#907D7D" />
+            <FaSearch
+              size={14}
+              fill="#907D7D"
+              stroke="#907D7D"
+            />
           </button>
         </div>
       </div>

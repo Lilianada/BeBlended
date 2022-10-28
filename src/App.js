@@ -7,6 +7,7 @@ import AppointmentStepOne from "./components/StylistBookingPage/Modals/CreateApp
 // import CustomService from "./components/StylistBookingPage/Modals/CreateAppointmentModals/CustomService/CustomService";
 // import AppointmentConfirmation from "./components/StylistBookingPage/Modals/CreateAppointmentModals/AppointmentConfirmationModal/AppointmentConfirmation";
 import NormalService from "./components/StylistBookingPage/Modals/CreateAppointmentModals/NormalServiceModal/NormalService";
+import { Routes } from "react-router-dom";
 // import {
 //   Home,
 //   Client,
@@ -41,13 +42,14 @@ function App() {
       {/* <ReschedulePage/> */}
       {/* <TimeScheduler/> */}
 
-    {/* <BookingPage/> */}
+    <BookingPage/>
     {/* <ManageBookings/> */}
     {/* <InfoForm/> */}
     {/* <CustomService/> */}
     {/* <AppointmentConfirmation/> */}
     {/* <AppointmentStepOne/> */}
-    <NormalService/>
+    {/* <NormalService/> */}
+    {/* <Routes/> */}
     </div>
   );
 }
