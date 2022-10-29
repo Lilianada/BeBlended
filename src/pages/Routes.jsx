@@ -32,25 +32,24 @@ import Stylist from "./Stylist";
 
 function RoutedPages() {
   return (
-    <React.Fragment>
+    <Routes>
       {/* The nested route names need to be changed */}
-      <Routes>
-        <Route>
-          <Route path="/" element={<App />} />
-          <Route index path='.home' element={<Home />} />
-          <Route  element={<OnboardingStylistIntro />} />
-          <Route path="/stylist-step-one" element={<StepTwoStylist />} />
-          <Route path="/stylist-step-two" element={<StylistConfirmationAdvanced />} />
-          <Route path="/stylist-step-three" element={<OnboardStylistForm />} />
-          <Route path="/stylist-step-four" element={<BusinessPage />} />
-          <Route path="/stylist-step-five" element={<BusinessHour />} />
-          <Route path="/stylist-step-six" element={<BusinessModal />} />
-          <Route path="/stylist-step-seven" element={<IdUpload />} />
-          <Route path="/stylist-step-eight" element={<LicenseQtn />} />
-          <Route path="/stylist-step-nine" element={<LicenseUpload />} />
-          <Route path="/stylist-completed" element={<CompletedStylist />} />
-          <Route path="/logged-in-stylist" element={<Stylist />} />
-        </Route>
+      <Route>
+        <Route path="/" element={<App />} />
+        <Route index path='.home' element={<Home />} />
+        <Route  element={<OnboardingStylistIntro />} />
+        <Route path="/stylist-step-one" element={<StepTwoStylist />} />
+        <Route path="/stylist-step-two" element={<StylistConfirmationAdvanced />} />
+        <Route path="/stylist-step-three" element={<OnboardStylistForm />} />
+        <Route path="/stylist-step-four" element={<BusinessPage />} />
+        <Route path="/stylist-step-five" element={<BusinessHour />} />
+        <Route path="/stylist-step-six" element={<BusinessModal />} />
+        <Route path="/stylist-step-seven" element={<IdUpload />} />
+        <Route path="/stylist-step-eight" element={<LicenseQtn />} />
+        <Route path="/stylist-step-nine" element={<LicenseUpload />} />
+        <Route path="/stylist-completed" element={<CompletedStylist />} />
+        <Route path="/logged-in-stylist" element={<Stylist />} />
+      </Route>
 
       <Route>
         <Route index path="/onboard-client" element={<OnboardClient />} />
@@ -66,12 +65,10 @@ function RoutedPages() {
         <Route index path="/stylist-booking-page" element={<BookingPage/>} />
         <Route path="/cancellation" element={<Cancellation />} />
         <Route path="/reschedule-appointment" element={<ReschedulePage/>} />
-        <Route path="manage-bookings" element={<ManageBookings/>} />
+        <Route path="/manage-bookings" element={<ManageBookings/>} />
         <Route path="*" element={<ErrorPage />} />
       </Route>
     </Routes>
-
-    </React.Fragment>
   );
 }
 

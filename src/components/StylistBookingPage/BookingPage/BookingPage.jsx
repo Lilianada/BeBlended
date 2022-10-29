@@ -24,7 +24,7 @@ function BookingPage() {
                 </div>
                 <div className="bigGrid">
                     <div className="calendarWrap">
-                        <Schedule/>
+                        <Schedule />
                     </div>
                 </div>
             </div>
