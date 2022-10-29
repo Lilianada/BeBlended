@@ -2,11 +2,10 @@ import React from "react";
 import "./ServiceModal.scss";
 import CurrencyInput from "react-currency-input-field";
 import { useForm } from "react-hook-form";
-import { useState } from "react";
 
 function VariantTable({ variant, tags, input }) {
   // useform hooks
-  const { register, handleSubmit } = useForm();
+  const { register } = useForm();
   const handleRegistration = (data) => console.log(data);
   
   return (

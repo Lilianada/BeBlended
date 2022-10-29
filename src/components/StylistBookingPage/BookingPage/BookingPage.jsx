@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Calendar } from "react-calendar";
 import AppointmentSection from "../Appointment/AppointmentSection";
 import BookingHeader from "../BookingHeader/BookingHeader";
+import Schedule from "../Scheduler/Scheduler";
 import UpcomingBookings from "../UpcomingBookings/UpcomingBookings";
 import './BookingPage.scss';
 
@@ -23,7 +24,7 @@ function BookingPage() {
                 </div>
                 <div className="bigGrid">
                     <div className="calendarWrap">
-                        <Calendar onChange={onChange} value={value} />
+                        <Schedule/>
                     </div>
                 </div>
             </div>

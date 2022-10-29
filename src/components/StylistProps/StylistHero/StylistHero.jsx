@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./StylistHero.scss";
 import Rose from "../../../assets/Ellipse-Rose.png";
 import StylistHeader from "../StylistHeader/StylistHeader";
