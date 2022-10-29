@@ -59,7 +59,7 @@ function PolicyModal({ openModal, closeModal }) {
                     ))}
                   </select>
                 </div>
-                { isClicked == options[0].value && (
+                { isClicked === options[0].value && (
                 <div className="colShow">
                   <h6 className="colHead">Flexible Cancellation Policy:</h6>
                   <ul className="colList">
@@ -77,7 +77,7 @@ function PolicyModal({ openModal, closeModal }) {
                   </ul>
                 </div>
                 )}
-                { isClicked == options[1].value && (
+                { isClicked === options[1].value && (
                 <div className="colShow">
                   <h6 className="colHead">Moderate Cancellation Policy:</h6>
                   <ul className="colList">
@@ -95,7 +95,7 @@ function PolicyModal({ openModal, closeModal }) {
                   </ul>
                 </div>
                 )}
-                { isClicked == options[2].value && (
+                { isClicked === options[2].value && (
                 <div className="colShow">
                   <h6 className="colHead">Strict Cancellation Policy:</h6>
                   <ul className="colList">

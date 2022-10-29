@@ -48,7 +48,7 @@ function AppointmentSection() {
           Day
         </option>
         <option value="Week">Week</option>
-        <option value="Month">Month</option>
+        <option value="Month">Month</option> 
       </select>
     </section>
   );
