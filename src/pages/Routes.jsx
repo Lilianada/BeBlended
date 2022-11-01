@@ -6,6 +6,7 @@ import {
   BusinessHour,
   BusinessModal,
   BusinessPage,
+  Client,
   CompletedStylist,
   ErrorPage,
   Home,
@@ -22,13 +23,10 @@ import {
   StepThreeClient,
   StepTwoClient,
   StepTwoStylist,
+  Stylist,
   StylistConfirmationAdvanced,
-  StylistConfirmationMajor,
 } from "../components";
-import Cancellation from "../components/ClientBookingPage/CancellationPage/Cancellation";
 import ReschedulePage from "../components/ClientBookingPage/ReschedulePage/ReschedulePage";
-import Client from "./Client";
-import Stylist from "./Stylist";
 
 function RoutedPages() {
   return (
@@ -62,12 +60,13 @@ function RoutedPages() {
       </Route>
 
       <Route>
+        {/* Stylist Booking */}
         <Route index path="/stylist-booking-page" element={<BookingPage/>} />
-        <Route path="/cancellation" element={<Cancellation />} />
         <Route path="/reschedule-appointment" element={<ReschedulePage/>} />
         <Route path="/manage-bookings" element={<ManageBookings/>} />
-        <Route path="*" element={<ErrorPage />} />
       </Route>
+      
+        <Route path="*" element={<ErrorPage />} />
     </Routes>
   );
 }

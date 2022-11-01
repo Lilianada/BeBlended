@@ -1,6 +1,8 @@
+
 //Re-exporting components
 export { default as ErrorPage } from "./404Page/404Page";
 
+export { default as CreateAppointment} from "./StylistBookingPage/Modals/CreateAppointmentModals/AppointementStepOneModal/CreateAppointment";
 export { default as CancelModal } from "./ClientBookingPage/CancelModal/CancelModal";
 export { default as ConfirmPage } from "./ClientBookingPage/ConfirmPage/ConfirmPage";
 export { default as PayPage } from "./ClientBookingPage/Pay/PayPage";
@@ -13,7 +15,8 @@ export { default as TimeRescheduler } from "./ClientBookingPage/TimeScheduler/Ti
 export { default as Cancellation } from "./ClientBookingPage/CancellationPage/Cancellation";
 export { default as BookingHeaderClient } from "./ClientBookingPage/Header/Header";
 export { DeclineAppointment } from "./StylistBookingPage/ManageBookingsPage/ManageBookings";
-export { CancelAppointment, DateReschedule } from "./StylistBookingPage/Modals/AppointmentDetailsModal/AppointmentDetails";
+export { default as CancelAppointment } from "./StylistBookingPage/Modals/AppointmentDetailsModal/CancelAppointment";
+export { default as DateReschedule } from "./StylistBookingPage/Modals/AppointmentDetailsModal/DateReschedule";
 export { default as DuringAppointment } from "./StylistBookingPage/Modals/DuringAppointmentModal/DuringAppointment";
 export {  DeclareNoShow } from "./StylistBookingPage/Modals/DuringAppointmentModal/DuringAppointment";
 export { default as AppointmentSection } from "./StylistBookingPage/Appointment/AppointmentSection";

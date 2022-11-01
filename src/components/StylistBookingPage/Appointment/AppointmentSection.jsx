@@ -1,10 +1,10 @@
 import React from "react";
-import "./Appointment.scss";
+import { CreateAppointment } from "../../../components";
+import { AnimatePresence } from "framer-motion";
 import { GrPrevious } from "react-icons/gr";
 import { FaSearch } from "react-icons/fa";
 import { MdAdd } from "react-icons/md";
-import CreateAppointment from "../Modals/CreateAppointmentModals/AppointementStepOneModal/AppointmentStepOne";
-import { AnimatePresence } from "framer-motion";
+import "./Appointment.scss";
 
 function AppointmentSection() {
   const [openModal, setOpenModal] = React.useState(false);
@@ -34,7 +34,6 @@ function AppointmentSection() {
           </button>
         </div>
       </div>
-
       <button className="createBtn" onClick={handleModal}>
         <MdAdd
           size={28}

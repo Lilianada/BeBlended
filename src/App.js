@@ -3,7 +3,7 @@ import "./index.scss";
 import 'react-calendar/dist/Calendar.css';
 import ManageBookings from "./components/StylistBookingPage/ManageBookingsPage/ManageBookings";
 // import InfoForm from "./components/StylistBookingPage/Modals/CreateAppointmentModals/ClientInfoForm/InfoForm";
-import AppointmentStepOne from "./components/StylistBookingPage/Modals/CreateAppointmentModals/AppointementStepOneModal/AppointmentStepOne";
+import AppointmentStepOne from "./components/StylistBookingPage/Modals/CreateAppointmentModals/AppointementStepOneModal/CreateAppointment";
 // import CustomService from "./components/StylistBookingPage/Modals/CreateAppointmentModals/CustomService/CustomService";
 // import AppointmentConfirmation from "./components/StylistBookingPage/Modals/CreateAppointmentModals/AppointmentConfirmationModal/AppointmentConfirmation";
 import NormalService from "./components/StylistBookingPage/Modals/CreateAppointmentModals/NormalServiceModal/NormalService";
