@@ -32,9 +32,10 @@ function RoutedPages() {
   return (
     <Routes>
       {/* The nested route names need to be changed */}
-      <Route>
+      {/* <Route>
         <Route path="/" element={<App />} />
-        <Route index path='.home' element={<Home />} />
+        <Route path="*" element={<ErrorPage />} />
+        <Route index path='/home' element={<Home />} />
         <Route  element={<OnboardingStylistIntro />} />
         <Route path="/stylist-step-one" element={<StepTwoStylist />} />
         <Route path="/stylist-step-two" element={<StylistConfirmationAdvanced />} />
@@ -57,7 +58,7 @@ function RoutedPages() {
         <Route path="/client-step-Four" element={<StepFourClient />} />
         <Route path="/welcome" element={<StepFiveClient />} />
         <Route path="/logged-in-client" element={<Client />} />
-      </Route>
+      </Route> */}
 
       <Route>
         {/* Stylist Booking */}
@@ -66,7 +67,6 @@ function RoutedPages() {
         <Route path="/manage-bookings" element={<ManageBookings/>} />
       </Route>
       
-        <Route path="*" element={<ErrorPage />} />
     </Routes>
   );
 }

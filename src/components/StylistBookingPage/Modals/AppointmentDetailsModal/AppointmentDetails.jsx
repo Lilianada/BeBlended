@@ -1,30 +1,34 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./AppointmentDetails.scss";
-import { Backdrop, CancelAppointment, DateReschedule } from "../../../../components";
+import {
+  Backdrop,
+  CancelAppointment,
+  DateReschedule,
+} from "../../../../components";
 import { AnimatePresence, motion } from "framer-motion";
 import { AiOutlineClose } from "react-icons/ai";
 
-export default function AppointmentDetails({ openModal, closeModal }) {
+export default function AppointmentDetails({ openDetails, closeDetails }) {
   const [open, setOpen] = React.useState({
     cancel: false,
     reschedule: false,
   });
   const handleModal = (cancel, reschedule) => {
     setOpen((prevState) => {
-      return{
+      return {
         ...prevState,
         [cancel]: !prevState[cancel],
         [reschedule]: !prevState[reschedule],
-      }
-    })
-  }
+      };
+    });
+  };
 
   return ReactDOM.createPortal(
     <>
-      {openModal ? (
+      {openDetails ? (
         <section className="appointmentDetails">
-          <Backdrop onClick={closeModal}>
+          <Backdrop>
             <motion.div
               className="dialogContent"
               onClick={(e) => e.stopPropagation()}
@@ -38,7 +42,7 @@ export default function AppointmentDetails({ openModal, closeModal }) {
               exit="exit"
             >
               <header className="modalHeader">
-                <button className="closeButton" onClick={closeModal}>
+                <button className="closeButton" onClick={closeDetails}>
                   <AiOutlineClose size={26} />
                 </button>
               </header>
@@ -71,7 +75,10 @@ export default function AppointmentDetails({ openModal, closeModal }) {
                   <div className="buttonControls">
                     <button className="chatBtn">Chat with Leah</button>
                     <button className="viewBtn">View Profile</button>
-                    <button className="rescheduleBtn">
+                    <button
+                      className="rescheduleBtn"
+                      onClick={() => handleModal("reschedule")}
+                    >
                       Reschedule Appointment
                     </button>
                     <AnimatePresence
@@ -81,12 +88,17 @@ export default function AppointmentDetails({ openModal, closeModal }) {
                     >
                       {open && (
                         <DateReschedule
-                          openModal={open}
-                          closeModal={handleModal("reschedule")}
+                          openModal={open.reschedule}
+                          closeModal={setOpen}
                         />
                       )}
                     </AnimatePresence>
-                    <button className="cancelBtn">Cancel Appointment</button>
+                    <button
+                      className="cancelBtn"
+                      onClick={() => handleModal("cancel")}
+                    >
+                      Cancel Appointment
+                    </button>
                     <AnimatePresence
                       initial={false}
                       exitBeforeEnter={true}
@@ -94,8 +106,8 @@ export default function AppointmentDetails({ openModal, closeModal }) {
                     >
                       {open && (
                         <CancelAppointment
-                          openModal={open}
-                          closeModal={handleModal("cancel")}
+                          openModal={open.cancel}
+                          closeModal={setOpen}
                         />
                       )}
                     </AnimatePresence>

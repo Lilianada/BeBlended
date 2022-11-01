@@ -2,6 +2,8 @@ import React from "react";
 import "./UpcomingBookings.scss";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+import AppointmentDetails from "../Modals/AppointmentDetailsModal/AppointmentDetails";
 
 const services = [
   {
@@ -10,27 +12,31 @@ const services = [
     date: "August 23, 2021",
     time: "8:00am - 12:00pm",
   },
-  {
-    serviceName: "Cornrows",
-    clientName: "Sarah Jones",
-    date: "August 23, 2021",
-    time: "12:10pm - 3:00pm",
-  },
-  {
-    serviceName: "Micro Twists",
-    clientName: "Ayo Adetunde",
-    date: "August 23, 2021",
-    time: "8:00am - 12:00pm",
-  },
-  {
-    serviceName: "Knotless Braids",
-    clientName: "Ashley Nelson",
-    date: "October 23, 2021",
-    time: "11:00am - 5:00pm",
-  },
+  // {
+  //   serviceName: "Cornrows",
+  //   clientName: "Sarah Jones",
+  //   date: "August 23, 2021",
+  //   time: "12:10pm - 3:00pm",
+  // },
+  // {
+  //   serviceName: "Micro Twists",
+  //   clientName: "Ayo Adetunde",
+  //   date: "August 23, 2021",
+  //   time: "8:00am - 12:00pm",
+  // },
+  // {
+  //   serviceName: "Knotless Braids",
+  //   clientName: "Ashley Nelson",
+  //   date: "October 23, 2021",
+  //   time: "11:00am - 5:00pm",
+  // },
 ];
 
-function UpcomingBookings() {
+export default function UpcomingBookings() {
+  const [openModal, setOpenModal] = React.useState(false);
+  const handleModal = () => {
+    setOpenModal(!openModal);
+  };
   return (
     <div className="upcomingBookings">
       <div className="upcomingHeader">
@@ -46,7 +52,16 @@ function UpcomingBookings() {
             <div className="card">
               <div className="cardHead">
                 <p className="cardTitle"> {items.serviceName} </p>
-                <BsThreeDotsVertical style={{ cursor: "pointer" }} />
+                <BsThreeDotsVertical style={{ cursor: "pointer" }} onClick={handleModal} />
+                <AnimatePresence
+                  initial={false}
+                    exitBeforeEnter={true}
+                    onExitComplete={() => null}
+                  >
+                    {openModal && (
+                      <AppointmentDetails openDetails={openModal} closeDetails={handleModal} />
+                    )}
+                </AnimatePresence>
               </div>
               <div className="cardTexts">
                 <p className="text"> {items.clientName} </p>
@@ -65,4 +80,3 @@ function UpcomingBookings() {
   );
 }
 
-export default UpcomingBookings;

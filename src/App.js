@@ -6,8 +6,9 @@ import 'react-calendar/dist/Calendar.css';
 // import AppointmentConfirmation from "./components/StylistBookingPage/Modals/CreateAppointmentModals/AppointmentConfirmationModal/AppointmentConfirmation";
 // import AppointmentStepOne from "./components/StylistBookingPage/Modals/CreateAppointmentModals/AppointementStepOneModal/CreateAppointment";
 import ManageBookings from "./components/StylistBookingPage/ManageBookingsPage/ManageBookings";
+import RoutedPages from "./pages/Routes";
 // import NormalService from "./components/StylistBookingPage/Modals/CreateAppointmentModals/NormalServiceModal/NormalService";
-// import { Routes } from "react-router-dom";
+
 // import {
 //   Home,
 //   Client,
@@ -26,14 +27,14 @@ function App() {
       {/* <Stylist /> */}
       
 
-    <BookingPage/>
+    {/* <BookingPage/> */}
     {/* <ManageBookings/> */}
     {/* <InfoForm/> */}
     {/* <CustomService/> */}
     {/* <AppointmentConfirmation/> */}
     {/* <AppointmentStepOne/> */}
     {/* <NormalService/> */}
-    {/* <Routes/> */}
+    <RoutedPages/>
     </div>
   );
 }
