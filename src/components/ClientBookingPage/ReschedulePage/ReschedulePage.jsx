@@ -20,7 +20,7 @@ function ReschedulePage({ openModal, closeModal }) {
 
   return(
     <>
-      {/* {openModal ? ( */}
+      {openModal ? (
       <motion.section
         className="reschedule"
         onClick={(e) => e.stopPropagation()}
@@ -74,7 +74,7 @@ function ReschedulePage({ openModal, closeModal }) {
           </div>
         </div>
       </motion.section>
-      {/* ) : null} */}
+      ) : null}
     </>
   );
 }

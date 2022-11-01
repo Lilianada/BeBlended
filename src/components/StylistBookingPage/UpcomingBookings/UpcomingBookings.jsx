@@ -12,24 +12,24 @@ const services = [
     date: "August 23, 2021",
     time: "8:00am - 12:00pm",
   },
-  // {
-  //   serviceName: "Cornrows",
-  //   clientName: "Sarah Jones",
-  //   date: "August 23, 2021",
-  //   time: "12:10pm - 3:00pm",
-  // },
-  // {
-  //   serviceName: "Micro Twists",
-  //   clientName: "Ayo Adetunde",
-  //   date: "August 23, 2021",
-  //   time: "8:00am - 12:00pm",
-  // },
-  // {
-  //   serviceName: "Knotless Braids",
-  //   clientName: "Ashley Nelson",
-  //   date: "October 23, 2021",
-  //   time: "11:00am - 5:00pm",
-  // },
+  {
+    serviceName: "Cornrows",
+    clientName: "Sarah Jones",
+    date: "August 23, 2021",
+    time: "12:10pm - 3:00pm",
+  },
+  {
+    serviceName: "Micro Twists",
+    clientName: "Ayo Adetunde",
+    date: "August 23, 2021",
+    time: "8:00am - 12:00pm",
+  },
+  {
+    serviceName: "Knotless Braids",
+    clientName: "Ashley Nelson",
+    date: "October 23, 2021",
+    time: "11:00am - 5:00pm",
+  },
 ];
 
 export default function UpcomingBookings() {

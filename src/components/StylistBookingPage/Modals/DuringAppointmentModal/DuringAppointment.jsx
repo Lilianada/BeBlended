@@ -3,6 +3,7 @@ import "../AppointmentDetailsModal/AppointmentDetails.scss";
 import { Backdrop } from "../../..";
 import { motion } from "framer-motion";
 import { AiOutlineClose, AiFillDelete } from "react-icons/ai";
+import { BsCalendarXFill } from "react-icons/bs";
 
 export default function DuringAppointment({ handleModal }) {
     return (
@@ -107,7 +108,7 @@ export function DeclareNoShow() {
             <Backdrop>
                 <div className="cancelContent">
                     <div className="dialogHeader">
-                        <AiFillDelete size={35} />
+                        <BsCalendarXFill size={35} />
                     </div>
                     <div className="dialogBody">
                         <p>Are you sure you want to declare your client as a “no show”?</p>
