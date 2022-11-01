@@ -4,7 +4,7 @@ import Ellipse2 from "../../../assets/Ellipse-Pinkrose.png";
 import "./Work.scss";
 
 
-function Work() {
+export default function Work() {
   const [toggle, setToggle] = useState(1);
   const [click, setClick] = useState(1)
 
@@ -384,8 +384,5 @@ function Work() {
     </section>
   );
 }
-
-export default Work;
-
 
 

@@ -6,11 +6,12 @@ import { FaSearch } from "react-icons/fa";
 import { MdAdd } from "react-icons/md";
 import "./Appointment.scss";
 
-function AppointmentSection() {
+export default function AppointmentSection() {
   const [openModal, setOpenModal] = React.useState(false);
   const handleModal = () => {
     setOpenModal(!openModal);
   };
+
   return (
     <section className="appointmentSection">
       <button className="backBtn">
@@ -63,5 +64,3 @@ function AppointmentSection() {
     </section>
   );
 }
-
-export default AppointmentSection;

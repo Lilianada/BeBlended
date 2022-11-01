@@ -4,11 +4,9 @@ import Rose from "../../../assets/Ellipse-Rose.png";
 import StylistHeader from "../StylistHeader/StylistHeader";
 
 function StylistHero() {
-  // const [open, setOpen] = useState(false);
 
   const handleClick = (e) => {
     e.preventDefault();
-    // setOpen(true);
   };
 
   return (

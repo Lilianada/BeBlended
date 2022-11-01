@@ -7,7 +7,7 @@ import UpcomingBookings from "../UpcomingBookings/UpcomingBookings";
 import './BookingPage.scss';
 
 
-function BookingPage() {
+export default function BookingPage() {
     const [value, onChange] = useState(new Date());
 
     return (
@@ -32,4 +32,3 @@ function BookingPage() {
     );
 }
 
-export default BookingPage;
