@@ -43,18 +43,18 @@ const upcomingServices = [
 ];
 
 const pastServices = [
-  {
-    serviceName: "Knotless Braids",
-    clientName: "Ashley Nelson",
-    date: "October 23, 2021",
-    time: "11:00am - 5:00pm",
-  },
-  {
-    serviceName: "Knotless Braids",
-    clientName: "Ashley Nelson",
-    date: "October 23, 2021",
-    time: "11:00am - 5:00pm",
-  },
+//   {
+//     serviceName: "Knotless Braids",
+//     clientName: "Ashley Nelson",
+//     date: "October 23, 2021",
+//     time: "11:00am - 5:00pm",
+//   },
+//   {
+//     serviceName: "Knotless Braids",
+//     clientName: "Ashley Nelson",
+//     date: "October 23, 2021",
+//     time: "11:00am - 5:00pm",
+//   },
 ];
 
 export default function ManageBookings() {

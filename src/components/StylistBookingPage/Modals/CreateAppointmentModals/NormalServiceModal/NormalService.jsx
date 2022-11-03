@@ -15,7 +15,7 @@ const services = [
   "Crotchet Braids",
 ]
 
-export default function NormalService({ openModal, closeModal }) {
+export default function NormalService ({ openModal, closeModal }) {
   const handleClick = (e) => {
     e.preventDefault(); 
   }

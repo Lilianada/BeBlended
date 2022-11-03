@@ -38,8 +38,8 @@ export default function CustomService({ openModal, closeModal }) {
 
   return ReactDOM.createPortal (
     <>
-      {" "}
-      {openModal ? (
+      {/* {" "}
+      {openModal ? ( */}
       <div className="customService_Wrap">
         <Backdrop>
           <motion.div
@@ -180,7 +180,7 @@ export default function CustomService({ openModal, closeModal }) {
           </motion.div>
         </Backdrop>
       </div>
-) : null}{" "}
+{/* ) : null}{" "} */}
 </>,
     document.getElementById("modal")  );
 }

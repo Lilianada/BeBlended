@@ -34,7 +34,7 @@ function RoutedPages() {
       {/* The nested route names need to be changed */}
         <Route path="/" element={<App />} >
           <Route path="*" element={<ErrorPage />} />
-          <Route index path='/home' element={<Home />} >
+          <Route index path='/home' element={<Home />} />
             <Route  element={<OnboardingStylistIntro />} />
             <Route path="/stylist-step-one" element={<StepTwoStylist />} />
             <Route path="/stylist-step-two" element={<StylistConfirmationAdvanced />} />
@@ -49,13 +49,13 @@ function RoutedPages() {
             <Route path="/logged-in-stylist" element={<Stylist />} />
         </Route>
 
-        <Route index path="/onboard-client" element={<OnboardClient />} >
-          <Route path="/client-step-One" element={<StepOneClient />} />
-          <Route path="/client-step-Two" element={<StepTwoClient />} />
-          <Route path="/client-step-Three" element={<StepThreeClient />} />
-          <Route path="/client-step-Four" element={<StepFourClient />} />
-          <Route path="/welcome" element={<StepFiveClient />} />
-          <Route path="/logged-in-client" element={<Client />} />
+        <Route path="/onboard-client" element={<OnboardClient />} >
+          <Route path="/onboard-client/client-step-One" element={<StepOneClient />} />
+          <Route path="/onboard-client/client-step-Two" element={<StepTwoClient />} />
+          <Route path="/onboard-client/client-step-Three" element={<StepThreeClient />} />
+          <Route path="/onboard-client/client-step-Four" element={<StepFourClient />} />
+          <Route path="/onboard-client/welcome" element={<StepFiveClient />} />
+          <Route path="/onboard-client/logged-in-client" element={<Client />} />
         </Route>
 
         <Route>
@@ -64,7 +64,7 @@ function RoutedPages() {
           <Route path="/reschedule-appointment" element={<ReschedulePage/>} />
           <Route path="/manage-bookings" element={<ManageBookings/>} />
         </Route>
-      </Route>
+      {/* </Route> */}
     </Routes>
   );
 }

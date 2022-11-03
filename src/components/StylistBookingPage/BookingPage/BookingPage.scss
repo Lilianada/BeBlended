@@ -1,10 +1,15 @@
 .gridContainer {
-    display: grid;
-    grid-template-columns: 20rem 1fr;
-    grid-template-rows: auto;
-    grid-gap: 2rem;
-    padding: 10px;
-    margin: 2rem 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    @media screen and (min-width: 768px) {
+        display: grid;
+        grid-template-columns: 20rem 1fr;
+        grid-template-rows: auto;
+        grid-gap: 2rem;
+        padding: 10px;
+        margin: 2rem 2rem 1rem;
+    }
 
     .smallGrid {
         padding: 1rem 0;
