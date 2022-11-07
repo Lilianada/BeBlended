@@ -1,11 +1,32 @@
-import React from "react";
+import React, {useState} from "react";
 import { IoCalendarSharp } from "react-icons/io5";
 import "./ManageBookings.scss";
 import { BsThreeDotsVertical } from "react-icons/bs";
 
+const pastServices = [
+  //   {
+  //     serviceName: "Knotless Braids",
+  //     clientName: "Ashley Nelson",
+  //     date: "October 23, 2021",
+  //     time: "11:00am - 5:00pm",
+  //   },
+  //   {
+  //     serviceName: "Knotless Braids",
+  //     clientName: "Ashley Nelson",
+  //     date: "October 23, 2021",
+  //     time: "11:00am - 5:00pm",
+  //   },
+];
+
 export default function PastAppointments() {
+  const [activeTab, setActiveTab] = useState(1);
+  const isActive = (index) => setActiveTab(index);
+
+  const [tabOpen, setTabOpen] = useState(false);
+  const isOpen = () => setTabOpen(!tabOpen);
+
   return (
-    <Fragment>
+    <div>
         {pastServices.length > 0 ? (
               <div
                 className={`mappedTabs ${activeTab === 2 ? "activeTab" : ""}`}
@@ -48,6 +69,6 @@ export default function PastAppointments() {
                 </p>
               </div>
             )}
-    </Fragment>
+    </div>
     );
 }

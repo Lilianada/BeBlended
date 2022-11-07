@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { DeclineAppointment } from "../../../components";
 import { AnimatePresence } from "framer-motion";
 import { BsThreeDotsVertical } from "react-icons/bs";
@@ -33,6 +33,12 @@ const upcomingServices = [
 ];
 
 export default function UpcomingAppointment({openModal, closeModal}) {
+  const [activeTab, setActiveTab] = useState(1);
+  const isActive = (index) => setActiveTab(index);
+
+  const [tabOpen, setTabOpen] = useState(false);
+  const isOpen = () => setTabOpen(!tabOpen);
+
   return (
     <div>
       {upcomingServices.length > 0 ? (

@@ -61,7 +61,7 @@ export { default as BookingHeaderStylist } from "./StylistBookingPage/BookingHea
 export { default as BookingPage } from "./StylistBookingPage/BookingPage/BookingPage";
 export { default as ManageBookings } from "./StylistBookingPage/ManageBookingsPage/ManageBookings";
 export { default as DeclineAppointment } from "./StylistBookingPage/ManageBookingsPage/DeclineAppointment";
-export { default as PastAppointment } from "./StylistBookingPage/ManageBookingsPage/PastAppointment";
+export { default as PastAppointments } from "./StylistBookingPage/ManageBookingsPage/PastAppointments";
 export { default as UpcomingAppointment } from "./StylistBookingPage/ManageBookingsPage/UpcomingAppointment";
 export { default as AppointmentDetails } from "./StylistBookingPage/Modals/AppointmentDetailsModal/AppointmentDetails";
 export { default as CancelAppointment } from "./StylistBookingPage/Modals/AppointmentDetailsModal/CancelAppointment";
