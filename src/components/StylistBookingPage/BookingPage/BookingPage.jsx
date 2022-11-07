@@ -17,9 +17,9 @@ export default function BookingPage() {
 
             <div className="gridContainer">
                 <div className="smallGrid">
-                    <div className="calendarWrap">
+                    {/* <div className="calendarWrap">
                         <Calendar onChange={onChange} value={value} />
-                    </div>
+                    </div> */}
                     <UpcomingBookings/> 
                 </div>
                 <div className="bigGrid">
