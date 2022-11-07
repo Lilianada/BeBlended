@@ -4,11 +4,11 @@ import BookingHeader from "../BookingHeader/BookingHeader";
 import {
   BottomNavStylist,
   CreateAppointment,
-  PastAppointment,
+  PastAppointments,
+  UpcomingAppointment
 } from "../../../components";
 import { FaSearch } from "react-icons/fa";
 import { GrPrevious } from "react-icons/gr";
-import { IoCalendarSharp } from "react-icons/io5";
 import { MdAdd } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -18,8 +18,13 @@ export default function ManageBookings() {
   const [activeTab, setActiveTab] = useState(1);
   const isActive = (index) => setActiveTab(index);
 
-  const [tabOpen, setTabOpen] = useState(false);
-  const isOpen = () => setTabOpen(!tabOpen);
+  const [tabOpen, setTabOpen] = useState({
+    upcoming: false,
+    past: false
+  });
+  const isOpen = () => {
+    setTabOpen(!tabOpen);
+  }
 
   const [openModal, setOpenModal] = React.useState(false);
   const handleModal = () => {
@@ -106,7 +111,8 @@ export default function ManageBookings() {
           </div>
 
           <div className="tabFlex">
-            <PastAppointment />
+            <UpcomingAppointment openModal={handleModal} closeModal={openModal} ctiveTab={activeTab} open={isOpen}/>
+            <PastAppointments activeTab={activeTab} open={isOpen} />
           </div>
         </div>
       </section>

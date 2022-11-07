@@ -1,9 +1,10 @@
 import React, {useState} from "react";
-import { DeclineAppointment } from "../../../components";
+import { DeclineAppointment  } from "../../../components";
 import { AnimatePresence } from "framer-motion";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { IoCalendarSharp } from "react-icons/io5";
 import "./ManageBookings.scss";
+import ErrorBoundary from "../../ErrorBoundary/ErrorBoundary";
 
 const upcomingServices = [
   {
@@ -32,19 +33,14 @@ const upcomingServices = [
   },
 ];
 
-export default function UpcomingAppointment({openModal, closeModal}) {
-  const [activeTab, setActiveTab] = useState(1);
-  const isActive = (index) => setActiveTab(index);
-
-  const [tabOpen, setTabOpen] = useState(false);
-  const isOpen = () => setTabOpen(!tabOpen);
-
+export default function UpcomingAppointment({openModal, closeModal, activeTab, open}) {
+  
   return (
-    <div>
+    <ErrorBoundary>
       {upcomingServices.length > 0 ? (
         <div
           className={`mappedTabs ${activeTab === 1 ? "activeTab" : ""}`}
-          onClick={isOpen}
+          onClick={open}
         >
           {upcomingServices.map((items, id) => (
             <div className="serviceCard" key={id}>
@@ -61,15 +57,15 @@ export default function UpcomingAppointment({openModal, closeModal}) {
                 </div>
                 <div className="cardButtons">
                   <button className="accept"> Accept </button>
-                  <button className="decline"> Decline </button>
+                  <button className="decline" onClick={openModal}> Decline </button>
                   <AnimatePresence
                     initial={false}
                     exitBeforeEnter={true}
                     onExitComplete={() => null}
                   >
                     <DeclineAppointment
-                      openModal={closeModal}
-                      closeModal={openModal}
+                      openModal={openModal}
+                      closeModal={closeModal}
                     />
                   </AnimatePresence>
                 </div>
@@ -80,7 +76,7 @@ export default function UpcomingAppointment({openModal, closeModal}) {
       ) : (
         <div
           className={`noPastBooking ${activeTab === 2 ? "activeTab" : ""}`}
-          onClick={isOpen}
+          onClick={open}
         >
           <div className="calendarIcon">
             <IoCalendarSharp size={40} />
@@ -88,6 +84,6 @@ export default function UpcomingAppointment({openModal, closeModal}) {
           <p className="noBookingText">You have no upbookings.</p>
         </div>
       )}
-    </div>
+    </ErrorBoundary>
   );
 }

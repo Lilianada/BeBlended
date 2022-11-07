@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import { IoCalendarSharp } from "react-icons/io5";
 import "./ManageBookings.scss";
 import { BsThreeDotsVertical } from "react-icons/bs";
+import ErrorBoundary from "../../ErrorBoundary/ErrorBoundary";
 
 const pastServices = [
   //   {
@@ -18,19 +19,19 @@ const pastServices = [
   //   },
 ];
 
-export default function PastAppointments() {
-  const [activeTab, setActiveTab] = useState(1);
-  const isActive = (index) => setActiveTab(index);
+export default function PastAppointments({activeTab, open }) {
+  // const [activeTab, setActiveTab] = useState(1);
+  // const isActive = (index) => setActiveTab(index);
 
-  const [tabOpen, setTabOpen] = useState(false);
-  const isOpen = () => setTabOpen(!tabOpen);
+  // const [tabOpen, setTabOpen] = useState(false);
+  // const isOpen = () => setTabOpen(!tabOpen);
 
   return (
-    <div>
+    <ErrorBoundary>
         {pastServices.length > 0 ? (
               <div
                 className={`mappedTabs ${activeTab === 2 ? "activeTab" : ""}`}
-                onClick={isOpen}
+                onClick={open}
               >
                 <div className="mappedServices">
                   {pastServices.map((items, id) => (
@@ -59,7 +60,7 @@ export default function PastAppointments() {
                 className={`noPastBooking ${
                   activeTab === 2 ? "activeTab" : ""
                 }`}
-                onClick={isOpen}
+                onClick={open}
               >
                 <div className="calendarIcon">
                   <IoCalendarSharp size={40} />
@@ -69,6 +70,6 @@ export default function PastAppointments() {
                 </p>
               </div>
             )}
-    </div>
+    </ErrorBoundary>
     );
 }
