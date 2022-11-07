@@ -22,8 +22,15 @@ export default function ManageBookings() {
     upcoming: false,
     past: false
   });
-  const isOpen = () => {
-    setTabOpen(!tabOpen);
+  const isOpen = (upcoming, past) => {
+    setTabOpen((prev) => {
+      return {
+        ...prev, 
+        [upcoming]: !prev[upcoming],
+        [past]: !prev[past]
+      }}
+
+    );
   }
 
   const [openModal, setOpenModal] = React.useState(false);
@@ -111,8 +118,8 @@ export default function ManageBookings() {
           </div>
 
           <div className="tabFlex">
-            <UpcomingAppointment openModal={handleModal} closeModal={openModal} ctiveTab={activeTab} open={isOpen}/>
-            <PastAppointments activeTab={activeTab} open={isOpen} />
+            <UpcomingAppointment openModal={handleModal} closeModal={openModal} activeTab={activeTab} open={isOpen.upcoming}/>
+            <PastAppointments activeTab={activeTab} open={isOpen.past} />
           </div>
         </div>
       </section>

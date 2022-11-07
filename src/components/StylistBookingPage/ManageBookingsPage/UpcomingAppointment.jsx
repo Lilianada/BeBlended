@@ -48,7 +48,7 @@ export default function UpcomingAppointment({openModal, closeModal, activeTab, o
               <div className="card">
                 <div className="cardHead">
                   <p className="cardTitle"> {items.serviceName} </p>
-                  <BsThreeDotsVertical style={{ cursor: "pointer" }} />
+                  <BsThreeDotsVertical style={{ cursor: "pointer" }}/>
                 </div>
                 <div className="cardTexts">
                   <p className="text"> {items.clientName} </p>
@@ -57,7 +57,7 @@ export default function UpcomingAppointment({openModal, closeModal, activeTab, o
                 </div>
                 <div className="cardButtons">
                   <button className="accept"> Accept </button>
-                  <button className="decline" onClick={openModal}> Decline </button>
+                  <button className="decline" > Decline </button>
                   <AnimatePresence
                     initial={false}
                     exitBeforeEnter={true}

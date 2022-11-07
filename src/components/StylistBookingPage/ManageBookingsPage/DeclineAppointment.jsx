@@ -1,13 +1,14 @@
+import ReactDOM from "react";
 import { Backdrop } from "../../../components";
 import { AiFillDelete } from "react-icons/ai";
 import "./ManageBookings.scss";
 
 export default function DeclineAppointment({ openModal, closeModal }) {
-  return (
+  return ReactDOM.createPortal (
     (
       <>
         {openModal ? (
-          <div className="declineAppointment">
+          <motion.div className="declineAppointment">
             <Backdrop>
               <div className="declineContent">
                 <div className="dialogHeader">
@@ -34,7 +35,7 @@ export default function DeclineAppointment({ openModal, closeModal }) {
                 </div>
               </div>
             </Backdrop>
-          </div>
+          </motion.div>
         ) : null}
       </>
     ),

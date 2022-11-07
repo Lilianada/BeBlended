@@ -20,11 +20,6 @@ const pastServices = [
 ];
 
 export default function PastAppointments({activeTab, open }) {
-  // const [activeTab, setActiveTab] = useState(1);
-  // const isActive = (index) => setActiveTab(index);
-
-  // const [tabOpen, setTabOpen] = useState(false);
-  // const isOpen = () => setTabOpen(!tabOpen);
 
   return (
     <ErrorBoundary>
