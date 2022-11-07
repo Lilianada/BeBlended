@@ -1,7 +1,7 @@
 import React from "react";
-import { DeclineAppointment } from "../../../components";
-import { AnimatePresence } from "framer-motion";
 import { IoCalendarSharp } from "react-icons/io5";
+import "./ManageBookings.scss";
+import { BsThreeDotsVertical } from "react-icons/bs";
 
 export default function PastAppointments() {
   return (

@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import "./ManageBookings.scss";
 import BookingHeader from "../BookingHeader/BookingHeader";
-import { BottomNavStylist, CreateAppointment } from "../../../components";
-import { BsThreeDotsVertical } from "react-icons/bs";
+import {
+  BottomNavStylist,
+  CreateAppointment,
+  PastAppointment,
+} from "../../../components";
 import { FaSearch } from "react-icons/fa";
 import { GrPrevious } from "react-icons/gr";
 import { IoCalendarSharp } from "react-icons/io5";
 import { MdAdd } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
-
-
 
 const pastServices = [
   //   {
@@ -119,9 +120,7 @@ export default function ManageBookings() {
           </div>
 
           <div className="tabFlex">
-            
-
-            
+            <PastAppointment />
           </div>
         </div>
       </section>

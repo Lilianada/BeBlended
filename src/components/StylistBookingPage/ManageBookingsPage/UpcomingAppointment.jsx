@@ -1,7 +1,9 @@
 import React from "react";
 import { DeclineAppointment } from "../../../components";
 import { AnimatePresence } from "framer-motion";
+import { BsThreeDotsVertical } from "react-icons/bs";
 import { IoCalendarSharp } from "react-icons/io5";
+import "./ManageBookings.scss";
 
 const upcomingServices = [
   {
@@ -30,12 +32,7 @@ const upcomingServices = [
   },
 ];
 
-export default function UpcomingAppointment() {
-  const [openModal, setOpenModal] = React.useState(false);
-  const handleModal = () => {
-    setOpenModal(!openModal);
-  };
-
+export default function UpcomingAppointment({openModal, closeModal}) {
   return (
     <div>
       {upcomingServices.length > 0 ? (
@@ -65,7 +62,7 @@ export default function UpcomingAppointment() {
                     onExitComplete={() => null}
                   >
                     <DeclineAppointment
-                      openModal={handleModal}
+                      openModal={closeModal}
                       closeModal={openModal}
                     />
                   </AnimatePresence>
