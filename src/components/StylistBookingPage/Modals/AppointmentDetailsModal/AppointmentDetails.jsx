@@ -26,7 +26,7 @@ export default function AppointmentDetails({ openDetails, closeDetails }) {
 
   return ReactDOM.createPortal(
     <>
-      {openDetails ? (
+      {/* {openDetails ? ( */}
         <section className="appointmentDetails">
           <Backdrop>
             <motion.div
@@ -117,7 +117,7 @@ export default function AppointmentDetails({ openDetails, closeDetails }) {
             </motion.div>
           </Backdrop>
         </section>
-      ) : null}{" "}
+      {/* ) : null}{" "} */}
     </>,
     document.getElementById("modal")
   );

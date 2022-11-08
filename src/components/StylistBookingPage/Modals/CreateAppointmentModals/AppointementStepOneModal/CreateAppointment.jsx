@@ -4,23 +4,25 @@ import { Backdrop, DateReschedule, InfoForm, ErrorBoundary } from "../../../..";
 import { AnimatePresence, motion } from "framer-motion";
 import { AiOutlineClose, AiOutlineClockCircle } from "react-icons/ai";
 import { HiOutlineCalendar } from "react-icons/hi";
-import { BsChevronCompactDown } from "react-icons/bs";
+// import { BsChevronCompactDown } from "react-icons/bs";
 import AfroIcon from "../../../../../assets/AfroVector.svg";
 import "./AppointmentStepOne.scss";
 import { services, getTimer } from "./CreateAppointmentData";
 
 function CreateAppointment({ openModal, closeModal }) {
-  const handleClick = (e) => {
-    e.preventDefault();
-  };
+  // const handleClick = (e) => {
+  //   e.preventDefault();
+  // };
 
   const [open, setOpen] = useState({
     date: false,
     form: false,
   });
 
-  const handleModal = (date, form, e) => {
-    e.preventDefault();
+  const handleModal = (
+    date,
+    form,
+    ) => {
     setOpen((prevState) => {
       return {
         ...prevState,
@@ -77,31 +79,29 @@ function CreateAppointment({ openModal, closeModal }) {
 
                   <div className="selectDate">
                     <HiOutlineCalendar className="HiOutlineCalendar" />
-                    <button
+                    <div
                       className="select"
                       onClick={() => handleModal("date")}
                     >
                       Select a date
-                    </button>
+                    </div>
                     <AnimatePresence
                       initial={false}
                       exitBeforeEnter={true}
                       onExitComplete={() => null}
                     >
-                      <ErrorBoundary>
                         {open.date && (
                           <DateReschedule
                             openModal={open.date}
                             closeModal={setOpen}
                           />
                         )}
-                      </ErrorBoundary>
                     </AnimatePresence>
                   </div>
 
                   <div className="selectTime">
                     <AiOutlineClockCircle className="AiOutlineClockCircle" />
-                    <select name="select-time" className="select">
+                    <select name="select-time-one" className="select">
                       <option
                         value="id"
                         className="optHead"
@@ -118,7 +118,7 @@ function CreateAppointment({ openModal, closeModal }) {
                       })}
                     </select>
                     <span className="bar"></span>
-                    <select name="select-time" className="select">
+                    <select name="select-time-two" className="select">
                       <option
                         value="id"
                         className="optHead"
@@ -137,14 +137,12 @@ function CreateAppointment({ openModal, closeModal }) {
                   </div>
                   <div className="clientDetails">
                     <img src={AfroIcon} alt="Afro Vector" width={34} />
-                    <ErrorBoundary>
-                    <button
-                      className="select"
-                      onClick={() => handleModal("form")}
-                      >
-                      Click here to add client details.
-                    </button>
-                      </ErrorBoundary>
+                      <div
+                        className="select"
+                        onClick={() => handleModal('form') }
+                        >
+                        Click here to add client details.
+                      </div>
                     <AnimatePresence
                       initial={false}
                       exitBeforeEnter={true}
@@ -159,7 +157,7 @@ function CreateAppointment({ openModal, closeModal }) {
                     </AnimatePresence>
                   </div>
 
-                  <button className="saveBtn" onClick={handleClick}>
+                  <button className="saveBtn" onClick={(e) => e.preventDefault()}>
                     Save
                   </button>
                 </form>

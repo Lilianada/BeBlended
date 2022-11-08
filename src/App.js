@@ -3,7 +3,7 @@ import "./index.scss";
 import 'react-calendar/dist/Calendar.css';
 // import AppointmentConfirmation from "./components/StylistBookingPage/Modals/CreateAppointmentModals/AppointmentConfirmationModal/AppointmentConfirmation";
 // import AppointmentStepOne from "./components/StylistBookingPage/Modals/CreateAppointmentModals/AppointementStepOneModal/CreateAppointment";
-import {ManageBookings} from "./components";
+import {AppointmentDetails, ManageBookings} from "./components";
 import RoutedPages from "./pages/Routes";
 import InfoForm from "./components/StylistBookingPage/Modals/CreateAppointmentModals/ClientInfoFormModal/InfoForm";
 import CustomService from "./components/StylistBookingPage/Modals/CreateAppointmentModals/CustomServiceModal/CustomService";
@@ -28,11 +28,12 @@ function App() {
       
 
     {/* <BookingPage/> */}
-    <ManageBookings/>
+    {/* <ManageBookings/> */}
     {/* <InfoForm/> */}
     {/* <CustomService/> */}
     {/* <AppointmentConfirmation/> */}
     {/* <AppointmentStepOne/> */}
+    <AppointmentDetails/>
     {/* <NormalService/> */}
     {/* <RoutedPages/> */}
     </div>

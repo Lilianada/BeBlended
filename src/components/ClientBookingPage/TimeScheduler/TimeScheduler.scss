@@ -1,4 +1,6 @@
 .timeScheduler{
+    position: absolute;
+    z-index: 300;
     .dialogContent {
         background-color: var(--white);
         width: 90%;

@@ -121,7 +121,7 @@
 //Cancel Appointment
 .cancelAppointment, .chargeFee, .noShowModal {
     position: fixed;
-    z-index: 400;
+    z-index: 300;
 
     .cancelContent {
         display: grid;
@@ -192,7 +192,7 @@
 //Reschedule Appointment
 .dateReschedule {
     position: fixed;
-    z-index: 400;
+    z-index: 200;
     .dialogContent {
         display: block;
         background-color: var(--white);
