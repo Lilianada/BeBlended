@@ -2,6 +2,7 @@
 // export { default as OnboardingPages } from "../pages/Routes";
 
 
+export { default as ErrorBoundary } from "./ErrorBoundary/ErrorBoundary";
 export  { default as InfoForm } from "./StylistBookingPage/Modals/CreateAppointmentModals/ClientInfoFormModal/InfoForm";
 export { default as Client } from "../pages/Client";
 export { default as ClientProfile } from "../pages/ClientProfile";

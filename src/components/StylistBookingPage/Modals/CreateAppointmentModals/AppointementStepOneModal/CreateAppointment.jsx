@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import { Backdrop, DateReschedule, InfoForm } from "../../../..";
+import { Backdrop, DateReschedule, InfoForm, ErrorBoundary } from "../../../..";
 import { AnimatePresence, motion } from "framer-motion";
 import { AiOutlineClose, AiOutlineClockCircle } from "react-icons/ai";
 import { HiOutlineCalendar } from "react-icons/hi";
 import { BsChevronCompactDown } from "react-icons/bs";
 import AfroIcon from "../../../../../assets/AfroVector.svg";
 import "./AppointmentStepOne.scss";
-import {services, getTimer} from './CreateAppointmentData';
+import { services, getTimer } from "./CreateAppointmentData";
 
 function CreateAppointment({ openModal, closeModal }) {
   const handleClick = (e) => {
@@ -58,7 +58,11 @@ function CreateAppointment({ openModal, closeModal }) {
               <div className="modalContent">
                 <form action="" className="appointmentForm">
                   <select name="select" className="selectDropdown">
-                    <option value="services" className="optHead" defaultValue={true}>
+                    <option
+                      value="services"
+                      className="optHead"
+                      defaultValue={true}
+                    >
                       Select services...
                     </option>
                     {services.map((item, id) => (
@@ -75,65 +79,84 @@ function CreateAppointment({ openModal, closeModal }) {
                     <HiOutlineCalendar className="HiOutlineCalendar" />
                     <button
                       className="select"
-                      onClick={(e) => handleModal("date")}
+                      onClick={() => handleModal("date")}
                     >
                       Select a date
                     </button>
                     <AnimatePresence
-                        initial={false}
-                        exitBeforeEnter={true}
-                        onExitComplete={() => null}
-                        >
+                      initial={false}
+                      exitBeforeEnter={true}
+                      onExitComplete={() => null}
+                    >
+                      <ErrorBoundary>
                         {open.date && (
-                          <DateReschedule openModal={open .date} closeModal={setOpen} />
+                          <DateReschedule
+                            openModal={open.date}
+                            closeModal={setOpen}
+                          />
                         )}
-                      </AnimatePresence>
+                      </ErrorBoundary>
+                    </AnimatePresence>
                   </div>
 
                   <div className="selectTime">
                     <AiOutlineClockCircle className="AiOutlineClockCircle" />
                     <select name="select-time" className="select">
-                        <option value="id" className="optHead" defaultValue={true}>
-                          6:00 AM
-                        </option>
-                      {getTimer.map((time) => {
-                          return(
-                            <option value="id" className="opt">{time}</option>
-                          )
-                        })
-                      }
+                      <option
+                        value="id"
+                        className="optHead"
+                        defaultValue={true}
+                      >
+                        6:00 AM
+                      </option>
+                      {getTimer.map((time, id) => {
+                        return (
+                          <option key={id} value="id" className="opt">
+                            {time}
+                          </option>
+                        );
+                      })}
                     </select>
                     <span className="bar"></span>
                     <select name="select-time" className="select">
-                        <option value="id" className="optHead" defaultValue={true}>
-                          6:00 AM
-                        </option>
-                      {getTimer.map((time) => {
-                          return(
-                            <option value="id" className="opt">{time}</option>
-                          )
-                        })
-                      }
+                      <option
+                        value="id"
+                        className="optHead"
+                        defaultValue={true}
+                      >
+                        6:00 AM
+                      </option>
+                      {getTimer.map((time, id) => {
+                        return (
+                          <option value="id" className="opt" key={id}>
+                            {time}
+                          </option>
+                        );
+                      })}
                     </select>
                   </div>
-
                   <div className="clientDetails">
                     <img src={AfroIcon} alt="Afro Vector" width={34} />
+                    <ErrorBoundary>
                     <button
                       className="select"
                       onClick={() => handleModal("form")}
-                    >
+                      >
                       Click here to add client details.
                     </button>
-                      <AnimatePresence
-                        initial={false}
-                        exitBeforeEnter={true}
-                        onExitComplete={() => null}
-                        >
+                      </ErrorBoundary>
+                    <AnimatePresence
+                      initial={false}
+                      exitBeforeEnter={true}
+                      onExitComplete={() => null}
+                    >
                         {open.form && (
-                        <InfoForm openModal={open.form} closeModal={setOpen} />
+                          <InfoForm
+                            openModal={open.form}
+                            closeModal={setOpen}
+                          />
                         )}
-                      </AnimatePresence>
+                    </AnimatePresence>
                   </div>
 
                   <button className="saveBtn" onClick={handleClick}>
