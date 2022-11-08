@@ -33,8 +33,8 @@ function App() {
     {/* <CustomService/> */}
     {/* <AppointmentConfirmation/> */}
     {/* <AppointmentStepOne/> */}
-    <AppointmentDetails/>
-    {/* <NormalService/> */}
+    {/* <AppointmentDetails/> */}
+    <NormalService/>
     {/* <RoutedPages/> */}
     </div>
   );

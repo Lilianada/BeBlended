@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import { Backdrop, DateReschedule, InfoForm, ErrorBoundary } from "../../../..";
+import { Backdrop, DateReschedule, InfoForm } from "../../../../../components";
 import { AnimatePresence, motion } from "framer-motion";
 import { AiOutlineClose, AiOutlineClockCircle } from "react-icons/ai";
 import { HiOutlineCalendar } from "react-icons/hi";
@@ -10,10 +10,6 @@ import "./AppointmentStepOne.scss";
 import { services, getTimer } from "./CreateAppointmentData";
 
 function CreateAppointment({ openModal, closeModal }) {
-  // const handleClick = (e) => {
-  //   e.preventDefault();
-  // };
-
   const [open, setOpen] = useState({
     date: false,
     form: false,

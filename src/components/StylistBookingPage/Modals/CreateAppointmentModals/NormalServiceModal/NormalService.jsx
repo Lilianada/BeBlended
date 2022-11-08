@@ -1,24 +1,31 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import { Backdrop } from "../../../../../components";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { AiOutlineClose, AiOutlineClockCircle } from "react-icons/ai";
 import { HiOutlineCalendar } from "react-icons/hi";
-import { BsChevronCompactDown } from "react-icons/bs";
 import AfroIcon from "../../../../../assets/AfroVector.svg";
 import "./NormalService.scss";
-
-const services = [
-  "Classic Box Braids",
-  "Knotless Box Braids",
-  "Braided Ponytail",
-  "Crotchet Braids",
-]
+import { services, getTimer } from "../../CreateAppointmentModals/AppointementStepOneModal/CreateAppointmentData";
+import { Backdrop, DateReschedule, InfoForm } from "../../../../../components";
 
 export default function NormalService ({ openModal, closeModal }) {
-  const handleClick = (e) => {
-    e.preventDefault(); 
-  }
+  const [open, setOpen] = useState({
+    date: false,
+    form: false,
+  });
+
+  const handleModal = (
+    date,
+    form,
+    ) => {
+    setOpen((prevState) => {
+      return {
+        ...prevState,
+        [date]: !prevState[date],
+        [form]: !prevState[form],
+      };
+    });
+  };
 
   return ReactDOM.createPortal(
     <>
@@ -77,33 +84,87 @@ export default function NormalService ({ openModal, closeModal }) {
                 </div>
 
                 <div className="selectDate">
-                  <HiOutlineCalendar className="HiOutlineCalendar" />
-                  <button className="select" onClick={(e) => e.preventDefault()}>
-                    Select a date
-                  </button>
-                </div>
+                    <HiOutlineCalendar className="HiOutlineCalendar" />
+                    <div
+                      className="select"
+                      onClick={() => handleModal("date")}
+                    >
+                      Select a date
+                    </div>
+                    <AnimatePresence
+                      initial={false}
+                      exitBeforeEnter={true}
+                      onExitComplete={() => null}
+                    >
+                        {open.date && (
+                          <DateReschedule
+                            openModal={open.date}
+                            closeModal={setOpen}
+                          />
+                        )}
+                    </AnimatePresence>
+                  </div>
 
                 <div className="selectTime">
                   <AiOutlineClockCircle className="AiOutlineClockCircle" />
-                  <button disabled className="select">
-                    8:00am
-                    <BsChevronCompactDown fill="#000" size={18} />
-                  </button>
-                  <span className="bar"></span>
-                  <button disabled className="select">
-                    1:00pm
-                    <BsChevronCompactDown fill="#000" size={18} />
-                  </button>
+                  <select name="select-time-one" className="select">
+                      <option
+                        value="id"
+                        className="optHead"
+                        defaultValue={true}
+                      >
+                        6:00 AM
+                      </option>
+                      {getTimer.map((time, id) => {
+                        return (
+                          <option key={id} value="id" className="opt">
+                            {time}
+                          </option>
+                        );
+                      })}
+                    </select>
+                    <span className="bar"></span>
+                    <select name="select-time-two" className="select">
+                      <option
+                        value="id"
+                        className="optHead"
+                        defaultValue={true}
+                      >
+                        6:00 AM
+                      </option>
+                      {getTimer.map((time, id) => {
+                        return (
+                          <option value="id" className="opt" key={id}>
+                            {time}
+                          </option>
+                        );
+                      })}
+                    </select>
                 </div>
 
                 <div className="clientDetails">
-                  <img src={AfroIcon} alt="Afro Vector" width={34} />
-                  <button className="select" onClick={(e) => e.preventDefault()}>
-                    Click here to add client details.
-                  </button>
-                </div>
+                    <img src={AfroIcon} alt="Afro Vector" width={34} />
+                      <div
+                        className="select"
+                        onClick={() => handleModal('form') }
+                        >
+                        Click here to add client details.
+                      </div>
+                    <AnimatePresence
+                      initial={false}
+                      exitBeforeEnter={true}
+                      onExitComplete={() => null}
+                    >
+                        {open.form && (
+                          <InfoForm
+                            openModal={open.form}
+                            closeModal={setOpen}
+                          />
+                        )}
+                    </AnimatePresence>
+                  </div>
 
-                <button className="saveBtn" onClick={handleClick}>
+                <button className="saveBtn" onClick={(e) => e.preventDefault()}>
                   Save
                 </button>
               </form>
@@ -111,7 +172,7 @@ export default function NormalService ({ openModal, closeModal }) {
           </motion.div>
         </Backdrop>
       </div>
-      {/* ) : null } */}
+      {/*  ) : null } */}
     </>, document.getElementById('modal')
   );
 }
