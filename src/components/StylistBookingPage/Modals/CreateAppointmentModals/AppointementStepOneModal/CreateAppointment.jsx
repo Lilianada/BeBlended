@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import { Backdrop } from "../../../..";
+import { Backdrop, DateReschedule, InfoForm } from "../../../..";
 import { AnimatePresence, motion } from "framer-motion";
 import { AiOutlineClose, AiOutlineClockCircle } from "react-icons/ai";
 import { HiOutlineCalendar } from "react-icons/hi";
 import { BsChevronCompactDown } from "react-icons/bs";
 import AfroIcon from "../../../../../assets/AfroVector.svg";
 import "./AppointmentStepOne.scss";
-import InfoForm from "../ClientInfoFormModal/InfoForm";
 import {services, getTimer} from './CreateAppointmentData';
 
 function CreateAppointment({ openModal, closeModal }) {
@@ -76,10 +75,19 @@ function CreateAppointment({ openModal, closeModal }) {
                     <HiOutlineCalendar className="HiOutlineCalendar" />
                     <button
                       className="select"
-                      onClick={(e) => e.preventDefault()}
+                      onClick={(e) => handleModal("date")}
                     >
                       Select a date
                     </button>
+                    <AnimatePresence
+                        initial={false}
+                        exitBeforeEnter={true}
+                        onExitComplete={() => null}
+                        >
+                        {open.date && (
+                          <DateReschedule openModal={open .date} closeModal={setOpen} />
+                        )}
+                      </AnimatePresence>
                   </div>
 
                   <div className="selectTime">

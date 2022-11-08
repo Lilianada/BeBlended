@@ -1,5 +1,8 @@
 //Re-exporting components
 // export { default as OnboardingPages } from "../pages/Routes";
+
+
+export  { default as InfoForm } from "./StylistBookingPage/Modals/CreateAppointmentModals/ClientInfoFormModal/InfoForm";
 export { default as Client } from "../pages/Client";
 export { default as ClientProfile } from "../pages/ClientProfile";
 export { default as Home } from "../pages/Home";

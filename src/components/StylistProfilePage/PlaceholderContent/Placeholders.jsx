@@ -23,7 +23,7 @@ import Carousel from "nuka-carousel";
 import Header from "./Header";
 import { Rating } from "react-simple-star-rating";
 import ReviewedFilled from "../StylistProfileModals/ReviewFilled/ReviewFilled";
-import {services, images, addon} from "./Placeholderdata";
+import {service, images, addon} from "./Placeholderdata";
 
 function Placeholders() {
   const [rating, setRating] = useState(0);
