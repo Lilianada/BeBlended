@@ -8,13 +8,7 @@ import { BsChevronCompactDown } from "react-icons/bs";
 import AfroIcon from "../../../../../assets/AfroVector.svg";
 import "./AppointmentStepOne.scss";
 import InfoForm from "../ClientInfoFormModal/InfoForm";
-
-const services = [
-  "Classic Box Braids",
-  "Knotless Box Braids",
-  "Braided Ponytail",
-  "Crotchet Braids",
-];
+import {services, getTimer} from './CreateAppointmentData';
 
 function CreateAppointment({ openModal, closeModal }) {
   const handleClick = (e) => {
@@ -65,7 +59,7 @@ function CreateAppointment({ openModal, closeModal }) {
               <div className="modalContent">
                 <form action="" className="appointmentForm">
                   <select name="select" className="selectDropdown">
-                    <option value="" className="optHead" defaultValue={true}>
+                    <option value="services" className="optHead" defaultValue={true}>
                       Select services...
                     </option>
                     {services.map((item, id) => (
@@ -90,15 +84,29 @@ function CreateAppointment({ openModal, closeModal }) {
 
                   <div className="selectTime">
                     <AiOutlineClockCircle className="AiOutlineClockCircle" />
-                    <button disabled className="select">
-                      8:00am
-                      <BsChevronCompactDown fill="#000" size={18} />
-                    </button>
+                    <select name="select-time" className="select">
+                        <option value="id" className="optHead" defaultValue={true}>
+                          6:00 AM
+                        </option>
+                      {getTimer.map((time) => {
+                          return(
+                            <option value="id" className="opt">{time}</option>
+                          )
+                        })
+                      }
+                    </select>
                     <span className="bar"></span>
-                    <button disabled className="select">
-                      1:00pm
-                      <BsChevronCompactDown fill="#000" size={18} />
-                    </button>
+                    <select name="select-time" className="select">
+                        <option value="id" className="optHead" defaultValue={true}>
+                          6:00 AM
+                        </option>
+                      {getTimer.map((time) => {
+                          return(
+                            <option value="id" className="opt">{time}</option>
+                          )
+                        })
+                      }
+                    </select>
                   </div>
 
                   <div className="clientDetails">
@@ -109,15 +117,15 @@ function CreateAppointment({ openModal, closeModal }) {
                     >
                       Click here to add client details.
                     </button>
-                    {open.form && (
                       <AnimatePresence
                         initial={false}
                         exitBeforeEnter={true}
                         onExitComplete={() => null}
-                      >
+                        >
+                        {open.form && (
                         <InfoForm openModal={open.form} closeModal={setOpen} />
+                        )}
                       </AnimatePresence>
-                    )}
                   </div>
 
                   <button className="saveBtn" onClick={handleClick}>

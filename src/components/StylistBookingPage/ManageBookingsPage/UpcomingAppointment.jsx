@@ -13,24 +13,12 @@ const upcomingServices = [
     date: "August 23, 2021",
     time: "8:00am - 12:00pm",
   },
-  {
-    serviceName: "Cornrows",
-    clientName: "Sarah Jones",
-    date: "August 23, 2021",
-    time: "12:10pm - 3:00pm",
-  },
-  {
-    serviceName: "Micro Twists",
-    clientName: "Ayo Adetunde",
-    date: "August 23, 2021",
-    time: "8:00am - 12:00pm",
-  },
-  {
-    serviceName: "Knotless Braids",
-    clientName: "Ashley Nelson",
-    date: "October 23, 2021",
-    time: "11:00am - 5:00pm",
-  },
+  // {
+  //   serviceName: "Cornrows",
+  //   clientName: "Sarah Jones",
+  //   date: "August 23, 2021",
+  //   time: "12:10pm - 3:00pm",
+  // },
 ];
 
 export default function UpcomingAppointment({openModal, closeModal, activeTab, open}) {
@@ -58,7 +46,7 @@ export default function UpcomingAppointment({openModal, closeModal, activeTab, o
                 <div className="cardButtons">
                   <button className="accept"> Accept </button>
                   <button className="decline" > Decline </button>
-                  <AnimatePresence
+                  {/* <AnimatePresence
                     initial={false}
                     exitBeforeEnter={true}
                     onExitComplete={() => null}
@@ -67,7 +55,7 @@ export default function UpcomingAppointment({openModal, closeModal, activeTab, o
                       openModal={openModal}
                       closeModal={closeModal}
                     />
-                  </AnimatePresence>
+                  </AnimatePresence> */}
                 </div>
               </div>
             </div>

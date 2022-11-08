@@ -23,6 +23,7 @@ import Carousel from "nuka-carousel";
 import Header from "./Header";
 import { Rating } from "react-simple-star-rating";
 import ReviewedFilled from "../StylistProfileModals/ReviewFilled/ReviewFilled";
+import {services, images, addon} from "./Placeholderdata";
 
 function Placeholders() {
   const [rating, setRating] = useState(0);
@@ -69,58 +70,7 @@ function Placeholders() {
     });
   };
 
-  //carousel
-  const images = [
-    {
-      id: 1,
-      item: "images",
-    },
-    {
-      id: 2,
-      item: "images",
-    },
-    {
-      id: 3,
-      item: "images",
-    },
-    {
-      id: 4,
-      item: "images",
-    },
-  ];
-
-  //service array
-  const service = [
-    {
-      serviceName: "Classic Box Braids",
-      servicePrice: 180,
-    },
-    {
-      serviceName: "Knotless Box Braids",
-      servicePrice: 120,
-    },
-    {
-      serviceName: "Braided Ponytail",
-      servicePrice: 280,
-    },
-    {
-      serviceName: "Crotchet Braids",
-      servicePrice: 110,
-    },
-  ];
-
-  //addon array
-  const addon = [
-    {
-      addonName: "Hair extensions",
-      addonPrice: 180,
-    },
-    {
-      addonName: "Hair accessories",
-      addonPrice: 120,
-    },
-  ];
-
+  
   return (
     <section className="contentWrap">
       <Header />
@@ -479,7 +429,7 @@ function Placeholders() {
         {/* Review plcaeholders */}
         <div className="reviewsPlaceholder">
           {/*<div className="reviewsPlaceholder_Head">
-            <h5 className="name">Reviews</h5>
+            <h5 classNamge="name">Reviews</h5>
             <hr />
           </div>
            <div className="reviewsPlaceholder_FLex">
