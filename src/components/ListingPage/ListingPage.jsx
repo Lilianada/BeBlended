@@ -35,7 +35,9 @@ export default function ListingPage () {
         </div>
       </div>
       <BottomNavClient/>
-      <Footer/>
+      <div className="footer">
+        <Footer/>
+      </div>
     </section>
   );
 }
