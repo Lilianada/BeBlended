@@ -8,57 +8,58 @@
         align-items: center;
         padding: 1.5rem 1rem;
         position: relative;
-    }
+
+        .backBtn {
+            border: none;
+            background: none;
+            outline: none;
+            padding: 0 0.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            margin-right: auto;
+            margin-left: 0;
+                
     
-    .backBtn {
-        border: none;
-        background: none;
-        outline: none;
-        padding: 0 0.5rem;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        margin-right: 1rem;
-        // margin-bottom: 0;
-
-        @media screen and (min-width: 768px) {
-            margin-bottom: 1rem;
-            // margin-top: 0;
+            @media screen and (min-width: 1024px) {
+                // margin-bottom: 1rem;
+                display: none;
+            }
         }
-    }
 
-    .stylistDesktop__Header{
-        display: none;
-    }
-
-    .searchBox{
-        display: flex;
-        align-items: center;
-        background: var(--white);
-        border: 1px solid var(--black);
-        border-radius: 10px;
-
-        .inputField{
-            display: inherit;
-            padding: .5rem 0rem;
-            
-            .field{
-                width: 100%;
-                border: none;
-                height: 1.5rem;
-                font-size: var(--eighteen);
-                outline: none;
-                padding: 0 .5rem;
-                @media screen and (min-width: 768px) {
-                    width: 13rem;
+        .searchBox{
+            display: flex;
+            align-items: center;
+            background: var(--white);
+            border: 1px solid var(--black);
+            border-radius: 10px;
+            margin: auto;
+    
+            .inputField{
+                display: inherit;
+                padding: .5rem 0rem;
+                
+                .field{
+                    width: 100%;
+                    border: none;
+                    height: 1.5rem;
+                    font-size: var(--eighteen);
+                    outline: none;
+                    padding: 0 .5rem;
+                    @media screen and (min-width: 768px) {
+                        width: 13rem;
+                    }
                 }
             }
         }
-        
+
     }
-    
-    
-    @media screen and (min-width: 900px) {
+
+    .stylistDesktop__Header{
+        display: none !important;
+    }
+
+    @media screen and (min-width: 1024px) {
         .stylistMobile__Header{
             display: none;
         }
@@ -167,3 +168,5 @@
         }
     }
 }
+    
+    

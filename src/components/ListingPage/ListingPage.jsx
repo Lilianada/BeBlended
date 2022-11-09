@@ -1,7 +1,7 @@
 import React from "react";
 import { IoIosPricetags, IoMdTime }from 'react-icons/io';
 import { IoLocationSharp }from 'react-icons/io5';
-import { BottomNavClient, BottomNavStylist } from "../../components";
+import { BottomNavClient, Footer } from "../../components";
 import ListingHead from "./ListingHead/ListingHead";
 import Map from '../../assets/Map.png';
 import './ListingPage.scss';
@@ -35,7 +35,7 @@ export default function ListingPage () {
         </div>
       </div>
       <BottomNavClient/>
-      <BottomNavStylist/>
+      <Footer/>
     </section>
   );
 }

@@ -21,8 +21,8 @@ export default function Listings() {
                             </div>
                             <p className="location"> {item.address} </p>
                             <div className="tags">
-                                {item.tags.map((tag) => (
-                                    <p className="tag" key={tag.id}> {tag} </p>
+                                {item.tags.map((tag, id) => (
+                                    <p className="tag" key={id}> {tag} </p>
                                 ))}
                             </div>
                             <div className="services">
