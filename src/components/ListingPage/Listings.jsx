@@ -1,4 +1,5 @@
 import React from "react";
+import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { ListingData } from "./ListingData";
 
 export default function Listings() {
@@ -6,14 +7,32 @@ export default function Listings() {
       <div className="listings">
             {
                 ListingData.map((item, id) => (
-                    <div className="listingsWrap">
+                <div className="listing" key={id}>
+                    <div className="listingsWrap" >
                         <div className="profileImage">
                             <img src={item.profileImage} alt="Listing Image" />
                         </div>
                         <div className="listingInfo">
-
+                            <h5 className="title"> {item.stylistName} </h5>
+                            <div className="ratingReviews">
+                                <AiFillStar size={18} style={{marginRight: '.75rem'}} fill="#893583" />
+                                <p className="rating"> {item.rating} </p>
+                                <p className="review"> ({item.reviews} reviews) </p>
+                            </div>
+                            <p className="location"> {item.address} </p>
+                            <div className="tags">
+                                <div className="tag"> {item.tags} </div>
+                            </div>
+                            <div className="services">
+                                <p className="serviceTitle">Services provided:</p>
+                                <p className="serviceLists"> {item.services} </p>
+                            </div>
                         </div>
                     </div>
+                    <div className="like">
+                        {item.like === true ? <AiFillHeart size={24} /> : <AiOutlineHeart size={24}/>}
+                    </div>
+                </div>
                 ))
             }
 

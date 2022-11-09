@@ -1,7 +1,7 @@
 import Profile1 from '../../assets/BraidedLady.png';
-import Profile2 from '../../assets/BraidedLady.png';
-import Profile3 from '../../assets/BraidedLady.png';
-import Profile4 from '../../assets/BraidedLady.png';
+import Profile2 from '../../assets/CelebrityLady.png';
+import Profile3 from '../../assets/FreeAfro.png';
+import Profile4 from '../../assets/WindyHair.png';
 import Profile5 from '../../assets/BraidedLady.png';
 
 
