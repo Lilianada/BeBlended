@@ -1,0 +1,36 @@
+<svg width="297" height="32" viewBox="0 0 297 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="6" y1="23.5" x2="284" y2="23.5" stroke="#989898"/>
+<rect x="36" y="14" width="2.41901" height="9" fill="#989898"/>
+<rect x="162.595" y="14" width="2.41901" height="9" fill="#989898"/>
+<rect x="173.077" y="14" width="2.41901" height="9" fill="#989898"/>
+<rect x="180.334" y="14" width="2.41901" height="9" fill="#989898"/>
+<rect x="193.236" y="14" width="2.41901" height="9" fill="#989898"/>
+<rect x="201.299" y="14" width="2.41901" height="9" fill="#989898"/>
+<rect x="206.137" y="14" width="2.41901" height="9" fill="#989898"/>
+<rect x="214.201" y="14" width="2.41901" height="9" fill="#989898"/>
+<rect x="257.743" y="14" width="2.41901" height="9" fill="#989898"/>
+<rect x="262.581" y="14" width="2.41901" height="9" fill="#989898"/>
+<rect x="40.838" y="4" width="2.41901" height="19" fill="#989898"/>
+<rect x="45.676" y="9" width="2.41901" height="14" fill="#989898"/>
+<rect x="50.5141" y="9" width="2.41901" height="14" fill="#989898"/>
+<rect x="55.3521" y="4" width="2.41901" height="19" fill="#989898"/>
+<rect x="64.2218" y="4" width="2.41901" height="19" fill="#989898"/>
+<rect x="69.0599" y="4" width="2.41901" height="19" fill="#989898"/>
+<rect x="80.3486" y="4" width="2.41901" height="19" fill="#989898"/>
+<rect x="86.7993" y="4" width="2.41901" height="19" fill="#989898"/>
+<rect x="91.6373" y="4" width="2.41901" height="19" fill="#989898"/>
+<rect x="98.088" width="2.41901" height="23" fill="#989898"/>
+<rect x="104.539" width="2.41901" height="23" fill="#989898"/>
+<rect x="110.989" width="2.41901" height="23" fill="#989898"/>
+<rect x="121.472" width="2.41901" height="23" fill="#989898"/>
+<rect x="135.18" width="2.41901" height="23" fill="#989898"/>
+<rect x="146.468" width="2.41901" height="23" fill="#989898"/>
+<rect x="227.908" width="2.41901" height="23" fill="#989898"/>
+<rect x="235.165" width="2.41901" height="23" fill="#989898"/>
+<rect x="243.229" width="2.41901" height="23" fill="#989898"/>
+<rect x="250.486" width="2.41901" height="23" fill="#989898"/>
+<circle cx="7.5" cy="24.5" r="7" fill="white" stroke="#DEDDDD"/>
+<path d="M7.5 27.8333V22M10 27.8333V22M5 27.8333V22" stroke="#DEDDDD" stroke-linecap="round"/>
+<circle cx="289.5" cy="24.5" r="7" fill="white" stroke="#DEDDDD"/>
+<path d="M289.5 27.8333V22M292 27.8333V22M287 27.8333V22" stroke="#DEDDDD" stroke-linecap="round"/>
+</svg>

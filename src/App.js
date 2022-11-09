@@ -9,6 +9,7 @@ import InfoForm from "./components/StylistBookingPage/Modals/CreateAppointmentMo
 import CustomService from "./components/StylistBookingPage/Modals/CreateAppointmentModals/CustomServiceModal/CustomService";
 import NormalService from "./components/StylistBookingPage/Modals/CreateAppointmentModals/NormalServiceModal/NormalService";
 import ListingPage from "./components/ListingPage/ListingPage";
+import PriceRangeModal from "./components/ListingPage/PriceRangeModal/PriceRangeModal";
 
 // import {
 //   Home,
@@ -37,7 +38,8 @@ function App() {
     {/* <AppointmentDetails/> */}
     {/* <NormalService/> */}
     
-    <ListingPage/>
+    {/* <ListingPage/> */}
+    <PriceRangeModal/>
     {/* <RoutedPages/> */}
     </div>
   );

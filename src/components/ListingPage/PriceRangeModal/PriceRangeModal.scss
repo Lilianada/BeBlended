@@ -1,0 +1,39 @@
+.priceRangeModal{
+    .dialogContent {
+        display: block;
+        background-color: var(--white);
+        width: 90%;
+        height: 70%;
+        margin: 0 auto;
+        border-radius: 12px;
+        overflow-y: scroll;
+
+        @media screen and (min-width: 500px) {
+            width: 21.875rem;
+            height: 38rem;
+        }
+
+        .modalHeader {
+            align-items: center;
+            background: #f2f2f2;
+            border-radius: 10px 10px 0 0;
+            display: flex;
+            justify-content: flex-end;
+            padding: 1rem;
+
+            .closeButton {
+                background: none;
+                border: none;
+                outline: none;
+                cursor: pointer;
+            }
+        }
+
+        .modalContent {
+            padding: 1rem;
+
+            @media screen and (min-width: 500px) {
+                padding: 1.5rem;
+            }
+
+}
