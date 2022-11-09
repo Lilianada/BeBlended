@@ -1,6 +1,7 @@
 import React from "react";
 import { IoIosPricetags, IoMdTime }from 'react-icons/io';
 import { IoLocationSharp }from 'react-icons/io5';
+import { BottomNavClient, BottomNavStylist } from "../../components";
 import ListingHead from "./ListingHead/ListingHead";
 import Map from '../../assets/Map.png';
 import './ListingPage.scss';
@@ -14,23 +15,27 @@ export default function ListingPage () {
         <h4 className="title">32 Search Results in Toronto</h4>
         <div className="titleButtons">
           <button className="btnPrimary">
-            <IoIosPricetags size={18} style={{marginRight: '1rem'}} />
+            <IoIosPricetags size={18} className='icon' />
             Price
           </button>
           <button className="btnPrimary">
-            <IoMdTime size={18} style={{marginRight: '1rem'}} />
+            <IoMdTime size={18} className='icon' />
             Available Now
           </button>
           <button className="btnPrimary">
-            <IoLocationSharp size={18} style={{marginRight: '1rem'}} />
+            <IoLocationSharp size={18} className='icon' />
             Distance
           </button>
         </div>
       </div>
       <div className="listingFlex">
         <Listings/>
-        <img src={Map} alt="" />
+        <div className="map">
+          {/* Fix in the map here */}
+        </div>
       </div>
+      <BottomNavClient/>
+      <BottomNavStylist/>
     </section>
   );
 }

@@ -7,6 +7,7 @@ import ProfileImage from "../../../assets/ClientProfile.png";
 import { FaSearch } from "react-icons/fa";
 import { HiLocationMarker } from "react-icons/hi";
 import { TbMinusVertical } from "react-icons/tb";
+import { GrPrevious } from "react-icons/gr";
 
 export default function ListingHead() {
   const [toggle, setToggle] = useState(false);
@@ -55,7 +56,20 @@ export default function ListingHead() {
             </header>
 
             <header className="stylistMobile__Header">
-                <img src={Logo} alt="Logo" />
+              <div className="backBtn">
+                <GrPrevious className="angleLeft" size={18} />
+              </div>
+                <div className="searchBox">
+                  <div className="inputField">
+                    <FaSearch size={18} style={{marginLeft: "1.5rem"}} />
+                    <input type="search" name="service-search" className="field" />
+                  </div>
+                  <TbMinusVertical size={48} strokeWidth={1} />
+                  <div className="inputField">
+                    <HiLocationMarker size={24} />
+                    <input type="search" name="service-search" className="field" />
+                  </div>
+                </div>
             </header>
         </section>
   );

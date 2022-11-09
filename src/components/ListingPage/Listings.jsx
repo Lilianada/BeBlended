@@ -22,7 +22,7 @@ export default function Listings() {
                             <p className="location"> {item.address} </p>
                             <div className="tags">
                                 {item.tags.map((tag) => (
-                                    <p className="tag"> {tag} </p>
+                                    <p className="tag" key={tag.id}> {tag} </p>
                                 ))}
                             </div>
                             <div className="services">

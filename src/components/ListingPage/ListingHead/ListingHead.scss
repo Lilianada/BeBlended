@@ -10,6 +10,23 @@
         position: relative;
     }
     
+    .backBtn {
+        border: none;
+        background: none;
+        outline: none;
+        padding: 0 0.5rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        margin-right: 1rem;
+        // margin-bottom: 0;
+
+        @media screen and (min-width: 768px) {
+            margin-bottom: 1rem;
+            // margin-top: 0;
+        }
+    }
+
     .stylistDesktop__Header{
         display: none;
     }
@@ -17,7 +34,6 @@
     .searchBox{
         display: flex;
         align-items: center;
-        width: 28rem;
         background: var(--white);
         border: 1px solid var(--black);
         border-radius: 10px;
@@ -27,18 +43,22 @@
             padding: .5rem 0rem;
             
             .field{
+                width: 100%;
                 border: none;
                 height: 1.5rem;
                 font-size: var(--eighteen);
                 outline: none;
                 padding: 0 .5rem;
+                @media screen and (min-width: 768px) {
+                    width: 13rem;
+                }
             }
         }
         
     }
     
     
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 900px) {
         .stylistMobile__Header{
             display: none;
         }

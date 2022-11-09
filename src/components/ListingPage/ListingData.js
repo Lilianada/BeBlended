@@ -1,6 +1,6 @@
 export const ListingData = [
 {
-    profileImage: '../../assets/BraidedLady.png',
+    profileImage: "../../assets/BraidedLady.png",
     stylistName: "Braids by Becky",
     rating: 4.7,
     reviews: 20,
