@@ -83,7 +83,7 @@ function AddOnModal({ openModal, closeModal }) {
                       prefix="$"
                       decimalSeparator=","
                       groupSeparator="."
-                      onValueChange={(value, name) => console.log(value, name)}
+                      // onValueChange={(value, name) => console.log(value, name)}
                       required={true}
                     />
                   </div>

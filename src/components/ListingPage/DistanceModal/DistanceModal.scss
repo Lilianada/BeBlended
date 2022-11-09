@@ -1,0 +1,69 @@
+.distanceModal{
+    .dialogContent {
+        display: block;
+        background-color: var(--white);
+        width: 12rem;
+        height: 9.5rem;
+        margin: 0 auto;
+        border-radius: 2px;
+
+        .modalContent {
+            padding: 2rem 1rem;
+
+            @media screen and (min-width: 500px) {
+                padding: 2rem 1.5rem;
+            }
+
+            .distanceLabel{
+                display: flex;
+                flex-direction: column;
+                font-size: var(--twelve);
+                margin-bottom: 1rem;
+
+                .inputField{
+                    width: 5rem;
+                    border: 1px solid #DEDDDD;
+                    border-radius: 5px 0px 0px 5px;
+                    outline: none;
+                    font-size: var(--twelve);
+                    margin-top: .5rem;
+                    padding: .5rem 1rem;
+                }
+            }
+
+            .buttonWrap{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 1rem;
+
+                .clearBtn{
+                    background: none;
+                    border: none;
+                    border-bottom: 1px solid #B8B8B8;
+                    outline: none;
+                    cursor: pointer;
+                    font-size: var(--fourteen);
+                    color: #B8B8B8;
+                }
+
+                .saveBtn{
+                    padding: .5rem 1rem;
+                    margin-bottom: 0.5rem;
+                    background: var(--black);
+                    color: var(--white);
+                    border-radius: 9px;
+                    outline: none;
+                    border: none;
+                    cursor: pointer;
+                    font-size: var(--fourteen);
+                    transition: 0.5s all;
+
+                    &:hover {
+                        transform: scale(0.95, 0.95);
+                    }
+                }
+            }
+        }
+    }
+}

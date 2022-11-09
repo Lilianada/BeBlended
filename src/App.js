@@ -10,6 +10,7 @@ import CustomService from "./components/StylistBookingPage/Modals/CreateAppointm
 import NormalService from "./components/StylistBookingPage/Modals/CreateAppointmentModals/NormalServiceModal/NormalService";
 import ListingPage from "./components/ListingPage/ListingPage";
 import PriceRangeModal from "./components/ListingPage/PriceRangeModal/PriceRangeModal";
+import DistanceModal from "./components/ListingPage/DistanceModal/DistanceModal";
 
 // import {
 //   Home,
@@ -39,7 +40,8 @@ function App() {
     {/* <NormalService/> */}
     
     {/* <ListingPage/> */}
-    <PriceRangeModal/>
+    {/* <PriceRangeModal/> */}
+    <DistanceModal/>
     {/* <RoutedPages/> */}
     </div>
   );
