@@ -8,6 +8,7 @@ import RoutedPages from "./pages/Routes";
 import InfoForm from "./components/StylistBookingPage/Modals/CreateAppointmentModals/ClientInfoFormModal/InfoForm";
 import CustomService from "./components/StylistBookingPage/Modals/CreateAppointmentModals/CustomServiceModal/CustomService";
 import NormalService from "./components/StylistBookingPage/Modals/CreateAppointmentModals/NormalServiceModal/NormalService";
+import ListingPage from "./components/ListingPage/ListingPage";
 
 // import {
 //   Home,
@@ -34,7 +35,9 @@ function App() {
     {/* <AppointmentConfirmation/> */}
     {/* <AppointmentStepOne/> */}
     {/* <AppointmentDetails/> */}
-    <NormalService/>
+    {/* <NormalService/> */}
+    
+    <ListingPage/>
     {/* <RoutedPages/> */}
     </div>
   );

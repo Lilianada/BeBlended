@@ -1,5 +1,10 @@
 import React from "react";
+import ListingHead from "./ListingHead/ListingHead";
 
-export default function ListingPage() {
-  return (<div>ListingPage</div>);
+export default function ListingPage () {
+  return (
+    <section className="mainWrapper">
+      <ListingHead/>
+    </section>
+  );
 }
