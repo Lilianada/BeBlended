@@ -28,20 +28,22 @@
 //Listings scss
 .listings{
     display: block;
+    max-width: 35rem;
 
     .listing{
         display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        background: var(--white);
+        border: 1px solid #E0E0E0;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+        border-radius: 10px;
 
         .listingsWrap{
             display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            background: var(--white);
-            border: 1px solid #E0E0E0;
-            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
-            border-radius: 10px;
+            margin-top: 1rem;
     
             .profileImage{
                 width: 13.75rem;
@@ -55,6 +57,7 @@
             .listingInfo{
                 .title{
                     font-size: var(--twentyEight);
+                    margin-bottom: .5rem;
                 }
                 .ratingReviews{
                     display: flex;
@@ -62,8 +65,10 @@
                     margin-bottom: 1rem;
     
                     .rating{
+                        font-family: var(--font-head);
                         font-size: var(--twenty);
                         font-weight: 600;
+                        margin-right: .5rem;
                     }
     
                     .reviews{
@@ -79,11 +84,11 @@
                 .tags{
                     display: flex;
                     flex-wrap: wrap;
-                    margin-bottom: 1rem;
+                    margin-bottom: .5rem;
     
                     .tag{
                         font-size: var(--twelve);
-                        padding: .5rem;
+                        padding: 0 .5rem;
                         background: #EBCCE9;
                         border-radius: 5px;
                         margin-right: .75rem;
@@ -96,18 +101,19 @@
                     .serviceTitle{
                         font-size: var(--fourteen);
                         font-weight: 400;
-                        margin-bottom: .75rem;
+                        margin-bottom: .25rem;
                         color: var(--black);
                     }
     
                     .serviceLists{
                         font-size: var(--fourteen);
                         color: #707070;
+                        max-width: 14rem;
                     }
                 }
             }
         }
-        
+
         .like{
             margin-left: .75rem;
         }

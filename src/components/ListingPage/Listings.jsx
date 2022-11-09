@@ -1,5 +1,5 @@
 import React from "react";
-import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+import { AiFillHeart, AiFillStar, AiOutlineHeart } from "react-icons/ai";
 import { ListingData } from "./ListingData";
 
 export default function Listings() {
@@ -21,7 +21,9 @@ export default function Listings() {
                             </div>
                             <p className="location"> {item.address} </p>
                             <div className="tags">
-                                <div className="tag"> {item.tags} </div>
+                                {item.tags.map((tag) => (
+                                    <p className="tag"> {tag} </p>
+                                ))}
                             </div>
                             <div className="services">
                                 <p className="serviceTitle">Services provided:</p>

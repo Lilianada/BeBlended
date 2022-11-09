@@ -2,7 +2,9 @@ import React from "react";
 import { IoIosPricetags, IoMdTime }from 'react-icons/io';
 import { IoLocationSharp }from 'react-icons/io5';
 import ListingHead from "./ListingHead/ListingHead";
+import Map from '../../assets/Map.png';
 import './ListingPage.scss';
+import Listings from "./Listings";
 
 export default function ListingPage () {
   return (
@@ -24,6 +26,10 @@ export default function ListingPage () {
             Distance
           </button>
         </div>
+      </div>
+      <div className="listingFlex">
+        <Listings/>
+        <img src={Map} alt="" />
       </div>
     </section>
   );

@@ -1,14 +1,6 @@
-import Profile1 from '../../assets/BraidedLady.png';
-import Profile2 from '../../assets/CelebrityLady.png';
-import Profile3 from '../../assets/FreeAfro.png';
-import Profile4 from '../../assets/WindyHair.png';
-import Profile5 from '../../assets/BraidedLady.png';
-
-
-
 export const ListingData = [
 {
-    profileImage: {Profile1},
+    profileImage: '../../assets/BraidedLady.png',
     stylistName: "Braids by Becky",
     rating: 4.7,
     reviews: 20,
@@ -18,40 +10,44 @@ export const ListingData = [
     like: false,
 },
 {
-    profileImage: {Profile2}, 
+    profileImage: '../../assets/CelebrityLady.png', 
     stylistName: "Nella Studio",
     rating: 4.2,
     reviews: 20,
     address: "North York, Toronto",
     tags: ['In-home Salon', 'Mobile'],
     services: "Box Braids, Crotchet Braids, Weave, Faux Locs, Feed-in Braids + 13 more",
+    like: true,
 },
 {
-    profileImage: {Profile3}, 
+    profileImage: '../../assets/FreeAfro.png', 
     stylistName: "Clarisse Hair Salon",
     rating: 4.3,
     reviews: 12,
     address: "Etobicoke, Toronto",
     tags: ['In-home Salon', 'Mobile'],
     services: "Knotless Braids, Box Braids, Weave, Faux Locs, Feed-in Braids + 13 more",
+    like: false,
 },
 {
-    profileImage: {Profile4}, 
+    profileImage: '../../assets/WindyHair.png', 
     stylistName: "6ixBraids",
     rating: 3.8,
     reviews: 10,
     address: "Makssd, Donot",
-    tags:[Doant, Foloi],
+    tags:["Doant", "Foloi"],
     services: "Knotless Braids, Box Braids, Weave, Faux Locs, Feed-in Braids + 13 more",
+    like: true,
 },
 {
-    profileImage: {Profile5}, 
+    profileImage: '../../assets/BraidedLady.png', 
     stylistName: "6ixBraids",
     rating: 3.8,
     reviews: 10,
     address: "Makssd, Donot",
-    tags:[Doant, Foloi],
+    tags:["Doant", "Foloi"],
     services: "Knotless Braids, Box Braids, Weave, Faux Locs, Feed-in Braids + 13 more",
+    like: true,
 },
 
 ]
