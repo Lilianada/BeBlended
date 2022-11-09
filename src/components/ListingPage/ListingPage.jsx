@@ -1,4 +1,6 @@
+import { AnimatePresence } from "framer-motion";
 import React, { useState } from "react";
+import ReactDOM from "react";
 import { IoIosPricetags, IoMdTime } from "react-icons/io";
 import { IoLocationSharp } from "react-icons/io5";
 import { BottomNavClient, Footer } from "../../components";
@@ -23,7 +25,7 @@ export default function ListingPage() {
       };
     });
   };
-  return (
+  return ReactDOM.createPortal (
     <section className="mainWrapper">
       <ListingHead />
       <div className="listingTitle">
@@ -40,7 +42,7 @@ export default function ListingPage() {
           >
             {openModal.price && (
               <PriceRangeModal
-                openModal={open.price}
+                openModal={openModal.price}
                 closeModal={setOpenModal}
               />
             )}
@@ -59,7 +61,7 @@ export default function ListingPage() {
           >
             {openModal.available && (
               <PriceRangeModal
-                openModal={open.available}
+                openModal={openModal.available}
                 closeModal={setOpenModal}
               />
             )}
@@ -78,7 +80,7 @@ export default function ListingPage() {
           >
             {openModal.distance && (
               <PriceRangeModal
-                openModal={open.distance}
+                openModal={openModal.distance}
                 closeModal={setOpenModal}
               />
             )}

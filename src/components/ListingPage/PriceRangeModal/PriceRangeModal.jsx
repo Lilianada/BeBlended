@@ -1,4 +1,5 @@
 import React from "react";
+import ReactDOM from 'react-dom';
 import { Backdrop } from "../../../components";
 import { motion } from "framer-motion";
 import PriceRange from "../../../assets/PriceRange.svg";
