@@ -3,37 +3,89 @@
         display: block;
         background-color: var(--white);
         width: 90%;
-        height: 70%;
+        height: 13rem;
         margin: 0 auto;
-        border-radius: 12px;
-        overflow-y: scroll;
+        border-radius: 2px;
 
         @media screen and (min-width: 500px) {
-            width: 21.875rem;
-            height: 38rem;
-        }
-
-        .modalHeader {
-            align-items: center;
-            background: #f2f2f2;
-            border-radius: 10px 10px 0 0;
-            display: flex;
-            justify-content: flex-end;
-            padding: 1rem;
-
-            .closeButton {
-                background: none;
-                border: none;
-                outline: none;
-                cursor: pointer;
-            }
+            width: 19.875rem;
         }
 
         .modalContent {
-            padding: 1rem;
+            padding: 2rem 1rem;
 
             @media screen and (min-width: 500px) {
-                padding: 1.5rem;
+                padding: 2rem 1.5rem;
             }
+
+            .inputWrap{
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                margin: 1rem 0;
+                padding-bottom: 1rem;
+                border-bottom: 1px solid #eeeeee;
+
+                .label{
+                    width: 45%;
+                    height: 3rem;
+                    padding: .5rem;
+                    border: 1px solid #DEDDDD;
+                    border-radius: 5px;
+                    font-size: 10px;
+
+                    .inputField{
+                        width: 100%;
+                        border: none;
+                        outline: none;
+                        font-size: var(--fourteen);
+                        font-family: var(--font-text);
+                        color: var(--black);
+                        padding-top: .5rem;
+
+                        &::placeholder{
+                            color: var(--greyPro);
+                        }
+                    }
+                }
+            }
+            
+            .buttonWrap{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 1rem;
+
+                .clearBtn{
+                    background: none;
+                    border: none;
+                    border-bottom: 1px solid #B8B8B8;
+                    outline: none;
+                    cursor: pointer;
+                    font-size: var(--fourteen);
+                    color: #B8B8B8;
+                }
+
+                .saveBtn{
+                    padding: .5rem 1rem;
+                    margin-bottom: 0.5rem;
+                    background: var(--black);
+                    color: var(--white);
+                    border-radius: 9px;
+                    outline: none;
+                    border: none;
+                    cursor: pointer;
+                    font-size: var(--fourteen);
+                    transition: 0.5s all;
+
+                    &:hover {
+                        transform: scale(0.95, 0.95);
+                    }
+                }
+            }
+
+        }
+
+    }
 
 }
