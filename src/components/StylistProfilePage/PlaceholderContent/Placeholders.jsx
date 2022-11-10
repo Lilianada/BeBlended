@@ -76,6 +76,7 @@ function Placeholders() {
   return (
     <section className="contentWrap">
       <Header />
+
       <div className="content">
         {/* Stylist Name */}
         <div className="stylistName">
@@ -150,8 +151,8 @@ function Placeholders() {
 
           {/* desktop gallery items */}
           <div className="galleryItems">
-            {images.map((image) => 
-            <div className="image"></div>
+            {images.map((image, id) => 
+            <div className="image" key={id}>{image.item}</div>
             ) }
           </div>
 
@@ -166,9 +167,9 @@ function Placeholders() {
               renderCenterLeftControls={true}
               renderCenterRightControls={true}
             >
-              {images.map((image) => (
-                <div className="image" key={image.id} draggable="false">
-                  {" "}
+              {images.map((image, id) => (
+                <div className="image" key={id} draggable="false">
+                  {image.item}
                 </div>
               ))}
             </Carousel>
@@ -532,6 +533,7 @@ function Placeholders() {
         {/* Footer */}
         <BottomNavStylist />
       </div>
+
       <div className="footer">
         <Footer />
       </div>

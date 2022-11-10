@@ -92,6 +92,20 @@
                     justify-content: space-between;
                     align-items: center;
                     width: 100%;
+
+                    &:first-child {
+                        width: 55%;
+                        @media screen and (min-width: 600px) {
+                            width: 60%;
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        width: 40%;
+                        @media screen and (min-width: 600px) {
+                            width: 35%;
+                        }
+                    }
                 }
 
                 // Variant

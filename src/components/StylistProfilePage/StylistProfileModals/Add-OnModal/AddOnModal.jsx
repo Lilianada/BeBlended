@@ -72,43 +72,35 @@ function AddOnModal({ openModal, closeModal }) {
                       required
                     />
                   </div>
-                  <div className="formField">
-                    <label className="formLabel" htmlFor="price">
-                      Price (*){" "}
-                    </label>
-                    <CurrencyInput
-                      name="price"
-                      className="add-onInput"
-                      placeholder="$0.00"
-                      prefix="$"
-                      decimalSeparator=","
-                      groupSeparator="."
-                      // onValueChange={(value, name) => console.log(value, name)}
-                      required={true}
-                    />
+                  <div className="fields">
+                    <div className="formField">
+                      <label className="formLabel" htmlFor="price">
+                        Price (*){" "}
+                      </label>
+                      <CurrencyInput
+                        name="price"
+                        className="add-onInput"
+                        placeholder="$0.00"
+                        prefix="$"
+                        decimalSeparator=","
+                        groupSeparator="."
+                        // onValueChange={(value, name) => console.log(value, name)}
+                        required={true}
+                      />
+                    </div>
+                    <div className="formField">
+                      <label className="formLabel" htmlFor="price">
+                        Inventory (*){" "}
+                      </label>
+                      <input
+                        name="price"
+                        type="number"
+                        className="add-onInput"
+                        placeholder="0"
+                        required={true}
+                      />
+                    </div>
                   </div>
-
-                  {/* Variant */}
-                  <div className=" variant">
-                    <input
-                      type="checkbox"
-                      name="variantcheckbox"
-                      className="checkBox"
-                      onChange={handleVariant}
-                    />
-                    <span className="variantCheckbox"></span>
-                    <label className="formLabel" htmlFor="">
-                      <p>
-                        <strong>Variants:</strong>
-                        This service has multiple options, like different sizes
-                        or colours.
-                      </p>
-                    </label>
-                  </div>
-                  {/* Variant Content */}
-                  {showVariant ? (
-                    <Variant />
-                  ) : null}
                 <button className="saveBtn" type="submit">Save</button>
                 </form>
               </div>

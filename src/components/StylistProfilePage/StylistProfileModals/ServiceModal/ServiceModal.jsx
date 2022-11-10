@@ -81,7 +81,7 @@ function ServiceModal({ openModal, closeModal }) {
                       required
                     />
                   </div>
-                  <div className="fields">
+                   <div className="fields">
                     <div className="formField">
                       <label className="formLabel" htmlFor="price">
                         Price (*){" "}
