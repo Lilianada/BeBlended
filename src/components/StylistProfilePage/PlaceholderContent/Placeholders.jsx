@@ -17,6 +17,8 @@ import {
   PolicyModal,
   BusinessModal,
   ProfilePicture,
+  BottomNavStylist, 
+  Footer,
 } from "../../../components";
 import { AnimatePresence } from "framer-motion";
 import Carousel from "nuka-carousel";
@@ -526,6 +528,12 @@ function Placeholders() {
           {/* Map */}
           <img src={Map} alt="map" />
         </div>
+
+        {/* Footer */}
+        <BottomNavStylist />
+      </div>
+      <div className="footer">
+        <Footer />
       </div>
     </section>
   );
