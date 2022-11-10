@@ -12,30 +12,29 @@ import PriceRangeModal from "./PriceRangeModal/PriceRangeModal";
 export default function ListingPage() {
   const [openModal, setOpenModal] = useState({
     price: false,
+    available: false,
     distance: false,
   });
 
-  const handleModal = (price, distance) => {
+  const handleModal = (price, distance, available) => {
     setOpenModal((prevState) => {
       return {
         ...prevState,
         [price]: !prevState[price],
+        [available]: !prevState[available],
         [distance]: !prevState[distance],
       };
     });
   };
 
-  const [active, setActive] = useState(false);
-  const handleActive = () => {
-    setActive(!active);
-  }
+  
   return(
     <section className="mainWrapper">
       <ListingHead />
       <div className="listingTitle">
         <h4 className="title">32 Search Results in Toronto</h4>
         <div className="titleButtons">
-          <button className="btnPrimary" onClick={() => handleModal("price")}>
+          <button className={`btnPrimary ${openModal.price ? 'activeBtn' : ''}`} onClick={() => handleModal("price")}>
             <IoIosPricetags size={18} className="icon" />
             Price
           </button>
@@ -51,16 +50,17 @@ export default function ListingPage() {
               />
             )}
           </AnimatePresence>
+
           <button
-            className={`btnPrimary ${active ? 'activeBtn' : ''}`}
-            onClick={handleActive}
+            className={`btnPrimary ${openModal.available ? 'activeBtn' : ''}`}
+            onClick={() => handleModal("available")}
           >
             <IoMdTime size={18} className="icon" />
             Available Now
           </button>
           
           <button
-            className="btnPrimary"
+            className={`btnPrimary ${openModal.distance ? 'activeBtn' : ''}`}
             onClick={() => handleModal("distance")}
           >
             <IoLocationSharp size={18} className="icon" />

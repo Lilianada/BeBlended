@@ -6,11 +6,17 @@ import { motion } from "framer-motion";
 import "./DistanceModal.scss";
 
 export default function DistanceModal({ openModal, closeModal }) {
-  const [switchBtn, setSwitchBtn] = useState({
-    kilo: true,
-    miles: false,
-  });
- 
+    const [message, setMessage] = useState('');
+
+    const handleChange = event => {
+    setMessage(event.target.value);
+    };
+
+    const handleClear = () => {
+    // 👇️ clear input value
+    setMessage('');
+    };
+
 
   return ReactDOM.createPortal(
     <>
@@ -35,8 +41,8 @@ export default function DistanceModal({ openModal, closeModal }) {
                 </label>
                 <div className="labelFlex">
                   <CurrencyInput
-                    suffix="km"
-                    type="num"
+                    value={message}
+                    onChange={handleChange}
                     name="kilometers"
                     className="inputField"
                     placeholder="0"
@@ -45,11 +51,11 @@ export default function DistanceModal({ openModal, closeModal }) {
                   />
                     <select name="select-distance" className="distanceSelect">
                         <option value="km">km</option>
-                        <option value="km">miles</option>
+                        <option value="miles">miles</option>
                     </select>
                 </div>
                 <div className="buttonWrap">
-                  <button className="clearBtn">clear</button>
+                  <button className="clearBtn" onClick={handleClear}>clear</button>
                   <button className="saveBtn">Save</button>
                 </div>
               </div>

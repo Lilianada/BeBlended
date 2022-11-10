@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from 'react-dom';
 import { Backdrop } from "../../../components";
 import { motion } from "framer-motion";
@@ -8,6 +8,16 @@ import { AiOutlineMinus } from "react-icons/ai";
 import CurrencyInput from "react-currency-input-field";
 
 export default function PriceRangeModal({ openModal, closeModal }) {
+    const [message, setMessage] = useState('');
+    const handleChange = event => {
+    setMessage(event.target.value);
+    console.log( event.target.value)
+    };
+    const handleClear = () => {
+    // 👇️ clear input value
+    setMessage('');
+    };
+
   return ReactDOM.createPortal(
     <>
       {openModal ? (
@@ -31,10 +41,11 @@ export default function PriceRangeModal({ openModal, closeModal }) {
                   <label htmlFor="min-price" className="label">
                     Min Price
                     <CurrencyInput
-                      prefix="$"
-                      type="text|num"
+                      value={message}
+                      onChange={handleChange}                    
                       name="min-price"
                       className="inputField"
+                      prefix="$"
                       placeholder="00.00"
                       groupSeparator=""
                       disableGroupSeparators="true"
@@ -44,18 +55,19 @@ export default function PriceRangeModal({ openModal, closeModal }) {
                   <label htmlFor="max-price" className="label">
                     Max Price
                     <CurrencyInput
-                      prefix="$"
-                      type="text|num"
+                      value={message}
+                      onChange={handleChange}
                       name="max-price"
                       className="inputField"
                       placeholder="00.00"
+                      prefix="$" 
                       groupSeparator=""
                       disableGroupSeparators="true"
                     />
                   </label>
                 </div>
                 <div className="buttonWrap">
-                  <button className="clearBtn">clear</button>
+                  <button className="clearBtn" onClick={handleClear}>clear</button>
                   <button className="saveBtn">Save</button>
                 </div>
               </div>
