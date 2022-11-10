@@ -40,6 +40,11 @@
                 font-size: var(--eighteen);
             }
         }
+
+        .activeBtn{
+            background: var(--black);
+            color: var(--white);
+        }
     }
 }
 

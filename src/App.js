@@ -39,9 +39,9 @@ function App() {
     {/* <AppointmentDetails/> */}
     {/* <NormalService/> */}
     
-    {/* <ListingPage/> */}
+    <ListingPage/>
     {/* <PriceRangeModal/> */}
-    <DistanceModal/>
+    {/* <DistanceModal/> */}
     {/* <RoutedPages/> */}
     </div>
   );

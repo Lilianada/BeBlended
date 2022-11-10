@@ -1,9 +1,9 @@
 import { AnimatePresence } from "framer-motion";
 import React, { useState } from "react";
-import ReactDOM from "react";
 import { IoIosPricetags, IoMdTime } from "react-icons/io";
 import { IoLocationSharp } from "react-icons/io5";
 import { BottomNavClient, Footer } from "../../components";
+import DistanceModal from "./DistanceModal/DistanceModal";
 import ListingHead from "./ListingHead/ListingHead";
 import "./ListingPage.scss";
 import Listings from "./Listings";
@@ -12,20 +12,24 @@ import PriceRangeModal from "./PriceRangeModal/PriceRangeModal";
 export default function ListingPage() {
   const [openModal, setOpenModal] = useState({
     price: false,
-    available: false,
     distance: false,
   });
-  const handleModal = (price, available, distance) => {
+
+  const handleModal = (price, distance) => {
     setOpenModal((prevState) => {
       return {
         ...prevState,
         [price]: !prevState[price],
-        [available]: !prevState[available],
         [distance]: !prevState[distance],
       };
     });
   };
-  return ReactDOM.createPortal (
+
+  const [active, setActive] = useState(false);
+  const handleActive = () => {
+    setActive(!active);
+  }
+  return(
     <section className="mainWrapper">
       <ListingHead />
       <div className="listingTitle">
@@ -48,24 +52,13 @@ export default function ListingPage() {
             )}
           </AnimatePresence>
           <button
-            className="btnPrimary"
-            onClick={() => handleModal("available")}
+            className={`btnPrimary ${active ? 'activeBtn' : ''}`}
+            onClick={handleActive}
           >
             <IoMdTime size={18} className="icon" />
             Available Now
           </button>
-          <AnimatePresence
-            initial={false}
-            exitBeforeEnter={true}
-            onExitComplete={() => null}
-          >
-            {openModal.available && (
-              <PriceRangeModal
-                openModal={openModal.available}
-                closeModal={setOpenModal}
-              />
-            )}
-          </AnimatePresence>
+          
           <button
             className="btnPrimary"
             onClick={() => handleModal("distance")}
@@ -79,7 +72,7 @@ export default function ListingPage() {
             onExitComplete={() => null}
           >
             {openModal.distance && (
-              <PriceRangeModal
+              <DistanceModal
                 openModal={openModal.distance}
                 closeModal={setOpenModal}
               />

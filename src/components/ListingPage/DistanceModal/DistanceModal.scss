@@ -2,8 +2,8 @@
     .dialogContent {
         display: block;
         background-color: var(--white);
-        width: 12rem;
-        height: 9.5rem;
+        width: 13rem;
+        height: 10rem;
         margin: 0 auto;
         border-radius: 2px;
 
@@ -15,11 +15,17 @@
             }
 
             .distanceLabel{
-                display: flex;
-                flex-direction: column;
-                font-size: var(--twelve);
+                font-size: var(--fourteen);
                 margin-bottom: 1rem;
-
+            }
+            
+            .labelFlex{
+                display: flex;
+                flex-direction: row;
+                margin-bottom: .5rem;
+                padding-bottom: .75rem;
+                border-bottom: 1px solid #EEEEEE;
+    
                 .inputField{
                     width: 5rem;
                     border: 1px solid #DEDDDD;
@@ -28,6 +34,20 @@
                     font-size: var(--twelve);
                     margin-top: .5rem;
                     padding: .5rem 1rem;
+
+                    &::placeholder{
+                        color: var(--greyPro);
+                    }
+                }
+                
+                .distanceSelect{
+                    border: 1px solid #DEDDDD;
+                    border-radius: 0;
+                    outline: none;
+                    font-size: var(--twelve);
+                    margin-top: .5rem;
+                    padding: .5rem 1rem;
+
                 }
             }
 

@@ -10,13 +10,11 @@ export default function DistanceModal({ openModal, closeModal }) {
     kilo: true,
     miles: false,
   });
-  // const handleSwitch = () => {
-
-  // }
+ 
 
   return ReactDOM.createPortal(
     <>
-      {/* {openModal ? ( */}
+      {openModal ? (
         <section className="distanceModal">
           <Backdrop onClick={closeModal}>
             <motion.div
@@ -34,16 +32,22 @@ export default function DistanceModal({ openModal, closeModal }) {
               <div className="modalContent">
                 <label htmlFor="max-distance" className="distanceLabel">
                   Max Distance
+                </label>
+                <div className="labelFlex">
                   <CurrencyInput
                     suffix="km"
-                    type="text|num"
+                    type="num"
                     name="kilometers"
                     className="inputField"
                     placeholder="0"
                     groupSeparator=""
                     disableGroupSeparators="true"
                   />
-                </label>
+                    <select name="select-distance" className="distanceSelect">
+                        <option value="km">km</option>
+                        <option value="km">miles</option>
+                    </select>
+                </div>
                 <div className="buttonWrap">
                   <button className="clearBtn">clear</button>
                   <button className="saveBtn">Save</button>
@@ -52,7 +56,7 @@ export default function DistanceModal({ openModal, closeModal }) {
             </motion.div>
           </Backdrop>
         </section>
-      {/* ) : null} */}
+      ) : null}
     </>,
     document.getElementById("modal")
   );
