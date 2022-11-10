@@ -1,172 +1,171 @@
-.listingTitle{
-    margin: 1rem;
-    @media screen and (min-width: 768px) {
-        margin: 2rem;
-    }
+.listingPage {
+    .listingTitle {
+        margin: 1rem;
+        @media screen and (min-width: 768px) {
+            margin: 2rem;
+        }
 
-    .title{
-        font-size: var(--fourty);
-        line-height: 3rem;
-        margin-bottom: 1rem;
-    }
+        .title {
+            font-size: var(--fourty);
+            line-height: 3rem;
+            margin-bottom: 1rem;
+        }
 
-    .titleButtons{
-        display: flex;
-
-        .btnPrimary{
+        .titleButtons {
             display: flex;
-            align-items: center;
-            font-size: var(--twelve);
-            padding: 0.5rem;
-            margin-right: 0.35rem;
-            background: var(--white);
-            color: var(--black);
-            border: 1px solid var(--black);
-            border-radius: 5px;
 
-            .icon{
-                margin-right: 0.5rem;
+            .btnPrimary {
+                display: flex;
+                align-items: center;
+                font-size: var(--twelve);
+                padding: 0.5rem;
+                margin-right: 0.35rem;
+                background: var(--white);
+                color: var(--black);
+                border: 1px solid var(--black);
+                border-radius: 5px;
+
+                .icon {
+                    margin-right: 0.5rem;
+
+                    @media screen and (min-width: 768px) {
+                        margin-right: 1rem;
+                    }
+                }
 
                 @media screen and (min-width: 768px) {
+                    justify-content: space-between;
+                    padding: 0.5rem 1rem;
                     margin-right: 1rem;
-                
+                    font-size: var(--eighteen);
                 }
             }
-            
-            @media screen and (min-width: 768px) {
-                justify-content: space-between;
-                padding: 0.5rem 1rem;
-                margin-right: 1rem;
-                font-size: var(--eighteen);
+
+            .activeBtn {
+                background: var(--black);
+                color: var(--white);
             }
         }
+    }
 
-        .activeBtn{
-            background: var(--black);
-            color: var(--white);
+    .listingFlex {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 1rem;
+
+        .map {
+            width: 100%;
+            margin: auto;
+            height: 100vh;
+            background: var(--grey);
+            margin-bottom: 1rem;
+
+            @media screen and (min-width: 768px) {
+                width: 55%;
+                margin: 0;
+                margin-bottom: 3rem;
+            }
         }
     }
-}
 
-.listingFlex{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin: 1rem;
-    
-    .map{
-        width: 100%;
-        margin: auto;
-        height: 100vh;
-        background: var(--grey);
-        margin-bottom: 5rem;
-        
+    .footer {
+        display: none;
+
         @media screen and (min-width: 768px) {
-            width: 55%;
-            margin: 0;
-            margin-bottom: 3rem;
+            display: block;
         }
     }
 }
-
-.footer{
-    display: none;
-
-    @media screen and (min-width: 768px) {
-        display: block;
-    }
-}
-
 
 //Listings scss
-.listings{
+.listings {
     display: none;
     @media screen and (min-width: 768px) {
         display: block;
         max-width: 35rem;
-    
-        .listing{
+
+        .listing {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
             padding: 1rem;
             margin-bottom: 1rem;
             background: var(--white);
-            border: 1px solid #E0E0E0;
+            border: 1px solid #e0e0e0;
             filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
             border-radius: 10px;
-    
-            .listingsWrap{
+
+            .listingsWrap {
                 display: flex;
                 width: 29rem;
                 display: flex;
                 justify-content: space-between;
-                
-                .profileImage{
+
+                .profileImage {
                     width: 13.75rem;
                     height: 13.125rem;
                     background-color: var(--greyPro);
-                    
-        border-radius: 10px;
+                    border-radius: 10px;
 
-                    img{
+                    img {
                         object-fit: cover;
                     }
                 }
-                
-                .listingInfo{
+
+                .listingInfo {
                     margin-top: 1rem;
-                    .title{
+                    .title {
                         font-size: var(--twentyEight);
-                        margin-bottom: .5rem;
+                        margin-bottom: 0.5rem;
                     }
-                    .ratingReviews{
+                    .ratingReviews {
                         display: flex;
                         align-items: center;
                         margin-bottom: 1rem;
-        
-                        .rating{
+
+                        .rating {
                             font-family: var(--font-head);
                             font-size: var(--twenty);
                             font-weight: 600;
-                            margin-right: .5rem;
+                            margin-right: 0.5rem;
                         }
-        
-                        .reviews{
+
+                        .reviews {
                             font-size: var(--sixteen);
                             color: #707070;
                         }
                     }
-        
-                    .location{
+
+                    .location {
                         color: #707070;
                     }
-        
-                    .tags{
+
+                    .tags {
                         display: flex;
                         flex-wrap: wrap;
-                        margin-bottom: .5rem;
-        
-                        .tag{
+                        margin-bottom: 0.5rem;
+
+                        .tag {
                             font-size: var(--twelve);
-                            padding: 0 .5rem;
-                            background: #EBCCE9;
+                            padding: 0 0.5rem;
+                            background: #ebcce9;
                             border-radius: 5px;
-                            margin-right: .75rem;
+                            margin-right: 0.75rem;
                         }
                     }
-        
-                    .services{
+
+                    .services {
                         display: block;
-        
-                        .serviceTitle{
+
+                        .serviceTitle {
                             font-size: var(--fourteen);
                             font-weight: 400;
-                            margin-bottom: .25rem;
+                            margin-bottom: 0.25rem;
                             color: var(--black);
                         }
-        
-                        .serviceLists{
+
+                        .serviceLists {
                             font-size: var(--fourteen);
                             color: #707070;
                             max-width: 14rem;
@@ -174,12 +173,146 @@
                     }
                 }
             }
-    
-            .like{
-                margin-left: .75rem;
+
+            .like {
+                margin-left: 0.75rem;
             }
         }
-    
     }
+}
+
+// Listing Card
+.listingCards {
+    display: block;
+    width: 100%;
+    background:  rgba(255, 255, 255, 0.95);
+    border-radius: 30px 30px 0px 0px;
+    padding: .5rem;
+    position: fixed;
+    left: 0;
+    bottom: 5rem;
+    z-index: 100;
+
+    .cardHeader {
+        text-align: right;
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+
+        .closeButton {
+            background: none;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+    }
+
+    article{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+        width: 100%;
+
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
+
+        .listings {
+            display: flex;
+            width: 90%;
+            overflow-x: hidden;
     
+            .listing {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                width: 100%;
+                
+                .listingsWrap {
+                    display: flex;
+                    width: 20rem;
+                    display: flex;
+                    justify-content: space-between;
+    
+                    .profileImage {
+                        width: 8.75rem;
+                        height: 11.875rem;
+                        background-color: var(--greyPro);
+                        border-radius: 10px;
+    
+                        img {
+                            object-fit: cover;
+                        }
+                    }
+    
+                    .listingInfo {
+                        .infoHead{
+                            display: flex;
+                            justify-content: space-between;
+                            .title {
+                                font-size: var(--twentyFour);
+                                display: flex;
+                                justify-content: space-between;
+                            }
+                            .like {
+                                margin-left: 0.75rem;
+                            }
+                        }
+    
+                        .ratingReviews {
+                            display: flex;
+                            align-items: center;
+    
+                            .rating {
+                                font-family: var(--font-head);
+                                font-size: var(--sixteen);
+                                font-weight: 600;
+                                margin-right: 0.5rem;
+                            }
+    
+                            .reviews {
+                                font-size: var(--fourteen);
+                                color: #707070;
+                            }
+                        }
+    
+                        .location {
+                            color: #707070;
+                        }
+    
+                        .tags {
+                            display: flex;
+                            flex-wrap: wrap;
+    
+                            .tag {
+                                font-size: var(--ten);
+                                padding: 0 0.5rem;
+                                background: #ebcce9;
+                                border-radius: 5px;
+                                margin-right: 0.75rem;
+                            }
+                        }
+    
+                        .services {
+                            display: block;
+    
+                            .serviceTitle {
+                                font-size: var(--twelve);
+                                font-weight: 400;
+                                color: var(--black);
+                            }
+    
+                            .serviceLists {
+                                font-size: var(--twelve);
+                                color: #707070;
+                                max-width: 8rem;
+                                line-height: .75rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 }
