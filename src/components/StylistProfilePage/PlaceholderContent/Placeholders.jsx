@@ -4,10 +4,10 @@ import Map from "../../../assets/Map.png";
 import Pic from "../../../assets/BraidedLady.png";
 import { MdEdit } from "react-icons/md";
 import { BsStarFill } from "react-icons/bs";
-import { GrAdd, GrLinkNext } from "react-icons/gr";
+import { GrAdd } from "react-icons/gr";
 import { TiLocation } from "react-icons/ti";
 import { AiFillMessage, AiOutlineFileProtect } from "react-icons/ai";
-import { RiDeleteBin7Fill, RiShieldCheckFill } from "react-icons/ri";
+import { RiShieldCheckFill } from "react-icons/ri";
 import {
   UploadPhoto,
   GalleryModal,
@@ -71,7 +71,6 @@ function Placeholders() {
       };
     });
   };
-
   
   return (
     <section className="contentWrap">
@@ -80,10 +79,8 @@ function Placeholders() {
       <div className="content">
         {/* Stylist Name */}
         <div className="stylistName">
-          {/* <div className="profilePicture">
-            <img src={Pic} alt="Profile Picture" />
-          </div> */}
-          <button
+         
+           <button
             className="editButton"
             onClick={() => handleModal("addProPic")}
           >
@@ -108,7 +105,7 @@ function Placeholders() {
               <h6 className="rate">0.0</h6>
               <span className="review">( 0 reviews )</span>
             </div>
-          </div>
+          </div> 
         </div>
 
         {/* Gallery upload */}
@@ -201,24 +198,15 @@ function Placeholders() {
                 )}
               </AnimatePresence>
             </div>
+
             {/* Placeholders */}
-            {/* <div className="aboutPlaceholder_TextBars">
+            <div className="aboutPlaceholder_TextBars">
               <div
                 className="aboutPlaceholder_TextBar"
                 style={{ width: "70%" }}
               ></div>
               <div className="aboutPlaceholder_TextBar"></div>
               <div className="aboutPlaceholder_TextBar"></div>
-            </div>*/}
-
-            {/* Text box for about */}
-            <div className="aboutTextBox">
-              <p className="text">
-                Welcome to Braids by Becky, located in the heart of Toronto,
-                Ontario, Canada. I’m an experienced hairdresser specialising in
-                knotless braids, box braids, braided ponytails, and crochet. I
-                look forward to meeting you!
-              </p>
             </div>
           </div>
 
@@ -312,51 +300,10 @@ function Placeholders() {
             </AnimatePresence>
           </div>
           {/* Service Placeholders */}
-          {/* <div className="servicePlaceholder_TextBars">
+          <div className="servicePlaceholder_TextBars">
             <div className="servicePlaceholder_TextBar"></div>
             <div className="servicePlaceholder_TextBar"></div>
             <div className="servicePlaceholder_TextBar"></div>
-          </div> */}
-          {/* Service items listed out */}
-          <div className="serviceListBox">
-            {service.map((item, id) => (
-              <div className="serviceList" key={id}>
-                <div className="list">
-                  <p className="serviceName"> {item.serviceName} </p>
-                  <span className="bar"></span>
-                  <p className="price">
-                    Starting from <span>${item.servicePrice} </span>{" "}
-                  </p>
-                </div>
-                <div className="list">
-                  <button
-                    className="editButton"
-                    onClick={() => handleModal("service")}
-                  >
-                    <MdEdit className="MdEdit" />
-                  </button>
-                  <AnimatePresence
-                    initial={false}
-                    exitBeforeEnter={true}
-                    onExitComplete={() => null}
-                  >
-                    {openModal.service && (
-                      <ServiceModal
-                        openModal={openModal.service}
-                        closeModal={setOpenModal}
-                      />
-                    )}
-                  </AnimatePresence>
-                  <button
-                    type="button"
-                    className="deleteButton"
-                    // onClick={handleDelete}
-                  >
-                    <RiDeleteBin7Fill className="RiDeleteBin7Fill" />
-                  </button>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
 
@@ -381,58 +328,18 @@ function Placeholders() {
               )}
             </AnimatePresence>
           </div>
-          {/* <div className="addOnsPlaceholder_TextBars">
+          <div className="addOnsPlaceholder_TextBars">
             <div className="addOnsPlaceholder_TextBar"></div>
             <div className="addOnsPlaceholder_TextBar"></div>
             <div className="addOnsPlaceholder_TextBar"></div>
-          </div> */}
-          <div className="addonListBox">
-            {addon.map((item, id) => (
-              <div className="addonList" key={id}>
-                <div className="list">
-                  <p className="addonName"> {item.addonName} </p>
-                  <span className="bar"></span>
-                  <p className="price">
-                    Starting from <span>${item.addonPrice} </span>{" "}
-                  </p>
-                </div>
-                <div className="list">
-                  <button
-                    className="editButton"
-                    onClick={() => handleModal("addOn")}
-                  >
-                    <MdEdit className="MdEdit" />
-                  </button>
-                  <AnimatePresence
-                    initial={false}
-                    exitBeforeEnter={true}
-                    onExitComplete={() => null}
-                  >
-                    {openModal.addOn && (
-                      <AddOnModal
-                        openModal={openModal.addOn}
-                        closeModal={setOpenModal}
-                      />
-                    )}
-                  </AnimatePresence>
-                  <button
-                    type="button"
-                    className="deleteButton"
-                    // onClick={handleDelete}
-                  >
-                    <RiDeleteBin7Fill className="RiDeleteBin7Fill" />
-                  </button>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
 
         {/* Reviews */}
         {/* Review plcaeholders */}
         <div className="reviewsPlaceholder">
-          {/*<div className="reviewsPlaceholder_Head">
-            <h5 classNamge="name">Reviews</h5>
+          <div className="reviewsPlaceholder_Head">
+            <h5 className="name">Reviews</h5>
             <hr />
           </div>
            <div className="reviewsPlaceholder_FLex">
@@ -517,8 +424,8 @@ function Placeholders() {
                 </div>
               </div>
             </div>
-          </div> */}
-          <ReviewedFilled />
+          </div>
+         
         </div>
 
         {/* Location */}

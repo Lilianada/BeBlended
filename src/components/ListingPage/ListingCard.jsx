@@ -37,6 +37,7 @@ export default function ListingCard({ openModal, closeModal }) {
             </button>
           </div>
           <article>
+           {/* This is the left icon, you can give it an onclick */}
             <FiChevronLeft />
             <div className="listings">
               {ListingData.slice(0, 1).map((item, id) => (
@@ -83,7 +84,8 @@ export default function ListingCard({ openModal, closeModal }) {
                 </div>
               ))}
             </div>
-            <FiChevronRight />
+            {/* This is the right icon, you can give it an onclick */}
+            <FiChevronRight /> 
           </article>
         </motion.div>
       ) : null}

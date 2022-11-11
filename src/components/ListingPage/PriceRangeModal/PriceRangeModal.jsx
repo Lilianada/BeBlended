@@ -11,7 +11,6 @@ export default function PriceRangeModal({ openModal, closeModal }) {
     const [message, setMessage] = useState('');
     const handleChange = event => {
     setMessage(event.target.value);
-    console.log( event.target.value)
     };
     const handleClear = () => {
     // 👇️ clear input value
@@ -41,11 +40,12 @@ export default function PriceRangeModal({ openModal, closeModal }) {
                   <label htmlFor="min-price" className="label">
                     Min Price
                     <CurrencyInput
-                      value={message}
-                      onChange={handleChange}                    
+                      // value={message}
+                      // onChange={handleChange}                    
                       name="min-price"
                       className="inputField"
                       prefix="$"
+                      min='0'
                       placeholder="00.00"
                       groupSeparator=""
                       disableGroupSeparators="true"
@@ -55,12 +55,13 @@ export default function PriceRangeModal({ openModal, closeModal }) {
                   <label htmlFor="max-price" className="label">
                     Max Price
                     <CurrencyInput
-                      value={message}
-                      onChange={handleChange}
+                      // value={message}
+                      // onChange={handleChange}
                       name="max-price"
                       className="inputField"
                       placeholder="00.00"
                       prefix="$" 
+                      min='0'
                       groupSeparator=""
                       disableGroupSeparators="true"
                     />

@@ -18,7 +18,7 @@ import {
   // Client,
   // OnboardingPages,
   // Stylist,
-  // StylistProfile,
+  StylistProfile,
 } from "./components";
 
 
@@ -31,9 +31,10 @@ function App() {
       
       {/* <Placeholders/> */}
       {/* <ClientProfile/>  */}
+      {/* <StylistProfile/> */}
       
     {/* <BookingPage/> */}
-    <ManageBookings/>
+    {/* <ManageBookings/> */}
     {/* <InfoForm/> */}
     {/* <CustomService/> */}
     {/* <AppointmentConfirmation/> */}
@@ -41,7 +42,7 @@ function App() {
     {/* <AppointmentDetails/> */}
     {/* <NormalService/> */}
     
-    {/* <ListingPage/> */}
+    <ListingPage/>
     {/* <PriceRangeModal/> */}
     {/* <DistanceModal/> */}
     {/* <RoutedPages/> */}

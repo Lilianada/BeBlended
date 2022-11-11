@@ -46,6 +46,7 @@ export default function DistanceModal({ openModal, closeModal }) {
                     name="kilometers"
                     className="inputField"
                     placeholder="0"
+                    min='0'
                     groupSeparator=""
                     disableGroupSeparators="true"
                   />
