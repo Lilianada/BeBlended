@@ -3,7 +3,7 @@ import { GrDown, GrUp } from "react-icons/gr";
 import "./Accordion.scss";
 import { motion, AnimatePresence } from "framer-motion";
 
-function Accordion({ id, name, price, description, duration, variant, total }) {
+function AddonAccordion({ id, name, price, description, duration, variant, total }) {
     const [isActive, setIsActive] = useState(false);
     const handleAccordion = () => {
         setIsActive(!isActive);
@@ -66,4 +66,4 @@ function Accordion({ id, name, price, description, duration, variant, total }) {
     );
 }
 
-export default Accordion;
+export default AddonAccordion;

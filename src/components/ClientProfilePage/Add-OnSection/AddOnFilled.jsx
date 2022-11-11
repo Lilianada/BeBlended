@@ -1,5 +1,5 @@
 import React from "react";
-import Accordion from "../Accordion/AddonAccordion";
+import AddonAccordion from "../Accordion/AddonAccordion";
 import './AddOnFilled.scss';
 
 function AddOnFilled() {
@@ -37,7 +37,7 @@ function AddOnFilled() {
       </div>
       {addOnList.map((item, id) => {
         return (
-          <Accordion
+          <AddonAccordion
             key={id}
             id={item.id}
             name={item.name}

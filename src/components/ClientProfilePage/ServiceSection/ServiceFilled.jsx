@@ -1,5 +1,5 @@
 import React from "react";
-import Accordion from "../Accordion/ServiceAccordion";
+import ServiceAccordion from "../Accordion/ServiceAccordion";
 import "./ServiceFilled.scss";
 
 function ServiceFilled() {
@@ -70,7 +70,7 @@ function ServiceFilled() {
       </div>
       {serviceList.map((item, id  ) => {
         return(
-          <Accordion 
+          <ServiceAccordion 
             key={id}
             id={item.id}
             name={item.name}
