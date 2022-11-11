@@ -38,7 +38,8 @@ export default function ListingCard({ openModal, closeModal }) {
           </div>
           <article>
            {/* This is the left icon, you can give it an onclick */}
-            <FiChevronLeft />
+           <button className="slideControl"> <FiChevronLeft /></button>
+           
             <div className="listings">
               {ListingData.slice(0, 1).map((item, id) => (
                 <div className="listing" key={id}>
@@ -48,6 +49,7 @@ export default function ListingCard({ openModal, closeModal }) {
                     </div>
                     <div className="listingInfo">
                       <div className="infoHead">
+                        {/* This should link to stylist page */}
                         <h5 className="title"> {item.stylistName}</h5>
                         <div className="like" onClick={handleLike}>
                           {isliked ? (
@@ -85,7 +87,7 @@ export default function ListingCard({ openModal, closeModal }) {
               ))}
             </div>
             {/* This is the right icon, you can give it an onclick */}
-            <FiChevronRight /> 
+            <button className="slideControl"><FiChevronRight /> </button>
           </article>
         </motion.div>
       ) : null}
