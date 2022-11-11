@@ -3,7 +3,7 @@ import { GrDown, GrUp } from "react-icons/gr";
 import "./Accordion.scss";
 import { motion, AnimatePresence } from "framer-motion";
 
-function AddonAccordion({ id, name, price, description, duration, variant, total }) {
+function AddonAccordion({ id, name, description}) {
     const [isActive, setIsActive] = useState(false);
     const handleAccordion = () => {
         setIsActive(!isActive);
@@ -41,22 +41,8 @@ function AddonAccordion({ id, name, price, description, duration, variant, total
                         </div>
                         <div className="selectWrap">
                             <div className="selectList">
-                                {variant.map((opt, idx) => (
-                                    <select key={idx} className="variantaccordion">
-                                        <option value="" defaultValue={true}>
-                                            {opt.type}
-                                        </option>
-                                        {opt.options.map((arr, index) => (
-                                            <option value="index" key={index}>
-                                                {arr}
-                                            </option>
-                                        ))}
-                                    </select>
-                                ))}
-                            </div>
-                            <div className="servicePrice">
-                                <p className="price"> ${total} </p>{" "}
-                                <button className="selected">Selected</button>
+                                <input type="number" name="" className="variantAccordion" min='0' />
+                                <p className="inventory">9 remaining</p>
                             </div>
                         </div>
                     </motion.div>

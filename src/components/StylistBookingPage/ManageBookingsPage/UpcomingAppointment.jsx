@@ -45,8 +45,8 @@ export default function UpcomingAppointment({openModal, closeModal, activeTab, o
                 </div>
                 <div className="cardButtons">
                   <button className="accept"> Accept </button>
-                  <button className="decline" > Decline </button>
-                  {/* <AnimatePresence
+                  <button className="decline"onClick={openModal} > Decline </button>
+                  <AnimatePresence
                     initial={false}
                     exitBeforeEnter={true}
                     onExitComplete={() => null}
@@ -55,7 +55,7 @@ export default function UpcomingAppointment({openModal, closeModal, activeTab, o
                       openModal={openModal}
                       closeModal={closeModal}
                     />
-                  </AnimatePresence> */}
+                  </AnimatePresence>
                 </div>
               </div>
             </div>

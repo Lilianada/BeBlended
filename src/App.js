@@ -30,7 +30,7 @@ function App() {
       {/* <Stylist /> */}
       
       {/* <Placeholders/> */}
-      <ClientProfile/> 
+      {/* <ClientProfile/>  */}
       
     {/* <BookingPage/> */}
     <ManageBookings/>

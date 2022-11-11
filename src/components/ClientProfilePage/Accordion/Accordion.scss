@@ -106,9 +106,16 @@
                     display: grid;
                     grid-template-columns: repeat(2, 330px);
                     grid-template-rows: auto;
+                    align-items: center;
                 }
 
-                .variantaccordion {
+                .inventory{
+                    font-size: var(--eighteen);
+                    color: var(--hotPink);
+                    margin-bottom: 0.75rem;
+                }
+
+                .variantAccordion {
                     width: 18.75rem;
                     height: 2.5rem;
                     padding: 0.5rem;
