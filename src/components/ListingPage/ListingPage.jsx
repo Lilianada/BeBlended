@@ -86,17 +86,15 @@ export default function ListingPage() {
           </AnimatePresence>
         </div>
       </div>
-       
+
       <div className="listingFlex">
         <Listings />
         <div className="map">{/* Fix in the map here */}</div>
       </div>
 
-        {
-          openModal.list && (
-            <ListingCard openModal={openModal.list} closeModal={setOpenModal} />
-          )
-        }
+      {openModal.list && (
+        <ListingCard openModal={openModal.list} closeModal={setOpenModal} />
+      )}
 
       <BottomNavClient />
       <div className="footer">

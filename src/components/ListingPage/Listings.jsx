@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-import {
-  AiFillHeart,
-  AiFillStar,
-  AiOutlineHeart,
-} from "react-icons/ai";
+import { AiFillHeart, AiFillStar, AiOutlineHeart } from "react-icons/ai";
 import { ListingData } from "./ListingData";
 
 export default function Listings() {
+  //like button
+  const [isliked, setIsLiked] = useState("white");
+  const handleLike = () => {
+    setIsLiked(!isliked);
+  };
   return (
     <div className="listings">
       {ListingData.map((item, id) => (
@@ -42,11 +43,7 @@ export default function Listings() {
             </div>
           </div>
           <div className="like">
-            {item.like === true ? (
-              <AiFillHeart size={24} />
-            ) : (
-              <AiOutlineHeart size={24} />
-            )}
+            {isliked ? <AiOutlineHeart size={24} /> : <AiFillHeart size={24} />}
           </div>
         </div>
       ))}

@@ -12,14 +12,14 @@ import ListingPage from "./components/ListingPage/ListingPage";
 import PriceRangeModal from "./components/ListingPage/PriceRangeModal/PriceRangeModal";
 import DistanceModal from "./components/ListingPage/DistanceModal/DistanceModal";
 
-// import {
-//   Home,
-//   Client,
-//   ClientProfile,
-//   OnboardingPages,
-//   Stylist,
-//   StylistProfile,
-// } from "./components";
+import {
+  ClientProfile,
+  // Home,
+  // Client,
+  // OnboardingPages,
+  // Stylist,
+  // StylistProfile,
+} from "./components";
 
 
 function App() {
@@ -29,10 +29,11 @@ function App() {
       {/* <Client /> */}
       {/* <Stylist /> */}
       
-      <Placeholders/>
+      {/* <Placeholders/> */}
+      <ClientProfile/> 
       
     {/* <BookingPage/> */}
-    {/* <ManageBookings/> */}
+    <ManageBookings/>
     {/* <InfoForm/> */}
     {/* <CustomService/> */}
     {/* <AppointmentConfirmation/> */}

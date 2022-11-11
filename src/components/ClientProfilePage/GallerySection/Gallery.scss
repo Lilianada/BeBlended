@@ -13,7 +13,7 @@
         padding-bottom: 1rem;
 
         @media screen and (min-width: 768px) {
-            padding: 1rem 1rem 0;
+            padding: 1rem;
         }
 
         .likeImage{
@@ -21,10 +21,10 @@
             border: none;
             font-size: var(--eighteen);
 
-            .VscHeart{
-                width: 1.5rem;
-                height: 1.5rem;
+            .AiFillHeart{
+                fill: red;
             }
+            
             @media screen and (min-width: 768px) {
                 font-size: var(--twenty);
             }

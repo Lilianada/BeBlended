@@ -9,10 +9,6 @@ function StylistProfile() {
   return (
     <main className="mainWrapper">
       <Placeholders />
-      <div className="stylistProfile_Footer">
-        <Footer />
-      </div>
-      <BottomNavStylist />
     </main>
 
   );
