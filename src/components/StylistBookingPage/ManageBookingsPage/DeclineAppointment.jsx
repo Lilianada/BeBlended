@@ -1,11 +1,13 @@
-import ReactDOM from "react";
+import React from 'react';
+import ReactDOM from "react-dom";
 import { Backdrop } from "../../../components";
 import { AiFillDelete } from "react-icons/ai";
 import "./ManageBookings.scss";
 import { motion } from "framer-motion";
+import './ManageBookings.scss';
 
 export default function DeclineAppointment({ openModal, closeModal }) {
-  return (
+  return ReactDOM.createPortal (
     <>
       {openModal ? (
         <section className="declineAppointment">

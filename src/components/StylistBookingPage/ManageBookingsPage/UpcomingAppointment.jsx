@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { DeclineAppointment  } from "../../../components";
+import { DeclineAppointment, AppointmentDetails  } from "../../../components";
 import { AnimatePresence } from "framer-motion";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { IoCalendarSharp } from "react-icons/io5";
@@ -21,8 +21,20 @@ const upcomingServices = [
   // },
 ];
 
-export default function UpcomingAppointment({openModal, closeModal, activeTab, open}) {
+export default function UpcomingAppointment({activeTab, open}) {
   
+  const [openModal, setOpenModal] = React.useState({
+    details: false,
+    decline: false
+  });
+  const handleModal = (details, decline) => {
+    setOpenModal((prev) => {
+      return {
+        [details]: !prev[details],
+        [decline]: !prev[decline],
+      }
+    });
+  };
   return (
     <ErrorBoundary>
       {upcomingServices.length > 0 ? (
@@ -36,7 +48,18 @@ export default function UpcomingAppointment({openModal, closeModal, activeTab, o
               <div className="card">
                 <div className="cardHead">
                   <p className="cardTitle"> {items.serviceName} </p>
-                  <BsThreeDotsVertical style={{ cursor: "pointer" }}/>
+                  <BsThreeDotsVertical style={{ cursor: "pointer" }} onClick={() => handleModal('details')} />
+                  {
+                    openModal.details && (
+                      <AnimatePresence
+                      initial={false}
+                      exitBeforeEnter={true}
+                      onExitComplete={() => null}
+                    >
+                      <AppointmentDetails openDetails={openModal.details} closeDetails={setOpenModal} />
+                    </AnimatePresence>
+                    )
+                  }
                 </div>
                 <div className="cardTexts">
                   <p className="text"> {items.clientName} </p>
@@ -45,16 +68,20 @@ export default function UpcomingAppointment({openModal, closeModal, activeTab, o
                 </div>
                 <div className="cardButtons">
                   <button className="accept"> Accept </button>
-                  <button className="decline"onClick={openModal} > Decline </button>
+                  <button className="decline" onClick={() => handleModal('decline')}> Decline </button>
                   <AnimatePresence
                     initial={false}
                     exitBeforeEnter={true}
                     onExitComplete={() => null}
                   >
-                    <DeclineAppointment
-                      openModal={openModal}
-                      closeModal={closeModal}
-                    />
+                    {
+                      openModal.decline && (
+                        <DeclineAppointment
+                          openModal={openModal.decline}
+                          closeModal={setOpenModal}
+                        />
+                      )
+                    }
                   </AnimatePresence>
                 </div>
               </div>

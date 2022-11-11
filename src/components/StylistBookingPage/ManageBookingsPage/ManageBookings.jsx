@@ -118,7 +118,7 @@ export default function ManageBookings() {
           </div>
 
           <div className="tabFlex">
-            <UpcomingAppointment openModal={handleModal} closeModal={openModal} activeTab={activeTab} open={isOpen.upcoming}/>
+            <UpcomingAppointment activeTab={activeTab} open={isOpen.upcoming}/>
             <PastAppointments activeTab={activeTab} open={isOpen.past} />
           </div>
         </div>
