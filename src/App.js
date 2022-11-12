@@ -35,17 +35,8 @@ function App() {
       
     {/* <BookingPage/> */}
     {/* <ManageBookings/> */}
-    {/* <InfoForm/> */}
-    {/* <CustomService/> */}
-    {/* <AppointmentConfirmation/> */}
-    {/* <AppointmentStepOne/> */}
-    {/* <AppointmentDetails/> */}
-    {/* <NormalService/> */}
     
     <ListingPage/>
-    {/* <PriceRangeModal/> */}
-    {/* <DistanceModal/> */}
-    {/* <RoutedPages/> */}
     </div>
   );
 }
