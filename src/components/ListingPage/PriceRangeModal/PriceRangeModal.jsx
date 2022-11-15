@@ -9,13 +9,19 @@ import CurrencyInput from "react-currency-input-field";
 
 export default function PriceRangeModal({ openModal, closeModal }) {
     const [message, setMessage] = useState('');
-    const handleChange = event => {
+    const handleChange = (event) => {
     setMessage(event.target.value);
+    };
+
+    const [message2, setMessage2] = useState('');
+    const handleChange2 = (event) => {
+    setMessage2(event.target.value);
     };
     const handleClear = () => {
     // 👇️ clear input value
-    setMessage('');
-    };
+    setMessage('')
+    setMessage2('')
+  };
 
   return ReactDOM.createPortal(
     <>
@@ -40,13 +46,13 @@ export default function PriceRangeModal({ openModal, closeModal }) {
                   <label htmlFor="min-price" className="label">
                     Min Price
                     <CurrencyInput
-                      // value={message}
-                      // onChange={handleChange}                    
+                      value={message}
+                      onChange={handleChange}
                       name="min-price"
                       className="inputField"
-                      prefix="$"
-                      min='0'
                       placeholder="00.00"
+                      // prefix="$"
+                      min='0'
                       groupSeparator=""
                       disableGroupSeparators="true"
                     />
@@ -55,12 +61,12 @@ export default function PriceRangeModal({ openModal, closeModal }) {
                   <label htmlFor="max-price" className="label">
                     Max Price
                     <CurrencyInput
-                      // value={message}
-                      // onChange={handleChange}
+                      value={message2}
+                      onChange={handleChange2}
                       name="max-price"
                       className="inputField"
                       placeholder="00.00"
-                      prefix="$" 
+                      // prefix="$" 
                       min='0'
                       groupSeparator=""
                       disableGroupSeparators="true"
