@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { AiOutlineClose } from "react-icons/ai";
 import "./AppointmentConfirmation.scss";
 
-export default function AppointmentConfirmation({ openModal, closeModal }) {
+export default function AppointmentConfirmation ({ openModal, closeModal }) {
     
     return ReactDOM.createPortal (
         <>

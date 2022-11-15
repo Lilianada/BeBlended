@@ -6,7 +6,7 @@ import { FaSearch } from "react-icons/fa";
 import { MdAdd } from "react-icons/md";
 import "./Appointment.scss";
 
-export default function AppointmentSection() {
+export default function AppointmentSection () {
   const [openModal, setOpenModal] = React.useState(false);
   const handleModal = () => {
     setOpenModal(!openModal);

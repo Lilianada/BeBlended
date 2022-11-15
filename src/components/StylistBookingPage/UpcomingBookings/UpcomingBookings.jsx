@@ -4,6 +4,7 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import AppointmentDetails from "../Modals/AppointmentDetailsModal/AppointmentDetails";
+import DeclineAppointment from "../ManageBookingsPage/DeclineAppointment";
 
 const services = [
   {
@@ -71,6 +72,20 @@ export default function UpcomingBookings() {
               <div className="cardButtons">
                 <button className="accept"> Accept </button>
                 <button className="decline"> Decline </button>
+                <AnimatePresence
+                    initial={false}
+                    exitBeforeEnter={true}
+                    onExitComplete={() => null}
+                  >
+                    {
+                      openModal.decline && (
+                        <DeclineAppointment
+                          openModal={openModal.decline}
+                          closeModal={setOpenModal}
+                        />
+                      )
+                    }
+                  </AnimatePresence>
               </div>
             </div>
           </div>

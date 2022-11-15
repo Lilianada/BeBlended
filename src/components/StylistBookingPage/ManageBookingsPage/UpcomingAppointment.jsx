@@ -13,12 +13,18 @@ const upcomingServices = [
     date: "August 23, 2021",
     time: "8:00am - 12:00pm",
   },
-  // {
-  //   serviceName: "Cornrows",
-  //   clientName: "Sarah Jones",
-  //   date: "August 23, 2021",
-  //   time: "12:10pm - 3:00pm",
-  // },
+  {
+    serviceName: "Cornrows",
+    clientName: "Sarah Jones",
+    date: "August 23, 2021",
+    time: "12:10pm - 3:00pm",
+  },
+  {
+    serviceName: "Cornrows",
+    clientName: "Sarah Jones",
+    date: "August 23, 2021",
+    time: "12:10pm - 3:00pm",
+  },
 ];
 
 export default function UpcomingAppointment({activeTab, open}) {

@@ -1,6 +1,25 @@
 //Re-exporting components
-// export { default as OnboardingPages } from "../pages/Routes";
 
+import BookingHeader from "./ClientBookingPage/Header/Header";
+import DeclineAppointment from "./StylistBookingPage/ManageBookingsPage/DeclineAppointment";
+import ManageBookings from "./StylistBookingPage/ManageBookingsPage/ManageBookings";
+import PastAppointments from "./StylistBookingPage/ManageBookingsPage/PastAppointments";
+import UpcomingAppointment from "./StylistBookingPage/ManageBookingsPage/UpcomingAppointment";
+import AppointmentDetails from "./StylistBookingPage/Modals/AppointmentDetailsModal/AppointmentDetails";
+import CancelAppointment from "./StylistBookingPage/Modals/AppointmentDetailsModal/CancelAppointment";
+import DateReschedule from "./StylistBookingPage/Modals/AppointmentDetailsModal/DateReschedule";
+import CreateAppointment from "./StylistBookingPage/Modals/CreateAppointmentModals/AppointementStepOneModal/CreateAppointment";
+import AppointmentConfirmation from "./StylistBookingPage/Modals/CreateAppointmentModals/AppointmentConfirmationModal/AppointmentConfirmation";
+import InfoForm from "./StylistBookingPage/Modals/CreateAppointmentModals/ClientInfoFormModal/InfoForm";
+import CustomService from "./StylistBookingPage/Modals/CreateAppointmentModals/CustomServiceModal/CustomService";
+import NormalService from "./StylistBookingPage/Modals/CreateAppointmentModals/NormalServiceModal/NormalService";
+import DuringAppointment from "./StylistBookingPage/Modals/DuringAppointmentModal/DuringAppointment";
+import Schedule from "./StylistBookingPage/Scheduler/Scheduler";
+import UpcomingBookings from "./StylistBookingPage/UpcomingBookings/UpcomingBookings";
+
+ 
+
+// export { default as OnboardingPages } from "../pages/Routes";
 
 export { default as ErrorBoundary } from "./ErrorBoundary/ErrorBoundary";
 export  { default as InfoForm } from "./StylistBookingPage/Modals/CreateAppointmentModals/ClientInfoFormModal/InfoForm";

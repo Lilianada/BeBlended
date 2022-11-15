@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { AiOutlineClose } from "react-icons/ai";
 import "./InfoForm.scss";
 
-function InfoForm({ openModal, closeModal }) {
+function InfoForm ({ openModal, closeModal }) {
     const [input, setInput] = useState("")
     const [active, setActive] = useState(false);
     const handleInput = (e) => {
