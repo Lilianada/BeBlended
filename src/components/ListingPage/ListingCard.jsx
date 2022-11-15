@@ -12,9 +12,12 @@ import { ListingData } from "./ListingData";
 
 export default function ListingCard({ openModal, closeModal }) {
   //like button
-  const [isliked, setIsLiked] = useState("white");
-  const handleLike = () => {
-    setIsLiked(!isliked);
+  const [isliked, setIsLiked] = useState({});
+  const handleLike = (index) => {
+    setIsLiked(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
   };
   return ReactDOM.createPortal(
     <>
@@ -41,8 +44,9 @@ export default function ListingCard({ openModal, closeModal }) {
            <button className="slideControl"> <FiChevronLeft /></button>
            
             <div className="listings">
-              {ListingData.slice(0, 1).map((item, id) => (
-                <div className="listing" key={id}>
+              {ListingData.slice(0, 1).map((item, index) => {
+                return (
+                <div className="listing" key={index}>
                   <div className="listingsWrap">
                     <div className="profileImage">
                       <img src={item.profileImage} alt="Listing Image" />
@@ -51,8 +55,8 @@ export default function ListingCard({ openModal, closeModal }) {
                       <div className="infoHead">
                         {/* This should link to stylist page */}
                         <h5 className="title"> {item.stylistName}</h5>
-                        <div className="like" onClick={handleLike}>
-                          {isliked ? (
+                        <div className="like" onClick={(J) => handleLike(index)}>
+                          {isliked[index] ? (
                             <AiOutlineHeart size={24} />
                           ) : (
                             <AiFillHeart size={24} />
@@ -84,7 +88,7 @@ export default function ListingCard({ openModal, closeModal }) {
                     </div>
                   </div>
                 </div>
-              ))}
+              )})}
             </div>
             {/* This is the right icon, you can give it an onclick */}
             <button className="slideControl"><FiChevronRight /> </button>

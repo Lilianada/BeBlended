@@ -4,14 +4,17 @@ import { ListingData } from "./ListingData";
 
 export default function Listings() {
   //like button
-  const [isliked, setIsLiked] = useState("white");
-  const handleLike = () => {
-    setIsLiked(!isliked);
+  const [isliked, setIsLiked] = useState({});
+  const handleLike = (index) => {
+    setIsLiked(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
   };
   return (
     <div className="listings">
-      {ListingData.map((item, id) => (
-        <div className="listing" key={id}>
+      {ListingData.map((item, index) => (
+        <div className="listing" key={index}>
           <div className="listingsWrap">
             <div className="profileImage">
               <img src={item.profileImage} alt="Listing Image" />
@@ -42,8 +45,8 @@ export default function Listings() {
               </div>
             </div>
           </div>
-          <div className="like">
-            {isliked ? <AiOutlineHeart size={24} /> : <AiFillHeart size={24} />}
+          <div className="like" onClick={() => handleLike(index)}>
+            {isliked[index] ? <AiOutlineHeart size={24} /> : <AiFillHeart size={24} />}
           </div>
         </div>
       ))}
