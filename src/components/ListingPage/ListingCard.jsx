@@ -55,7 +55,7 @@ export default function ListingCard({ openModal, closeModal }) {
                       <div className="infoHead">
                         {/* This should link to stylist page */}
                         <h5 className="title"> {item.stylistName}</h5>
-                        <div className="like" onClick={(J) => handleLike(index)}>
+                        <div className="like" onClick={() => handleLike(index)}>
                           {isliked[index] ? (
                             <AiOutlineHeart size={24} />
                           ) : (

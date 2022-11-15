@@ -22,16 +22,16 @@ export default function ListingHead() {
                 <div className="searchBox">
                   <div className="inputField">
                     <FaSearch size={18} style={{marginLeft: "1.5rem"}} />
-                    <input type="search" name="service-search" className="field" />
+                    <input type="text" name="service-search" className="field" />
                   </div>
                   <TbMinusVertical size={48} strokeWidth={1} />
                   <div className="inputField">
                     <HiLocationMarker size={24} />
-                    <input type="search" name="service-search" className="field" />
+                    <input type="text" name="service-search" className="field" />
                   </div>
                 </div>
                 <div className="navWrap">
-                    <button className="headBtn">Switch to Client</button>
+                    <button className="headBtn">Switch to Stylist</button>
                     <nav className="navItems">
                     <div className="toggle" onClick={handleToggle}>
                         <FiMenu size={28} fill="#050205" stroke="#050205" style={{marginRight: '1rem', cursor: 'pointer'}} />
@@ -62,12 +62,12 @@ export default function ListingHead() {
                 <div className="searchBox">
                   <div className="inputField">
                     <FaSearch size={18} style={{marginLeft: "1.5rem"}} />
-                    <input type="search" name="service-search" className="field" />
+                    <input type="text" name="service-search" className="field" />
                   </div>
                   <TbMinusVertical size={48} strokeWidth={1} />
                   <div className="inputField">
                     <HiLocationMarker size={24} />
-                    <input type="search" name="service-search" className="field" />
+                    <input type="text" name="service-search" className="field" />
                   </div>
                 </div>
             </header>
