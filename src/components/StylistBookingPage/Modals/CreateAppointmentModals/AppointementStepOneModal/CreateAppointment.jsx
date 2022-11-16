@@ -32,13 +32,9 @@ function CreateAppointment({ openModal, closeModal }) {
     });
   };
 
-  // const [selected, setSelected] = useState();
-
-  const handleSelect = () => {
-    const lastItem = services[services.length - 1]
-    if (lastItem === "Custom Service") {
+  const handleSelect = (e) => {
+    if (e.target.value === "Custom Service") {
       handleModal('custom')
-      console.log("event.target.value");
     }else {
       return
     }
@@ -72,15 +68,14 @@ function CreateAppointment({ openModal, closeModal }) {
               <div className="modalContent">
                 <form action="" className="appointmentForm">
                   <select
-                    // value={selected}
                     className="selectDropdown"
-                    onChange={() => handleSelect()}
+                    onChange={(e) => handleSelect(e)}
                   >
                     <option
                       value="services"
                       className="optHead"
                       defaultValue
-                      // disabled
+                      disabled
                     >
                       Select services...
                     </option>

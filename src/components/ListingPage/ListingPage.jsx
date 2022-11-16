@@ -33,58 +33,61 @@ export default function ListingPage() {
 
   return (
     <section className="mainWrapper listingPage">
-      <ListingHead />
-      <div className="listingTitle">
-        <h4 className="title">32 Search Results in Toronto</h4>
-        <div className="titleButtons">
-          <button
-            className={`btnPrimary ${openModal.price ? "activeBtn" : ""}`}
-            onClick={() => handleModal("price")}
-          >
-            <IoIosPricetags size={18} className="icon" />
-            Price
-          </button>
-          <AnimatePresence
-            initial={false}
-            exitBeforeEnter={true}
-            onExitComplete={() => null}
-          >
-            {openModal.price && (
-              <PriceRangeModal
-                openModal={openModal.price}
-                closeModal={setOpenModal}
-              />
-            )}
-          </AnimatePresence>
+      <div className="listHead">
+        <ListingHead />
+        <div className="listingTitle">
+          <h4 className="title">32 Search Results in Toronto</h4>
+          <div className="titleButtons">
+            <button
+              className={`btnPrimary ${openModal.price ? "activeBtn" : ""}`}
+              onClick={() => handleModal("price")}
+            >
+              <IoIosPricetags size={18} className="icon" />
+              Price
+            </button>
+            <AnimatePresence
+              initial={false}
+              exitBeforeEnter={true}
+              onExitComplete={() => null}
+            >
+              {openModal.price && (
+                <PriceRangeModal
+                  openModal={openModal.price}
+                  closeModal={setOpenModal}
+                />
+              )}
+            </AnimatePresence>
 
-          <button
-            className={`btnPrimary ${openModal.available ? "activeBtn" : ""}`}
-            onClick={() => handleModal("available")}
-          >
-            <IoMdTime size={18} className="icon" />
-            Available Now
-          </button>
+            <button
+              className={`btnPrimary ${openModal.available ? "activeBtn" : ""}`}
+              onClick={() => handleModal("available")}
+            >
+              <IoMdTime size={18} className="icon" />
+              Available Now
+            </button>
 
-          <button
-            className={`btnPrimary ${openModal.distance ? "activeBtn" : ""}`}
-            onClick={() => handleModal("distance")}
-          >
-            <IoLocationSharp size={18} className="icon" />
-            Distance
-          </button>
-          <AnimatePresence
-            initial={false}
-            exitBeforeEnter={true}
-            onExitComplete={() => null}
-          >
-            {openModal.distance && (
-              <DistanceModal
-                openModal={openModal.distance}
-                closeModal={setOpenModal}
-              />
-            )}
-          </AnimatePresence>
+            <button
+              className={`btnPrimary ${openModal.distance ? "activeBtn" : ""}`}
+              onClick={() => handleModal("distance")}
+            >
+              <IoLocationSharp size={18} className="icon" />
+              Distance
+            </button>
+            <AnimatePresence
+              initial={false}
+              exitBeforeEnter={true}
+              onExitComplete={() => null}
+            >
+              {openModal.distance && (
+                <DistanceModal
+                  openModal={openModal.distance}
+                  closeModal={setOpenModal}
+                />
+              )}
+            </AnimatePresence>
+          </div>
         </div>
+
       </div>
 
       <div className="listingFlex">
