@@ -3,8 +3,8 @@ import "./UpcomingBookings.scss";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import AppointmentDetails from "../Modals/AppointmentDetailsModal/AppointmentDetails";
-import DeclineAppointment from "../ManageBookingsPage/DeclineAppointment";
+import { DeclineAppointment, AppointmentDetails} from "../../../components";
+
 
 const services = [
   {
@@ -34,9 +34,17 @@ const services = [
 ];
 
 export default function UpcomingBookings() {
-  const [openModal, setOpenModal] = React.useState(false);
-  const handleModal = () => {
-    setOpenModal(!openModal);
+  const [openModal, setOpenModal] = React.useState({
+    details: false,
+    decline: false
+  });
+  const handleModal = (details, decline) => {
+    setOpenModal((prev) => {
+      return {
+        [details]: !prev[details],
+        [decline]: !prev[decline],
+      }
+    });
   };
   return (
     <div className="upcomingBookings">
@@ -53,14 +61,14 @@ export default function UpcomingBookings() {
             <div className="card">
               <div className="cardHead">
                 <p className="cardTitle"> {items.serviceName} </p>
-                <BsThreeDotsVertical style={{ cursor: "pointer" }} onClick={handleModal} />
+                <BsThreeDotsVertical style={{ cursor: "pointer" }} onClick={() => handleModal("details")} />
                 <AnimatePresence
                   initial={false}
                     exitBeforeEnter={true}
                     onExitComplete={() => null}
                   >
-                    {openModal && (
-                      <AppointmentDetails openDetails={openModal} closeDetails={handleModal} />
+                    {openModal.details && (
+                      <AppointmentDetails openDetails={openModal.details} closeDetails={handleModal} />
                     )}
                 </AnimatePresence>
               </div>
@@ -71,7 +79,7 @@ export default function UpcomingBookings() {
               </div>
               <div className="cardButtons">
                 <button className="accept"> Accept </button>
-                <button className="decline"> Decline </button>
+                <button className="decline" onClick={() => handleModal("decline")} > Decline </button>
                 <AnimatePresence
                     initial={false}
                     exitBeforeEnter={true}
