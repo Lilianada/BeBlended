@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import { Backdrop, DateReschedule, InfoForm } from "../../../../../components";
+import { Backdrop, DateReschedule, InfoForm, CustomService } from "../../../../../components";
 import { AnimatePresence, motion } from "framer-motion";
 import { AiOutlineClose, AiOutlineClockCircle } from "react-icons/ai";
 import { HiOutlineCalendar } from "react-icons/hi";
@@ -13,20 +13,36 @@ function CreateAppointment({ openModal, closeModal }) {
   const [open, setOpen] = useState({
     date: false,
     form: false,
+    custom: false,
   });
 
   const handleModal = (
     date,
     form,
+    custom
     ) => {
     setOpen((prevState) => {
       return {
         ...prevState,
         [date]: !prevState[date],
         [form]: !prevState[form],
+        [custom]: !prevState[custom],
       };
     });
   };
+
+  const [selected, setSelected] = useState(services[4].value);
+
+  const handleSelect = (custom) => {
+    if ( selected ){
+     setOpen((prevState) => {
+      return {
+        ...prevState,
+        [custom]: !prevState[custom]
+      }})
+    console.log("event.target.value")
+    }
+  }
 
   return ReactDOM.createPortal(
     <>
@@ -55,22 +71,32 @@ function CreateAppointment({ openModal, closeModal }) {
 
               <div className="modalContent">
                 <form action="" className="appointmentForm">
-                  <select name="select" className="selectDropdown">
+                  <select value={selected} className="selectDropdown" onChange={() => handleSelect("custom")}>
                     <option
                       value="services"
                       className="optHead"
+                      disabled
                       defaultValue={true}
                     >
                       Select services...
                     </option>
                     {services.map((item, id) => (
-                      <option value={id} className="opt" key={id}>
-                        {item}
+                      <option value={item.value} className="opt" key={id}>
+                        {item.value}
                       </option>
                     ))}
-                    <option value="" className="optButton">
-                      Custom Service
-                    </option>
+                    <AnimatePresence
+                      initial={false}
+                      exitBeforeEnter={true}
+                      onExitComplete={() => null}
+                    >
+                        {open.custom && (
+                          <CustomService
+                            openModal={open.custom}
+                            closeModal={setOpen}
+                          />
+                        )}
+                    </AnimatePresence>
                   </select>
 
                   <div className="selectDate">

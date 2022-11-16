@@ -1,22 +1,16 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import "./AppointmentDetails.scss";
-import { Backdrop, TimeRescheduler } from "../../../../components";
+import { Backdrop } from "../../../../components";
 import { Calendar } from "react-calendar";
 import Pic from "../../../../assets/BraidedLady.png";
 import { AiOutlineClose } from "react-icons/ai";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 function DateReschedule ({ openModal, closeModal}) {
-    const [value, onChange] = useState(new Date());
+    // const [value, onChange] = useState(new Date());
       //date
     const [date, setDate] = useState(new Date());
-
-    //time
-    const [time, setTime] = useState();
-    const handleTime = () => {
-      setTime(!time);
-    };
 
     return ReactDOM.createPortal (
       <>
@@ -52,19 +46,9 @@ function DateReschedule ({ openModal, closeModal}) {
             <Calendar
                   onChange={() => {
                     setDate();
-                    handleTime();
                   }}
                   value={date}
                 />
-                <AnimatePresence
-                  initial={false}
-                  exitBeforeEnter={true}
-                  onExitComplete={() => null}
-                >
-                  {time && (
-                    <TimeRescheduler openModal={time} closeModal={handleTime} />
-                  )}
-                </AnimatePresence>
             </div>
           </motion.div>
         </Backdrop>

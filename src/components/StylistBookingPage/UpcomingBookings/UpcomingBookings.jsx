@@ -38,11 +38,12 @@ export default function UpcomingBookings() {
     details: false,
     decline: false
   });
+
   const handleModal = (details, decline) => {
     setOpenModal((prev) => {
       return {
         [details]: !prev[details],
-        [decline]: !prev[decline],
+        [decline]: !prev[decline]
       }
     });
   };

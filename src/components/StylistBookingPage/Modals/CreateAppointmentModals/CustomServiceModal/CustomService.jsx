@@ -14,6 +14,7 @@ export default function CustomService({ openModal, closeModal }) {
 
   const [active, setActive] = useState(false);
   const [field, setField] = useState("");
+  g
   const handleChange = (e) => {
     setField(e.target.value)
     if (setField !== "") {
@@ -29,6 +30,7 @@ export default function CustomService({ openModal, closeModal }) {
 
   const [textArea, setTextArea] = useState("")
   const inputRef = useRef(null);
+
   const handleClick = (e) => {
     e.preventDefault();
     inputRef.current.value = ""

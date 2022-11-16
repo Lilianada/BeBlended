@@ -54,14 +54,14 @@ function InfoForm ({ openModal, closeModal }) {
                   </div>
                 </div>
                 <div className="inputField">
-                  <label htmlFor="last-name">Client email address</label>
+                  <label htmlFor="last-name">Client Email Address</label>
                   <input type="text" onChange={handleInput} />
                 </div>
                 <div className="inputField">
                   <label htmlFor="last-name">Client Phone Number</label>
                   <input
                     type="text"
-                    placeholder="4167980000"
+                    placeholder="00000000"
                     onChange={handleInput}
                   />
                 </div>
