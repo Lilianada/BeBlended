@@ -45,7 +45,7 @@ export default function ManageBookings() {
       <section className="appointmentSection">
         <Link to="/stylist-booking-page" className="backBtn">
           <GrPrevious className="angleLeft" size={18} />
-          <p>Back</p>
+          <p>View Calendar</p>
         </Link>
         <div className="searchWrap">
           <button className="searchButton">

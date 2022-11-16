@@ -14,8 +14,9 @@ export default function CustomService({ openModal, closeModal }) {
 
   const [active, setActive] = useState(false);
   const [field, setField] = useState("");
-  g
+  
   const handleChange = (e) => {
+    e.preventDefault();
     setField(e.target.value)
     if (setField !== "") {
       setActive(true);
@@ -23,10 +24,10 @@ export default function CustomService({ openModal, closeModal }) {
   }
 
   //switch buttons
-  const [isSwitch, setIsSwitch] = useState(1);
-  const handleSwitch = (index) => {
-    setIsSwitch(index);
-  };
+  // const [isSwitch, setIsSwitch] = useState(1);
+  // const handleSwitch = (index) => {
+  //   setIsSwitch(index);
+  // };
 
   const [textArea, setTextArea] = useState("")
   const inputRef = useRef(null);
@@ -35,7 +36,6 @@ export default function CustomService({ openModal, closeModal }) {
     e.preventDefault();
     inputRef.current.value = ""
     setTextArea(e.target.value);
-
   }
 
   return ReactDOM.createPortal (
@@ -67,7 +67,7 @@ export default function CustomService({ openModal, closeModal }) {
               <form
                 action=""
                 className="modalForm_Column"
-                onSubmit={handleSubmit(handleRegistration)}
+                // onSubmit={handleSubmit(handleRegistration)}
               >
                 <div className="formField">
                   <label className="formLabel" htmlFor="name">
@@ -113,7 +113,7 @@ export default function CustomService({ openModal, closeModal }) {
                         name="deposit"
                         {...register("deposit")}
                         className="serviceInput"
-                        onChange={handleChange}
+                        // onChange={handleChange}
                         placeholder="0"
                         min={0}
                         required

@@ -73,9 +73,9 @@ export const getTimer = [
 ];
 
 export const services = [
-  {value:"Classic Box Braids"},
-  {value:"Knotless Box Braids"},
-  {value:"Braided Ponytail"},
-  {value:"Crotchet Braids"},
-  {value:"Custom Service"}
+  "Classic Box Braids",
+  "Knotless Box Braids",
+  "Braided Ponytail",
+  "Crotchet Braids",
+  "Custom Service"
 ];
