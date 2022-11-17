@@ -6,6 +6,7 @@ import {
   WeekView,
   Appointments,
   Toolbar,
+  DateNavigator,
   ViewSwitcher,
   MonthView,
   DayView,
@@ -36,6 +37,7 @@ export default class Schedule extends React.PureComponent {
           <WeekView startDayHour={7} endDayHour={19} />
           <MonthView />
 
+          <DateNavigator />
           <Toolbar />
           <ViewSwitcher />
           <Appointments />
