@@ -11,7 +11,7 @@ export default function BookingPage() {
     const [value, onChange] = useState(new Date());
 
     return (
-        <main className="mainWrapper">
+        <main className="mainWrapper bookingPage">
             <BookingHeader />
             <AppointmentSection />
 

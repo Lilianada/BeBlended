@@ -1,128 +1,128 @@
 //Appointment Section
-.appointmentSection {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    padding: 1rem;
-    border: none;
-    
-    @media screen and (min-width: 768px) {
+.manageBookings{
+
+    .appointmentSection {
         display: grid;
         grid-template-columns: 10% 1fr 17rem;
         align-items: center;
-        padding: 2rem 2rem 1rem;
-        border-bottom: 1px solid #dedddd;
-    }
-
-    .backBtn {
+        padding: 1rem 2rem;
         border: none;
-        background: none;
-        outline: none;
-        padding: 0 0.5rem;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        margin-right: 1rem;
-        margin-bottom: 0;
-
+    
         @media screen and (min-width: 768px) {
-            margin-bottom: 1rem;
-            margin-top: 0;
+            padding: 2rem 2rem 1rem;
+            border-bottom: 1px solid #dedddd;
         }
-
-        p {
-            margin-left: 0.35rem;
-        }
-    }
-
-    .searchWrap {
-        display: block;
-        margin: 0;
-
-        .searchBar {
-            display: none;
-        }
-
-        .searchButton {
+    
+        .backBtn {
             border: none;
             background: none;
             outline: none;
+            padding: 0 0.5rem;
             cursor: pointer;
-        }
-
-        @media screen and (min-width: 768px) {
-            display: block;
-            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
             margin-right: 1rem;
-            margin-left: 1rem;
-
-            .searchButton {
+            margin-bottom: 0;
+    
+            @media screen and (min-width: 768px) {
+                margin-bottom: 1rem;
+                margin-top: 0;
+            }
+    
+            p {
+                margin-left: 0.35rem;
+            }
+        }
+    
+        .searchWrap {
+            display: block;
+            margin: 0;
+    
+            .searchBar {
                 display: none;
             }
-
-            .searchBar {
-                display: flex;
-                align-items: center;
-                // max-width: 33.75rem;
-                // min-width: 25rem;
-                height: 3rem;
-                background: #fbfbfb;
-                border: 1px solid #dfdfdf;
-                border-radius: 10px;
-                padding: 0.5rem 0.75rem;
-                cursor: text;
-
-                .searchInput {
-                    height: 2.5rem;
-                    // max-width: 31rem;
-                    // min-width: 23rem;
-                    padding: 0 1rem;
-                    outline: none;
-                    font-size: var(--sixteen);
-                    color: var(--black);
-                    border: none;
-                    outline: none;
-                    background: none;
-                    margin-left: 1rem;
-                    position: absolute;
-
-                    &::placeholder {
-                        color: #bebebe;
-                    }
-                }
-            }
-
-            .searchBtn {
-                display: block;
+    
+            .searchButton {
                 border: none;
                 background: none;
                 outline: none;
                 cursor: pointer;
             }
+    
+            @media screen and (min-width: 768px) {
+                display: block;
+                margin-bottom: 1rem;
+                margin-right: 1rem;
+                margin-left: 1rem;
+    
+                .searchButton {
+                    display: none;
+                }
+    
+                .searchBar {
+                    display: flex;
+                    align-items: center;
+                    // max-width: 33.75rem;
+                    // min-width: 25rem;
+                    height: 3rem;
+                    background: #fbfbfb;
+                    border: 1px solid #dfdfdf;
+                    border-radius: 10px;
+                    padding: 0.5rem 0.75rem;
+                    cursor: text;
+    
+                    .searchInput {
+                        height: 2.5rem;
+                        // max-width: 31rem;
+                        // min-width: 23rem;
+                        padding: 0 1rem;
+                        outline: none;
+                        font-size: var(--sixteen);
+                        color: var(--black);
+                        border: none;
+                        outline: none;
+                        background: none;
+                        margin-left: 1rem;
+                        position: absolute;
+    
+                        &::placeholder {
+                            color: #bebebe;
+                        }
+                    }
+                }
+    
+                .searchBtn {
+                    display: block;
+                    border: none;
+                    background: none;
+                    outline: none;
+                    cursor: pointer;
+                }
+            }
         }
-    }
-
-    .createBtn {
-        display: none;
-
-        @media screen and (min-width: 768px) {
-            display: flex;
-            align-items: center;
-            width: fit-content;
-            border: none;
-            outline: none;
-            padding: 0.5rem;
-            color: var(--white);
-            background: var(--hotPink);
-            font-size: var(--eighteen);
-            margin-bottom: 1rem;
-            margin-left: 1rem;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.03);
-            border-radius: 10px;
-            transition: all 0.5s;
-
-            &:hover {
-                transform: scale(0.95, 0.95);
+    
+        .createBtn {
+            display: none;
+    
+            @media screen and (min-width: 768px) {
+                display: flex;
+                align-items: center;
+                width: fit-content;
+                border: none;
+                outline: none;
+                padding: 0.5rem;
+                color: var(--white);
+                background: var(--hotPink);
+                font-size: var(--eighteen);
+                margin-bottom: 1rem;
+                margin-left: 1rem;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.03);
+                border-radius: 10px;
+                transition: all 0.5s;
+    
+                &:hover {
+                    transform: scale(0.95, 0.95);
+                }
             }
         }
     }

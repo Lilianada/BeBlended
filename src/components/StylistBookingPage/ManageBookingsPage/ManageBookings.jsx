@@ -39,7 +39,7 @@ export default function ManageBookings() {
   };
 
   return (
-    <main className="mainWrapper">
+    <main className="mainWrapper manageBookings">
       <BookingHeader />
 
       <section className="appointmentSection">

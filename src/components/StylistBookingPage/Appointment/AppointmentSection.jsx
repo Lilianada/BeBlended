@@ -4,7 +4,7 @@ import { AnimatePresence } from "framer-motion";
 import { GrPrevious } from "react-icons/gr";
 import { FaSearch } from "react-icons/fa";
 import { MdAdd } from "react-icons/md";
-import "./Appointment.scss";
+import "./AppointmentSection.scss";
 
 export default function AppointmentSection () {
   const [openModal, setOpenModal] = React.useState(false);
