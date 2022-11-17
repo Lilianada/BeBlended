@@ -1,12 +1,15 @@
 //Appointment Section
 .appointmentSection {
-    display: grid;
-    grid-template-columns: 10% 1fr 17rem;
-    align-items: center;
-    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 1rem;
     border: none;
-
+    
     @media screen and (min-width: 768px) {
+        display: grid;
+        grid-template-columns: 10% 1fr 17rem;
+        align-items: center;
         padding: 2rem 2rem 1rem;
         border-bottom: 1px solid #dedddd;
     }

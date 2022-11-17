@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Calendar } from "react-calendar";
+import {BottomNavStylist} from "../../../components";
 import AppointmentSection from "../Appointment/AppointmentSection";
 import BookingHeader from "../BookingHeader/BookingHeader";
 import Schedule from "../Scheduler/Scheduler";
@@ -28,6 +28,7 @@ export default function BookingPage() {
                     </div>
                 </div>
             </div>
+            <BottomNavStylist />
         </main>
     );
 }
