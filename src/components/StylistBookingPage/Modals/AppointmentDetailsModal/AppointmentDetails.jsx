@@ -24,6 +24,15 @@ export default function AppointmentDetails({ openDetails, closeDetails }) {
     });
   };
 
+  // const handleIndex = (index) => {
+  //   setOpen((prev) => {
+  //     return {
+  //       ...prev,
+  //       [index]: !prevState[index]
+  //     }
+  //   })
+  // }
+
   return ReactDOM.createPortal(
     <>
       {openDetails ? (
@@ -86,7 +95,7 @@ export default function AppointmentDetails({ openDetails, closeDetails }) {
                       exitBeforeEnter={true}
                       onExitComplete={() => null}
                     >
-                      {open && (
+                      {open.reschedule && (
                         <DateReschedule
                           openModal={open.reschedule}
                           closeModal={setOpen}
@@ -104,7 +113,7 @@ export default function AppointmentDetails({ openDetails, closeDetails }) {
                       exitBeforeEnter={true}
                       onExitComplete={() => null}
                     >
-                      {open && (
+                      {open.cancel && (
                         <CancelAppointment
                           openModal={open.cancel}
                           closeModal={setOpen}

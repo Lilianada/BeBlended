@@ -3,8 +3,7 @@ import "./UpcomingBookings.scss";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import { DeclineAppointment, AppointmentDetails} from "../../../components";
-
+import { DeclineAppointment, AppointmentDetails } from "../../../components";
 
 const services = [
   {
@@ -36,23 +35,36 @@ const services = [
 export default function UpcomingBookings() {
   const [openModal, setOpenModal] = React.useState({
     details: false,
-    decline: false
+    decline: false,
   });
 
   const handleModal = (details, decline) => {
     setOpenModal((prev) => {
       return {
         [details]: !prev[details],
-        [decline]: !prev[decline]
-      }
+        [decline]: !prev[decline],
+      };
     });
   };
+
+  
+  const [selectedProject, setSelectedProject] = React.useState(null);
+  const expandModal = (services) => {
+    setSelectedProject(services);
+    handleModal("details");
+  };
+
+  const closeModal = () => {
+    setSelectedProject(null);
+    setOpenModal(true);
+  };
+
   return (
     <div className="upcomingBookings">
       <div className="upcomingHeader">
         <h5 className="upcomingHead">Upcoming Bookings</h5>
-        <Link to="/manage-bookings" className="subHead" >
-            View all
+        <Link to="/manage-bookings" className="subHead">
+          View all
         </Link>
       </div>
       <div className="mappedServices">
@@ -62,15 +74,21 @@ export default function UpcomingBookings() {
             <div className="card">
               <div className="cardHead">
                 <p className="cardTitle"> {items.serviceName} </p>
-                <BsThreeDotsVertical style={{ cursor: "pointer" }} onClick={() => handleModal("details")} />
+                <BsThreeDotsVertical
+                  style={{ cursor: "pointer" }}
+                  onClick={() => expandModal(services)}
+                />
                 <AnimatePresence
                   initial={false}
-                    exitBeforeEnter={true}
-                    onExitComplete={() => null}
-                  >
-                    {openModal.details && (
-                      <AppointmentDetails openDetails={openModal.details} closeDetails={handleModal} />
-                    )}
+                  exitBeforeEnter={true}
+                  onExitComplete={() => null}
+                >
+                  {openModal.details && (
+                    <AppointmentDetails
+                      openDetails={openModal.details}
+                      closeDetails={closeModal}
+                    />
+                  )}
                 </AnimatePresence>
               </div>
               <div className="cardTexts">
@@ -80,21 +98,25 @@ export default function UpcomingBookings() {
               </div>
               <div className="cardButtons">
                 <button className="accept"> Accept </button>
-                <button className="decline" onClick={() => handleModal("decline")} > Decline </button>
+                <button
+                  className="decline"
+                  onClick={() => handleModal("decline")}
+                >
+                  {" "}
+                  Decline{" "}
+                </button>
                 <AnimatePresence
-                    initial={false}
-                    exitBeforeEnter={true}
-                    onExitComplete={() => null}
-                  >
-                    {
-                      openModal.decline && (
-                        <DeclineAppointment
-                          openModal={openModal.decline}
-                          closeModal={setOpenModal}
-                        />
-                      )
-                    }
-                  </AnimatePresence>
+                  initial={false}
+                  exitBeforeEnter={true}
+                  onExitComplete={() => null}
+                >
+                  {openModal.decline && (
+                    <DeclineAppointment
+                      openModal={openModal.decline}
+                      closeModal={setOpenModal}
+                    />
+                  )}
+                </AnimatePresence>
               </div>
             </div>
           </div>
@@ -103,4 +125,3 @@ export default function UpcomingBookings() {
     </div>
   );
 }
-

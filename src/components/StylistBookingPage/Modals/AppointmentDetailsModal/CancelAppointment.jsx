@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import "./AppointmentDetails.scss";
 import { Backdrop } from "../../../../components";
 import { AiFillDelete } from "react-icons/ai";
+import { motion } from "framer-motion";
 
 export default function CancelAppointment({ openModal, closeModal}) {
     return ReactDOM.createPortal (
@@ -10,7 +11,18 @@ export default function CancelAppointment({ openModal, closeModal}) {
       {openModal ? (
       <div className="cancelAppointment">
         <Backdrop>
-          <div className="cancelContent">
+          <motion.div 
+          className="cancelContent"
+          onClick={(e) => e.stopPropagation()}
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.8,
+            delay: 0.5,
+            ease: [0, 0.71, 0.2, 1.01],
+          }}
+          exit="exit"
+          >
             <div className="dialogHeader">
               <AiFillDelete size={35} />
             </div>
@@ -33,7 +45,7 @@ export default function CancelAppointment({ openModal, closeModal}) {
                 No
               </button>
             </div>
-          </div>
+          </motion.div>
         </Backdrop>
       </div>
   ) : null}{" "}
