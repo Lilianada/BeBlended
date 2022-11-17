@@ -3,14 +3,13 @@
         display: block;
         background-color: var(--white);
         width: 90%;
-        height: 70%;
+        height: fit-content;
         margin: 0 auto;
         border-radius: 12px;
-        overflow-y: scroll;
 
         @media screen and (min-width: 500px) {
             width: 21.875rem;
-            height: 40rem;
+            height: 37rem;
         }
 
         .modalHeader {
@@ -55,7 +54,7 @@
                 background: #dfdfdf;
                 height: 1px;
                 width: 12.5rem;
-                margin: 1.5rem auto 1rem;
+                margin: 1rem auto;
                 border: none;
             }
 
