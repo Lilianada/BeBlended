@@ -34,11 +34,11 @@ export default class Schedule extends React.PureComponent {
           />
 
           <DayView />
-          <WeekView startDayHour={7} endDayHour={19} />
+          <WeekView startDayHour={5} endDayHour={20} />
           <MonthView />
 
-          <DateNavigator />
           <Toolbar />
+          <DateNavigator />
           <ViewSwitcher />
           <Appointments />
         </Scheduler>

@@ -1,6 +1,10 @@
 .upcomingBookings{
     background: #FAFAFA;
-    padding: 1rem 2rem;
+    padding: 1rem;
+
+    @media screen and (min-width: 768px) {
+        padding: 1rem 2rem;
+    }
 
     .upcomingHeader{
         margin-bottom: 1rem;

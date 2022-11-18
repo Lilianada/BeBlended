@@ -304,9 +304,18 @@ abbr{
 .css-sizvqo-MuiTableCell-root .Cell-today,
 .css-sizvqo-MuiTableCell-root.Cell-cell:focus,
 .css-18tcpub-MuiTableCell-root.Cell-cell:focus{
-    background-color: #893583 !important;
+    background-color: var(--hotPink) !important;
 }
 
-.css-1675apn-MuiTableCell-root .Cell-highlightedText{
-    color: #893583 !important;
+.css-1675apn-MuiTableCell-root .Cell-highlightedText,
+.css-71a9mb-MuiButtonBase-root-MuiIconButton-root{
+    color: var(--hotPink) !important;
+}
+
+.css-3nejl.Appointment-appointment{
+    background-color: var(--hotPink) !important;
+}
+
+.css-3nejl.Appointment-appointment:hover{
+    background-color: var(--pink) !important;
 }
