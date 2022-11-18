@@ -33,8 +33,8 @@ function App() {
       {/* <ClientProfile/>  */}
       {/* <StylistProfile/> */}
       
-    <BookingPage/>
-    {/* <ManageBookings/> */}
+    {/* <BookingPage/> */}
+    <ManageBookings/>
     
     {/* <ListingPage/> */}
     </div>

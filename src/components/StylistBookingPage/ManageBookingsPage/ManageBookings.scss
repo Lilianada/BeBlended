@@ -2,13 +2,19 @@
 .manageBookings{
 
     .appointmentSection {
-        display: grid;
-        grid-template-columns: 10% 1fr 17rem;
-        align-items: center;
-        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: 1rem;
         border: none;
-    
+
         @media screen and (min-width: 768px) {
+            display: grid;
+            grid-template-columns: 10rem 1fr 15rem;
+            align-items: center;
+            padding: 1rem 2rem;
+            border: none;
+        
             padding: 2rem 2rem 1rem;
             border-bottom: 1px solid #dedddd;
         }
@@ -62,8 +68,6 @@
                 .searchBar {
                     display: flex;
                     align-items: center;
-                    // max-width: 33.75rem;
-                    // min-width: 25rem;
                     height: 3rem;
                     background: #fbfbfb;
                     border: 1px solid #dfdfdf;
@@ -73,8 +77,6 @@
     
                     .searchInput {
                         height: 2.5rem;
-                        // max-width: 31rem;
-                        // min-width: 23rem;
                         padding: 0 1rem;
                         outline: none;
                         font-size: var(--sixteen);
@@ -277,6 +279,7 @@
                                 border: none;
                                 outline: none;
                                 transition: all 0.5s;
+                                color: var(--black);
 
                                 &:hover {
                                     transform: scale(0.95, 0.95);
@@ -293,6 +296,7 @@
                                 border: none;
                                 outline: none;
                                 transition: all 0.5s;
+                                color: var(--black);
 
                                 &:hover {
                                     transform: scale(0.95, 0.95);

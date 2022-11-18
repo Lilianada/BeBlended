@@ -75,6 +75,7 @@
                         border-radius: 5px;
                         border: none;
                         outline: none;
+                        color: var(--black);
 
                         &:hover{
                             background: #7deaa7;
@@ -89,7 +90,8 @@
                         border-radius: 5px;
                         border: none;
                         outline: none;
-
+                        color: var(--black);
+                        
                         &:hover{
                             background: #fb404080;
                         }
