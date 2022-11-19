@@ -1,6 +1,11 @@
 .bookingHeader{
-    background: #FCFCFC;
-    border: 1px solid #EAEAEA;
+    display: none;
+    
+    @media screen and (min-width: 768px) {
+        background: #FCFCFC;
+        border: 1px solid #EAEAEA;
+        display: block;
+    }
     
     .stylistMobile__Header{
         display: flex;
