@@ -1,140 +1,172 @@
 .appointmentSection {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    padding: 1rem;
-    border: none;
+    @media screen and (max-width: 767px) {
+        .mobileVersion{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
 
-    
-    @media screen and (min-width: 768px) {
-        display: grid;
-        grid-template-columns: 15% 1fr 17rem;
-        align-items: center;
-        padding: 2rem 2rem 1rem;
-        // border-bottom: 1px solid #dedddd;
+            .manageBookings_Link{
+                color: var(--hotPink);
+                font-size: var(--eighteen);
+                text-decoration: underline;
+            }
+
+            .createAppointment_Button{
+                height: 40px;
+                width: 40px;
+                left: 301px;
+                top: 982px;
+                background: var(--hotPink);
+                border-radius: 50%;
+                display: grid;
+                place-items: center;
+                transition: all .3s;
+
+                &:hover{
+                    transform: scale(.95, .95);
+                }
+            }
+        }
     }
-
-    .backBtn {
-        border: none;
-        background: none;
-        outline: none;
-        cursor: pointer;
+    .desktopVersion{
         display: flex;
-        align-items: center;
-        margin-right: 1rem;
-        margin-bottom: 0;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: 1rem;
+        border: none;
 
+        
         @media screen and (min-width: 768px) {
-            margin-bottom: 1rem;
+            display: grid;
+            grid-template-columns: 15% 1fr 17rem;
+            align-items: center;
+            padding: 2rem 2rem 1rem;
+            // border-bottom: 1px solid #dedddd;
         }
 
-        p {
-            margin-left: 0.35rem;
-        }
-    }
-
-    .searchWrap {
-        display: block;
-        margin: 0;
-
-        .searchBar {
-            display: none;
-        }
-
-        .searchButton {
+        .backBtn {
             border: none;
             background: none;
             outline: none;
             cursor: pointer;
+            display: flex;
+            align-items: center;
+            margin-right: 1rem;
+            margin-bottom: 0;
+
+            @media screen and (min-width: 768px) {
+                margin-bottom: 1rem;
+            }
+
+            p {
+                margin-left: 0.35rem;
+            }
         }
 
-        @media screen and (min-width: 768px) {
+        .searchWrap {
             display: block;
-            margin-bottom: 1rem;
-            margin-right: 1rem;
-            margin-left: 1rem;
+            margin: 0;
 
-            .searchButton {
+            .searchBar {
                 display: none;
             }
 
-            .searchBar {
-                display: flex;
-                align-items: center;
-                height: 3rem;
-                background: #fbfbfb;
-                border: 1px solid #dfdfdf;
-                border-radius: 10px;
-                padding: 0.5rem 0.75rem;
-                cursor: text;
-
-                .searchInput {
-                    height: 2.5rem;
-                    padding: 0 1rem;
-                    outline: none;
-                    font-size: var(--sixteen);
-                    color: var(--black);
-                    border: none;
-                    outline: none;
-                    background: none;
-                    margin-left: 1rem;
-                    position: absolute;
-
-                    &::placeholder {
-                        color: #bebebe;
-                    }
-                }
-            }
-
-            .searchBtn {
+            .searchButton {
                 border: none;
                 background: none;
                 outline: none;
                 cursor: pointer;
             }
+
+            @media screen and (min-width: 768px) {
+                display: block;
+                margin-bottom: 1rem;
+                margin-right: 1rem;
+                margin-left: 1rem;
+
+                .searchButton {
+                    display: none;
+                }
+
+                .searchBar {
+                    display: flex;
+                    align-items: center;
+                    height: 3rem;
+                    background: #fbfbfb;
+                    border: 1px solid #dfdfdf;
+                    border-radius: 10px;
+                    padding: 0.5rem 0.75rem;
+                    cursor: text;
+
+                    .searchInput {
+                        height: 2.5rem;
+                        padding: 0 1rem;
+                        outline: none;
+                        font-size: var(--sixteen);
+                        color: var(--black);
+                        border: none;
+                        outline: none;
+                        background: none;
+                        margin-left: 1rem;
+                        position: absolute;
+
+                        &::placeholder {
+                            color: #bebebe;
+                        }
+                    }
+                }
+
+                .searchBtn {
+                    border: none;
+                    background: none;
+                    outline: none;
+                    cursor: pointer;
+                }
+            }
         }
-    }
 
-    .createBtn {
-        display: none;
+        .createBtn {
+            display: none;
 
-        @media screen and (min-width: 768px) {
-            display: flex;
-            align-items: center;
-            width: fit-content;
-            border: none;
-            outline: none;
+            @media screen and (min-width: 768px) {
+                display: flex;
+                align-items: center;
+                width: fit-content;
+                border: none;
+                outline: none;
+                padding: 0.5rem;
+                color: var(--white);
+                background: var(--hotPink);
+                font-size: var(--eighteen);
+                margin-bottom: 1rem;
+                margin-left: 1rem;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.03);
+                border-radius: 10px;
+            }
+        }
+
+        .dropdown {
+            display: none;
+            width: 8rem;
             padding: 0.5rem;
-            color: var(--white);
-            background: var(--hotPink);
-            font-size: var(--eighteen);
-            margin-bottom: 1rem;
-            margin-left: 1rem;
+            background: #ffffff;
+            border: 1.2px solid #707070;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.03);
             border-radius: 10px;
-        }
-    }
-
-    .dropdown {
-        display: none;
-        width: 8rem;
-        padding: 0.5rem;
-        background: #ffffff;
-        border: 1.2px solid #707070;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.03);
-        border-radius: 10px;
-        outline: none;
-        margin-bottom: 1rem;
-        margin-left: 1rem;
-        color: var(--black);
-        font-size: var(--eighteen);
-        font-weight: 600;
-        cursor: pointer;
-
-        option {
+            outline: none;
+            margin-bottom: 1rem;
+            margin-left: 1rem;
             color: var(--black);
-            padding: 0.5rem;
+            font-size: var(--eighteen);
+            font-weight: 600;
             cursor: pointer;
+
+            option {
+                color: var(--black);
+                padding: 0.5rem;
+                cursor: pointer;
+            }
         }
     }
 }

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { RiAddFill } from "react-icons/ri";
 import { BottomNavStylist } from "../../../components";
 import AppointmentSection from "../Appointment/AppointmentSection";
 import BookingHeader from "../BookingHeader/BookingHeader";
@@ -16,12 +17,6 @@ export default function BookingPage() {
         <BookingHeader />
       </div>
       <AppointmentSection />
-      <div className="manageCreate_Bookings">
-        {/* <Link to='/manage-booking'>Manage Bookings</Link> */}
-        <div className="createAppointment_Button">
-          <GrAdd />
-        </div>
-      </div>
 
       <div className="gridContainer">
         <div className="smallGrid">
