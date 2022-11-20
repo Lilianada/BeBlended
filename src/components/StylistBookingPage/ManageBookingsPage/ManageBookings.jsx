@@ -5,7 +5,6 @@ import {
   BottomNavStylist,
   CreateAppointment,
   PastAppointments,
-  UpcomingAppointment
 } from "../../../components";
 import { bookings } from "../CreateAppointmentData";
 import { FaSearch } from "react-icons/fa";
@@ -13,6 +12,7 @@ import { GrPrevious } from "react-icons/gr";
 import { MdAdd } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
+import BookingServiceCard from "../UpcomingBookings/BookingServiceCard";
 
 
 export default function ManageBookings() {
@@ -125,10 +125,12 @@ export default function ManageBookings() {
           </div>
 
           <div className="tabFlex">
-            {bookings.map((item, id) => {
-              return (
-              <BookingServiceCard item={item} key={id} activeTab={activeTab} open={isOpen.upcoming}/>
-            )})}
+            <div className={`mappedTabs ${activeTab === 1 ? "activeTab" : ""}`}>
+              {bookings.map((item, id) => {
+                return (
+                <BookingServiceCard item={item} key={id} open={isOpen.upcoming}/>
+              )})}
+            </div>
             <PastAppointments activeTab={activeTab} open={isOpen.past} />
           </div>
         </div>

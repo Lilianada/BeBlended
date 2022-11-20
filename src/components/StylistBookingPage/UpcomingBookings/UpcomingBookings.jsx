@@ -17,11 +17,10 @@ export default function UpcomingBookings() {
         </Link>
       </div>
       <div className="mappedServices">
-      
-      {bookings.map((item, id) => {
-        return (
-        <BookingServiceCard item={item} key={id} />
-      )})}
+        {bookings.map((item, id) => {
+          return (
+          <BookingServiceCard item={item} key={id} />
+        )})}
       </div>
     </div>
   );

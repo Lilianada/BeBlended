@@ -3,21 +3,7 @@ import { IoCalendarSharp } from "react-icons/io5";
 import "./ManageBookings.scss";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import ErrorBoundary from "../../ErrorBoundary/ErrorBoundary";
-
-const pastServices = [
-  //   {
-  //     serviceName: "Knotless Braids",
-  //     clientName: "Ashley Nelson",
-  //     date: "October 23, 2021",
-  //     time: "11:00am - 5:00pm",
-  //   },
-  //   {
-  //     serviceName: "Knotless Braids",
-  //     clientName: "Ashley Nelson",
-  //     date: "October 23, 2021",
-  //     time: "11:00am - 5:00pm",
-  //   },
-];
+import { pastServices } from "../CreateAppointmentData";
 
 export default function PastAppointments({activeTab, open }) {
 
