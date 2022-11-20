@@ -20,53 +20,55 @@ export default function BookingServiceCard({ item }) {
   };
 
   return (
-    <div className="serviceCard">
-      <div className="bar"></div>
-      <div className="card">
-        <div className="cardHead">
-          <p className="cardTitle"> {item.serviceName} </p>
-          <BsThreeDotsVertical
-            style={{ cursor: "pointer" }}
-            onClick={() => handleModal("details")}
-          />
-          <AnimatePresence
-            initial={false}
-            exitBeforeEnter={true}
-            onExitComplete={() => null}
-          >
-            {openModal.details && (
-              <AppointmentDetails
-                openDetails={openModal.details}
-                closeDetails={setOpenModal}
-              />
-            )}
-          </AnimatePresence>
-        </div>
-        <div className="cardTexts">
-          <p className="text"> {item.clientName} </p>
-          <p className="text"> {item.date} </p>
-          <p className="text"> {item.time} </p>
-        </div>
-        <div className="cardButtons">
-          <button className="accept"> Accept </button>
-          <button className="decline" onClick={() => handleModal("decline")}>
-            {" "}
-            Decline{" "}
-          </button>
-          <AnimatePresence
-            initial={false}
-            exitBeforeEnter={true}
-            onExitComplete={() => null}
-          >
-            {openModal.decline && (
-              <DeclineAppointment
-                openModal={openModal.decline}
-                closeModal={setOpenModal}
-              />
-            )}
-          </AnimatePresence>
+    <>
+      <div className="serviceCard">
+        <div className="bar"></div>
+        <div className="card">
+          <div className="cardHead">
+            <p className="cardTitle"> {item.serviceName} </p>
+            <BsThreeDotsVertical
+              style={{ cursor: "pointer" }}
+              onClick={() => handleModal("details")}
+            />
+            <AnimatePresence
+              initial={false}
+              exitBeforeEnter={true}
+              onExitComplete={() => null}
+            >
+              {openModal.details && (
+                <AppointmentDetails
+                  openDetails={openModal.details}
+                  closeDetails={setOpenModal}
+                />
+              )}
+            </AnimatePresence>
+          </div>
+          <div className="cardTexts">
+            <p className="text"> {item.clientName} </p>
+            <p className="text"> {item.date} </p>
+            <p className="text"> {item.time} </p>
+          </div>
+          <div className="cardButtons">
+            <button className="accept"> Accept </button>
+            <button className="decline" onClick={() => handleModal("decline")}>
+              {" "}
+              Decline{" "}
+            </button>
+            <AnimatePresence
+              initial={false}
+              exitBeforeEnter={true}
+              onExitComplete={() => null}
+            >
+              {openModal.decline && (
+                <DeclineAppointment
+                  openModal={openModal.decline}
+                  closeModal={setOpenModal}
+                />
+              )}
+            </AnimatePresence>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

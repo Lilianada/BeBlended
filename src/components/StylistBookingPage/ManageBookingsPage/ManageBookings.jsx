@@ -5,15 +5,13 @@ import {
   BottomNavStylist,
   CreateAppointment,
   PastAppointments,
+  UpcomingAppointment
 } from "../../../components";
-import { bookings } from "../CreateAppointmentData";
 import { FaSearch } from "react-icons/fa";
 import { GrPrevious } from "react-icons/gr";
 import { MdAdd } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
-import BookingServiceCard from "../UpcomingBookings/BookingServiceCard";
-
 
 export default function ManageBookings() {
   const [activeTab, setActiveTab] = useState(1);
@@ -21,18 +19,17 @@ export default function ManageBookings() {
 
   const [tabOpen, setTabOpen] = useState({
     upcoming: false,
-    past: false
+    past: false,
   });
   const isOpen = (upcoming, past) => {
     setTabOpen((prev) => {
       return {
-        ...prev, 
+        ...prev,
         [upcoming]: !prev[upcoming],
-        [past]: !prev[past]
-      }}
-
-    );
-  }
+        [past]: !prev[past],
+      };
+    });
+  };
 
   const [openModal, setOpenModal] = React.useState(false);
   const handleModal = () => {
@@ -125,12 +122,7 @@ export default function ManageBookings() {
           </div>
 
           <div className="tabFlex">
-            <div className={`mappedTabs ${activeTab === 1 ? "activeTab" : ""}`}>
-              {bookings.map((item, id) => {
-                return (
-                <BookingServiceCard item={item} key={id} open={isOpen.upcoming}/>
-              )})}
-            </div>
+            <UpcomingAppointment activeTab={activeTab} open={isOpen.upcoming} />
             <PastAppointments activeTab={activeTab} open={isOpen.past} />
           </div>
         </div>

@@ -100,4 +100,32 @@
             }
         }
     }
+
+    .noPastBooking {
+        display: none;
+        margin-top: 2rem;
+        flex-direction: column;
+        align-items: center;
+
+        @media screen and (min-width: 768px) {
+            display: flex;
+            opacity: 0;
+        }
+
+        .calendarIcon {
+            width: 5rem;
+            height: 4.625rem;
+            border: 1px solid #dedddd;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+        }
+
+        .noBookingText {
+            font-size: var(--twentyTwo);
+            font-weight: 600;
+            margin-top: 1rem;
+            text-align: center;
+        }
+    }
 }
