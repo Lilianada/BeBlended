@@ -9,10 +9,9 @@ import {
 import { AnimatePresence, motion } from "framer-motion";
 import { AiOutlineClose, AiOutlineClockCircle } from "react-icons/ai";
 import { HiOutlineCalendar } from "react-icons/hi";
-// import { BsChevronCompactDown } from "react-icons/bs";
 import AfroIcon from "../../../../../assets/AfroVector.svg";
 import "./AppointmentStepOne.scss";
-import { services, getTimer } from "./CreateAppointmentData";
+import { services, getTimer } from "../../../CreateAppointmentData";
 
 function CreateAppointment({ openModal, closeModal }) {
   const [open, setOpen] = useState({

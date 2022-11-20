@@ -7,6 +7,7 @@ import {
   PastAppointments,
   UpcomingAppointment
 } from "../../../components";
+import { bookings } from "../CreateAppointmentData";
 import { FaSearch } from "react-icons/fa";
 import { GrPrevious } from "react-icons/gr";
 import { MdAdd } from "react-icons/md";
@@ -95,6 +96,9 @@ export default function ManageBookings() {
               onExitComplete={() => null}
             >
               <motion.label
+                initial={{ x: 300, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: -300, opacity: 0 }}
                 htmlFor="upcoming"
                 className={`tab ${activeTab === 1 ? "active" : ""}`}
                 onClick={() => isActive(1)}
@@ -108,6 +112,9 @@ export default function ManageBookings() {
               onExitComplete={() => null}
             >
               <motion.label
+                initial={{ x: 300, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: -300, opacity: 0 }}
                 htmlFor="past"
                 className={`tab ${activeTab === 2 ? "active" : ""}`}
                 onClick={() => isActive(2)}
@@ -118,7 +125,10 @@ export default function ManageBookings() {
           </div>
 
           <div className="tabFlex">
-            <UpcomingAppointment activeTab={activeTab} open={isOpen.upcoming}/>
+            {bookings.map((item, id) => {
+              return (
+              <BookingServiceCard item={item} key={id} activeTab={activeTab} open={isOpen.upcoming}/>
+            )})}
             <PastAppointments activeTab={activeTab} open={isOpen.past} />
           </div>
         </div>

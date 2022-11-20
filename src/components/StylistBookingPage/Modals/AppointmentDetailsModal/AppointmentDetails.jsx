@@ -24,15 +24,6 @@ export default function AppointmentDetails({ openDetails, closeDetails }) {
     });
   };
 
-  // const handleIndex = (index) => {
-  //   setOpen((prev) => {
-  //     return {
-  //       ...prev,
-  //       [index]: !prevState[index]
-  //     }
-  //   })
-  // }
-
   return ReactDOM.createPortal(
     <>
       {openDetails ? (

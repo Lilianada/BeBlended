@@ -5,7 +5,7 @@ import { AiOutlineClose, AiOutlineClockCircle } from "react-icons/ai";
 import { HiOutlineCalendar } from "react-icons/hi";
 import AfroIcon from "../../../../../assets/AfroVector.svg";
 import "./NormalService.scss";
-import { services, getTimer } from "../../CreateAppointmentModals/AppointementStepOneModal/CreateAppointmentData";
+import { services, getTimer } from "../../../CreateAppointmentData";
 import { Backdrop, DateReschedule, InfoForm } from "../../../../../components";
 
 export default function NormalService ({ openModal, closeModal }) {

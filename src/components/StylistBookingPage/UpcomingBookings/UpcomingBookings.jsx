@@ -2,6 +2,9 @@ import React from "react";
 import "./UpcomingBookings.scss";
 import { Link } from "react-router-dom";
 import BookingServiceCard from './BookingServiceCard';
+import { bookings } from "../CreateAppointmentData";
+
+
 
 export default function UpcomingBookings() {
   
@@ -14,7 +17,11 @@ export default function UpcomingBookings() {
         </Link>
       </div>
       <div className="mappedServices">
-        <BookingServiceCard/>
+      
+      {bookings.map((item, id) => {
+        return (
+        <BookingServiceCard item={item} key={id} />
+      )})}
       </div>
     </div>
   );
