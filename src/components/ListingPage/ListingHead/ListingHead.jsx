@@ -61,7 +61,7 @@ export default function ListingHead() {
               </div>
                 <div className="searchBox">
                   <div className="inputField">
-                    <FaSearch size={18} style={{marginLeft: "1.5rem"}} />
+                    <FaSearch style={{marginLeft: "1.5rem", width:"20px", height:"24px"  }} />
                     <input type="text" name="service-search" className="field" />
                   </div>
                   <TbMinusVertical size={48} strokeWidth={1} />
