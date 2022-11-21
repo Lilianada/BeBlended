@@ -34,9 +34,9 @@ function App() {
       {/* <StylistProfile/> */}
       
     {/* <BookingPage/> */}
-    <ManageBookings/>
+    {/* <ManageBookings/> */}
     
-    {/* <ListingPage/> */}
+    <ListingPage/>
     </div>
   );
 }
