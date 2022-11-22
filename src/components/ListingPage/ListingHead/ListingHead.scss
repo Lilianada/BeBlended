@@ -47,6 +47,7 @@
                     font-size: var(--eighteen);
                     outline: none;
                     padding: 0 .5rem;
+
                     @media screen and (min-width: 768px) {
                         width: 13rem;
                     }
@@ -68,9 +69,9 @@
        
         .stylistDesktop__Header{
             display: grid;
-            grid-template-columns: 15% 55% 30%;
+            grid-template-columns: 15% 55% 29%;
             align-items: center;
-            gap: 0.5rem;
+            gap: 1rem;
             padding: 1rem 3rem;
             background-color: var(--white);
             position: relative;
@@ -82,14 +83,14 @@
         
                 .headBtn{
                     height: 2.5rem;
-                    padding: .5rem 1rem;
+                    padding: .5rem 0rem;
                     border: none;
                     border-radius: 10px;
                     background: none;
                     color: var(--black);
                     cursor: pointer;
                     font-size: var(--sixteen);
-                    margin-right: 1.5rem;
+                    margin-right: .75rem;
                 }
         
                 .navItems{
@@ -188,9 +189,10 @@
                         font-size: var(--eighteen);
                         outline: none;
                         padding: 0 .5rem;
-                        @media screen and (min-width: 768px) {
-                            width: 13rem;
-                        }
+
+                        // @media screen and (min-width: 768px) {
+                        //     width: 13rem;
+                        // }
                     }
                 }
             }

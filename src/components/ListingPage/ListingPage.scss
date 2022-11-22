@@ -24,11 +24,11 @@
                 font-size: var(--thirtyEight);
                 line-height: 3rem;
                 margin-bottom: 0.5rem;
-                
+
                 @media screen and (min-width: 500px) {
                     font-size: var(--fourtyEight);
                 }
-                
+
                 @media screen and (min-width: 768px) {
                     font-size: var(--thirtyEight);
                 }
@@ -76,7 +76,7 @@
         display: grid;
         grid-template-columns: 1fr;
         gap: 1rem;
-        
+
         @media screen and (min-width: 1000px) {
             grid-template-columns: 1fr 1fr;
             margin: 1rem;
@@ -133,7 +133,7 @@
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 gap: 0.75rem;
-                width: 29rem;
+                width: 100%;
 
                 .profileImage {
                     width: 13.75rem;
@@ -220,11 +220,19 @@
     width: 100%;
     background: rgba(255, 255, 255, 0.95);
     border-radius: 30px 30px 0px 0px;
-    padding: 0.5rem;
+    padding: 0.5rem 0.5rem 1rem;
     position: fixed;
     left: 0;
     bottom: 5rem;
     z-index: 100;
+
+    @media screen and (min-width: 768px) {
+        bottom: 0;    
+    }
+
+    @media screen and (min-width: 900px) {
+        display: none;
+    }
 
     .cardHeader {
         text-align: right;
@@ -246,29 +254,30 @@
         overflow: hidden;
         width: 100%;
 
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: 900px) {
             display: none;
         }
 
         .listings {
             display: flex;
             width: 90%;
-            overflow-x: hidden;
+            margin: auto;
 
             .listing {
                 display: flex;
                 justify-content: space-between;
                 align-items: flex-start;
-                width: 100%;
+                width: 90vw;
 
                 .listingsWrap {
                     display: flex;
-                    width: 20rem;
-                    display: flex;
-                    justify-content: space-between;
+                    justify-content: space-evenly;
+                    gap: 1rem;
+                    width: 100%;
+                    margin: auto;
 
                     .profileImage {
-                        width: 8.75rem;
+                        width: 50%;
                         height: 11.875rem;
                         background-color: var(--greyPro);
                         border-radius: 10px;
@@ -279,6 +288,8 @@
                     }
 
                     .listingInfo {
+                        width: 50%;
+
                         .infoHead {
                             display: flex;
                             justify-content: space-between;
@@ -338,12 +349,34 @@
                             .serviceLists {
                                 font-size: var(--twelve);
                                 color: #707070;
-                                max-width: 8rem;
                                 line-height: 0.75rem;
                             }
                         }
                     }
+
                 }
+            }
+
+            .next,
+            .prev {
+                top: calc(50%);
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                user-select: none;
+                cursor: pointer;
+                z-index: 2;
+            }
+
+            .next {
+                right: 0px;
+            }
+
+            .prev {
+                left: -3px;
             }
         }
     }

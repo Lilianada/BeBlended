@@ -1,5 +1,6 @@
 export const ListingData = [
 {
+    id: 1,
     profileImage: "../../assets/BraidedLady.png",
     stylistName: "Braids by Becky",
     rating: 4.7,
@@ -10,6 +11,7 @@ export const ListingData = [
     like: false,
 },
 {
+    id: 2,
     profileImage: '../../assets/CelebrityLady.png', 
     stylistName: "Nella Studio",
     rating: 4.2,
@@ -20,6 +22,7 @@ export const ListingData = [
     like: true,
 },
 {
+    id: 3,
     profileImage: '../../assets/FreeAfro.png', 
     stylistName: "Clarisse Hair Salon",
     rating: 4.3,
@@ -30,6 +33,7 @@ export const ListingData = [
     like: false,
 },
 {
+    id: 4,
     profileImage: '../../assets/WindyHair.png', 
     stylistName: "6ixBraids",
     rating: 3.8,
@@ -40,6 +44,7 @@ export const ListingData = [
     like: true,
 },
 {
+    id: 5,
     profileImage: '../../assets/BraidedLady.png', 
     stylistName: "6ixBraids",
     rating: 3.8,
