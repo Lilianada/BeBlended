@@ -3,11 +3,13 @@
     border: 1px solid #EAEAEA;
     
     .stylistMobile__Header{
-        display: flex;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: 20% 70%;
         align-items: center;
         padding: 1.5rem 1rem;
         position: relative;
+        gap: 2rem;
+
 
         .backBtn {
             border: none;

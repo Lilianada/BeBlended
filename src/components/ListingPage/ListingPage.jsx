@@ -95,7 +95,7 @@ export default function ListingPage() {
         <div className="map">{/* Fix in the map here */}</div>
       </div>
 
-      {openModal.list && (
+      {openModal && (
         <ListingCard openModal={openModal.list} closeModal={setOpenModal} />
       )}
 

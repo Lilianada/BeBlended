@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ReactDOM from "react";
+import ReactDOM from "react-dom";
 import {
   AiFillHeart,
   AiFillStar,
@@ -21,7 +21,7 @@ export default function ListingCard({ openModal, closeModal }) {
   };
   return ReactDOM.createPortal(
     <>
-      {openModal ? (
+      {/* {openModal ? ( */}
         <motion.div
           className="listingCards"
           onClick={(e) => e.stopPropagation()}
@@ -94,7 +94,7 @@ export default function ListingCard({ openModal, closeModal }) {
             <button className="slideControl"><FiChevronRight /> </button>
           </article>
         </motion.div>
-      ) : null}
+      {/* ) : null} */}
     </>,
     document.getElementById("modal")
   );
