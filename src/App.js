@@ -20,6 +20,7 @@ import {
   // Stylist,
   StylistProfile,
 } from "./components";
+import StylistAdminHome from "./components/StylistAdmin/StylistAdminHome/StylistAdminHome";
 
 
 function App() {
@@ -36,7 +37,9 @@ function App() {
     {/* <BookingPage/> */}
     {/* <ManageBookings/> */}
     
-    <ListingPage/>
+    {/* <ListingPage/> */}
+
+    <StylistAdminHome />
     </div>
   );
 }

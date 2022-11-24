@@ -1,12 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
+import './StylistAdminHeader.scss';
+import {Link} from "react-router-dom";
+import Logo from "../../../assets/logo-black.svg";
+import {FiMenu} from "react-icons/fi";
+import ProfileImage from "../../../assets/ClientProfile.png";
 
 export default function StylistAdminHeader() {
-  return (git 
+    const [toggle, setToggle] = useState(false);
+
+    const handleToggle = () => {
+        setToggle(!toggle);
+    }
+  return ( 
     <div className="stylistAdminHeader">
       <header className="stylistDesktop__Header">
         <img src={Logo} alt="Logo" />
         <div className="navWrap">
-          <button className="headBtn">Switch to Client</button>
           <nav className="navItems">
             <div className="toggle" onClick={handleToggle}>
               <FiMenu
@@ -66,13 +75,6 @@ export default function StylistAdminHeader() {
             </li>
           </ul>
         </div>
-      </header>
-
-      <header className="stylistMobile__Header">
-        <Link to="/stylist-booking-page" className="backBtn">
-          <GrPrevious className="angleLeft" size={18} />
-          <p>Back</p>
-        </Link>
       </header>
     </div>
   );
