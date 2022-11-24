@@ -13,41 +13,68 @@
     }
 
     .adminMenu_items{
-        display: flex;
-        justify-content: flex-start;
+        display: grid;
         align-items: center;
-        gap: 1.5rem;
-        padding: 0 2rem;
+        // gap: 2rem;
+        padding: 0 1rem;
+    
+        @media screen and (min-width: 768px) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            align-items: center;
+            gap: 2rem;
+            padding: 0 2rem;
+        }
 
         .menuItem{
-            width: 320px;
-            height: 228px;
+            height: 128px;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            background: #FFFFFF;
-            border: 1px solid #F2F2F2;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
-            border-radius: 20px;
-            padding: 2rem 1rem;
+            border-bottom: 1px solid #DEDDDD;
+            margin-top: 1rem;
+
+            @media screen and (min-width: 768px) {
+                height: 228px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                background: #FFFFFF;
+                border: 1px solid #F2F2F2;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+                border-radius: 20px;
+                padding: 2rem 1rem;
+                margin-top: 1rem;
+            }
 
             .menuIcon{
-                width: 1.75rem;
+                display: none;
+
+                @media screen and (min-width: 768px) {
+                    display: contents;
+                    width: 1.75rem;
+                    margin-bottom: .25rem;
+                }
             }
 
             .menuName{
                 display: flex;
                 align-items: center;
-
+                justify-content: space-between;
+                
+                @media screen and (min-width: 768px) {
+                    justify-content: flex-start;
+                }
                 p{
                     margin-right: .5rem;
+                    font-size: var(--eighteen);
                     font-weight: 700;
                 }
             }
 
             .menuInfo{
                 font-size: var(--sixteen);
-                margin-top: .5rem;
+                margin-top: .35rem;
                 line-height: 19px;
                 color: #707070;
             }
