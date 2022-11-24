@@ -17,16 +17,40 @@
         justify-content: flex-start;
         align-items: center;
         gap: 1.5rem;
+        padding: 0 2rem;
 
         .menuItem{
             width: 320px;
             height: 228px;
-            display: block;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             background: #FFFFFF;
             border: 1px solid #F2F2F2;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
             border-radius: 20px;
             padding: 2rem 1rem;
+
+            .menuIcon{
+                width: 1.75rem;
+            }
+
+            .menuName{
+                display: flex;
+                align-items: center;
+
+                p{
+                    margin-right: .5rem;
+                    font-weight: 700;
+                }
+            }
+
+            .menuInfo{
+                font-size: var(--sixteen);
+                margin-top: .5rem;
+                line-height: 19px;
+                color: #707070;
+            }
         }
     }
 
