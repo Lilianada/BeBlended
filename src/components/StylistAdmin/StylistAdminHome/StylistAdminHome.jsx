@@ -9,6 +9,7 @@ import { GrNext } from "react-icons/gr";
 import { IoCalendarClearOutline, IoCard } from "react-icons/io5";
 import { MdOutlineSecurity } from "react-icons/md";
 import {BottomNavStylist} from "../../../components";
+import { Link } from "react-router-dom";
 
 export default function StylistAdminHome() {
   return (
@@ -26,7 +27,7 @@ export default function StylistAdminHome() {
         <div className="menuItem">
           <img src={Personal} alt="Menu Icon" className="menuIcon" />
           <div className="menuName">
-            <p>Personal Information</p>
+            <Link to="/personal-information" className="menuLink" >Personal Information</Link>
             <GrNext fontWeight={700} size={14} />
           </div>
           <p className="menuInfo">
@@ -37,7 +38,7 @@ export default function StylistAdminHome() {
         <div className="menuItem">
           <img src={Business} alt="Menu Icon" className="menuIcon" />
           <div className="menuName">
-            <p>Business Profile</p>
+            <Link to="/business-profile" className="menuLink" >Business Profile</Link>
             <GrNext fontWeight={700} size={14} />
           </div>
           <p className="menuInfo">
@@ -48,7 +49,7 @@ export default function StylistAdminHome() {
         <div className="menuItem">
           <img src={Finances} alt="Menu Icon" className="menuIcon" />
           <div className="menuName">
-            <p>Finances</p>
+            <Link to="/finances" className="menuLink" >Finances</Link>
             <GrNext fontWeight={700} size={14} />
           </div>
           <p className="menuInfo">
@@ -59,7 +60,7 @@ export default function StylistAdminHome() {
         <div className="menuItem">
           <img src={Clients} alt="Menu Icon" className="menuIcon" />
           <div className="menuName">
-            <p>Clients</p>
+            <Link to="/clinets" className="menuLink" >Clients</Link>
             <GrNext fontWeight={700} size={14} />
           </div>
           <p className="menuInfo">
@@ -74,7 +75,7 @@ export default function StylistAdminHome() {
             stroke="#893583"
           />
           <div className="menuName">
-            <p>Calendar</p>
+            <Link to="/calendar" className="menuLink" >Calendar</Link>
             <GrNext fontWeight={700} size={14} />
           </div>
           <p className="menuInfo">View, manage, and create appointments.</p>
@@ -83,16 +84,16 @@ export default function StylistAdminHome() {
         <div className="menuItem">
           <IoCard size={24} fill="#893583"  className="menuIcon"  />
           <div className="menuName">
-            <p>Payout Information</p>
+            <Link to="/payout-info" className="menuLink" >Payout Information</Link>
             <GrNext fontWeight={700} size={14} />
           </div>
           <p className="menuInfo">Add and manage your payout information.</p>
         </div>
 
         <div className="menuItem">
-          <MdOutlineSecurity size={24} fill="893583"   className="menuIcon" />
+          <MdOutlineSecurity size={24} fill="#893583"   className="menuIcon" />
           <div className="menuName">
-            <p>Login & Security</p>
+            <Link to="/login-security" className="menuLink" >Login & Security</Link>
             <GrNext fontWeight={700} size={14} />
           </div>
           <p className="menuInfo">

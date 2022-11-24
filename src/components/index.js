@@ -1,14 +1,15 @@
 //Re-exporting components
 
-export { default as BookingServiceCard} from "./StylistBookingPage/UpcomingBookings/BookingServiceCard";
+export {default as StylistAdminHeader} from "./StylistAdmin/StylistAdminHeader/StylistAdminHeader";
 
+export { default as BookingServiceCard} from "./StylistBookingPage/UpcomingBookings/BookingServiceCard";
 export { default as BookingHeader } from "./ClientBookingPage/Header/Header";
 export { default as AppointmentConfirmation } from "./StylistBookingPage/Modals/CreateAppointmentModals/AppointmentConfirmationModal/AppointmentConfirmation";
 export { default as CustomService } from "./StylistBookingPage/Modals/CreateAppointmentModals/CustomServiceModal/CustomService";
 export { default as NormalService } from "./StylistBookingPage/Modals/CreateAppointmentModals/NormalServiceModal/NormalService";
 export { default as Schedule } from "./StylistBookingPage/Scheduler/Scheduler";
 export { default as ErrorBoundary } from "./ErrorBoundary/ErrorBoundary";
-export  { default as InfoForm } from "./StylistBookingPage/Modals/CreateAppointmentModals/ClientInfoFormModal/InfoForm";
+export { default as InfoForm } from "./StylistBookingPage/Modals/CreateAppointmentModals/ClientInfoFormModal/InfoForm";
 export { default as Client } from "../pages/Client";
 export { default as ClientProfile } from "../pages/ClientProfile";
 export { default as Home } from "../pages/Home";

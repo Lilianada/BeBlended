@@ -5,11 +5,12 @@
         padding: 2rem 1rem 1rem;
 
         @media screen and (min-width: 768px) {
-            padding: 2rem;
+            padding: 2rem 3rem 1rem;
         }
         
         h5{
             font-size: var(--fourtyEight);
+
             @media screen and (min-width: 768px) {
                 font-size: var(--thirtyTwo);
             }
@@ -25,13 +26,16 @@
         display: grid;
         align-items: center;
         padding: 0 1rem;
+        margin-bottom: 6rem;
     
         @media screen and (min-width: 768px) {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(3, 320px);
+            justify-content: space-between;
             align-items: center;
             gap: 2rem;
-            padding: 0 2rem;
+            padding: 0 3rem;
+            margin-bottom: 2rem;
         }
 
         .menuItem{
@@ -59,7 +63,7 @@
                 display: none;
 
                 @media screen and (min-width: 768px) {
-                    display: contents;
+                    display: block;
                     width: 1.75rem;
                     margin-bottom: .25rem;
                 }
@@ -74,12 +78,12 @@
                     justify-content: flex-start;
                 }
 
-                p{
+                .menuLink{
                     font-size: var(--eighteen);
                     font-weight: 700;
 
                     @media screen and (min-width: 768px) {
-                        margin-right: .5rem;
+                        margin-right: .75rem;
                         font-size: var(--eighteen);
                     }
                 }
