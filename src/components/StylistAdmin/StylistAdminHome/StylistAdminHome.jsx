@@ -15,8 +15,8 @@ export default function StylistAdminHome() {
         </div>
 
         <div className="adminMenu_items">
-          <div className="menuItems">
-            
+          <div className="menuItem">
+
           </div>
         </div>
     </section>
