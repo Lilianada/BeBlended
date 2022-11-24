@@ -19,8 +19,10 @@ import {
   // OnboardingPages,
   // Stylist,
   StylistProfile,
+  StylistAdminHome,
+  PersonalInfo,
+
 } from "./components";
-import StylistAdminHome from "./components/StylistAdmin/StylistAdminHome/StylistAdminHome";
 
 
 function App() {
@@ -39,7 +41,8 @@ function App() {
     
     {/* <ListingPage/> */}
 
-    <StylistAdminHome />
+    {/* <StylistAdminHome /> */}
+    <PersonalInfo />
     </div>
   );
 }

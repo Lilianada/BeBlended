@@ -1,7 +1,9 @@
 //Re-exporting components
 
-export {default as StylistAdminHeader} from "./StylistAdmin/StylistAdminHeader/StylistAdminHeader";
+export {default as PersonalInfo} from "./StylistAdmin/PersonalnfoPage/Personalnfo";
 
+export {default as StylistAdminHeader} from "./StylistAdmin/StylistAdminHeader/StylistAdminHeader";
+export {default as StylistAdminHome} from "./StylistAdmin/StylistAdminHome/StylistAdminHome";
 export { default as BookingServiceCard} from "./StylistBookingPage/UpcomingBookings/BookingServiceCard";
 export { default as BookingHeader } from "./ClientBookingPage/Header/Header";
 export { default as AppointmentConfirmation } from "./StylistBookingPage/Modals/CreateAppointmentModals/AppointmentConfirmationModal/AppointmentConfirmation";

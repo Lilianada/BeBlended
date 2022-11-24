@@ -18,7 +18,7 @@
 
         .stylistName{
             margin-top: .5rem;
-            font-size: var(--thirty);
+            font-size: var(--twentyFour);
         }
     }
 
@@ -30,12 +30,17 @@
     
         @media screen and (min-width: 768px) {
             display: grid;
-            grid-template-columns: repeat(3, 320px);
+            grid-template-columns: repeat(3, 1fr);
             justify-content: space-between;
             align-items: center;
             gap: 2rem;
             padding: 0 3rem;
             margin-bottom: 2rem;
+        }
+
+        @media screen and (min-width: 1200px) {
+            display: grid;
+            grid-template-columns: repeat(3, 320px);
         }
 
         .menuItem{
