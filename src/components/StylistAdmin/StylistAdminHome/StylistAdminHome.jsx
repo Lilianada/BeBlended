@@ -8,6 +8,7 @@ import Clients from "../../../assets/Admin-Icons/Clients-icon.svg";
 import { GrNext } from "react-icons/gr";
 import { IoCalendarClearOutline, IoCard } from "react-icons/io5";
 import { MdOutlineSecurity } from "react-icons/md";
+import {BottomNavStylist} from "../../../components";
 
 export default function StylistAdminHome() {
   return (
@@ -99,6 +100,8 @@ export default function StylistAdminHome() {
           </p>
         </div>
       </div>
+
+      <BottomNavStylist/>
     </section>
   );
 }
