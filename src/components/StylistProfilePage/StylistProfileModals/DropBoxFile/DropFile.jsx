@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "./DropFile.scss";
 import { IoCloudUploadOutline } from "react-icons/io5";
 
 function DropFile() {
+  const [selectedFile, setSelectedFile] = useState();
+  const [isFilePicked, setIsFilePicked] = useState(false);
+
   // drag state
-  const [dragActive, setDragActive] = React.useState(false);
+  const [dragActive, setDragActive] = useState(false);
   // ref
   const inputRef = React.useRef(null);
 
@@ -25,7 +28,9 @@ function DropFile() {
     e.stopPropagation();
     setDragActive(false);
     if (e.dataTransfer.files && e.dataTransfer.files[0]) {
-      // handleFiles(e.dataTransfer.files);
+      setSelectedFile(e.dataTransfer.files[0]);
+      setIsFilePicked(true);
+      console.log(setSelectedFile);
     }
   };
 
@@ -33,7 +38,9 @@ function DropFile() {
   const handleChange = function (e) {
     e.preventDefault();
     if (e.target.files && e.target.files[0]) {
-      // handleFiles(e.target.files);
+      setSelectedFile(e.target.files[0]);
+      setIsFilePicked(true);
+      console.log(setSelectedFile);
     }
   };
 
@@ -41,35 +48,51 @@ function DropFile() {
   const onButtonClick = () => {
     inputRef.current.click();
   };
+
   return (
     <form
       className="dropBox"
       onDragEnter={handleDrag}
       onSubmit={(e) => e.preventDefault()}
     >
-      <label
-        id="labelUpload"
-        htmlFor="input-file-upload"
-        className={dragActive ? "drag-active" : ""}
-      >
-        <IoCloudUploadOutline size={60} />
-        <input
-          ref={inputRef}
-          type="file"
-          className="inputFile"
-          multiple={true}
-          onChange={handleChange}
-        />
-        <p className="dropBox_text">
-          Drop files here or
-          <button className="uploadInput" onClick={onButtonClick}>
-            browse
+      {isFilePicked ? (
+        <label
+          id="labelUploaded"
+          htmlFor="input-file-upload"
+          className={dragActive ? "drag-active" : ""}
+        >
+          <div className="fileName">
+            <p>{selectedFile.name}</p>
+          </div>
+          <button className="browse" onClick={onButtonClick}>
+            Browse
           </button>
-        </p>
-        <p className="smallText">
-          Please upload a file in one of these formats: .jpg, .jpeg, .png, .gif
-        </p>
-      </label>
+        </label>
+      ) : (
+        <label
+          id="labelUpload"
+          htmlFor="input-file-upload"
+          className={dragActive ? "drag-active" : ""}
+        >
+          <IoCloudUploadOutline size={60} />
+          <input
+            ref={inputRef}
+            type="file"
+            className="inputFile"
+            multiple={true}
+            onChange={handleChange}
+          />
+          <p className="dropBox_text">
+            Drop files here or
+            <button className="uploadInput" onClick={onButtonClick}>
+              browse
+            </button>
+          </p>
+          <p className="smallText">
+            Please upload a file in one of these formats: .jpg, .jpeg, .png, .gif
+          </p>
+        </label>
+      )}
       {dragActive && (
         <div
           className="dragFile_element"

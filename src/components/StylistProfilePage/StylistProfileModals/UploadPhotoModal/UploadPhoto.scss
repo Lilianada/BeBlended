@@ -6,6 +6,7 @@
         width: 90%;
         margin: 0 auto;
         border-radius: 12px;
+        position: relative;
 
         @media screen and (min-width: 500px) {
             width: 28rem;
@@ -66,7 +67,8 @@
                     margin: 0 1rem;
 
                     @media screen and (min-width: 500px) {
-                        font-size: var(--twenty);
+                        font-size: var(--eighteen);
+                        line-height: 1.5rem;
                         margin: 0 2rem;
                     }
                 }
@@ -106,18 +108,17 @@
             font-size: var(--sixteen);
             z-index: 1;
             cursor: pointer;
-            margin-left: auto;
-            margin-right: auto;
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
 
             &:hover {
                 background-color: var(--black);
             }
 
-            @media screen and (min-width: 768px) {
-                margin-right: 6%;
-                margin-left: auto;
-                margin-bottom: 1rem;
-            }
+            // @media screen and (min-width: 768px) {
+            //     margin-right: 6%;
+            // }
         }
 
         .editBtn {

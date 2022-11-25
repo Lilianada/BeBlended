@@ -68,6 +68,10 @@
                         color: var(--black);
                         font-size: var(--eighteen);
 
+                        &:hover{
+                            text-decoration: underline;
+                        }
+
                         @media screen and (min-width: 768px) {
                             font-size: var(--sixteen);
                         }

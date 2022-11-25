@@ -26,7 +26,7 @@
         @media screen and (min-width: 900px) {
             width: 80%;
             margin: 2rem auto;
-            padding: 4rem 6rem;
+            padding: 3rem 6rem;
         }
 
         .inputFile {
@@ -67,6 +67,56 @@
             right: 0px;
             bottom: 0px;
             left: 0px;
-          }
+        }
+
     }
+
+    #labelUploaded{
+        text-align: center;
+        background: #F9F9F9;
+        border: 1px solid #DEDDDD;
+        border-radius: 12px;
+        margin: 0.75rem;
+        padding: 1rem 0.5rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        @media screen and (min-width: 450px) {
+            margin: 2.5rem;
+        }
+
+        @media screen and (min-width: 600px) {
+            width: 80%;
+            margin: 3.5rem auto;
+            padding: 1rem;
+        }
+
+        @media screen and (min-width: 900px) {
+            width: 80%;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+
+        .fileName{
+            width: 65%;
+            border: 1px solid #DEDDDD;
+            border-radius: 12px;
+            padding: .5rem;
+        }
+    
+        .browse {
+            width: 7rem;
+            border: none;
+            border-radius: .75rem;
+            background: var(--black);
+            outline: none;
+            font-size: var(--eighteen);
+            margin-left: 1rem;
+            padding: .5rem;
+            color: var(--white);
+        }
+    }
+
 }
