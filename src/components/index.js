@@ -1,7 +1,8 @@
 //Re-exporting components
 
-export {default as PersonalInfo} from "./StylistAdmin/PersonalnfoPage/PersonalInfo";
+export {default as DropFile} from "./StylistProfilePage/StylistProfileModals/DropBoxFile/DropFile";
 
+export {default as PersonalInfo} from "./StylistAdmin/PersonalnfoPage/PersonalInfo";
 export {default as StylistAdminHeader} from "./StylistAdmin/StylistAdminHeader/StylistAdminHeader";
 export {default as StylistAdminHome} from "./StylistAdmin/StylistAdminHome/StylistAdminHome";
 export { default as BookingServiceCard} from "./StylistBookingPage/UpcomingBookings/BookingServiceCard";

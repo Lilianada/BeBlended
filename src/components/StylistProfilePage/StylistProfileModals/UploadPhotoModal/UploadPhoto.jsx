@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 import "./UploadPhoto.scss";
 import { AiOutlineClose } from "react-icons/ai";
 import { motion } from "framer-motion";
-import { Backdrop } from "../../../../components";
-import DropFile from "../DropBoxFile/DropFile";
+import { Backdrop, DropFile } from "../../../../components";
 
 function UploadPhoto({ openModal, closeModal }) {
   return ReactDOM.createPortal(
