@@ -1,0 +1,25 @@
+.personalInfo_page{
+    .personalInfo_head{
+        display: flex;
+        align-items: center;
+        margin: 2rem 3rem 1rem;
+    }
+    
+    .personalInfo_subhead{
+        display: flex;
+        align-items: center;
+        margin: 1rem 6rem .75rem;
+    }
+    
+    .personalInfo_form{
+        display: block;
+        
+        .formHead{
+            font-family: var(--font-head);
+            font-size: var(--thirtyTwo);
+            font-weight: 500;
+            margin: 0 6rem;
+            line-height: 38px;
+        }
+    }
+}

@@ -1,6 +1,6 @@
 //Re-exporting components
 
-export {default as PersonalInfo} from "./StylistAdmin/PersonalnfoPage/Personalnfo";
+export {default as PersonalInfo} from "./StylistAdmin/PersonalnfoPage/PersonalInfo";
 
 export {default as StylistAdminHeader} from "./StylistAdmin/StylistAdminHeader/StylistAdminHeader";
 export {default as StylistAdminHome} from "./StylistAdmin/StylistAdminHome/StylistAdminHome";
