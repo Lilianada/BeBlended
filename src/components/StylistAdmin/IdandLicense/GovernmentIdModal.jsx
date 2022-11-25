@@ -37,7 +37,7 @@ export default function GovernmentIdModal() {
                     <DropFile/>
                   </div>
                   <footer className="modalFooter">
-                    <button className="saveBtn">Done</button>
+                    <button className="saveBtn">Save</button>
                   </footer>
                 </motion.div>
               </Backdrop>

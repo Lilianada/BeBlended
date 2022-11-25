@@ -8,7 +8,6 @@ import { Backdrop, DropFile } from "../../../components";
 export default function HairstylistLicenseModal() {
     return ReactDOM.createPortal(
         <>
-          {" "}
           {openModal ? (
             <div className="uploadLicense">
               <Backdrop onClick={closeModal}>
@@ -31,13 +30,13 @@ export default function HairstylistLicenseModal() {
                   </header>
                   <div className="modalContent">
                     <div className="modalContent_Head">
-                      <h4>Upload Photos</h4>
-                      <p>Showcase your work by uploading quality photos!</p>
+                      <h4>Hairstylist License</h4>
+                      <p>We’ll only use this document to verify your business and will never share or post it publicly.</p>
                     </div>
                     <DropFile/>
                   </div>
                   <footer className="modalFooter">
-                    <button className="saveBtn">Done</button>
+                    <button className="saveBtn">Save</button>
                   </footer>
                 </motion.div>
               </Backdrop>

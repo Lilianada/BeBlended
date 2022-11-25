@@ -1,11 +1,13 @@
 //Re-exporting components
 
-export {default as DropFile} from "./StylistProfilePage/StylistProfileModals/DropBoxFile/DropFile";
+export { default as GovernmentIdModal } from "./StylistAdmin/IdandLicense/GovernmentIdModal";
+export { default as HairstylistLicenseModal } from "./StylistAdmin/IdandLicense/HairstylistLicenseModal";
 
-export {default as PersonalInfo} from "./StylistAdmin/PersonalnfoPage/PersonalInfo";
-export {default as StylistAdminHeader} from "./StylistAdmin/StylistAdminHeader/StylistAdminHeader";
-export {default as StylistAdminHome} from "./StylistAdmin/StylistAdminHome/StylistAdminHome";
-export { default as BookingServiceCard} from "./StylistBookingPage/UpcomingBookings/BookingServiceCard";
+export { default as DropFile } from "./StylistProfilePage/StylistProfileModals/DropBoxFile/DropFile";
+export { default as PersonalInfo } from "./StylistAdmin/PersonalnfoPage/PersonalInfo";
+export { default as StylistAdminHeader } from "./StylistAdmin/StylistAdminHeader/StylistAdminHeader";
+export { default as StylistAdminHome } from "./StylistAdmin/StylistAdminHome/StylistAdminHome";
+export { default as BookingServiceCard } from "./StylistBookingPage/UpcomingBookings/BookingServiceCard";
 export { default as BookingHeader } from "./ClientBookingPage/Header/Header";
 export { default as AppointmentConfirmation } from "./StylistBookingPage/Modals/CreateAppointmentModals/AppointmentConfirmationModal/AppointmentConfirmation";
 export { default as CustomService } from "./StylistBookingPage/Modals/CreateAppointmentModals/CustomServiceModal/CustomService";
@@ -41,7 +43,14 @@ export { default as ProfileId } from "./ClientProfilePage/ProfileIdSection/Profi
 export { default as Reviewed } from "./ClientProfilePage/ReviewSection/Reviewed/Reviewed";
 export { default as ReviewFilled } from "./ClientProfilePage/ReviewSection/ReviewFilled/ReviewFilled";
 export { default as ServiceFilled } from "./ClientProfilePage/ServiceSection/ServiceFilled";
-export { OnboardClient, StepFiveClient, StepFourClient, StepOneClient, StepThreeClient, StepTwoClient } from "./Onboarding/OnboardingClient/OnboardClient";
+export {
+  OnboardClient,
+  StepFiveClient,
+  StepFourClient,
+  StepOneClient,
+  StepThreeClient,
+  StepTwoClient,
+} from "./Onboarding/OnboardingClient/OnboardClient";
 export { default as OnboardingStylistIntro } from "./Onboarding/OnboardingStylist/OnboardingStylistIntro";
 export { default as IdUpload } from "./Onboarding/OnboardingStylist/StepFiveStylist/IdUpload/IdUpload";
 export { default as LicenseQtn } from "./Onboarding/OnboardingStylist/StepFiveStylist/License/LicenseQtn";
@@ -52,7 +61,12 @@ export { default as BusinessPage } from "./Onboarding/OnboardingStylist/StepFour
 export { default as CompletedStylist } from "./Onboarding/OnboardingStylist/StepSixStylist/CompletedStylist";
 export { default as OnboardStylistForm } from "./Onboarding/OnboardingStylist/StepThreeStylist/OnboardStylistForm";
 export { default as StepTwoStylist } from "./Onboarding/OnboardingStylist/StepTwoStylist/StepTwoStylist";
-export { StylistConfirmationAdvanced, StylistConfirmationEstablished, StylistConfirmationExceptional, StylistConfirmationMajor } from "./Onboarding/OnboardingStylist/StepTwoStylist/StylistConfirmation";
+export {
+  StylistConfirmationAdvanced,
+  StylistConfirmationEstablished,
+  StylistConfirmationExceptional,
+  StylistConfirmationMajor,
+} from "./Onboarding/OnboardingStylist/StepTwoStylist/StylistConfirmation";
 export { default as BlogSection } from "./Sections/BlogSection/BlogSection";
 export { default as BottomNavClient } from "./Sections/BottomNav/BottomNavClient";
 export { default as BottomNavStylist } from "./Sections/BottomNav/BottomNavStylist";
@@ -80,7 +94,10 @@ export { default as AppointmentDetails } from "./StylistBookingPage/Modals/Appoi
 export { default as CancelAppointment } from "./StylistBookingPage/Modals/AppointmentDetailsModal/CancelAppointment";
 export { default as DateReschedule } from "./StylistBookingPage/Modals/AppointmentDetailsModal/DateReschedule";
 export { default as CreateAppointment } from "./StylistBookingPage/Modals/CreateAppointmentModals/AppointementStepOneModal/CreateAppointment";
-export { DeclareNoShow, default as DuringAppointment } from "./StylistBookingPage/Modals/DuringAppointmentModal/DuringAppointment";
+export {
+  DeclareNoShow,
+  default as DuringAppointment,
+} from "./StylistBookingPage/Modals/DuringAppointmentModal/DuringAppointment";
 export { default as UpcomingBookings } from "./StylistBookingPage/UpcomingBookings/UpcomingBookings";
 export { default as Placeholders } from "./StylistProfilePage/PlaceholderContent/Placeholders";
 export { default as AboutModal } from "./StylistProfilePage/StylistProfileModals/AboutStylistModal/AboutModal";
@@ -97,7 +114,3 @@ export { default as VariantTable } from "./StylistProfilePage/StylistProfileModa
 export { default as TagsInput } from "./StylistProfilePage/StylistProfileModals/TagsInput/TagsInput";
 export { default as UploadPhoto } from "./StylistProfilePage/StylistProfileModals/UploadPhotoModal/UploadPhoto";
 export { default as StylistHeader } from "./StylistProps/StylistHeader/StylistHeader";
-
-
-
-
