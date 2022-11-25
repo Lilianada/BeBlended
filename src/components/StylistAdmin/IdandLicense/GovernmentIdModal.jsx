@@ -1,16 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "../../../components/StylistProfilePage/StylistProfileModals/UploadPhotoModal/UploadPhoto.scss";
 import { AiOutlineClose } from "react-icons/ai";
 import { motion } from "framer-motion";
 import { Backdrop, DropFile } from "../../../components";
+import "../../StylistProfilePage/StylistProfileModals/UploadPhotoModal/UploadPhoto.scss";
 
-export default function GovernmentIdModal() {
+
+export default function GovernmentIdModal({openModal, closeModal}) {
     return ReactDOM.createPortal(
         <>
           {" "}
           {openModal ? (
-            <div className="uploadId">
+            <div className="uploadPhoto">
               <Backdrop onClick={closeModal}>
                 <motion.div
                   className="dialogContent"

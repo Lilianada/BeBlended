@@ -1,15 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./IdandLicense.scss";
+import "../../StylistProfilePage/StylistProfileModals/UploadPhotoModal/UploadPhoto.scss";
 import { AiOutlineClose } from "react-icons/ai";
 import { motion } from "framer-motion";
 import { Backdrop, DropFile } from "../../../components";
 
-export default function HairstylistLicenseModal() {
+export default function HairstylistLicenseModal({openModal, closeModal}) {
     return ReactDOM.createPortal(
         <>
           {openModal ? (
-            <div className="uploadLicense">
+            <div className="uploadPhoto">
               <Backdrop onClick={closeModal}>
                 <motion.div
                   className="dialogContent"

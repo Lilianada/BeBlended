@@ -17,7 +17,7 @@ export default function Personalnfo() {
 
   const handleModal = (govId, stylistLicence) => {
     setOpenModal(
-      (prev = () => {
+      ((prev) => {
         return {
           ...prev,
           [govId]: !prev[govId],
@@ -61,7 +61,7 @@ export default function Personalnfo() {
             <input type="text" className="inputField" />
           </div>
 
-          <div className="form Wrap">
+          <div className="formWrap">
             <label htmlFor="Email" className="inputWrap">
               <p>Email address*</p>
               <button className="editBtn">Edit</button>
@@ -72,12 +72,12 @@ export default function Personalnfo() {
           <div className="formWrap">
             <label htmlFor="Government-id" className="inputWrap">
               <p>Government ID*</p>
-              <button
+              <div
                 className="updateBtn"
                 onClick={() => handleModal("govId")}
               >
                 Update
-              </button>
+              </div>
               <AnimatePresence
                 initial={false}
                 exitBeforeEnter={true}
@@ -97,12 +97,12 @@ export default function Personalnfo() {
           <div className="formWrap">
             <label htmlFor="Name" className="inputWrap">
               <p>Hairstylist License</p>
-              <button
+              <div
                 className="updateBtn"
                 onClick={() => handleModal("stylistLicence")}
               >
                 Add
-              </button>
+              </div>
               <AnimatePresence
                 initial={false}
                 exitBeforeEnter={true}
