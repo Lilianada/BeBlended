@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "../../StylistProfilePage/StylistProfileModals/UploadPhotoModal/UploadPhoto.scss";
+import "../../../StylistProfilePage/StylistProfileModals/UploadPhotoModal/UploadPhoto.scss";
 import { AiOutlineClose } from "react-icons/ai";
 import { motion } from "framer-motion";
-import { Backdrop, DropFile } from "../../../components";
+import { Backdrop, DropFile } from "../../../../components";
 
 export default function HairstylistLicenseModal({openModal, closeModal}) {
     return ReactDOM.createPortal(

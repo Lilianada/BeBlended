@@ -2,8 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { AiOutlineClose } from "react-icons/ai";
 import { motion } from "framer-motion";
-import { Backdrop, DropFile } from "../../../components";
-import "../../StylistProfilePage/StylistProfileModals/UploadPhotoModal/UploadPhoto.scss";
+import { Backdrop, DropFile } from "../../../../components";
+import "../../../StylistProfilePage/StylistProfileModals/UploadPhotoModal/UploadPhoto.scss";
 
 
 export default function GovernmentIdModal({openModal, closeModal}) {

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import { Backdrop } from "../../../components";
+import { Backdrop } from "../../../../components";
 import { motion } from "framer-motion";
 import { AiOutlineClose } from "react-icons/ai";
 import "./PasswordModal.scss";
