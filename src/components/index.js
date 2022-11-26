@@ -1,4 +1,6 @@
-//Re-exporting components
+export { default as PayoutInfo} from "./StylistAdmin/PayoutInformation/PayoutInfo";
+
+//Re-exporting componen
 export { default as DeactivateAccount } from "./StylistAdmin/LoginAndSecurity/DeactivateAccountModal/DeactivateAccount";
 export { default as PasswordModal } from "./StylistAdmin/LoginAndSecurity/PasswordModal/PasswordModal";
 export { default as LoginSecurity } from "./StylistAdmin/LoginAndSecurity/LoginSecurity/LoginSecurity";

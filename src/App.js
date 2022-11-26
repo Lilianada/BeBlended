@@ -23,7 +23,8 @@ import {
   AppointmentDetails, 
   LoginSecurity, 
   ManageBookings, 
-  Placeholders
+  Placeholders,
+  PayoutInfo,
 } from "./components";
 
 
@@ -45,7 +46,8 @@ function App() {
 
     {/* <StylistAdminHome /> */}
     {/* <PersonalInfo /> */}
-    <LoginSecurity/>
+    {/* <LoginSecurity/> */}
+    <PayoutInfo />
     </div>
   );
 }

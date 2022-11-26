@@ -1,0 +1,43 @@
+.payoutInfo{
+    .wd_80 {
+        width: 90%;
+        margin: 2rem auto;
+
+        @media screen and (min-width: 768px) {
+            width: 80%;
+            // margin: auto;
+        }
+
+        
+        .payoutInfo_head {
+            display: flex;
+            align-items: center;
+        }
+        
+        
+        .payoutInfo_subhead {
+            display: flex;
+            align-items: center;
+            margin: 1.5rem 0 .75rem;
+            font-size: var(--eighteen);
+            
+            @media screen and (min-width: 768px) {
+                margin: 1rem 0;
+            }
+        }
+
+        .formHead {
+            font-family: var(--font-head);
+            font-size: var(--thirtyEight);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            line-height: 38px;
+            
+            @media screen and (min-width: 768px) {
+                font-size: var(--thirtyTwo);
+                font-weight: 500;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}
