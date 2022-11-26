@@ -43,7 +43,6 @@ function PasswordModal ({ openModal, closeModal }) {
 
             <div className="modalContent">
               <form action="" className="infoForm">
-                <div className="inputFlex">
                   <div className="inputField">
                     <label htmlFor="current-password">Current password</label>
                     <input type="password" onChange={handleInput} />
@@ -52,7 +51,6 @@ function PasswordModal ({ openModal, closeModal }) {
                     <label htmlFor="new-password">New Password</label>
                     <input type="password" onChange={handleInput} />
                   </div>
-                </div>
                 <div className="inputField">
                   <label htmlFor="confirm-password">Confirm Password</label>
                   <input type="text" onChange={handleInput} />

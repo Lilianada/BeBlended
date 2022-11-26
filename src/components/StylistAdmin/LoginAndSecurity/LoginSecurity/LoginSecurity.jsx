@@ -5,15 +5,26 @@ import {
   StylistAdminHeader,
   BottomNavStylist,
   PasswordModal
-} from "../../../components";
+} from "../../..";
 import './LoginSecurity.scss';
 
 export default function LoginSecurity() {
-    const [openModal, setOpenModal] = useState(false);
-    const handleModal = () => {
-        setOpenModal(!openModal);
-    }
-
+    const [openModal, setOpenModal] = useState({
+        password: false,
+        deactivate: false,
+      });
+    
+      const handleModal = (password, deactivate) => {
+        setOpenModal(
+          ((prev) => {
+            return {
+              ...prev,
+              [password]: !prev[password],
+              [deactivate]: !prev[deactivate],
+            };
+          })
+        );
+      };
   return (
     <main className="mainWrapper loginSecurity_page">
       <StylistAdminHeader />
@@ -36,15 +47,15 @@ export default function LoginSecurity() {
           <div className="formWrap">
             <label htmlFor="First-Name" className="inputWrap">
               <p>Current password</p>
-              <button className="updateBtn" onClick={handleModal}>Update</button>
+              <button className="updateBtn" onClick={() => handleModal("password")}>Update</button>
             <AnimatePresence
                 initial={false}
                 exitBeforeEnter={true}
                 onExitComplete={() => null}
               >
-                {openModal.stylistLicence && (
+                {openModal.password && (
                   <PasswordModal
-                    openModal={openModal.stylistLicence}
+                    openModal={openModal.password}
                     closeModal={setOpenModal}
                   />
                 )}
