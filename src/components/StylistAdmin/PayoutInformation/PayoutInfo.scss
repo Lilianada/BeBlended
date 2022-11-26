@@ -1,20 +1,17 @@
 .payoutInfo{
+    .payoutInfo_head {
+        display: flex;
+        align-items: center;
+        margin: 2rem 3rem 0;
+    }
     .wd_80 {
         width: 90%;
-        margin: 2rem auto;
+        margin: 0rem auto 3rem;
 
         @media screen and (min-width: 768px) {
             width: 80%;
-            // margin: auto;
         }
 
-        
-        .payoutInfo_head {
-            display: flex;
-            align-items: center;
-        }
-        
-        
         .payoutInfo_subhead {
             display: flex;
             align-items: center;
@@ -22,11 +19,11 @@
             font-size: var(--eighteen);
             
             @media screen and (min-width: 768px) {
-                margin: 1rem 0;
+                margin: 1rem 0 .5rem;
             }
         }
 
-        .formHead {
+        .formHead{
             font-family: var(--font-head);
             font-size: var(--thirtyEight);
             font-weight: 600;
@@ -39,5 +36,99 @@
                 margin-bottom: 2rem;
             }
         }
+
+        .redirectInfo{
+            margin-top: 1rem;
+
+            p{
+                font-size: var(--eighteen);
+            }
+
+            .activeBtn{
+                width: 14.75rem;
+                height: 3.75rem;
+                color: var(--white);
+                font-size: var(--twenty);
+                background: var(--black);
+                border: none;
+                outline: none;
+                border-radius: 10px;
+                align-self: center;
+                margin-top: .75rem;
+            }
+        }
+
+        .faqsAccordion{
+            border: 1px solid #DEDDDD;
+            border-radius: 12px;
+            padding: 1rem;
+            margin-top: 2rem;
+
+            .accordionHead {
+                font-family: var(--font-text);
+                font-size: var(--thirtyEight);
+                font-weight: 600;
+                margin-bottom: 1rem;
+                line-height: 38px;
+                
+                @media screen and (min-width: 768px) {
+                    font-size: var(--thirtyTwo);
+                    font-weight: 500;
+                    margin-bottom: 2rem;
+                }
+            }
+    
+            .accordion{
+                display: block;
+                margin-top: 2rem;
+                margin-bottom: 1rem;
+                padding-bottom: 1rem;
+                border-bottom: 1px solid #F2F2F2;
+                
+                .accordionHeader {
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: space-between;
+            
+                    .accordionCol {
+                        .headText {
+                            font-size: var(--fourteen);
+                            color: var(--black);
+            
+                            @media screen and (min-width: 480px) {
+                                font-size: var(--sixteen);
+                            }
+                        }
+            
+                        .accordionIcon{
+                            width: 1rem;
+                            height: 1rem;
+            
+                           @media screen and (min-width: 480px) {
+                                width: 1.5rem;
+                                height: 1.5rem;
+                           }
+                        }
+                    }
+                }
+                .accordionBody {
+                    .description {
+                        width: 100%;
+                        padding: 0 0 1rem;
+            
+                        p {
+                            font-size: var(--fourteen);
+                            margin-top: 0.65rem;
+            
+                            @media screen and (min-width: 480px) {
+                                font-size: var(--sixteen);
+                            }
+                        }
+                    }
+                }
+            
+            }
+        }
+
     }
 }

@@ -1,5 +1,6 @@
-export { default as PayoutInfo} from "./StylistAdmin/PayoutInformation/PayoutInfo";
+export { default as PayoutInfoAccordion } from "./StylistAdmin/PayoutInformation/PayoutInfoAccordion";
 
+export { default as PayoutInfo} from "./StylistAdmin/PayoutInformation/PayoutInfo";
 //Re-exporting componen
 export { default as DeactivateAccount } from "./StylistAdmin/LoginAndSecurity/DeactivateAccountModal/DeactivateAccount";
 export { default as PasswordModal } from "./StylistAdmin/LoginAndSecurity/PasswordModal/PasswordModal";
