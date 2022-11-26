@@ -1,0 +1,29 @@
+.adminClient_Page{
+    .adminClient_head{
+        display: flex;
+        align-items: center;
+        margin: 2rem 3rem 0;
+    }
+
+    .wd_80 {
+        width: 90%;
+        margin: 0rem auto 3rem;
+
+        @media screen and (min-width: 768px) {
+            width: 80%;
+        }
+        .formHead{
+            font-family: var(--font-head);
+            font-size: var(--thirtyEight);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            line-height: 38px;
+            
+            @media screen and (min-width: 768px) {
+                font-size: var(--thirtyTwo);
+                font-weight: 500;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}

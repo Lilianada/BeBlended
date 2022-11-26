@@ -47,7 +47,7 @@ function App() {
     {/* <StylistAdminHome /> */}
     {/* <PersonalInfo /> */}
     {/* <LoginSecurity/> */}
-    <PayoutInfo />
+    {/* <PayoutInfo /> */}
     </div>
   );
 }
