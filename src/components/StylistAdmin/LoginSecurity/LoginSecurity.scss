@@ -26,5 +26,92 @@
                 margin: 1rem 0;
             }
         }
-    }g
+
+        .formHead {
+            font-family: var(--font-head);
+            font-size: var(--thirtyEight);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            line-height: 38px;
+            
+            @media screen and (min-width: 768px) {
+                font-size: var(--thirtyTwo);
+                font-weight: 500;
+                margin-bottom: 2rem;
+            }
+        }
+
+        .loginSecurity_form {
+            display: flex;
+            flex-direction: column;
+
+            .formWrap {
+                display: flex;
+                flex-direction: column;
+                margin: 1rem 0;
+                
+                .inputWrap {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    p{
+                        font-size: var(--eighteen);
+    
+                        @media screen and (min-width: 768px) {
+                            font-size: var(--sixteen);
+                        }
+                    
+                    }
+                   .updateBtn{
+                        outline: none;
+                        border: none;
+                        background: none;
+                        color: var(--black);
+                        font-size: var(--eighteen);
+
+                        &:hover{
+                            text-decoration: underline;
+                        }
+
+                        @media screen and (min-width: 768px) {
+                            font-size: var(--sixteen);
+                        }
+                    }
+                }
+
+                .inputField {
+                    width: 100%;
+                    font-family: var(--font-text);
+                    font-size: var(--sixteen);
+                    outline: none;
+                    border: 0;
+                    padding: 0.45rem 0;
+                    margin-bottom: 0.5rem;
+                    border-bottom: 1px solid #050205;
+                    background: var(--white);
+                    color: var(--black);
+
+                    &::placeholder {
+                        color: #bebebe;
+                    }
+                }
+    
+                .deactivate {
+                    color: var(--black);
+                    font-size: var(--twenty);
+                    background: var(--white);
+                    border: none;
+                    outline: none;
+                    align-self: center;
+                    margin: 2rem 2rem 6rem;
+    
+                    @media screen and (min-width: 768px) {
+                        align-self: flex-end;
+                        margin: 2rem 0 3rem;
+                    }
+                }
+            }
+        }
+    }
 }

@@ -28,6 +28,16 @@ export default function LoginSecurity() {
 
         <h4 className="formHead">Login & Security</h4>
   
+        <form action="" className="loginSecurity_form">
+          <div className="formWrap">
+            <label htmlFor="First-Name" className="inputWrap">
+              <p>Current password</p>
+              <button className="updateBtn">Update</button>
+            </label>
+            <input type="password" className="inputField" placeholder="********" required />
+            <button className="deactivate">Deactivate Account</button>
+          </div>
+        </form>
         </div>
         <BottomNavStylist />
     </main>
