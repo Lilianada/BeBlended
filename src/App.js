@@ -25,6 +25,7 @@ import {
   ManageBookings, 
   Placeholders,
   PayoutInfo,
+  AdminClientList,
 } from "./components";
 
 
@@ -48,6 +49,7 @@ function App() {
     {/* <PersonalInfo /> */}
     {/* <LoginSecurity/> */}
     {/* <PayoutInfo /> */}
+    <AdminClientList />
     </div>
   );
 }

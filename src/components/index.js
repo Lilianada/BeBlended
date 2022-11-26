@@ -1,5 +1,6 @@
-export { default as PayoutInfoAccordion } from "./StylistAdmin/PayoutInformation/PayoutInfoAccordion";
+export { default as AdminClientList } from "./StylistAdmin/AdminClientPage/AdminClientList";
 
+export { default as PayoutInfoAccordion } from "./StylistAdmin/PayoutInformation/PayoutInfoAccordion";
 export { default as PayoutInfo} from "./StylistAdmin/PayoutInformation/PayoutInfo";
 //Re-exporting componen
 export { default as DeactivateAccount } from "./StylistAdmin/LoginAndSecurity/DeactivateAccountModal/DeactivateAccount";

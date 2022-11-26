@@ -1,4 +1,5 @@
 import React from "react";
+import { GrPrevious } from "react-icons/gr";
 import {StylistAdminHeader} from "../../../components";
 import './AdminClientList.scss';
 
@@ -12,7 +13,11 @@ export default function AdminClientList() {
           <p>Back</p>
         </div>
 
-        <h4 className="formHead">My Clients</h4>
+        <div className="wd_80">
+            <h4 className="formHead">My Clients</h4>
+
+        </div>
+
     </main>
   );
 }
