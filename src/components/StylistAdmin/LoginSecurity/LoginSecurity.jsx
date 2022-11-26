@@ -5,6 +5,7 @@ import {
   StylistAdminHeader,
   BottomNavStylist
 } from "../../../components";
+import './LoginSecurity.scss';
 
 export default function LoginSecurity() {
     const [openModal, setOpenModal] = useState(false);
@@ -26,7 +27,7 @@ export default function LoginSecurity() {
         </strong>
 
         <h4 className="formHead">Login & Security</h4>
-
+  
         </div>
         <BottomNavStylist />
     </main>

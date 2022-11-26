@@ -3,7 +3,6 @@ import "./index.scss";
 import 'react-calendar/dist/Calendar.css';
 // import AppointmentConfirmation from "./components/StylistBookingPage/Modals/CreateAppointmentModals/AppointmentConfirmationModal/AppointmentConfirmation";
 // import AppointmentStepOne from "./components/StylistBookingPage/Modals/CreateAppointmentModals/AppointementStepOneModal/CreateAppointment";
-import {AppointmentDetails, ManageBookings, Placeholders} from "./components";
 import RoutedPages from "./pages/Routes";
 import InfoForm from "./components/StylistBookingPage/Modals/CreateAppointmentModals/ClientInfoFormModal/InfoForm";
 import CustomService from "./components/StylistBookingPage/Modals/CreateAppointmentModals/CustomServiceModal/CustomService";
@@ -21,7 +20,10 @@ import {
   StylistProfile,
   StylistAdminHome,
   PersonalInfo,
-
+  AppointmentDetails, 
+  LoginSecurity, 
+  ManageBookings, 
+  Placeholders
 } from "./components";
 
 
@@ -42,7 +44,8 @@ function App() {
     {/* <ListingPage/> */}
 
     {/* <StylistAdminHome /> */}
-    <PersonalInfo />
+    {/* <PersonalInfo /> */}
+    <LoginSecurity/>
     </div>
   );
 }

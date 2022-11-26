@@ -1,8 +1,9 @@
 //Re-exporting components
 
+export { default as LoginSecurity } from "./StylistAdmin/LoginSecurity/LoginSecurity";
+
 export { default as GovernmentIdModal } from "./StylistAdmin/IdandLicense/GovernmentIdModal";
 export { default as HairstylistLicenseModal } from "./StylistAdmin/IdandLicense/HairstylistLicenseModal";
-
 export { default as DropFile } from "./StylistProfilePage/StylistProfileModals/DropBoxFile/DropFile";
 export { default as PersonalInfo } from "./StylistAdmin/PersonalnfoPage/PersonalInfo";
 export { default as StylistAdminHeader } from "./StylistAdmin/StylistAdminHeader/StylistAdminHeader";
