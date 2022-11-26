@@ -3,12 +3,16 @@ import React, { useState } from "react";
 import { GrNext, GrPrevious } from "react-icons/gr";
 import {
   StylistAdminHeader,
-  BottomNavStylist
+  BottomNavStylist,
+  PasswordModal
 } from "../../../components";
 import './LoginSecurity.scss';
 
 export default function LoginSecurity() {
     const [openModal, setOpenModal] = useState(false);
+    const handleModal = () => {
+        setOpenModal(!openModal);
+    }
 
   return (
     <main className="mainWrapper loginSecurity_page">
@@ -32,10 +36,22 @@ export default function LoginSecurity() {
           <div className="formWrap">
             <label htmlFor="First-Name" className="inputWrap">
               <p>Current password</p>
-              <button className="updateBtn">Update</button>
+              <button className="updateBtn" onClick={handleModal}>Update</button>
+            <AnimatePresence
+                initial={false}
+                exitBeforeEnter={true}
+                onExitComplete={() => null}
+              >
+                {openModal.stylistLicence && (
+                  <PasswordModal
+                    openModal={openModal.stylistLicence}
+                    closeModal={setOpenModal}
+                  />
+                )}
+            </AnimatePresence>
             </label>
             <input type="password" className="inputField" placeholder="********" required />
-            <button className="deactivate">Deactivate Account</button>
+            <button className="deactivate" >Deactivate Account</button>
           </div>
         </form>
         </div>
