@@ -8,13 +8,18 @@ export default function AdminClientList() {
     <main className="mainWrapper adminClient_Page">
         <StylistAdminHeader/>
 
-        <div className="adminClient_head">
-          <GrPrevious style={{ marginRight: ".5rem" }} />
-          <p>Back</p>
-        </div>
-
         <div className="wd_80">
-            <h4 className="formHead">My Clients</h4>
+            <div className="adminClient_head">
+            <GrPrevious style={{ marginRight: ".5rem" }} />
+            <p>Back</p>
+            </div>
+            <div className="adminClient_subhead">
+                <h4 className="formHead">My Clients</h4>
+                <p className="totalClients">0 in Total</p>
+                <div className="sort">
+                    <div className="sort">Sort by: Top Clients</div>
+                </div>
+            </div>
 
         </div>
 

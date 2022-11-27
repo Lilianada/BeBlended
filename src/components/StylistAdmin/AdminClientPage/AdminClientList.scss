@@ -1,27 +1,51 @@
 .adminClient_Page{
-    .adminClient_head{
-        display: flex;
-        align-items: center;
-        margin: 2rem 3rem 0;
-    }
-
+    
     .wd_80 {
-        width: 90%;
-        margin: 2rem auto 3rem;
+        
+        .adminClient_head{
+            display: flex;
+            align-items: center;
+            margin: 2rem 1rem;
 
+            @media screen and (min-width: 768px) {
+                margin: 2rem 3rem;
+            }
+        }
 
-        .formHead{
-            font-family: var(--font-head);
-            font-size: var(--thirtyEight);
-            font-weight: 600;
-            margin-bottom: 1rem;
-            line-height: 38px;
+        .adminClient_subhead{
+            display: flex;
+            align-items: center;
+            margin: 1.5rem 0 .75rem;
+            font-size: var(--eighteen);
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #F2F2F2;
             
             @media screen and (min-width: 768px) {
-                font-size: var(--thirtyTwo);
-                font-weight: 500;
-                margin-bottom: 2rem;
+                margin: 1rem 0 .5rem;
             }
+
+            .formHead{
+                font-family: var(--font-head);
+                font-size: var(--thirtyEight);
+                font-weight: 600;
+                margin: 2rem 1rem 1rem;
+                line-height: 38px;
+                
+                @media screen and (min-width: 768px) {
+                    font-size: var(--thirtyTwo);
+                    font-weight: 500;
+                    margin: 0 3rem;
+                }
+            }
+
+            .totalClients{
+                font-size: var(--twentyTwo);
+                color: var(--hotPink);
+                font-weight: 500;
+                margin-left: 1rem;
+                margin-right: 1rem;
+            }
+
         }
     }
 }
