@@ -66,7 +66,7 @@
                 display: flex;
                 flex-direction: column;
                 width: 100%;
-                margin: 0rem 0 0.75rem;
+                margin: 0rem;
                 font-size: var(--eighteen);
                 padding-bottom: 1rem;
                 
@@ -94,7 +94,7 @@
                 .totalClients {
                     font-size: var(--twentyTwo);
                     color: var(--hotPink);
-                    font-weight: 500;
+                    font-weight: 700;
                     
                     @media screen and (min-width: 768px) {
                         margin-left: 1rem;
