@@ -2,10 +2,13 @@ import React, { useState } from "react";
 import { GrDown, GrPrevious } from "react-icons/gr";
 import { RiSearchLine } from "react-icons/ri";
 import { motion, AnimatePresence } from "framer-motion";
-import { StylistAdminHeader, BottomNavStylist } from "../../../components";
-import {clientList} from "./AdminClientData";
+import {
+  StylistAdminHeader,
+  BottomNavStylist,
+  AdminClientCards,
+} from "../../../components";
+import { clientList } from "./AdminClientData";
 import "./AdminClientList.scss";
-import { IoPersonOutline } from "react-icons/io5";
 
 export default function AdminClientList() {
   const [isActive, setIsActive] = useState(false);
@@ -102,23 +105,15 @@ export default function AdminClientList() {
         </div>
       </div>
       <div className="adminClient_body">
-        <div className="clientCards">
-            {
-                clientList.map((card, id) => {
-                    return (
-                        <div className="clientCard" key={id}>
-                            <img src={card.clientImage} alt="Client List" className="clientImg" />
-                            <p className="clientName"> {card.clientName} </p>
-                            <div className="cardButtons">
-                                <button className="profile">
-                                    <IoPersonOutline />
-                                    Profile</button>
-                            </div>
-                        </div>
-                    )
-                })
-            }
-        </div>
+        {clientList.map((card, id) => {
+          return (
+            <AdminClientCards
+              clientImage={card.clientImage}
+              clientName={card.clientName}
+              key={id}
+            />
+          );
+        })}
       </div>
       <BottomNavStylist />
     </main>
