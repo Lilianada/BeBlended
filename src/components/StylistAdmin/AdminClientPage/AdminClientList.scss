@@ -4,30 +4,31 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            
-            div{
+            margin: 2rem;
+
+            div {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                margin: 2rem 1rem;
             }
 
-            .subHead_input{
+            .subHead_input {
                 display: block;
 
-                @media screen and (min-width: 768px) {
+                @media screen and (min-width: 800px) {
                     display: none;
                 }
-                .inputField{
+
+                .inputField {
                     display: flex;
                     align-items: center;
                     height: 3rem;
-                    padding: .5rem;
-                    background: #FBFBFB;
-                    border: 1px solid #DFDFDF;
+                    padding: 0.5rem;
+                    background: #fbfbfb;
+                    border: 1px solid #dfdfdf;
                     border-radius: 10px;
-                    
-                    input{
+
+                    input {
                         width: 80%;
                         padding-left: 1rem;
                         outline: none;
@@ -35,11 +36,10 @@
                         border: none;
                         font-size: var(--eighteen);
 
-                        &::placeholder{
-                            color: #BEBEBE;
+                        &::placeholder {
+                            color: #bebebe;
                         }
                     }
-
                 }
             }
 
@@ -53,59 +53,60 @@
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
-            border-bottom: 1px solid #BEBEBE;
-            
-            @media screen and (min-width: 768px) {
+            border-bottom: 1px solid #bebebe;
+            padding-bottom: 1rem;
+            margin: 0 2rem 1rem;
+
+            @media screen and (min-width: 800px) {
                 flex-direction: row;
                 justify-content: space-between;
                 margin-left: 3rem;
                 margin-right: 3rem;
             }
-            
-            .subHead{
+
+            .subHead {
                 display: flex;
                 flex-direction: column;
                 width: 100%;
                 margin: 0rem;
                 font-size: var(--eighteen);
                 padding-bottom: 1rem;
-                
-                @media screen and (min-width: 768px) {
+
+                @media screen and (min-width: 800px) {
                     align-items: center;
                     flex-direction: row;
                     margin: 1.5rem 0 0.75rem;
                 }
-    
-    
+
                 .formHead {
                     font-family: var(--font-head);
                     font-size: var(--thirtyEight);
                     font-weight: 600;
-                    margin: 0rem 1rem 1rem;
+                    margin-bottom: 1rem;
                     line-height: 38px;
-    
-                    @media screen and (min-width: 768px) {
+
+                    @media screen and (min-width: 800px) {
                         font-size: var(--thirtyTwo);
                         font-weight: 500;
                         margin: 0 0;
                     }
                 }
-    
+
                 .totalClients {
                     font-size: var(--twentyTwo);
                     color: var(--hotPink);
                     font-weight: 700;
-                    
-                    @media screen and (min-width: 768px) {
+
+                    @media screen and (min-width: 800px) {
                         margin-left: 1rem;
                         margin-right: 1rem;
                     }
                 }
-    
+
                 .sortDropdown {
                     display: flex;
                     justify-content: space-between;
-                    margin: 0rem 1rem;
+                    // margin: 0rem 1rem;
 
                     .accordion {
                         display: block;
@@ -113,25 +114,25 @@
                         padding-bottom: 0;
                         border: 0;
                         position: relative;
-    
+
                         .accordionHeader {
                             display: flex;
                             align-items: center;
                             justify-content: space-between;
-    
+
                             .accordionCol {
                                 .headText {
                                     color: var(--black);
-    
+
                                     @media screen and (min-width: 480px) {
                                         font-size: var(--twentyTwo);
                                     }
                                 }
-    
+
                                 .accordionIcon {
                                     width: 1rem;
                                     height: 1rem;
-    
+
                                     @media screen and (min-width: 480px) {
                                         width: 1.5rem;
                                         height: 1.5rem;
@@ -143,17 +144,17 @@
                         .accordionBody {
                             position: absolute;
                             z-index: 1;
-    
+
                             .description {
-                                margin-top: .75rem;
-                                padding: 0 0 .1rem;
+                                margin-top: 0.75rem;
+                                padding: 0 0 0.1rem;
                                 width: 172px;
                                 display: flex;
                                 flex-direction: column;
                                 height: 150px;
                                 box-shadow: 0px 0px 4px 2px #a9a9a940;
                                 border-radius: 10px;
-                                
+
                                 .sortBy {
                                     font-size: var(--fourteen);
                                     border: none;
@@ -164,14 +165,14 @@
                                     font-weight: 600;
                                     border-bottom: 1px solid rgba(61, 21, 61, 0.1);
                                     background: var(--white);
-    
+
                                     margin: 0;
-    
+
                                     &:hover {
                                         background: var(--hotPink);
                                         color: var(--white);
                                     }
-    
+
                                     @media screen and (min-width: 480px) {
                                         font-size: var(--sixteen);
                                     }
@@ -180,26 +181,26 @@
                         }
                     }
                 }
-
             }
 
-            .subHead_input{
+            .subHead_input {
                 display: none;
 
-                @media screen and (min-width: 768px) {
+                @media screen and (min-width: 800px) {
                     display: block;
                 }
-                .inputField{
+
+                .inputField {
                     display: flex;
                     align-items: center;
                     width: 17.75rem;
                     height: 3rem;
-                    padding: .5rem;
-                    background: #FBFBFB;
-                    border: 1px solid #DFDFDF;
+                    padding: 0.5rem;
+                    background: #fbfbfb;
+                    border: 1px solid #dfdfdf;
                     border-radius: 10px;
-                    
-                    input{
+
+                    input {
                         width: 80%;
                         padding-left: 1rem;
                         outline: none;
@@ -207,11 +208,103 @@
                         border: none;
                         font-size: var(--eighteen);
 
-                        &::placeholder{
-                            color: #BEBEBE;
+                        &::placeholder {
+                            color: #bebebe;
                         }
                     }
+                }
+            }
+        }
+    }
 
+    .adminClient_body {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 2rem;
+
+        @media screen and (min-width: 700px) {
+            justify-content: space-between;
+        }
+
+        .clientCard {
+            width: 17rem;
+            height: 15.875rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #f8f2f6;
+            border: 1px solid #d8bcd6;
+            border-radius: 1.25rem;
+            margin-bottom: 1rem;
+            padding: 1rem;
+
+            @media screen and (min-width: 500px) {
+                width: 14rem;
+                height: 13.875rem;
+            }
+
+            @media screen and (min-width: 900px) {
+                width: 17rem;
+                height: 15.875rem;
+            }
+
+            .clientImg {
+                width: 6rem;
+                height: 6rem;
+                border: 1px solid #f2e8f1;
+                border-radius: 50%;
+                margin-bottom: 0.75rem;
+            }
+
+            .clientName {
+                font-size: var(--twentyTwo);
+                line-height: 1.625rem;
+                margin-bottom: 0.75rem;
+            }
+
+            .cardButtons {
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                width: 100%;
+
+                .profile,
+                .chat {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    width: 6.25rem;
+                    height: 2rem;
+                    border-radius: 5px;
+                    font-size: var(--sixteen);
+                    margin-bottom: 0.75rem;
+                    cursor: pointer;
+                    transition: all 0.3s ease-in-out;
+
+                    &:hover {
+                        transform: scale(1.05);
+                    }
+
+                    @media screen and (min-width: 500px) {
+                        width: 5.5rem;
+                        height: 2rem;
+                    }
+                }
+
+                .chat {
+                    background: var(--black);
+                    color: var(--white);
+                }
+
+                .profile {
+                    background: var(--white);
+                    color: var(--black);
+                    border: 1px solid #050205;
+                    border-radius: 5px;
                 }
             }
         }

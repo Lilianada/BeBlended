@@ -114,6 +114,7 @@ export default function AdminClientList() {
             />
           );
         })}
+        <button className="btn-secondary">View More</button>
       </div>
       <BottomNavStylist />
     </main>
