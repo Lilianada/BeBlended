@@ -1,4 +1,4 @@
-.adminClient_Page {
+.adminClient_Profile {
     .wd_80 {
         .adminClient_head {
             display: flex;
@@ -14,4 +14,174 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                border: none;
+                background: none;
+                outline: none;
             }
+        }
+
+        .adminClient_subhead {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            margin: 0 2rem 1rem;
+
+            @media screen and (min-width: 800px) {
+                flex-direction: row;
+                justify-content: space-between;
+                margin-left: 3rem;
+                margin-right: 3rem;
+            }
+
+            .subHead {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                margin: 0rem;
+                font-size: var(--eighteen);
+                padding-bottom: 1rem;
+
+                @media screen and (min-width: 800px) {
+                    align-items: center;
+                    flex-direction: row;
+                    margin: 1.5rem 0 0.75rem;
+                }
+
+                .formHead {
+                    display: flex;
+                    align-items: center;
+                    font-family: var(--font-head);
+                    font-size: var(--thirtyEight);
+                    font-weight: 600;
+                    margin-bottom: 1rem;
+                    line-height: 38px;
+
+                    @media screen and (min-width: 800px) {
+                        font-size: var(--twentyEight);
+                        font-weight: 500;
+                        margin: 0 0;
+                    }
+                }
+            }
+        }
+        hr{
+            border: 0;
+            border-bottom: 1px solid #f2f2f2;
+        }
+    }
+
+    .clientProfile_Grid{
+        display: grid;
+        grid-template-columns: 342px 1fr;
+        margin: 2rem;
+        gap: 2rem;
+
+        .clientDetails{
+            height: 735px;
+            border-radius: 20px;
+            background: #F8F2F6;
+            border: 1px solid #D8BCD6;
+            border-radius: 20px;
+            display: grid;
+            place-items: center;
+
+            .clientImg{
+                width: 6rem;
+                height: 6rem;
+                border: 1px solid #f2e8f1;
+                border-radius: 50%;
+                margin-bottom: 0.75rem;
+            }
+
+            .clientName {
+                font-size: var(--twentyTwo);
+                line-height: 1.625rem;
+                margin-bottom: 0.75rem;
+            }
+
+            .chat {
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                width: 13rem;
+                height: 2.5rem;
+                border-radius: 5px;
+                font-size: var(--sixteen);
+                margin-bottom: 0.75rem;
+                background: var(--white);
+                color: var(--black);
+                border: 1px solid #050205;
+                border-radius: 9px;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+
+            .add{
+                width: 16rem;
+                height: 2.5rem;
+                border-radius: 5px;
+                font-size: var(--sixteen);
+                margin-bottom: 0.75rem;
+                background: var(--black);
+                color: var(--white);
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+                margin-bottom: 1rem;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+
+            .hairTexture{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1rem;
+
+                .texture{
+                    display: grid;
+                    place-items: center;
+                    width: 100%;
+
+                    .textureCircle{
+                        width: 8rem;
+                        height: 8rem;
+                        border: 1px solid #D8BCD6;
+                        border-radius: 50%;
+                        background: transparent;
+                        margin-bottom: .5rem;
+                    }
+
+                    .hairName{
+                        font-size: var(--sixteen);
+                        font-weight: 600;
+                        line-height: 1.25rem;
+                        margin-bottom: .5rem;
+                    }
+                    
+                    .textureName{
+                        font-family: Karla;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 1.25rem;
+                    }
+
+                }
+            }
+
+        }
+
+        .clientAppointments{
+
+        }   
+    }
+
+}
