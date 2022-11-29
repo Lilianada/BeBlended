@@ -1,0 +1,17 @@
+.adminClient_Page {
+    .wd_80 {
+        .adminClient_head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 2rem;
+
+            @media screen and (min-width: 800px) {
+                margin: 2rem 3rem 1rem;
+            }
+
+            .previousButton {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }

@@ -6,7 +6,11 @@
             align-items: center;
             margin: 2rem;
 
-            div {
+            @media screen and (min-width: 800px) {
+                margin: 2rem 3rem 1rem;
+            }
+
+            .previousButton {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -41,10 +45,6 @@
                         }
                     }
                 }
-            }
-
-            @media screen and (min-width: 800px) {
-                margin: 2rem 3rem 1rem;
             }
         }
 
@@ -214,9 +214,9 @@
             }
         }
 
-        hr{
+        hr {
             border: 0;
-            border-bottom: 1px solid #F2F2F2;
+            border-bottom: 1px solid #f2f2f2;
         }
     }
 
@@ -225,28 +225,28 @@
         flex-direction: column;
         justify-content: center;
         margin: 2rem;
-        
-        .noClientsCard{
+
+        .noClientsCard {
             display: grid;
             place-items: center;
 
-            .noClient_Img{
+            .noClient_Img {
                 height: 4.6875rem;
                 width: 4.6875rem;
                 border-radius: 0px;
                 margin-bottom: 1rem;
             }
 
-            .noClient_Txt{
+            .noClient_Txt {
                 font-size: var(--twentyTwo);
                 font-weight: 700;
                 line-height: 1.625rem;
                 letter-spacing: 0em;
                 text-align: center;
-                margin-bottom: .5rem;
+                margin-bottom: 0.5rem;
             }
 
-            .smallNote{
+            .smallNote {
                 font-size: var(--sixteen);
                 font-style: italic;
                 font-weight: 500;
@@ -257,18 +257,17 @@
             }
         }
 
-        .clientCards{
+        .clientCards {
             display: flex;
             gap: 1rem;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-    
+
             @media screen and (min-width: 700px) {
                 justify-content: space-between;
             }
 
-    
             .clientCard {
                 width: 17rem;
                 height: 15.875rem;
@@ -281,17 +280,17 @@
                 border-radius: 1.25rem;
                 margin-bottom: 1rem;
                 padding: 1rem;
-    
+
                 @media screen and (min-width: 500px) {
                     width: 14rem;
                     height: 13.875rem;
                 }
-    
+
                 @media screen and (min-width: 900px) {
                     width: 17rem;
                     height: 15.875rem;
                 }
-    
+
                 .clientImg {
                     width: 6rem;
                     height: 6rem;
@@ -299,19 +298,19 @@
                     border-radius: 50%;
                     margin-bottom: 0.75rem;
                 }
-    
+
                 .clientName {
                     font-size: var(--twentyTwo);
                     line-height: 1.625rem;
                     margin-bottom: 0.75rem;
                 }
-    
+
                 .cardButtons {
                     display: flex;
                     align-items: center;
                     justify-content: space-evenly;
                     width: 100%;
-    
+
                     .profile,
                     .chat {
                         display: flex;
@@ -324,22 +323,22 @@
                         margin-bottom: 0.75rem;
                         cursor: pointer;
                         transition: all 0.3s ease-in-out;
-    
+
                         &:hover {
                             transform: scale(1.05);
                         }
-    
+
                         @media screen and (min-width: 500px) {
                             width: 5.5rem;
                             height: 2rem;
                         }
                     }
-    
+
                     .chat {
                         background: var(--black);
                         color: var(--white);
                     }
-    
+
                     .profile {
                         background: var(--white);
                         color: var(--black);
@@ -348,20 +347,19 @@
                     }
                 }
             }
-
         }
 
-        .btn-secondary{
+        .btn-secondary {
             width: 214px;
             height: 2.5rem;
             transition: all 0.3s ease-in-out;
-            border: 1px solid #DEDDDD;
+            border: 1px solid #dedddd;
             border-radius: 9px;
             background: var(--white);
             align-self: center;
             margin-top: 1rem;
-            
-            &:hover{
+
+            &:hover {
                 background: var(--black);
                 color: var(--white);
                 transform: scale(1.05);

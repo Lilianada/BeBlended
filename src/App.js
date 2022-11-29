@@ -26,6 +26,7 @@ import {
   Placeholders,
   PayoutInfo,
   AdminClientList,
+  AdminClientProfile,
 } from "./components";
 
 
@@ -49,7 +50,8 @@ function App() {
     {/* <PersonalInfo /> */}
     {/* <LoginSecurity/> */}
     {/* <PayoutInfo /> */}
-    <AdminClientList />
+    {/* <AdminClientList /> */}
+    <AdminClientProfile/>
     </div>
   );
 }

@@ -19,10 +19,10 @@ export default function AdminClientList() {
 
       <div className="wd_80">
         <div className="adminClient_head">
-          <div>
+          <button className="previousButton">
             <GrPrevious style={{ marginRight: ".5rem" }} />
             <p>Back</p>
-          </div>
+          </button>
           <div className="subHead_input">
             <label htmlFor="input" className="inputField">
               <RiSearchLine fill="#907D7D" size={16} />
