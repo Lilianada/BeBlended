@@ -6,8 +6,9 @@ import {
   StylistAdminHeader,
   BottomNavStylist,
   AdminClientCards,
-} from "../../../components";
+} from "../../..";
 import { clientList } from "./AdminClientData";
+import BeblendedHead from "../../../../assets/Admin-Icons/Beblended-head.svg";
 import "./AdminClientList.scss";
 
 export default function AdminClientList() {
@@ -103,18 +104,29 @@ export default function AdminClientList() {
             </label>
           </div>
         </div>
+        <hr/>
       </div>
       <div className="adminClient_body">
-        {clientList.map((card, id) => {
-          return (
-            <AdminClientCards
-              clientImage={card.clientImage}
-              clientName={card.clientName}
-              key={id}
-            />
-          );
-        })}
-        <button className="btn-secondary">View More</button>
+          {clientList.length === 9 ? (
+            <div className="noClientsCard">
+                <img src={BeblendedHead} alt="No client" className="noClient_Img" />
+                <p className="noClient_Txt">You have no clients in <br/> our system yet!</p>
+                <p className="smallNote">Clients get added once you start <br/> booking appointments.</p>
+            </div>
+          ) : (
+              clientList.map((card, id) => {
+                  return (
+                  <div className="clientCards">
+                <AdminClientCards
+                  clientImage={card.clientImage}
+                  clientName={card.clientName}
+                  key={id}
+                  />
+              <button className="btn-secondary">View More</button>
+                  </div>
+              );
+            })
+          )}
       </div>
       <BottomNavStylist />
     </main>
