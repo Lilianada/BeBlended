@@ -7,6 +7,7 @@ import Kinky from "../../../../assets/KinkyHair.png";
 import Coarse from "../../../../assets/CoarseHair.png";
 import "./AdminClientProfile.scss";
 import { BsChat } from "react-icons/bs";
+import { HiMinus, HiOutlineMinus } from "react-icons/hi";
 
 export default function AdminClientProfile() {
   return (
@@ -23,7 +24,7 @@ export default function AdminClientProfile() {
         <div className="adminClient_subhead">
           <div className="subHead">
             <h4 className="formHead">
-              My Clients <AiOutlineMinus style={{ margin: "0 .75rem" }} /> Melly
+              My Clients <HiOutlineMinus size={24} style={{ margin: "0 .75rem" }} /> Melly
               Thomas
             </h4>
           </div>
@@ -61,19 +62,25 @@ export default function AdminClientProfile() {
             </div>
           </div>
         </div>
+
         <div className="clientAppointments">
             <div className="flexHead">
-                <div className="flexItem">
+                <div className="flexItem blackFlex_Item">
                     <h3>6</h3>
                     <p>All Bookings</p>
                 </div>
-                <div className="flexItem">
+                <div className="flexItem borderFlex_Item">
                     <h3>3</h3>
                     <p>Completed</p>
                 </div>
-                <div className="flexItem">
-                    <h3>2 Cancelled</h3>
+                <div className="flexItem greyFlex_Item">
+                    <h3>2</h3>
+                    <p>Cancelled</p>
                 </div>
+            </div>
+            <div className="appointmentTable">
+                <h5 className="appointmentTable_Head">Appointments</h5>
+
             </div>
         </div>
       </div>

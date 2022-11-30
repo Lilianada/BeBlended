@@ -184,7 +184,109 @@
         }
 
         .clientAppointments{
+            display: block;
 
+            .flexHead{
+                display: flex;
+                justify-content: space-evenly;
+
+                .flexItem{
+                    height: 111px;
+                    width: 204.00558471679688px;
+                    border-radius: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    h3{
+                        font-family: Roboto;
+                        font-size: var(--fourty);
+                        font-weight: 400;
+                        line-height: 2rem;
+                        letter-spacing: 0em;
+                        text-align: center;  
+                    }
+
+                    p{
+                        font-size: var(--fourteen);
+                        font-weight: 400;
+                        line-height: 1rem;
+                        letter-spacing: 0em;
+                        text-align: center;
+                        
+                    }
+                }
+
+                .blackFlex_Item{
+                    background: var(--black);
+                    
+                    h3{
+                                              
+                        color: var(--white);
+                        // margin-bottom: .5rem;
+                    }
+                    
+                    p{
+                        color: var(--white);
+                    }
+                }
+
+                .borderFlex_Item{
+                    background: var(--white);
+                    border: 1px solid #DFDFDF;
+                    box-shadow: 0px 4px 4px rgba(124, 124, 124, 0.1);
+                }
+
+                .greyFlex_Item{
+                    background: #F2F2F2;
+                    border: 1px solid #DFDFDF;
+                    box-shadow: 0px 4px 4px rgba(124, 124, 124, 0.1);
+                }
+            }
+
+            .appointmentTable{
+                margin-top: 2rem;
+                display: flex;
+                flex-direction: column;
+                // justify-content: center;
+                // align-items: center;
+
+                .appointmentTable_Head{
+                    font-size: var(--twentyFour);
+                    font-weight: 500;
+                    line-height: 29px;
+                    text-align: left;
+                }
+
+                .tableItem{
+                    font-size: var(--sixteen);
+                    font-weight: 600;
+                    line-height: 1.25rem;
+                    letter-spacing: 0em;
+                    text-align: center;
+                }
+
+                .tableBody{
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    width: 100%;
+                    height: 3rem;
+                    background: var(--white);
+                    border: 1px solid #DFDFDF;
+                    box-shadow: 0px 4px 4px rgba(124, 124, 124, 0.1);
+                    border-radius: 0 0 10px 10px;
+
+                    .tableItem{
+                        font-size: var(--sixteen);
+                        font-weight: 400;
+                        line-height: 1.25rem;
+                        letter-spacing: 0em;
+                        text-align: center;
+                    }
+                }
+            }
         }   
     }
 
