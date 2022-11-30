@@ -1,10 +1,11 @@
-export { default as AdminClientProfile } from "./StylistAdmin/AdminClientPage/AdminClientProfile/AdminClientProfile";
+//Re-exporting component
+export { default as AppointmentTable} from "./StylistAdmin/AdminClientPage/AdminClientProfile/AppointmentTable";
 
+export { default as AdminClientProfile } from "./StylistAdmin/AdminClientPage/AdminClientProfile/AdminClientProfile";
 export { default as AdminClientCards } from "./StylistAdmin/AdminClientPage/AdminClientList/AdminClientCards";
 export { default as AdminClientList } from "./StylistAdmin/AdminClientPage/AdminClientList/AdminClientList";
 export { default as PayoutInfoAccordion } from "./StylistAdmin/PayoutInformation/PayoutInfoAccordion";
 export { default as PayoutInfo} from "./StylistAdmin/PayoutInformation/PayoutInfo";
-//Re-exporting componen
 export { default as DeactivateAccount } from "./StylistAdmin/LoginAndSecurity/DeactivateAccountModal/DeactivateAccount";
 export { default as PasswordModal } from "./StylistAdmin/LoginAndSecurity/PasswordModal/PasswordModal";
 export { default as LoginSecurity } from "./StylistAdmin/LoginAndSecurity/LoginSecurity/LoginSecurity";

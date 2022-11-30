@@ -1,13 +1,13 @@
 import React from "react";
-import { AiOutlineMinus } from "react-icons/ai";
 import { GrPrevious } from "react-icons/gr";
-import { StylistAdminHeader } from "../../../../components";
+import { StylistAdminHeader, AppointmentTable } from "../../../../components";
 import BeblendedHead from "../../../../assets/Admin-Icons/Beblended-head.svg";
 import Kinky from "../../../../assets/KinkyHair.png";
 import Coarse from "../../../../assets/CoarseHair.png";
 import "./AdminClientProfile.scss";
 import { BsChat } from "react-icons/bs";
-import { HiMinus, HiOutlineMinus } from "react-icons/hi";
+import { HiOutlineMinus } from "react-icons/hi";
+import { tableData } from "./TableData";
 
 export default function AdminClientProfile() {
   return (
@@ -80,7 +80,7 @@ export default function AdminClientProfile() {
             </div>
             <div className="appointmentTable">
                 <h5 className="appointmentTable_Head">Appointments</h5>
-
+                <AppointmentTable data={tableData} />
             </div>
         </div>
       </div>
