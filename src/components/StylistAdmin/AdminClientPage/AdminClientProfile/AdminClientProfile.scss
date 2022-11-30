@@ -26,6 +26,7 @@
             align-items: center;
             justify-content: flex-start;
             margin: 0 2rem 1rem;
+            padding: 0;
 
             @media screen and (min-width: 800px) {
                 flex-direction: row;
@@ -224,7 +225,6 @@
                     h3{
                                               
                         color: var(--white);
-                        // margin-bottom: .5rem;
                     }
                     
                     p{
@@ -246,7 +246,7 @@
             }
 
             .appointmentTable{
-                margin-top: 2rem;
+                margin-top: 3rem;
                 display: flex;
                 flex-direction: column;
 
@@ -258,45 +258,76 @@
                 }
 
                 .tableBody{
-                    padding: 1rem;
                     margin-top: 2rem;
+                    width: 100%;
+                    
 
                     .tableHead{
-                        font-size: var(--sixteen);
-                        font-weight: 400;
-                        line-height: 1.25rem;
-                        letter-spacing: 0em;
-                        text-align: center;
+                        display: grid;
+                        grid-template-columns: repeat(4, 1fr);
+                        place-items: center;
+                        justify-content: space-evenly;
+                        gap: 1rem;
                         height: 3rem; 
                         background: #F2F2F2;
+
+                        p{
+                            font-size: var(--eighteen);
+                            font-weight: f00;
+                            line-height: 1.25rem;
+                            letter-spacing: 0em;
+                            text-align: center;
+                        }
                     }
+                    .tableItem{
+                        height: 31.5rem;
+                        overflow-y: scroll;
+                        margin-top: 1rem;
 
-                    .tableRow{
-                        height: 4rem;
-
-                        .tableData{
-                            text-align: center;
-                            border-bottom: 1px solid #F2F2F2;
+                        .tableRow{
+                            height: 4rem;
+                            display: grid;
+                            grid-template-columns: repeat(4, 1fr);
+                            gap: 1rem;
+                            align-items: center;
+                            border-bottom: 1px solid #f2f2f2;
+    
+                            .tableData{
+                                text-align: center;
+                                justify-content: center;
+                                font-size: var(--eighteen);
+                            }
+                            
+                            .completedStatus{
+                                background: #C5E9D3;
+                                border-radius: 5px;
+                                text-align: center;
+                                height: 2rem;
+                                margin: 0 .5rem;
+                                color: var(--black);
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-evenly;
+                                font-size: var(--eighteen);
+                                font-weight:600;
+                                width: 9rem;
+                            }
+                            
+                            .cancelledStatus{
+                                background: rgba(242, 106, 106, 0.1);
+                                border-radius: 5px;
+                                color: #F26A6A;
+                                text-align: center;
+                                height: 2rem;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-evenly;
+                                font-size: var(--eighteen);
+                                font-weight:600;
+                                width: 9rem;
+                            }
                         }
 
-                        .completedStatus{
-                            background: #C5E9D3;
-                            border-radius: 5px;
-                            text-align: center;
-                            height: 2rem;
-                            margin: 0 .5rem;
-                            border-bottom: 1px solid #F2F2F2;
-                            color: var(--black);
-                        }
-
-                        .cancelledStatus{
-                            background: rgba(242, 106, 106, 0.1);
-                            border-radius: 5px;
-                            color: #F26A6A;
-                            text-align: center;
-                            height: 2rem;
-                            border-bottom: 1px solid #F2F2F2;
-                        }
                     }
                 }
             }
