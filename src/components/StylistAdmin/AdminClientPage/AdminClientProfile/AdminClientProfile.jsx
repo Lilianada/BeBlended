@@ -1,6 +1,6 @@
 import React from "react";
 import { GrPrevious } from "react-icons/gr";
-import { StylistAdminHeader, AppointmentTable } from "../../../../components";
+import { StylistAdminHeader, AppointmentTable, BottomNavStylist } from "../../../../components";
 import BeblendedHead from "../../../../assets/Admin-Icons/Beblended-head.svg";
 import Kinky from "../../../../assets/KinkyHair.png";
 import Coarse from "../../../../assets/CoarseHair.png";
@@ -84,6 +84,7 @@ export default function AdminClientProfile() {
             </div>
         </div>
       </div>
+      <BottomNavStylist/>
     </main>
   );
 }

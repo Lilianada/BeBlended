@@ -41,12 +41,12 @@
                 width: 100%;
                 margin: 0rem;
                 font-size: var(--eighteen);
-                padding-bottom: 1rem;
+                padding-bottom: 0rem;
 
                 @media screen and (min-width: 800px) {
                     align-items: center;
                     flex-direction: row;
-                    margin: 1.5rem 0 0.75rem;
+                    margin: 1.5rem 0;
                 }
 
                 .formHead {
@@ -66,6 +66,7 @@
                 }
             }
         }
+
         hr{
             border: 0;
             border-bottom: 1px solid #f2f2f2;
@@ -73,12 +74,24 @@
     }
 
     .clientProfile_Grid{
-        display: grid;
-        grid-template-columns: 342px 1fr;
-        margin: 2rem;
-        gap: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (min-width: 1000px) {
+            display: grid;
+            grid-template-columns: 312px 1fr;
+            margin: 2rem;
+            gap: 2rem;
+        }
+
+        @media screen and (min-width: 1200px) {
+            grid-template-columns: 342px 1fr;
+        }
 
         .clientDetails{
+            width: 90%;
             height: 735px;
             border-radius: 20px;
             background: #F8F2F6;
@@ -87,6 +100,16 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            margin-bottom: 2rem;
+
+            @media screen and (min-width: 500px) {
+                width: 70%;
+            }
+
+            @media screen and (min-width: 1000px) {
+                width: 100%;
+                margin-bottom: 0rem;
+            }
 
 
             .clientImg{
@@ -188,20 +211,30 @@
             display: block;
 
             .flexHead{
-                display: flex;
-                justify-content: space-evenly;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1rem;
+                margin: 2rem;
+                
+                @media screen and (min-width: 1000px) {
+                    // display: flex;  
+                    // justify-content: space-between;
+                    margin: 0rem;
+                }
 
                 .flexItem{
-                    height: 111px;
-                    width: 204.00558471679688px;
-                    border-radius: 20px;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
+                    height: 7rem;
+                    border-radius: 20px;
+                    
+                    @media screen and (min-width: 768px) {
+                        width: 12.75rem;
+                    }
 
                     h3{
-                        font-family: Roboto;
                         font-size: var(--fourty);
                         font-weight: 400;
                         line-height: 2rem;
@@ -223,7 +256,6 @@
                     background: var(--black);
                     
                     h3{
-                                              
                         color: var(--white);
                     }
                     
@@ -246,21 +278,38 @@
             }
 
             .appointmentTable{
-                margin-top: 3rem;
                 display: flex;
                 flex-direction: column;
+                margin: 1rem;
+                width: 85%;
+                overflow: scroll;
+                margin: auto;
+
+                @media screen and (min-width: 768px) {
+                    margin-top: 3rem;
+                    overflow: hidden;
+                    width: 100%;
+                }
+                    
 
                 .appointmentTable_Head{
                     font-size: var(--twentyFour);
                     font-weight: 500;
-                    line-height: 29px;
+                    line-height: 1.875rem;
                     text-align: left;
                 }
 
                 .tableBody{
-                    margin-top: 2rem;
-                    width: 100%;
+                    margin: 2rem auto 6rem;
                     
+                    @media screen and (min-width: 500px) and (max-width: 768px) {
+                        margin-top: 1rem;
+                    }
+                    
+                    @media screen and (min-width: 768px) {
+                        width: 100%;
+                        margin: 0;
+                    }
 
                     .tableHead{
                         display: grid;
@@ -273,17 +322,19 @@
 
                         p{
                             font-size: var(--eighteen);
-                            font-weight: f00;
+                            font-weight: 600;
                             line-height: 1.25rem;
                             letter-spacing: 0em;
                             text-align: center;
                         }
                     }
-                    .tableItem{
-                        height: 31.5rem;
-                        overflow-y: scroll;
-                        margin-top: 1rem;
 
+                    .tableItem{
+                        height: 28rem;
+                        overflow-y: scroll;
+                        overflow-x: scroll;
+                        margin-top: 1rem;
+                        
                         .tableRow{
                             height: 4rem;
                             display: grid;
@@ -296,6 +347,12 @@
                                 text-align: center;
                                 justify-content: center;
                                 font-size: var(--eighteen);
+                                padding: .5rem;
+                                
+                                @media screen and (min-width: 768px) {
+                                    padding: 0;
+                                }
+
                             }
                             
                             .completedStatus{
