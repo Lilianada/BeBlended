@@ -2,6 +2,7 @@ import React from "react";
 
 export default function TransactionSection() {
   return (
-    <h3></h3>
+    <div className="transactionsTable">
+    </div>
   );
 }

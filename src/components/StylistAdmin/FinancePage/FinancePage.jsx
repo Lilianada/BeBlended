@@ -49,12 +49,10 @@ export default function AdminFinancePage() {
                             <h3>$0.00</h3>
                         </div>
                     </div>
-                    <hr />
                 </div>
             </div>
             <div className="adminFinance_body">
-                <div className="transactionsTable">
-                    <h5 className="transactionsTable_Head">Transactions</h5>
+                    <h5 className="transactionsHead">Transactions</h5>
                     <div className="noTransactions">
                         <img src={MoneyBag} alt="No client" className="noTransaction_Img" />
                         <p className="noTransaction_Txt">
@@ -64,6 +62,7 @@ export default function AdminFinancePage() {
                             Transactions get added once you <br /> start booking appointments.
                         </p>
                     </div>
+                <div className="transactionsTable">
                 </div>
             </div>
             <BottomNavStylist />
