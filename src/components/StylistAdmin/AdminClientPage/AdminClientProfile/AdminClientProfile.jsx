@@ -12,7 +12,8 @@ import Coarse from "../../../../assets/CoarseHair.png";
 import "./AdminClientProfile.scss";
 import { BsChat } from "react-icons/bs";
 import { HiOutlineMinus } from "react-icons/hi";
-import { tableData } from "./TableData";
+import { tableData } from "../../AdminData";
+import { AnimatePresence } from "framer-motion";
 
 export default function AdminClientProfile() {
   const [openModal, setOpenModal] = useState(false);

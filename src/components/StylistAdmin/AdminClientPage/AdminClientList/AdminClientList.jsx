@@ -7,7 +7,7 @@ import {
   BottomNavStylist,
   AdminClientCards,
 } from "../../..";
-import { clientList } from "./AdminClientData";
+import { clientList } from "../../AdminData";
 import BeblendedHead from "../../../../assets/Admin-Icons/Beblended-head.svg";
 import "./AdminClientList.scss";
 
