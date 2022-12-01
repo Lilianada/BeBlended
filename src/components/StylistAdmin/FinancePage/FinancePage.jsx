@@ -1,6 +1,6 @@
 import React from "react";
-import { BottomNavStylist } from "../../../components";
-import { HiArrowTrendingUp } from "react-icons/hi";
+import { BottomNavStylist, StylistAdminHeader } from "../../../components";
+import { MdTrendingUp } from "react-icons/md";
 import MoneyBag from "../../../assets/Admin-Icons/Money-bag.svg";
 import "./FinancePage.scss";
 
@@ -22,28 +22,28 @@ export default function AdminFinancePage() {
                         <div className="flexItem blackFlex_Item">
                             <p>
                                 Earnings this month
-                                <HiArrowTrendingUp />
+                                <MdTrendingUp />
                             </p>
                             <h3>$0.00</h3>
                         </div>
                         <div className="flexItem pinkFlex_Item">
                             <p>
                                 Earnings last month
-                                <HiArrowTrendingUp />
+                                <MdTrendingUp />
                             </p>
                             <h3>$0.00</h3>
                         </div>
                         <div className="flexItem greyFlex_Item">
                             <p>
                                 Earnings to date
-                                <HiArrowTrendingUp />
+                                <MdTrendingUp />
                             </p>
                             <h3>$0.00</h3>
                         </div>
                         <div className="flexItem borderFlex_Item">
                             <p>
                                 Upcoming earnings
-                                <HiArrowTrendingUp />
+                                <MdTrendingUp />
                             </p>
                             <h3>$0.00</h3>
                         </div>
@@ -67,11 +67,11 @@ export default function AdminFinancePage() {
                         clientList.map((card, id) => {
                             return (
                                 <div className="clientCards">
-                                    <AdminClientCards
+                                    {/* <AdminClientCards
                                         clientImage={card.clientImage}
                                         clientName={card.clientName}
                                         key={id}
-                                    />
+                                    /> */}
                                     <button className="btn-secondary">View More</button>
                                 </div>
                             );

@@ -27,6 +27,7 @@ import {
   PayoutInfo,
   AdminClientList,
   AdminClientProfile,
+  AdminFinancePage,
 } from "./components";
 
 
@@ -51,7 +52,8 @@ function App() {
     {/* <LoginSecurity/> */}
     {/* <PayoutInfo /> */}
     {/* <AdminClientList /> */}
-    <AdminClientProfile/>
+    {/* <AdminClientProfile/> */}
+    <AdminFinancePage />
     </div>
   );
 }
