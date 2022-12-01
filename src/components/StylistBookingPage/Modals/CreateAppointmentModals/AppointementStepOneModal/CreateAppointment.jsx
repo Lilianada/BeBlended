@@ -10,7 +10,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { AiOutlineClose, AiOutlineClockCircle } from "react-icons/ai";
 import { HiOutlineCalendar } from "react-icons/hi";
 import AfroIcon from "../../../../../assets/AfroVector.svg";
-import "./AppointmentStepOne.scss";
+import "./CreateAppointment.scss";
 import { services, getTimer } from "../../../CreateAppointmentData";
 
 function CreateAppointment({ openModal, closeModal }) {

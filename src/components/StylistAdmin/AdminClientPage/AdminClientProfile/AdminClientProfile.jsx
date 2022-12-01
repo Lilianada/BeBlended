@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { GrPrevious } from "react-icons/gr";
-import { StylistAdminHeader, AppointmentTable, BottomNavStylist } from "../../../../components";
+import {
+  StylistAdminHeader,
+  AppointmentTable,
+  BottomNavStylist,
+  CreateAppointment,
+} from "../../../../components";
 import BeblendedHead from "../../../../assets/Admin-Icons/Beblended-head.svg";
 import Kinky from "../../../../assets/KinkyHair.png";
 import Coarse from "../../../../assets/CoarseHair.png";
@@ -10,6 +15,10 @@ import { HiOutlineMinus } from "react-icons/hi";
 import { tableData } from "./TableData";
 
 export default function AdminClientProfile() {
+  const [openModal, setOpenModal] = useState(false);
+  const handleModal = () => {
+    setOpenModal(!openModal);
+  };
   return (
     <main className="mainWrapper adminClient_Profile">
       <StylistAdminHeader />
@@ -24,7 +33,8 @@ export default function AdminClientProfile() {
         <div className="adminClient_subhead">
           <div className="subHead">
             <h4 className="formHead">
-              My Clients <HiOutlineMinus size={24} style={{ margin: "0 .75rem" }} /> Melly
+              My Clients{" "}
+              <HiOutlineMinus size={24} style={{ margin: "0 .75rem" }} /> Melly
               Thomas
             </h4>
           </div>
@@ -44,7 +54,21 @@ export default function AdminClientProfile() {
             <BsChat />
             Chat with Melly
           </button>
-          <button className="add">Add New Appointment</button>
+          <button className="add" onClick={handleModal}>
+            Add New Appointment
+          </button>
+          <AnimatePresence
+            initial={false}
+            exitBeforeEnter={true}
+            onExitComplete={() => null}
+          >
+            {openModal && (
+              <CreateAppointment
+                openModal={openModal}
+                closeModal={handleModal}
+              />
+            )}
+          </AnimatePresence>
           <div className="hairTexture">
             <div className="texture">
               <div className="textureCircle">
@@ -64,27 +88,27 @@ export default function AdminClientProfile() {
         </div>
 
         <div className="clientAppointments">
-            <div className="flexHead">
-                <div className="flexItem blackFlex_Item">
-                    <h3>6</h3>
-                    <p>All Bookings</p>
-                </div>
-                <div className="flexItem borderFlex_Item">
-                    <h3>3</h3>
-                    <p>Completed</p>
-                </div>
-                <div className="flexItem greyFlex_Item">
-                    <h3>2</h3>
-                    <p>Cancelled</p>
-                </div>
+          <div className="flexHead">
+            <div className="flexItem blackFlex_Item">
+              <h3>6</h3>
+              <p>All Bookings</p>
             </div>
-            <div className="appointmentTable">
-                <h5 className="appointmentTable_Head">Appointments</h5>
-                <AppointmentTable data={tableData} />
+            <div className="flexItem borderFlex_Item">
+              <h3>3</h3>
+              <p>Completed</p>
             </div>
+            <div className="flexItem greyFlex_Item">
+              <h3>2</h3>
+              <p>Cancelled</p>
+            </div>
+          </div>
+          <div className="appointmentTable">
+            <h5 className="appointmentTable_Head">Appointments</h5>
+            <AppointmentTable data={tableData} />
+          </div>
         </div>
       </div>
-      <BottomNavStylist/>
+      <BottomNavStylist />
     </main>
   );
 }
