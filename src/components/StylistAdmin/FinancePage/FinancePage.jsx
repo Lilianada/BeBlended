@@ -1,9 +1,10 @@
 import React from "react";
-import { BottomNavStylist, StylistAdminHeader } from "../../../components";
+import { BottomNavStylist, StylistAdminHeader, TransactionSection } from "../../../components";
 import { MdTrendingUp } from "react-icons/md";
 import MoneyBag from "../../../assets/Admin-Icons/Money-bag.svg";
-import "./FinancePage.scss";
 import { GrPrevious } from "react-icons/gr";
+import { tableData } from "../AdminData";
+import "./FinancePage.scss";
 
 export default function AdminFinancePage() {
     return (
@@ -52,18 +53,17 @@ export default function AdminFinancePage() {
                 </div>
             </div>
             <div className="adminFinance_body">
-                    <h5 className="transactionsHead">Transactions</h5>
-                    <div className="noTransactions">
-                        <img src={MoneyBag} alt="No client" className="noTransaction_Img" />
-                        <p className="noTransaction_Txt">
-                            You have no transactions in <br /> our system yet!
-                        </p>
-                        <p className="smallNote">
-                            Transactions get added once you <br /> start booking appointments.
-                        </p>
-                    </div>
-                <div className="transactionsTable">
-                </div>
+                <h5 className="transactionsHead">Transactions</h5>
+                {/* <div className="noTransactions">
+                    <img src={MoneyBag} alt="No client" className="noTransaction_Img" />
+                    <p className="noTransaction_Txt">
+                        You have no transactions in <br /> our system yet!
+                    </p>
+                    <p className="smallNote">
+                        Transactions get added once you <br /> start booking appointments.
+                    </p>
+                </div> */}
+                <TransactionSection data={tableData} />
             </div>
             <BottomNavStylist />
         </main>

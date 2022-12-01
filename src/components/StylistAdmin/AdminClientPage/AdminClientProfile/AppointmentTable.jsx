@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { BsCheckCircleFill } from "react-icons/bs";
+import { MdCancel } from "react-icons/md";
 import "./AdminClientProfile.scss";
 
 export default function AppointmentTable({ data }) {
@@ -20,12 +21,24 @@ export default function AppointmentTable({ data }) {
                 <p className="tableData">{val.date}</p>
                 <p className="tableData">{val.id}</p>
                 <p className="tableData">${val.amount}</p>
-                <p
-                className="completedStatus"
-                >
-                    <BsCheckCircleFill />
-                { val.status }
-                </p>
+                {
+                        data.status === "Completed" ? (
+                            <p
+                                className="completedStatus"
+                                >
+                                    <BsCheckCircleFill />
+                                { data.status }
+                            </p>
+                        ) :
+                        (
+                            <p
+                                className="cancelledStatus"
+                                >
+                                    <MdCancel />
+                                { data.status }
+                            </p>
+                        )
+                    }
             </div>
             );
         })}
