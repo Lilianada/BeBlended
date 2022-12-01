@@ -33,7 +33,6 @@ export default function AdminClientList() {
         <div className="adminClient_subhead">
           <div className="subHead">
             <h4 className="formHead">My Clients</h4>
-
             <div className="sortDropdown">
               <p className="totalClients">0 in Total</p>
               <div className="accordion">

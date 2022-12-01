@@ -7,7 +7,7 @@
             margin: 2rem;
 
             @media screen and (min-width: 800px) {
-                margin: 2rem 3rem 1rem;
+                margin: 2rem 3rem;
             }
 
             .previousButton {
@@ -28,15 +28,13 @@
             margin: 0 2rem 1rem;
 
             @media screen and (min-width: 800px) {
-                flex-direction: row;
                 justify-content: space-between;
                 margin-left: 3rem;
                 margin-right: 3rem;
             }
 
             .formHead {
-                display: flex;
-                align-items: center;
+                align-self: flex-start;
                 font-family: var(--font-head);
                 font-size: var(--thirtyEight);
                 font-weight: 600;
@@ -46,47 +44,47 @@
                 @media screen and (min-width: 800px) {
                     font-size: var(--twentyEight);
                     font-weight: 500;
-                    margin: 0 0;
                 }
             }
 
             .earningsFlex {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
                 gap: 1rem;
-                margin: 2rem 2rem 1rem;
-                border-bottom: 1px solid #bebebe;
-                padding-bottom: 1rem;
+                margin: 1rem 2rem 1rem;
+                width: 100%;
 
-                @media screen and (min-width: 1000px) {
+                @media screen and (min-width: 768px) {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
                     margin: 0rem;
                 }
 
                 .flexItem {
                     display: flex;
                     flex-direction: column;
-                    justify-content: space-between;
-                    align-items: center;
+                    justify-content: center;
+                    align-items: flex-start;
                     height: 7rem;
-                    padding: 1rem;
+                    padding: 1.5rem;
                     border-radius: 20px;
-
-                    @media screen and (min-width: 768px) {
-                        width: 12.75rem;
-                    }
-
-                    h3 {
-                        font-size: var(--fourty);
-                        font-weight: 400;
-                        line-height: 2rem;
-                        letter-spacing: 0em;
-                        text-align: center;
-                    }
+                    margin-bottom: 1rem;
 
                     p {
                         font-size: var(--fourteen);
                         font-weight: 400;
                         line-height: 1rem;
+                        letter-spacing: 0em;
+                        text-align: center;
+                        display: flex;
+                        justify-content: space-between;
+                        width: 100%;
+                        margin-bottom: .5rem;
+                    }
+
+                    h3 {
+                        font-size: var(--fourty);
+                        font-family: var(--font-text);
+                        font-weight: 400;
+                        line-height: 2rem;
                         letter-spacing: 0em;
                         text-align: center;
                     }
@@ -95,6 +93,7 @@
                 .blackFlex_Item {
                     background: var(--black);
                     box-shadow: 0px 4px 4px rgba(124, 124, 124, 0.03);
+
                     h3 {
                         color: var(--white);
                     }
@@ -121,6 +120,65 @@
                     border: 1px solid #bebebe;
                     box-shadow: 0px 4px 4px rgba(124, 124, 124, 0.03);
                 }
+            }
+
+            hr{
+                display: none;
+    
+                @media screen and (min-width: 768px) {
+                    display: block;
+                    border: 0;
+                    border-bottom: 1px solid #bebebe;
+                }
+            }
+        }
+    }
+
+    .adminFinance_body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        margin-bottom: 6rem;
+
+        .transactionsTable_Head{
+            font-size: var(--twentyEight);
+            margin-bottom: 2rem;
+
+            @media screen and (min-width: 768px) {
+                margin-top: 2rem;
+            }
+        }
+
+        .noTransactions {
+            display: grid;
+            place-items: center;
+
+            .noTransaction_Img {
+                height: 4.6875rem;
+                width: 4.6875rem;
+                border-radius: 0px;
+                margin-bottom: 1rem;
+            }
+
+            .noTransaction_Txt {
+                font-size: var(--twentyTwo);
+                font-weight: 700;
+                line-height: 1.625rem;
+                letter-spacing: 0em;
+                text-align: center;
+                margin-bottom: 0.5rem;
+            }
+
+            .smallNote {
+                font-size: var(--sixteen);
+                font-style: italic;
+                font-weight: 500;
+                line-height: 1.1875rem;
+                letter-spacing: 0em;
+                text-align: center;
+                color: #707070;
             }
         }
     }

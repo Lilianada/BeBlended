@@ -3,6 +3,7 @@ import { BottomNavStylist, StylistAdminHeader } from "../../../components";
 import { MdTrendingUp } from "react-icons/md";
 import MoneyBag from "../../../assets/Admin-Icons/Money-bag.svg";
 import "./FinancePage.scss";
+import { GrPrevious } from "react-icons/gr";
 
 export default function AdminFinancePage() {
     return (
@@ -48,35 +49,21 @@ export default function AdminFinancePage() {
                             <h3>$0.00</h3>
                         </div>
                     </div>
+                    <hr />
                 </div>
             </div>
-            <div className="adminClient_body">
+            <div className="adminFinance_body">
                 <div className="transactionsTable">
                     <h5 className="transactionsTable_Head">Transactions</h5>
-                    {clientList.length === 9 ? (
-                        <div className="noClientsCard">
-                            <img src={MoneyBag} alt="No client" className="noClient_Img" />
-                            <p className="noClient_Txt">
-                                You have no transactions in <br /> our system yet!
-                            </p>
-                            <p className="smallNote">
-                                Transactions get added once you <br /> start booking appointments.
-                            </p>
-                        </div>
-                    ) : (
-                        clientList.map((card, id) => {
-                            return (
-                                <div className="clientCards">
-                                    {/* <AdminClientCards
-                                        clientImage={card.clientImage}
-                                        clientName={card.clientName}
-                                        key={id}
-                                    /> */}
-                                    <button className="btn-secondary">View More</button>
-                                </div>
-                            );
-                        })
-                    )}
+                    <div className="noTransactions">
+                        <img src={MoneyBag} alt="No client" className="noTransaction_Img" />
+                        <p className="noTransaction_Txt">
+                            You have no transactions in <br /> our system yet!
+                        </p>
+                        <p className="smallNote">
+                            Transactions get added once you <br /> start booking appointments.
+                        </p>
+                    </div>
                 </div>
             </div>
             <BottomNavStylist />
