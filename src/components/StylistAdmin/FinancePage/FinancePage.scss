@@ -1,4 +1,4 @@
-.adminFinance_Page{
+.adminFinance_Page {
     .wd_80 {
         .adminFinance_head {
             display: flex;
@@ -34,79 +34,94 @@
                 margin-right: 3rem;
             }
 
-            .formHead{
-                
+            .formHead {
+                display: flex;
+                align-items: center;
+                font-family: var(--font-head);
+                font-size: var(--thirtyEight);
+                font-weight: 600;
+                margin-bottom: 1rem;
+                line-height: 38px;
+
+                @media screen and (min-width: 800px) {
+                    font-size: var(--twentyEight);
+                    font-weight: 500;
+                    margin: 0 0;
+                }
             }
 
-            .earningsFlex{
-                display: block;
-        
-                .flexHead{
-                    display: grid;
-                    grid-template-columns: repeat(3, 1fr);
-                    gap: 1rem;
-                    margin: 2rem;
-                    
-                    @media screen and (min-width: 1000px) {
-                        margin: 0rem;
+            .earningsFlex {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1rem;
+                margin: 2rem 2rem 1rem;
+                border-bottom: 1px solid #bebebe;
+                padding-bottom: 1rem;
+
+                @media screen and (min-width: 1000px) {
+                    margin: 0rem;
+                }
+
+                .flexItem {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    height: 7rem;
+                    padding: 1rem;
+                    border-radius: 20px;
+
+                    @media screen and (min-width: 768px) {
+                        width: 12.75rem;
                     }
-        
-                    .flexItem{
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        height: 7rem;
-                        border-radius: 20px;
-                        
-                        @media screen and (min-width: 768px) {
-                            width: 12.75rem;
-                        }
-        
-                        h3{
-                            font-size: var(--fourty);
-                            font-weight: 400;
-                            line-height: 2rem;
-                            letter-spacing: 0em;
-                            text-align: center;  
-                        }
-        
-                        p{
-                            font-size: var(--fourteen);
-                            font-weight: 400;
-                            line-height: 1rem;
-                            letter-spacing: 0em;
-                            text-align: center;
-                            
-                        }
+
+                    h3 {
+                        font-size: var(--fourty);
+                        font-weight: 400;
+                        line-height: 2rem;
+                        letter-spacing: 0em;
+                        text-align: center;
                     }
-        
-                    .blackFlex_Item{
-                        background: var(--black);
-                        box-shadow: 0px 4px 4px rgba(124, 124, 124, 0.03);
-                        h3{
-                            color: var(--white);
-                        }
-                        
-                        p{
-                            color: var(--white);
-                        }
+
+                    p {
+                        font-size: var(--fourteen);
+                        font-weight: 400;
+                        line-height: 1rem;
+                        letter-spacing: 0em;
+                        text-align: center;
                     }
-        
-                    .pinkFlex_Item{
-                        background: var(--pink);
-                        border: 1px solid #EBCCE9;
-                        box-shadow: 0px 4px 4px rgba(124, 124, 124, 0.03);
+                }
+
+                .blackFlex_Item {
+                    background: var(--black);
+                    box-shadow: 0px 4px 4px rgba(124, 124, 124, 0.03);
+                    h3 {
+                        color: var(--white);
                     }
-        
-                    .greyFlex_Item{
-                        background: #F2F2F2;
-                        border: 1px solid #DFDFDF;
-                        box-shadow: 0px 4px 4px rgba(124, 124, 124, 0.1);
+
+                    p {
+                        color: var(--white);
                     }
+                }
+
+                .pinkFlex_Item {
+                    background: var(--pink);
+                    border: 1px solid #ebcce9;
+                    box-shadow: 0px 4px 4px rgba(124, 124, 124, 0.03);
+                }
+
+                .greyFlex_Item {
+                    background: #f2f2f2;
+                    border: 1px solid #dfdfdf;
+                    box-shadow: 0px 4px 4px rgba(124, 124, 124, 0.1);
+                }
+
+                .borderFlex_Item {
+                    background: var(--white);
+                    border: 1px solid #bebebe;
+                    box-shadow: 0px 4px 4px rgba(124, 124, 124, 0.03);
                 }
             }
         }
     }
-    
 }

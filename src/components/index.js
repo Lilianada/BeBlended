@@ -1,6 +1,7 @@
 //Re-exporting component
+export { default as AdminFinancePage} from "./StylistAdmin/FinancePage/FinancePage";
+export { default as TransactionSection} from "./StylistAdmin/FinancePage/TransactionSection";
 export { default as AppointmentTable} from "./StylistAdmin/AdminClientPage/AdminClientProfile/AppointmentTable";
-
 export { default as AdminClientProfile } from "./StylistAdmin/AdminClientPage/AdminClientProfile/AdminClientProfile";
 export { default as AdminClientCards } from "./StylistAdmin/AdminClientPage/AdminClientList/AdminClientCards";
 export { default as AdminClientList } from "./StylistAdmin/AdminClientPage/AdminClientList/AdminClientList";
