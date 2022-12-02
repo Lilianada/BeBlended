@@ -47,13 +47,13 @@ function App() {
     
     {/* <ListingPage/> */}
 
-    {/* <StylistAdminHome /> */}
+    <StylistAdminHome />
     {/* <PersonalInfo /> */}
     {/* <LoginSecurity/> */}
     {/* <PayoutInfo /> */}
     {/* <AdminClientList /> */}
     {/* <AdminClientProfile/> */}
-    <AdminFinancePage />
+    {/* <AdminFinancePage /> */}
     </div>
   );
 }

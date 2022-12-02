@@ -1,19 +1,19 @@
-import React, { useState } from "react";
-import './StylistAdminHeader.scss';
+import React from "react";
 import {Link} from "react-router-dom";
 import Logo from "../../../assets/logo-black.svg";
 import {FiMenu} from "react-icons/fi";
 import ProfileImage from "../../../assets/ClientProfile.png";
+import './ClientAdminHeader.scss';
 
-export default function StylistAdminHeader() {
+export default function ClientAdminHeader() {
     const [toggle, setToggle] = useState(false);
 
     const handleToggle = () => {
         setToggle(!toggle);
     }
   return ( 
-    <section className="stylistAdminHeader">
-      <header className="stylistDesktop__Header">
+    <div className="clientAdminHeader">
+      <header className="clientDesktop__Header">
         <img src={Logo} alt="Logo" />
         <div className="navWrap">
           <nav className="navItems">
@@ -76,6 +76,6 @@ export default function StylistAdminHeader() {
           </ul>
         </div>
       </header>
-    </section>
-  );
+    </div>
+    )    
 }
