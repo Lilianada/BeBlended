@@ -28,6 +28,7 @@ import {
   AdminClientList,
   AdminClientProfile,
   AdminFinancePage,
+  ClientAdminHome,
 } from "./components";
 
 
@@ -42,18 +43,20 @@ function App() {
       {/* <ClientProfile/>  */}
       {/* <StylistProfile/> */}
       
-    {/* <BookingPage/> */}
-    {/* <ManageBookings/> */}
-    
-    {/* <ListingPage/> */}
+      {/* <BookingPage/> */}
+      {/* <ManageBookings/> */}
+      
+      {/* <ListingPage/> */}
 
-    <StylistAdminHome />
-    {/* <PersonalInfo /> */}
-    {/* <LoginSecurity/> */}
-    {/* <PayoutInfo /> */}
-    {/* <AdminClientList /> */}
-    {/* <AdminClientProfile/> */}
-    {/* <AdminFinancePage /> */}
+      {/* <StylistAdminHome /> */}
+      {/* <PersonalInfo /> */}
+      {/* <LoginSecurity/> */}
+      {/* <PayoutInfo /> */}
+      {/* <AdminClientList /> */}
+      {/* <AdminClientProfile/> */}
+      {/* <AdminFinancePage /> */}
+
+      <ClientAdminHome />
     </div>
   );
 }

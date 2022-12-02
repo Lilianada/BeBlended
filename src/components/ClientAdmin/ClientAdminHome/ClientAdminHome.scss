@@ -1,0 +1,110 @@
+.clientAdmin_Home{
+
+    .adminHead_Text{
+        display: block;
+        padding: 2rem 1rem 1rem;
+
+        @media screen and (min-width: 768px) {
+            padding: 2rem 3rem 1rem;
+        }
+        
+        h5{
+            font-size: var(--fourtyEight);
+
+            @media screen and (min-width: 768px) {
+                font-size: var(--thirtyTwo);
+            }
+        }
+
+        .stylistName{
+            margin-top: .5rem;
+            font-size: var(--twentyFour);
+        }
+    }
+
+    .adminMenu_items{
+        display: grid;
+        align-items: center;
+        padding: 0 1rem;
+        margin-bottom: 6rem;
+    
+        @media screen and (min-width: 768px) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            padding: 0 3rem;
+            margin-bottom: 2rem;
+        }
+
+        @media screen and (min-width: 1200px) {
+            display: grid;
+            grid-template-columns: repeat(3, 320px);
+        }
+
+        .menuItem{
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-bottom: 1px solid #DEDDDD;
+            margin-top: 1rem;
+
+            @media screen and (min-width: 768px) {
+                height: 228px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                background: #FFFFFF;
+                border: 1px solid #F2F2F2;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+                border-radius: 20px;
+                padding: 2rem 1rem;
+                margin-top: 1rem;
+            }
+
+            .menuIcon{
+                display: none;
+
+                @media screen and (min-width: 768px) {
+                    display: block;
+                    width: 1.75rem;
+                    margin-bottom: .25rem;
+                }
+            }
+
+            .menuName{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                
+                @media screen and (min-width: 768px) {
+                    justify-content: flex-start;
+                }
+
+                .menuLink{
+                    font-size: var(--eighteen);
+                    font-weight: 700;
+
+                    @media screen and (min-width: 768px) {
+                        margin-right: .75rem;
+                        font-size: var(--eighteen);
+                    }
+                }
+            }
+            
+            .menuInfo{
+                font-size: var(--sixteen);
+
+                @media screen and (min-width: 768px) {
+                    font-size: var(--sixteen);
+                    margin-top: .35rem;
+                    line-height: 19px;
+                    color: #707070;
+                }
+            }
+        }
+    }
+
+}
