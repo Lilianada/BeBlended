@@ -5,7 +5,7 @@ import { HiDownload } from "react-icons/hi";
 import { BsCheckCircleFill } from "react-icons/bs";
 import { MdCancel } from "react-icons/md";
 import { IoFilter } from "react-icons/io5";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function TransactionSection({ data }) {
   const [openFilter, setOpenFilter] = useState(false);
@@ -28,9 +28,24 @@ export default function TransactionSection({ data }) {
         <button className="filterButton" onClick={isFilter}>
           Filter <IoFilter />{" "}
         </button>
-        <AnimatePresence>
+        <AnimatePresence
+            initial={false}
+            exitBeforeEnter={true}
+            onExitComplete={() => null}
+        >
           {openFilter && (
-            <motion.div className="filterDropdown">
+            <motion.div 
+                className="filterDropdown"
+                onClick={(e) => e.stopPropagation()}
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{
+                duration: 0.8,
+                delay: 0.5,
+                ease: [0, 0.71, 0.2, 1.01],
+                }}
+                exit="exit"
+            >
               <label htmlFor="filter" className="filterWrap">
                 <input type="radio" name="filter-radio" className="" />
                 <div className="radioButton"></div>
