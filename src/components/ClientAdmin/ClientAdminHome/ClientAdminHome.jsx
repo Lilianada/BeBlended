@@ -17,7 +17,7 @@ export default function ClientAdminHome() {
       <div className="adminHead_Text">
         <h5>Your Account</h5>
         <p className="stylistName">
-          <strong>Lola Adeyemi - <u> View your profile </u> </strong> 
+          Lola Adeyemi - <strong><u> View your profile </u> </strong> 
         </p>
       </div>
 
