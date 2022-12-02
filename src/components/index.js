@@ -1,3 +1,6 @@
+export { default as ClientAdminHeader} from "./ClientAdmin/ClientAdminHeader/ClientAdminHeader";
+export { default as ClientAdminHome } from "./ClientAdmin/ClientAdminHome/ClientAdminHome";
+
 //Re-exporting component
 export { default as AdminFinancePage} from "./StylistAdmin/FinancePage/FinancePage";
 export { default as TransactionSection} from "./StylistAdmin/FinancePage/TransactionSection";
