@@ -1,4 +1,4 @@
-export { default as FavouritesPage } g from "./ClientAdmin/FavouritesPage/FavouritesPage";
+export { default as FavouritesPage } from "./ClientAdmin/FavouritesPage/FavouritesPage";
 
 //Re-exporting component
 export { default as ClientAdminHeader } from "./ClientAdmin/ClientAdminHeader/ClientAdminHeader";

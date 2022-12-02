@@ -1,0 +1,28 @@
+.favouritesPage{
+    .wd_80 {
+        width: 90%;
+        margin: 2rem auto;
+
+        @media screen and (min-width: 768px) {
+            width: 80%;
+            // margin: auto;
+        }
+
+        .favourites_head{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .favourites_subhead{
+            display: grid;
+            place-items: center;
+            margin: 1.5rem 0 .75rem;
+            font-size: var(--eighteen);
+
+            @media screen and (min-width: 768px) {
+                margin: 1rem 0;
+            }
+        }
+    }
+}

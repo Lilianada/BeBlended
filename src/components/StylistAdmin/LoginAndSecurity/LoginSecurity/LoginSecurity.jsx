@@ -34,11 +34,11 @@ export default function LoginSecurity() {
           <p>Back</p>
         </div>
 
-        <strong className="loginSecurity_subhead">
+        <h6 className="loginSecurity_subhead">
           Account
           <GrNext style={{ margin: " 0 .5rem" }} />
           Login & Security
-        </strong>
+        </h6>
 
         <h4 className="formHead">Login & Security</h4>
 
