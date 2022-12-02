@@ -18,6 +18,7 @@ import {
   AdminClientProfile,
   AdminFinancePage,
   ClientAdminHome,
+  FavouritesPage,
 } from "./components";
 
 
@@ -45,7 +46,8 @@ function App() {
       {/* <AdminClientProfile/> */}
       {/* <AdminFinancePage /> */}
 
-      <ClientAdminHome />
+      {/* <ClientAdminHome /> */}
+      <FavouritesPage />
     </div>
   );
 }
