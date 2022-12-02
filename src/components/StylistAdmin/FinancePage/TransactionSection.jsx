@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "./FinancePage.scss";
 import { RiSearchLine } from "react-icons/ri";
 import { HiDownload } from "react-icons/hi";
 import { BsCheckCircleFill } from "react-icons/bs";
 import { MdCancel } from "react-icons/md";
 import { IoFilter } from "react-icons/io5";
+import { AnimatePresence } from "framer-motion";
 
 export default function TransactionSection({ data }) {
+  const [openFilter, setOpenFilter] = useState(false);
+  const isFilter = () => {
+    setOpenFilter(!openFilter);
+  };
+
   return (
     <div className="transactionTable_Section">
       <div className="transactionHead_Section">
@@ -19,7 +25,40 @@ export default function TransactionSection({ data }) {
             />
           </label>
         </div>
-        <button className="filterDropdown">Filter <IoFilter/> </button>
+        <button className="filterButton" onClick={isFilter}>
+          Filter <IoFilter />{" "}
+        </button>
+        <AnimatePresence>
+          {openFilter && (
+            <motion.div className="filterDropdown">
+              <label htmlFor="filter" className="filterWrap">
+                <input type="radio" name="filter-radio" className="" />
+                <div className="radioButton"></div>
+                last day
+              </label>
+              <label htmlFor="filter" className="filterWrap">
+                <input type="radio" name="filter-radio" className="" />
+                <div className="radioButton"></div>
+                last 15 days
+              </label>
+              <label htmlFor="filter" className="filterWrap">
+                <input type="radio" name="filter-radio" className="" />
+                <div className="radioButton"></div>
+                last 30 days
+              </label>
+              <label htmlFor="filter" className="filterWrap">
+                <input type="radio" name="filter-radio" className="" />
+                <div className="radioButton"></div>
+                last quater
+              </label>
+              <label htmlFor="filter" className="filterWrap">
+                <input type="radio" name="filter-radio" className="" />
+                <div className="radioButton"></div>
+                last year
+              </label>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
       <div className="transactionTable">
         <div className="tableHead">

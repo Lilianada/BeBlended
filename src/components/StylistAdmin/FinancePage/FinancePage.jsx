@@ -54,6 +54,7 @@ export default function AdminFinancePage() {
             </div>
             <div className="adminFinance_body">
                 <h5 className="transactionsHead">Transactions</h5>
+                
                 {/* <div className="noTransactions">
                     <img src={MoneyBag} alt="No client" className="noTransaction_Img" />
                     <p className="noTransaction_Txt">
