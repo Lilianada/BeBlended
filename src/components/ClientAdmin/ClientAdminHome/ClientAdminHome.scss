@@ -19,6 +19,9 @@
         .stylistName{
             margin-top: .5rem;
             font-size: var(--twentyFour);
+            font-weight: 700;
+            display: flex;
+            
         }
     }
 
@@ -44,7 +47,7 @@
         }
 
         .menuItem{
-            height: 100px;
+            height: 70px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -102,6 +105,29 @@
                     margin-top: .35rem;
                     line-height: 19px;
                     color: #707070;
+                }
+            }
+        }
+
+        .logoutItem{
+            height: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 1rem;
+
+            @media screen and (min-width: 768px) {
+                display: none;
+            }
+
+            .menuName{
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                
+                .menuLink{
+                    font-size: var(--eighteen);
+                    font-weight: 700;
                 }
             }
         }

@@ -4,7 +4,8 @@ import Business from "../../../assets/Admin-Icons/Business-icon.svg";
 import Finances from "../../../assets/Admin-Icons/Finances-icon.svg";
 import Clients from "../../../assets/Admin-Icons/Clients-icon.svg";
 import { GrNext } from "react-icons/gr";
-import { MdOutlineSecurity } from "react-icons/md";
+import { IoCalendarClearOutline, IoCard } from "react-icons/io5";
+import { MdFavorite, MdOutlineSecurity } from "react-icons/md";
 import { BottomNavClient, ClientAdminHeader } from "../../../components";
 import { Link } from "react-router-dom";
 import './ClientAdminHome.scss';
@@ -16,7 +17,7 @@ export default function ClientAdminHome() {
       <div className="adminHead_Text">
         <h5>Your Account</h5>
         <p className="stylistName">
-          <strong>Lola Adeyemi</strong> - View your profile
+          <strong>Lola Adeyemi - <u> View your profile </u> </strong> 
         </p>
       </div>
 
@@ -35,7 +36,7 @@ export default function ClientAdminHome() {
         </div>
 
         <div className="menuItem">
-          <img src={Business} alt="Menu Icon" className="menuIcon" />
+          <IoCalendarClearOutline className="menuIcon" />
           <div className="menuName">
             <Link to="/business-profile" className="menuLink">
               Bookings
@@ -48,7 +49,7 @@ export default function ClientAdminHome() {
         </div>
 
         <div className="menuItem">
-          <img src={Finances} alt="Menu Icon" className="menuIcon" />
+          <IoCard size={24} fill="#893583" className="menuIcon" />
           <div className="menuName">
             <Link to="/finances" className="menuLink">
               Payment Information
@@ -59,7 +60,7 @@ export default function ClientAdminHome() {
         </div>
 
         <div className="menuItem">
-          <img src={Clients} alt="Menu Icon" className="menuIcon" />
+          <MdFavorite size={24} fill="#893583" className="menuIcon" />
           <div className="menuName">
             <Link to="/clinets" className="menuLink">
               Favourites
@@ -80,6 +81,14 @@ export default function ClientAdminHome() {
             <GrNext fontWeight={700} size={14} />
           </div>
           <p className="menuInfo">Update your password and secure your account.</p>
+        </div>
+
+        <div className="logoutItem">
+          <div className="menuName">
+            <Link to="/logout" className="menuLink">
+              Logout.
+            </Link>
+          </div>
         </div>
       </div>
 
