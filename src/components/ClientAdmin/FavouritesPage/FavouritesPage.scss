@@ -1,27 +1,187 @@
-.favouritesPage{
+.favouritesPage {
     .wd_80 {
         width: 90%;
-        margin: 2rem auto;
+        margin: 2rem auto 0;
 
-        @media screen and (min-width: 768px) {
-            width: 80%;
-            // margin: auto;
-        }
-
-        .favourites_head{
+        .favourites_head {
             display: flex;
             flex-direction: row;
             align-items: center;
         }
 
-        .favourites_subhead{
+        .favourites_subhead {
             display: grid;
             place-items: center;
-            margin: 1.5rem 0 .75rem;
+            margin: 1.5rem 0 0.75rem;
             font-size: var(--eighteen);
 
             @media screen and (min-width: 768px) {
                 margin: 1rem 0;
+            }
+
+            .subhead_text {
+                font-family: var(--font-head);
+                font-size: var(--thirtyEight);
+                font-weight: 600;
+                line-height: 38px;
+
+                @media screen and (min-width: 768px) {
+                    font-size: var(--thirtyTwo);
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    hr{
+        margin: 1rem 0;
+        border: 0;
+        border-bottom: 1px solid #F2F2F2;
+    }
+
+    .adminFavourite_body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 2rem;
+
+        .noFavouritesCard {
+            display: grid;
+            place-items: center;
+
+            .noFavourite_Img {
+                height: 4.6875rem;
+                width: 4.6875rem;
+                border-radius: 0px;
+                margin-bottom: 1rem;
+            }
+
+            .noFavourite_Txt {
+                font-size: var(--twentyTwo);
+                font-weight: 700;
+                line-height: 1.625rem;
+                letter-spacing: 0em;
+                text-align: center;
+                margin-bottom: 0.5rem;
+            }
+
+            .smallNote {
+                font-size: var(--sixteen);
+                font-style: italic;
+                font-weight: 500;
+                line-height: 1.1875rem;
+                letter-spacing: 0em;
+                text-align: center;
+                color: #707070;
+            }
+        }
+
+        .favouriteCards {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+
+            @media screen and (min-width: 700px) {
+                justify-content: space-between;
+            }
+
+            .favouriteCard {
+                width: 17rem;
+                height: 15.875rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background: #f8f2f6;
+                border: 1px solid #d8bcd6;
+                border-radius: 1.25rem;
+                margin-bottom: 1rem;
+                padding: 1rem;
+
+                @media screen and (min-width: 500px) {
+                    width: 14rem;
+                    height: 13.875rem;
+                }
+
+                @media screen and (min-width: 900px) {
+                    width: 17rem;
+                    height: 15.875rem;
+                }
+
+                .favouriteImg {
+                    width: 6rem;
+                    height: 6rem;
+                    border: 1px solid #f2e8f1;
+                    border-radius: 50%;
+                    margin-bottom: 0.75rem;
+                }
+
+                .favouriteName {
+                    font-size: var(--twentyTwo);
+                    line-height: 1.625rem;
+                    margin-bottom: 0.75rem;
+                }
+
+                .cardButtons {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    width: 100%;
+
+                    .profile,
+                    .chat {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-evenly;
+                        width: 6.25rem;
+                        height: 2rem;
+                        border-radius: 5px;
+                        font-size: var(--sixteen);
+                        margin-bottom: 0.75rem;
+                        cursor: pointer;
+                        transition: all 0.3s ease-in-out;
+
+                        &:hover {
+                            transform: scale(1.05);
+                        }
+
+                        @media screen and (min-width: 500px) {
+                            width: 5.5rem;
+                            height: 2rem;
+                        }
+                    }
+
+                    .chat {
+                        background: var(--black);
+                        color: var(--white);
+                    }
+
+                    .profile {
+                        background: var(--white);
+                        color: var(--black);
+                        border: 1px solid #050205;
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
+
+        .btn-secondary {
+            width: 214px;
+            height: 2.5rem;
+            transition: all 0.3s ease-in-out;
+            border: 1px solid #dedddd;
+            border-radius: 9px;
+            background: var(--white);
+            align-self: center;
+            margin-top: 1rem;
+
+            &:hover {
+                background: var(--black);
+                color: var(--white);
+                transform: scale(1.05);
             }
         }
     }
