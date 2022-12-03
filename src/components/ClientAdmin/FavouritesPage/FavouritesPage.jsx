@@ -6,7 +6,7 @@ import {
   FavouriteCards,
 } from "../../../components";
 import BeblendedHead from "../../../assets/Admin-Icons/Beblended-head.svg";
-import {favouriteList} from "../ClientAdminData";
+import { favouriteList } from "../ClientAdminData";
 import "./FavouritesPage.scss";
 
 export default function FavouritesPage() {
@@ -28,33 +28,35 @@ export default function FavouritesPage() {
 
       <div className="favourites_body">
         {favouriteList.length < 9 ? (
-          <div className="noFavouritesCard">
+          <div className="noFavourites_Card">
             <img
               src={BeblendedHead}
               alt="No Favourite"
               className="noFavourite_Img"
             />
             <p className="noFavourite_Txt">
-            You haven’t favourited any<br /> stylists yet!
+              You haven’t favourited any
+              <br /> stylists yet!
             </p>
             <p className="smallNote">
-            Click the 🖤 on a stylist’s profile to<br/> add them to this list
+              Click the 🖤 on a stylist’s profile to
+              <br /> add them to this list
             </p>
           </div>
         ) : (
-            favouriteList.map((card, id) => {
+          favouriteList.map((card, id) => {
             return (
-              <div className="favouritesCards">
+              <div className="favouriteCards">
                 <FavouriteCards
                   favouritesImage={card.favouritesImage}
                   favouritesName={card.favouritesName}
                   key={id}
                 />
-                <button className="btn-secondary">View More</button>
               </div>
             );
           })
         )}
+        <button className="btn-secondary">View More</button>
       </div>
 
       <BottomNavClient />
