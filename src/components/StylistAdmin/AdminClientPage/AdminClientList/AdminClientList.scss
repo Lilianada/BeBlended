@@ -232,6 +232,7 @@
         .noClientsCard {
             display: grid;
             place-items: center;
+            justify-self: center;
 
             .noClient_Img {
                 height: 4.6875rem;

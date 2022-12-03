@@ -42,12 +42,12 @@ function App() {
       {/* <PersonalInfo /> */}
       {/* <LoginSecurity/> */}
       {/* <PayoutInfo /> */}
-      {/* <AdminClientList /> */}
+      <AdminClientList />
       {/* <AdminClientProfile/> */}
       {/* <AdminFinancePage /> */}
 
       {/* <ClientAdminHome /> */}
-      <FavouritesPage />
+      {/* <FavouritesPage /> */}
     </div>
   );
 }

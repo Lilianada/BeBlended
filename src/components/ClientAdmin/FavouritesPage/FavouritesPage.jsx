@@ -52,11 +52,11 @@ export default function FavouritesPage() {
                   favouritesName={card.favouritesName}
                   key={id}
                 />
+                <button className="btn-secondary">View More</button>
               </div>
             );
           })
         )}
-        <button className="btn-secondary">View More</button>
       </div>
 
       <BottomNavClient />
