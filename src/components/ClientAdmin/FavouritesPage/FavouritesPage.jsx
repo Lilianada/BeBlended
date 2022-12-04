@@ -27,36 +27,36 @@ export default function FavouritesPage() {
       <hr />
 
       <div className="favourites_body">
-        {favouriteList.length < 9 ? (
-          <div className="noFavourites_Card">
-            <img
-              src={BeblendedHead}
-              alt="No Favourite"
-              className="noFavourite_Img"
-            />
-            <p className="noFavourite_Txt">
-              You haven’t favourited any
-              <br /> stylists yet!
-            </p>
-            <p className="smallNote">
-              Click the 🖤 on a stylist’s profile to
-              <br /> add them to this list
-            </p>
-          </div>
-        ) : (
-          favouriteList.map((card, id) => {
-            return (
-              <div className="favouriteCards">
-                <FavouriteCards
-                  favouritesImage={card.favouritesImage}
-                  favouritesName={card.favouritesName}
-                  key={id}
-                />
-                <button className="btn-secondary">View More</button>
-              </div>
-            );
-          })
-        )}
+        <div className="favouriteCards">
+          {favouriteList.length < 9 ? (
+            <div className="noFavourites_Card">
+              <img
+                src={BeblendedHead}
+                alt="No Favourite"
+                className="noFavourite_Img"
+              />
+              <p className="noFavourite_Txt">
+                You haven’t favourited any
+                <br /> stylists yet!
+              </p>
+              <p className="smallNote">
+                Click the 🖤 on a stylist’s profile to
+                <br /> add them to this list
+              </p>
+            </div>
+          ) : (
+            favouriteList.map((card, id) => {
+              return (
+                  <FavouriteCards
+                    favouritesImage={card.favouritesImage}
+                    favouritesName={card.favouritesName}
+                    key={id}
+                  />
+              );
+            })
+          )}
+        </div>
+          <button className="btn-secondary">View More</button>
       </div>
 
       <BottomNavClient />

@@ -107,31 +107,33 @@ export default function AdminClientList() {
       </div>
       <div className="adminClient_body">
         <div className="clientCards">
-        {
-        clientList.length === 9 ? (
-          <div className="noClientsCard">
-            <img src={BeblendedHead} alt="No client" className="noClient_Img" />
-            <p className="noClient_Txt">
-              You have no clients in <br /> our system yet!
-            </p>
-            <p className="smallNote">
-              Clients get added once you start <br /> booking appointments.
-            </p>
-          </div>
-        ) : ( 
-          clientList.map((card, id) => {
-            return (
+          {clientList.length < 9 ? (
+            <div className="noClientsCard">
+              <img
+                src={BeblendedHead}
+                alt="No client"
+                className="noClient_Img"
+              />
+              <p className="noClient_Txt">
+                You have no clients in <br /> our system yet!
+              </p>
+              <p className="smallNote">
+                Clients get added once you start <br /> booking appointments.
+              </p>
+            </div>
+          ) : (
+            clientList.map((card, id) => {
+              return (
                 <AdminClientCards
                   clientImage={card.clientImage}
                   clientName={card.clientName}
                   key={id}
                 />
-                );
-              })
-              )
-            }
-            </div>
-      <button className="btn-secondary">View More</button>
+              );
+            })
+          )}
+        </div>
+        <button className="btn-secondary">View More</button>
       </div>
       <BottomNavStylist />
     </main>
