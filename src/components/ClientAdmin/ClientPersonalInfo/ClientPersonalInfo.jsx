@@ -1,4 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
+import { GrNext, GrPrevious } from "react-icons/gr";
+import {
+  StylistAdminHeader,
+  BottomNavStylist,
+} from "../../../components";
+import "../../StylistAdmin/PersonalnfoPage/PersonalInfo.scss";
 
 export default function ClientPersonalInfo() {
   return (

@@ -45,6 +45,10 @@
         justify-content: center;
         margin: 2rem;
 
+        @media screen and (min-width: 1000px) {
+            margin: 3rem ;
+        }
+
         .noFavourites_Card {
             display: grid;
             place-items: center;
@@ -110,13 +114,25 @@
                     height: 15.875rem;
                 }
 
-                .favouriteImg {
-                    width: 6rem;
-                    height: 6rem;
-                    border: 1px solid #f2e8f1;
-                    border-radius: 50%;
-                    margin-bottom: 0.75rem;
+                .alignedLeft{
+                    display: grid;
+                    grid-template-columns: 90% 10%;
+                    justify-content: space-between;
+                    width: 100%;
+
+                    .favouriteImg {
+                        width: 6rem;
+                        height: 6rem;
+                        border: 1px solid #f2e8f1;
+                        border-radius: 50%;
+                        margin: 0rem auto .75rem;
+                    }
+
+                    .bsHeart{
+                        float: right;
+                    }
                 }
+
 
                 .favouriteName {
                     font-size: var(--twentyTwo);
@@ -124,7 +140,7 @@
                     margin-bottom: 0.75rem;
                 }
 
-                .chat {
+                .bookingBtn {
                     display: flex;
                     align-items: center;
                     justify-content: space-evenly;
@@ -159,7 +175,7 @@
             border-radius: 9px;
             background: var(--white);
             align-self: center;
-            margin-top: 1rem;
+            margin-top: 2rem;
 
             &:hover {
                 background: var(--black);

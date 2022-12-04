@@ -1,5 +1,6 @@
-export { default as FavouriteCards } from "./ClientAdmin/FavouritesPage/FavouriteCards";
+export { default as ClientPersonalInfo } from "./ClientAdmin/ClientPersonalInfo/ClientPersonalInfo";
 
+export { default as FavouriteCards } from "./ClientAdmin/FavouritesPage/FavouriteCards";
 export { default as FavouritesPage } from "./ClientAdmin/FavouritesPage/FavouritesPage";
 //Re-exporting component
 export { default as ClientAdminHeader } from "./ClientAdmin/ClientAdminHeader/ClientAdminHeader";

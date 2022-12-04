@@ -19,6 +19,7 @@ import {
   AdminFinancePage,
   ClientAdminHome,
   FavouritesPage,
+  ClientPersonalInfo,
 } from "./components";
 
 
@@ -47,7 +48,8 @@ function App() {
       {/* <AdminFinancePage /> */}
 
       {/* <ClientAdminHome /> */}
-      <FavouritesPage />
+      {/* <FavouritesPage /> */}
+      <ClientPersonalInfo/>
     </div>
   );
 }
