@@ -30,14 +30,14 @@ export default function ClientLoginSecurity() {
 
       <div className="wd_90">
         <div className="loginSecurity_head">
-          <GrPrevious style={{ marginRight: ".5rem" }} />
+          <GrPrevious style={{ marginRight: ".5rem" }} fill="#707070" />
           <p>Back</p>
         </div>
 
         <div className="wd_90">
           <h6 className="loginSecurity_subhead">
             Account
-            <GrNext style={{ margin: " 0 .5rem" }} />
+            <GrNext style={{ margin: " 0 .5rem" }} fill="#707070" />
             Login & Security
           </h6>
           <h4 className="formHead">Login & Security</h4>

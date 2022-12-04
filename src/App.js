@@ -44,7 +44,7 @@ function App() {
       {/* <StylistAdminHome /> */}
       {/* <PersonalInfo /> */}
       {/* <LoginSecurity/> */}
-      {/* <PayoutInfo /> */}
+      <PayoutInfo />
       {/* <AdminClientList /> */}
       {/* <AdminClientProfile/> */}
       {/* <AdminFinancePage /> */}
@@ -53,7 +53,7 @@ function App() {
       {/* <FavouritesPage /> */}
       {/* <ClientPersonalInfo/> */}
       {/* <ClientLoginSecurity /> */}
-      <ClientPayoutInformation/>
+      {/* <ClientPayoutInformation/> */}
     </div>
   );
 }
