@@ -1,5 +1,7 @@
-export { default as ClientPersonalInfo } from "./ClientAdmin/ClientPersonalInfo/ClientPersonalInfo";
+export { default as ClientPayoutInformation } from "./ClientAdmin/ClientPayoutInformation/ClientPayoutInformation";
 
+export { default as ClientLoginSecurity } from "./ClientAdmin/ClientLoginSecurity/Login&Security";
+export { default as ClientPersonalInfo } from "./ClientAdmin/ClientPersonalInfo/ClientPersonalInfo";
 export { default as FavouriteCards } from "./ClientAdmin/FavouritesPage/FavouriteCards";
 export { default as FavouritesPage } from "./ClientAdmin/FavouritesPage/FavouritesPage";
 //Re-exporting component

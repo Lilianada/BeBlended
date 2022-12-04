@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { GrNext, GrPrevious } from "react-icons/gr";
-import { StylistAdminHeader, BottomNavStylist } from "../../../components";
+import { ClientAdminHeader, BottomNavClient } from "../../../components";
 import "../../StylistAdmin/PersonalnfoPage/PersonalInfo.scss";
 
 export default function ClientPersonalInfo() {
   return (
     <main className="mainWrapper personalInfo_page">
-      <StylistAdminHeader />
+      <ClientAdminHeader />
 
       <div className="wd_90">
         <div className="personalInfo_head">
@@ -64,7 +64,7 @@ export default function ClientPersonalInfo() {
         </div>
       </div>
 
-      <BottomNavStylist />
+      <BottomNavClient />
     </main>
   );
 }

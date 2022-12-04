@@ -28,69 +28,72 @@ export default function LoginSecurity() {
     <main className="mainWrapper loginSecurity_page">
       <StylistAdminHeader />
 
-      <div className="wd_80">
+      <div className="wd_90">
         <div className="loginSecurity_head">
           <GrPrevious style={{ marginRight: ".5rem" }} />
           <p>Back</p>
         </div>
 
-        <h6 className="loginSecurity_subhead">
-          Account
-          <GrNext style={{ margin: " 0 .5rem" }} />
-          Login & Security
-        </h6>
+        <div className="wd_90">
 
-        <h4 className="formHead">Login & Security</h4>
+          <h6 className="loginSecurity_subhead">
+            Account
+            <GrNext style={{ margin: " 0 .5rem" }} />
+            Login & Security
+          </h6>
 
-        <form action="" className="loginSecurity_form">
-          <div className="formWrap">
-            <label htmlFor="First-Name" className="inputWrap">
-              <p>Current password</p>
+          <h4 className="formHead">Login & Security</h4>
+
+          <form action="" className="loginSecurity_form">
+            <div className="formWrap">
+              <label htmlFor="First-Name" className="inputWrap">
+                <p>Current password</p>
+                <button
+                  className="updateBtn"
+                  onClick={() => handleModal("password")}
+                >
+                  Update
+                </button>
+                <AnimatePresence
+                  initial={false}
+                  exitBeforeEnter={true}
+                  onExitComplete={() => null}
+                >
+                  {openModal.password && (
+                    <PasswordModal
+                      openModal={openModal.password}
+                      closeModal={setOpenModal}
+                    />
+                  )}
+                </AnimatePresence>
+              </label>
+              <input
+                type="password"
+                className="inputField"
+                placeholder="********"
+                required
+              />
               <button
-                className="updateBtn"
-                onClick={() => handleModal("password")}
+                className="deactivate"
+                onClick={() => handleModal("deactivate")}
               >
-                Update
+                Deactivate Account
               </button>
               <AnimatePresence
                 initial={false}
                 exitBeforeEnter={true}
                 onExitComplete={() => null}
               >
-                {openModal.password && (
-                  <PasswordModal
-                    openModal={openModal.password}
+                {openModal.deactivate && (
+                  <DeactivateAccount
+                    openModal={openModal.deactivate}
                     closeModal={setOpenModal}
                   />
                 )}
               </AnimatePresence>
-            </label>
-            <input
-              type="password"
-              className="inputField"
-              placeholder="********"
-              required
-            />
-            <button
-              className="deactivate"
-              onClick={() => handleModal("deactivate")}
-            >
-              Deactivate Account
-            </button>
-            <AnimatePresence
-              initial={false}
-              exitBeforeEnter={true}
-              onExitComplete={() => null}
-            >
-              {openModal.deactivate && (
-                <DeactivateAccount
-                  openModal={openModal.deactivate}
-                  closeModal={setOpenModal}
-                />
-              )}
-            </AnimatePresence>
-          </div>
-        </form>
+            </div>
+          </form>
+        </div>
       </div>
       <BottomNavStylist />
     </main>

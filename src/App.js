@@ -20,6 +20,7 @@ import {
   ClientAdminHome,
   FavouritesPage,
   ClientPersonalInfo,
+  ClientLoginSecurity,
 } from "./components";
 
 
@@ -49,7 +50,8 @@ function App() {
 
       {/* <ClientAdminHome /> */}
       {/* <FavouritesPage /> */}
-      <ClientPersonalInfo/>
+      {/* <ClientPersonalInfo/> */}
+      <ClientLoginSecurity />
     </div>
   );
 }

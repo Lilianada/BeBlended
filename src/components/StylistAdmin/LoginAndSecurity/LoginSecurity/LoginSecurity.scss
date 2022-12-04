@@ -1,13 +1,8 @@
 .loginSecurity_page{
 
-    .wd_80 {
+    .wd_90 {
         width: 90%;
         margin: 2rem auto;
-
-        @media screen and (min-width: 768px) {
-            width: 80%;
-            // margin: auto;
-        }
 
         
         .loginSecurity_head {
@@ -21,6 +16,7 @@
             align-items: center;
             margin: 1.5rem 0 .75rem;
             font-size: var(--eighteen);
+            font-family: var(--font-text);
             
             @media screen and (min-width: 768px) {
                 margin: 1rem 0;
