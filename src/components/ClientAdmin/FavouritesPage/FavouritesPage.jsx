@@ -16,7 +16,7 @@ export default function FavouritesPage() {
 
       <div className="wd_80">
         <div className="favourites_head">
-          <GrPrevious style={{ marginRight: ".5rem" }} />
+          <GrPrevious style={{ marginRight: ".5rem" }} fill="#707070" />
           <p>Back</p>
         </div>
         <div className="favourites_subhead">

@@ -30,14 +30,14 @@ export default function Personalnfo() {
 
       <div className="wd_90">
         <div className="personalInfo_head">
-          <GrPrevious style={{ marginRight: ".5rem" }} />
+          <GrPrevious style={{ marginRight: ".5rem" }} fill="#707070" />
           <p>Back</p>
         </div>
 
         <div className="wd_90">
           <h6 className="personalInfo_subhead">
             Account
-            <GrNext style={{ margin: " 0 .35rem" }} />
+            <GrNext style={{ margin: " 0 .35rem" }} fill="#707070" />
             Personal Information
           </h6>
 

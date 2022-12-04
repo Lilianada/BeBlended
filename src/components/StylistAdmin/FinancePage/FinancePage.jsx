@@ -14,7 +14,7 @@ export default function AdminFinancePage() {
             <div className="wd_80">
                 <div className="adminFinance_head">
                     <button className="previousButton">
-                        <GrPrevious style={{ marginRight: ".5rem" }} />
+                        <GrPrevious style={{ marginRight: ".5rem" }} fill="#707070" />
                         <p>Back</p>
                     </button>
                 </div>

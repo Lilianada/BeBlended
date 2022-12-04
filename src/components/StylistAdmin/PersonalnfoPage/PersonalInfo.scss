@@ -3,16 +3,14 @@
     .wd_90 {
         width: 90%;
         margin: 2rem auto;
-
-        @media screen and (min-width: 768px) {
-            // width: 90%;
-            // margin: auto;
-        }
-
         
         .personalInfo_head {
             display: flex;
             align-items: center;
+
+            p{
+                color: #707070;
+            }
         }
         
         
