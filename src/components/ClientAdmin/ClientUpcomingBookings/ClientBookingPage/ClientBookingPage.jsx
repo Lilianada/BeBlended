@@ -12,6 +12,7 @@ export default function ClientBookingPage() {
         upcoming: false,
         past: false,
     });
+
     const isOpen = (upcoming, past) => {
         setTabOpen((prev) => {
             return {
@@ -22,21 +23,21 @@ export default function ClientBookingPage() {
         });
     };
 
-    const [openModal, setOpenModal] = React.useState(false);
-    const handleModal = () => {
-        setOpenModal(!openModal);
-    };
+    // const [openModal, setOpenModal] = React.useState(false);
+    // const handleModal = () => {
+    //     setOpenModal(!openModal);
+    // };
 
     return (
         <main className="mainWrapper clientBookings">
             <ClientAdminHeader />
 
+            <section className="clientBookings_Section">
             <div className="backBtn">
                 <GrPrevious style={{ marginRight: ".35rem" }} />
                 <p>Back</p>
             </div>
 
-            <section className="clientBookings_Section">
                 <div className="sectionHead">
                     <h4 className="sectionTitle"> My Bookings </h4>
                 </div>

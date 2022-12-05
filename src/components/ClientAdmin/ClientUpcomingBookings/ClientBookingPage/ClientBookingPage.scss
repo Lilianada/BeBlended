@@ -5,16 +5,19 @@
         margin-bottom: 2rem;
     }
 
-    .backBtn {
-        display: flex;
-        align-items: center;
-
-        p {
-            color: #707070;
-        }
-    }
-
     .clientBookings_Section {
+        width: 90%;
+        margin: .5rem auto;
+
+        .backBtn {
+            display: flex;
+            align-items: center;
+
+            p {
+                color: #707070;
+            }
+        }
+
         .sectionHead {
             text-align: center;
 
@@ -24,12 +27,13 @@
                 font-weight: 500;
 
                 @media screen and (min-width: 768px) {
-                    font-size: var(--thirtyTwo);
+                    font-size: var(--twentyFour);
                 }
             }
         }
 
         .sectionTabs {
+            
             .tabHead {
                 display: flex;
                 justify-content: center;
@@ -100,90 +104,9 @@
                         display: block;
                         opacity: 0;
                     }
-
-                    .serviceCard {
-                        width: 18rem;
-                        height: 9rem;
-                        display: flex;
-                        background: var(--white);
-                        border: 1px solid #dedddd;
-                        border-radius: 9px;
-                        margin-bottom: 1.5rem;
-
-                        .bar {
-                            width: 0.75rem;
-                            height: 100%;
-                            background: var(--hotPink);
-                            border-radius: 10px 0px 0px 10px;
-                        }
-
-                        .card {
-                            width: 100%;
-                            padding: 0.75rem 1rem;
-
-                            .cardHead {
-                                display: flex;
-                                justify-content: space-between;
-                                align-items: center;
-
-                                .cardTitle {
-                                    font-size: var(--eighteen);
-                                    font-family: var(--font-text);
-                                }
-                            }
-
-                            .cardTexts {
-                                margin-top: 0.45rem;
-
-                                .text {
-                                    font-size: var(--fourteen);
-                                    line-height: 0.9rem;
-                                }
-                            }
-
-                            .cardButtons {
-                                display: flex;
-                                justify-content: space-between;
-                                margin-top: 0.75rem;
-
-                                .accept {
-                                    width: 7rem;
-                                    height: 1.75rem;
-                                    text-align: center;
-                                    background: #c5e9d3;
-                                    border-radius: 5px;
-                                    border: none;
-                                    outline: none;
-                                    transition: all 0.5s;
-                                    color: var(--black);
-
-                                    &:hover {
-                                        transform: scale(0.95, 0.95);
-                                        background: #7deaa7;
-                                    }
-                                }
-
-                                .decline {
-                                    width: 7rem;
-                                    height: 1.75rem;
-                                    text-align: center;
-                                    background: #f26a6a4d;
-                                    border-radius: 5px;
-                                    border: none;
-                                    outline: none;
-                                    transition: all 0.5s;
-                                    color: var(--black);
-
-                                    &:hover {
-                                        transform: scale(0.95, 0.95);
-                                        background: #fb404080;
-                                    }
-                                }
-                            }
-                        }
-                    }
                 }
 
+                //No past Bookings
                 .noPastBooking {
                     display: none;
                     margin-top: 2rem;

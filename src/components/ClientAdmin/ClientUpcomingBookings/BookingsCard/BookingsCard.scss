@@ -32,9 +32,10 @@
         .cardTexts{
             margin-top: .45rem;
 
+            
             .text{
                 font-size: var(--fourteen);
-                line-height: .9rem;
+                line-height: 1rem;
             }
         }
 
@@ -43,13 +44,13 @@
             justify-content: space-between;
             margin-top: .75rem;
 
-            .accept{
+            .viewBtn{
                 width: 7rem;
                 height: 1.75rem;
                 text-align: center;
-                background: #C5E9D3;
+                background: var(--white);
                 border-radius: 5px;
-                border: none;
+                border: 1px solid var(--black);
                 outline: none;
                 color: var(--black);
 
@@ -58,20 +59,6 @@
                 }
             }
             
-            .decline{
-                width: 7rem;
-                height: 1.75rem;
-                text-align: center;
-                background: #F26A6A4D;
-                border-radius: 5px;
-                border: none;
-                outline: none;
-                color: var(--black);
-                
-                &:hover{
-                    background: #fb404080;
-                }
-            }
         }
     }
 }

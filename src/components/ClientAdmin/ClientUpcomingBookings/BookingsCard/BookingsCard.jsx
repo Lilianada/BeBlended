@@ -36,7 +36,7 @@ export default function BookingsCard({item}) {
                         </AnimatePresence>
                     </div>
                     <div className="cardTexts">
-                        <p className="text"> {item.clientName} </p>
+                        <p className="text"> <strong>{item.clientName}</strong> </p>
                         <p className="text"> {item.date} </p>
                         <p className="text"> {item.time} </p>
                     </div>

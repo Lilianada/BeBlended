@@ -4,7 +4,7 @@ import {
   BookingsCard,
 } from "../../../../components";
 import { IoCalendarSharp } from "react-icons/io5";
-import { bookings } from "../../../StylistBookingPage/CreateAppointmentData";
+import { bookings } from "../../ClientAdminData";
 import "../ClientBookingPage/ClientBookingPage.scss";
 
 export default function ClientUpcomingBookings({activeTab, open}) {
@@ -24,7 +24,8 @@ export default function ClientUpcomingBookings({activeTab, open}) {
         <div className="calendarIcon">
           <IoCalendarSharp size={40} />
         </div>
-        <p className="noBookingText">You have no upbookings.</p>
+        <p className="noBookingText">You have no upcoming bookings.</p>
+        <div className="btn-primary">Browse BeBlended</div>
       </div>
     )}
   </>
