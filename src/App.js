@@ -22,6 +22,7 @@ import {
   ClientPersonalInfo,
   ClientLoginSecurity,
   ClientPayoutInformation,
+  ClientBookingPage,
 } from "./components";
 
 
@@ -37,7 +38,7 @@ function App() {
       {/* <StylistProfile/> */}
       
       {/* <BookingPage/> */}
-      <ManageBookings/>
+      {/* <ManageBookings/> */}
       
       {/* <ListingPage/> */}
 
@@ -54,6 +55,7 @@ function App() {
       {/* <ClientPersonalInfo/> */}
       {/* <ClientLoginSecurity /> */}
       {/* <ClientPayoutInformation/> */}
+      <ClientBookingPage/>
     </div>
   );
 }

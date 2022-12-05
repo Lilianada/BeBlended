@@ -1,19 +1,19 @@
 import React from "react";
 import {
-  
   ErrorBoundary,
+  BookingsCard,
 } from "../../../../components";
 import { IoCalendarSharp } from "react-icons/io5";
 import { bookings } from "../../../StylistBookingPage/CreateAppointmentData";
 import "./UpcomingBookings.scss";
 
-export default function UpcomingBookings() {
+export default function ClientUpcomingBookings({activeTab, open}) {
   <ErrorBoundary>
   <>
     {bookings.length > 0 ? (
       <div className={`mappedTabs ${activeTab === 1 ? "activeTab" : ""}`}>
         {bookings.map((item, id) => {
-          return <BookingServiceCard item={item} key={id} />;
+          return <BookingsCard item={item} key={id} />;
         })}
       </div>
     ) : (

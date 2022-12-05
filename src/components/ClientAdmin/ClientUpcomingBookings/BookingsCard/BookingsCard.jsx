@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { AnimatePresence } from "framer-motion";
+import {AppointmentDetails} from "../../../../components";
+import "./BookingsCard.scss";
 
-export default function BookingsCard() {
+export default function BookingsCard({item}) {
     const [openModal, setOpenModal] = useState(false);
 
     const handleModal = () => {

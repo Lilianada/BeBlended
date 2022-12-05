@@ -1,3 +1,8 @@
+export { default as BookingsCard } from "./ClientAdmin/ClientUpcomingBookings/BookingsCard/BookingsCard";
+export { default as ClientBookingPage } from "./ClientAdmin/ClientUpcomingBookings/ClientBookingPage/ClientBookingPage";
+export { default as PastBookings } from "./ClientAdmin/ClientUpcomingBookings/PastUpcomingBookings/PastBookings";
+export { default as ClientUpcomingBookings } from "./ClientAdmin/ClientUpcomingBookings/PastUpcomingBookings/UpcomingBookings";
+
 export { default as ClientPayoutInformation } from "./ClientAdmin/ClientPayoutInformation/ClientPayoutInformation";
 
 export { default as ClientLoginSecurity } from "./ClientAdmin/ClientLoginSecurity/Login&Security";

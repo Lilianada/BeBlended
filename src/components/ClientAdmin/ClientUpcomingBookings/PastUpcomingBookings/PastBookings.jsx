@@ -2,9 +2,9 @@ import React from "react";
 import { IoCalendarSharp } from "react-icons/io5";
 import { pastServices } from "../../../StylistBookingPage/CreateAppointmentData";
 import {BookingServiceCard, ErrorBoundary} from "../../..";
-import "./ManageBookings.scss";
+import "../../../StylistBookingPage/ManageBookingsPage/ManageBookings.scss";
 
-export default function PastBookings() {
+export default function PastBookings({activeTab, open}) {
     return (
         <ErrorBoundary>
           {pastServices.length > 0 ? (
