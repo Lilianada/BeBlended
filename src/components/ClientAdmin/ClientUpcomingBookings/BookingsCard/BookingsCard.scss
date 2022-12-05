@@ -26,6 +26,8 @@
             .cardTitle{
                 font-size: var(--eighteen);
                 font-family: var(--font-text);
+                font-weight: 500;
+                color: var(--black);
             }
         }
 
@@ -55,7 +57,9 @@
                 color: var(--black);
 
                 &:hover{
-                    background: #7deaa7;
+                    background: var(--black);
+                    border: var(--white);
+                    color: var(--white);
                 }
             }
             
