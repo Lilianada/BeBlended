@@ -1,7 +1,7 @@
 import React from "react";
 import { IoCalendarSharp } from "react-icons/io5";
-import { pastServices } from "../../StylistBookingPage/CreateAppointmentData";
-import {BookingServiceCard, ErrorBoundary} from "../../../components";
+import { pastServices } from "../../../StylistBookingPage/CreateAppointmentData";
+import {BookingServiceCard, ErrorBoundary} from "../../..";
 import "./ManageBookings.scss";
 
 export default function PastBookings() {

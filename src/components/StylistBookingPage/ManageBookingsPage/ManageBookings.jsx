@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./ManageBookings.scss";
 import BookingHeader from "../BookingHeader/BookingHeader";
 import {
   BottomNavStylist,
@@ -12,6 +11,7 @@ import { GrPrevious } from "react-icons/gr";
 import { MdAdd } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
+import "./ManageBookings.scss";
 
 export default function ManageBookings() {
   const [activeTab, setActiveTab] = useState(1);

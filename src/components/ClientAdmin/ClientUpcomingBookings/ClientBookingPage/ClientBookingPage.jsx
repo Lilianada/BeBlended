@@ -1,7 +1,7 @@
 import React from "react";
 import { GrPrevious } from "react-icons/gr";
 import { motion, AnimatePresence } from "framer-motion";
-import {BottomNavClient, ClientAdminHeader} from "../../../components";
+import {BottomNavClient, ClientAdminHeader} from "../../..";
 
 export default function ClientBookingPage() {
     const [activeTab, setActiveTab] = useState(1);
@@ -27,7 +27,7 @@ export default function ClientBookingPage() {
     };
 
     return (
-        <main className="mainWrapper manageBookings">
+        <main className="mainWrapper clientBookings">
             <ClientAdminHeader />
 
                 <button className="backBtn">
@@ -35,7 +35,7 @@ export default function ClientBookingPage() {
                     <p>Back</p>
                 </button>
 
-            <section className="manageBookings_Section">
+            <section className="clientBookings_Section">
                 <div className="sectionHead">
                     <h4 className="sectionTitle"> My Bookings </h4>
                 </div>
