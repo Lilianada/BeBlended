@@ -3,7 +3,7 @@ import { AnimatePresence } from "framer-motion";
 import {ClientAppointmentDetails} from "../../../../components";
 import "./BookingsCard.scss";
 
-export default function BookingsCard({item}) {
+export default function BookingsCardPast({item}) {
     const [openModal, setOpenModal] = useState(false);
 
     const handleModal = () => {
@@ -31,7 +31,7 @@ export default function BookingsCard({item}) {
                             onExitComplete={() => null}
                         >
                             {openModal && (
-                                <ClientAppointmentDetails
+                                <PastAppointmentDetails
                                     openDetails={openModal}
                                     closeDetails={handleModal}
                                 />

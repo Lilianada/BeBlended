@@ -25,7 +25,6 @@ export default function PastBookings({ activeTab, open }) {
             <IoCalendarSharp size={40} />
           </div>
           <p className="noBookingText">
-            {" "}
             You have no past <br /> bookings.
           </p>
         </div>

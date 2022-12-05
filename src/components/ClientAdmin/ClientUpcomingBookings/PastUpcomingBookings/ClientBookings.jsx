@@ -22,7 +22,7 @@ export default function ClientBookings({ activeTab, open }) {
             <div className="calendarIcon">
               <IoCalendarSharp size={40} />
             </div>
-            <p className="noBookingText">You have no upcoming bookings.</p>
+            <p className="noBookingText">You have no<br/> upcoming bookings.</p>
             <div className="btn-secondary">Browse BeBlended</div>
           </div>
         )}

@@ -33,7 +33,7 @@
         }
 
         .sectionTabs {
-            
+
             .tabHead {
                 display: flex;
                 justify-content: center;
@@ -129,9 +129,20 @@
 
                     .noBookingText {
                         font-size: var(--twentyTwo);
-                        font-weight: 600;
+                        font-weight: 700;
                         margin-top: 1rem;
                         text-align: center;
+                    }
+
+                    .btn-secondary{
+                        width: 14.75rem;
+                        height: 2.75rem;
+                        text-align: center;
+                        background: var(--black);
+                        color: var(--white);
+                        font-weight: 400;
+                        margin-top: 1rem;
+                        border-radius: 10px;
                     }
                 }
             }
