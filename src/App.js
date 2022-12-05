@@ -37,14 +37,14 @@ function App() {
       {/* <StylistProfile/> */}
       
       {/* <BookingPage/> */}
-      {/* <ManageBookings/> */}
+      <ManageBookings/>
       
       {/* <ListingPage/> */}
 
       {/* <StylistAdminHome /> */}
       {/* <PersonalInfo /> */}
       {/* <LoginSecurity/> */}
-      <PayoutInfo />
+      {/* <PayoutInfo /> */}
       {/* <AdminClientList /> */}
       {/* <AdminClientProfile/> */}
       {/* <AdminFinancePage /> */}
