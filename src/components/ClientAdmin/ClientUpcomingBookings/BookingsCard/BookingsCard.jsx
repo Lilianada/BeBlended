@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { BsThreeDotsVertical } from "react-icons/bs";
 import { AnimatePresence } from "framer-motion";
-import {ClientAppointment} from "../../../../components";
+import {ClientAppointmentDetails} from "../../../../components";
 import "./BookingsCard.scss";
 
 export default function BookingsCard({item}) {
@@ -32,9 +31,9 @@ export default function BookingsCard({item}) {
                             onExitComplete={() => null}
                         >
                             {openModal && (
-                                <ClientAppointment
+                                <ClientAppointmentDetails
                                     openDetails={openModal}
-                                    closeDetails={setOpenModal}
+                                    closeDetails={handleModal}
                                 />
                             )}
                         </AnimatePresence>

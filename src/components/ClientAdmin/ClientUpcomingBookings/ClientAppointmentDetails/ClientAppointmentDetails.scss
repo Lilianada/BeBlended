@@ -1,0 +1,114 @@
+.clientAppointment_Details{
+    .dialogContent {
+        display: block;
+        background-color: var(--white);
+        width: 90%;
+        height: fit-content;
+        margin: 0 auto;
+        border-radius: 12px;
+
+        @media screen and (min-width: 500px) {
+            width: 21.875rem;
+            height: 37rem;
+        }
+
+        .modalHeader {
+            align-items: center;
+            background: #f2f2f2;
+            border-radius: 10px 10px 0 0;
+            display: flex;
+            justify-content: flex-end;
+            padding: .5rem 1rem;
+
+            .closeButton {
+                background: none;
+                border: none;
+                outline: none;
+                cursor: pointer;
+            }
+        }
+
+        .modalContent {
+            padding: 1rem 1.5rem;
+
+            @media screen and (min-width: 500px) {
+                padding: 1.5rem;
+            }
+
+            .contentHead {
+                text-align: center;
+                .head {
+                    font-family: var(--font-text);
+                }
+            }
+
+            .contentDetails {
+                margin-top: 0.75rem;
+            }
+
+            .borderBottom {
+                background: #dfdfdf;
+                height: 1px;
+                width: 12.5rem;
+                margin: .75rem auto;
+                border: none;
+            }
+
+            .serviceControls {
+                text-align: center;
+                margin: auto;
+
+                .text {
+                    font-size: var(--twenty);
+                    margin-bottom: 1rem;
+                }
+
+                .buttonControls {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    button {
+                        width: 13.375rem;
+                        height: 2.65rem;
+                        margin-bottom: 0.5rem;
+                        border-radius: 9px;
+                        outline: none;
+                        font-size: var(--sixteen);
+                        transition: 0.5s all;
+
+                        &:hover {
+                            transform: scale(0.95, 0.95);
+                        }
+                    }
+
+                    .chatBtn {
+                        background: var(--white);
+                        border: 1px solid #707070;
+                        border-radius: 9px;
+                        color: var(--black);
+                    }
+
+                    .viewBtn {
+                        background: var(--hotPink);
+                        color: var(--white);
+                        border: none;
+                    }
+
+                    .cancelBtn {
+                        background: #dfdfdf;
+                        border: 1px solid #707070;
+                        border-radius: 9px;
+                    }
+
+                    .rescheduleBtn {
+                        background-color: var(--black);
+                        color: var(--white);
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+}

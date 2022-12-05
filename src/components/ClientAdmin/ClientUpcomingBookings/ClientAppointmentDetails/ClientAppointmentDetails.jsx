@@ -7,9 +7,9 @@ import {
 } from "../../..";
 import { AnimatePresence, motion } from "framer-motion";
 import { AiOutlineClose } from "react-icons/ai";
-import "../../../StylistBookingPage/Modals/AppointmentDetailsModal/AppointmentDetails.scss";
+import "./ClientAppointmentDetails.scss";
 
-export default function ClientAppointment({ openDetails, closeDetails }) {
+export default function ClientAppointmentDetails({ openDetails, closeDetails }) {
   const [open, setOpen] = React.useState({
     cancel: false,
     reschedule: false,
@@ -27,7 +27,7 @@ export default function ClientAppointment({ openDetails, closeDetails }) {
   return ReactDOM.createPortal(
     <>
       {openDetails ? (
-        <section className="appointmentDetails">
+        <section className="clientAppointment_Details">
           <Backdrop>
             <motion.div
               className="dialogContent"

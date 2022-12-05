@@ -1,4 +1,4 @@
-export { default as ClientAppointment } from "./ClientAdmin/ClientUpcomingBookings/ClientAppointmentDetails/ClientAppointment";
+export { default as ClientAppointmentDetails } from "./ClientAdmin/ClientUpcomingBookings/ClientAppointmentDetails/ClientAppointmentDetails";
 
 export { default as BookingsCard } from "./ClientAdmin/ClientUpcomingBookings/BookingsCard/BookingsCard";
 export { default as ClientBookingPage } from "./ClientAdmin/ClientUpcomingBookings/ClientBookingPage/ClientBookingPage";

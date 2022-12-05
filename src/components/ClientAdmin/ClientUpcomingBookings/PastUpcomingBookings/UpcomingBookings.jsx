@@ -9,7 +9,6 @@ import "../ClientBookingPage/ClientBookingPage.scss";
 
 export default function ClientUpcomingBookings({activeTab, open}) {
   <ErrorBoundary>
-  <>
     {bookings.length > 0 ? (
       <div className={`mappedTabs ${activeTab === 1 ? "activeTab" : ""}`}>
         {bookings.map((item, id) => {
@@ -28,6 +27,5 @@ export default function ClientUpcomingBookings({activeTab, open}) {
         <div className="btn-primary">Browse BeBlended</div>
       </div>
     )}
-  </>
 </ErrorBoundary>
 }
