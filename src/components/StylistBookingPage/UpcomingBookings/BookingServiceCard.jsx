@@ -1,5 +1,5 @@
 import React from "react";
-import "./UpcomingBookings.scss";
+import "../ManageBookingsPage/ManageBookings.scss";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { AnimatePresence } from "framer-motion";
 import { DeclineAppointment, AppointmentDetails } from "../../../components";
