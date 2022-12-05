@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { GrPrevious } from "react-icons/gr";
 import { motion, AnimatePresence } from "framer-motion";
 import {BottomNavClient, ClientAdminHeader, ClientUpcomingBookings, PastBookings} from "../../../../components";
-import '../../../StylistBookingPage/ManageBookingsPage/ManageBookings.scss';
+import './ClientBookingPage.scss';
 
 export default function ClientBookingPage() {
     const [activeTab, setActiveTab] = useState(1);
@@ -31,10 +31,10 @@ export default function ClientBookingPage() {
         <main className="mainWrapper clientBookings">
             <ClientAdminHeader />
 
-                <button className="backBtn">
-                    <GrPrevious className="angleLeft" size={18} />
-                    <p>Back</p>
-                </button>
+            <div className="backBtn">
+                <GrPrevious style={{ marginRight: ".35rem" }} />
+                <p>Back</p>
+            </div>
 
             <section className="clientBookings_Section">
                 <div className="sectionHead">

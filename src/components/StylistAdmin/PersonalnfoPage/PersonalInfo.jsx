@@ -29,13 +29,13 @@ export default function Personalnfo() {
       <StylistAdminHeader />
 
       <div className="wd_90">
-        <div className="personalInfo_head">
+        <div className="backBtn">
           <GrPrevious style={{ marginRight: ".5rem" }} fill="#707070" />
           <p>Back</p>
         </div>
 
         <div className="wd_90">
-          <h6 className="personalInfo_subhead">
+          <h6 className="personalInfo_head">
             Account
             <GrNext style={{ margin: " 0 .35rem" }} fill="#707070" />
             Personal Information

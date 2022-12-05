@@ -5,7 +5,7 @@ import {
 } from "../../../../components";
 import { IoCalendarSharp } from "react-icons/io5";
 import { bookings } from "../../../StylistBookingPage/CreateAppointmentData";
-import "./UpcomingBookings.scss";
+import "../ClientBookingPage/ClientBookingPage.scss";
 
 export default function ClientUpcomingBookings({activeTab, open}) {
   <ErrorBoundary>

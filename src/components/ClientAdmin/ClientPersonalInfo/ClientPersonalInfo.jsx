@@ -9,13 +9,13 @@ export default function ClientPersonalInfo() {
       <ClientAdminHeader />
 
       <div className="wd_90">
-        <div className="personalInfo_head">
+        <div className="backBtn">
           <GrPrevious style={{ marginRight: ".35rem" }} />
           <p>Back</p>
         </div>
 
         <div className="wd_90">
-          <h6 className="personalInfo_subhead">
+          <h6 className="personalInfo_head">
             Account
             <GrNext style={{ margin: " 0 .5rem" }} />
             Personal Information
