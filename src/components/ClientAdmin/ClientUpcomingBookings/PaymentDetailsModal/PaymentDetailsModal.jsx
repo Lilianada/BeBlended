@@ -1,11 +1,15 @@
 import React from "react";
+import ReactDOM from "react-dom";
+import { Backdrop } from "../../../../components";
+import { motion } from "framer-motion";
+import { AiOutlineClose } from "react-icons/ai";
 import './PaymentDetailsModal.scss';
 
 export default function PaymentDetailsModal() {
-  return (
+  return ReactDOM.createPortal (
     <>
     {openDetails ? (
-      <section className="clientAppointment_Details">
+      <section className="paymentDetails_modal">
         <Backdrop>
           <motion.div
             className="dialogContent"
@@ -26,7 +30,7 @@ export default function PaymentDetailsModal() {
             </header>
             <div className="modalContent">
               <div className="contentHead">
-                <h5 className="head">Box Braids</h5>
+                <h5 className="head">Payment Details</h5>
               </div>
             </div>
           </motion.div>

@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import {
     Backdrop,
+    PaymentDetailsModal
 } from "../../..";
 import { AnimatePresence, motion } from "framer-motion";
 import { AiOutlineClose } from "react-icons/ai";
@@ -79,18 +80,18 @@ export default function PastAppointmentDetails({ openDetails, closeDetails }) {
                         >
                           View Payment Details
                         </button>
-                        {/* <AnimatePresence
+                        <AnimatePresence
                           initial={false}
                           exitBeforeEnter={true}
                           onExitComplete={() => null}
                         >
                           {open.payment && (
-                            <Datepayment
+                            <PaymentDetailsModal
                               openModal={open.payment}
                               closeModal={setOpen}
                             />
                           )}
-                        </AnimatePresence> */}
+                        </AnimatePresence>
                         
                       </div>
                     </div>

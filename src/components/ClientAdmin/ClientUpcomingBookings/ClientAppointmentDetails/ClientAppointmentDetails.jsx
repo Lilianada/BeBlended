@@ -1,25 +1,26 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {
-    Backdrop,
-    CancelAppointment,
-    DateReschedule,
-} from "../../..";
+import { Backdrop, CancelAppointment, DateReschedule } from "../../../../components";
 import { AnimatePresence, motion } from "framer-motion";
 import { AiOutlineClose } from "react-icons/ai";
 import "./ClientAppointmentDetails.scss";
 
-export default function ClientAppointmentDetails({ openDetails, closeDetails }) {
+export default function ClientAppointmentDetails({
+  openDetails,
+  closeDetails,
+}) {
   const [open, setOpen] = React.useState({
     cancel: false,
     reschedule: false,
+    payment: false,
   });
-  const handleModal = (cancel, reschedule) => {
+  const handleModal = (cancel, reschedule, payment) => {
     setOpen((prevState) => {
       return {
         ...prevState,
         [cancel]: !prevState[cancel],
         [reschedule]: !prevState[reschedule],
+        [payment]: !prevState[payment],
       };
     });
   };
@@ -112,6 +113,18 @@ export default function ClientAppointmentDetails({ openDetails, closeDetails }) 
                       )}
                     </AnimatePresence>
                     <button className="chatBtn">View Payment Details</button>
+                    <AnimatePresence
+                      initial={false}
+                      exitBeforeEnter={true}
+                      onExitComplete={() => null}
+                    >
+                      {open.payment && (
+                        <PaymentDetailsModal
+                          openModal={open.payment}
+                          closeModal={setOpen}
+                        />
+                      )}
+                    </AnimatePresence>
                   </div>
                 </div>
               </div>

@@ -1,6 +1,7 @@
+export { default as  PaymentDetailsModal } from "./ClientAdmin/ClientUpcomingBookings/PaymentDetailsModal/PaymentDetailsModal";
+
 export { default as ClientAppointmentDetails } from "./ClientAdmin/ClientUpcomingBookings/ClientAppointmentDetails/ClientAppointmentDetails";
 export { default as PastAppointmentDetails } from "./ClientAdmin/ClientUpcomingBookings/ClientAppointmentDetails/PastAppointmentDetails";
-
 export { default as BookingsCardPast } from "./ClientAdmin/ClientUpcomingBookings/BookingsCard/BookingsCardPast";
 export { default as BookingsCard } from "./ClientAdmin/ClientUpcomingBookings/BookingsCard/BookingsCard";
 export { default as ClientBookingPage } from "./ClientAdmin/ClientUpcomingBookings/ClientBookingPage/ClientBookingPage";
