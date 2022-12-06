@@ -2,8 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import {
     Backdrop,
-    CancelAppointment,
-    Datepayment,
 } from "../../..";
 import { AnimatePresence, motion } from "framer-motion";
 import { AiOutlineClose } from "react-icons/ai";
@@ -79,9 +77,9 @@ export default function PastAppointmentDetails({ openDetails, closeDetails }) {
                           className="paymentBtn"
                           onClick={() => handleModal("payment")}
                         >
-                          View Appointment Details
+                          View Payment Details
                         </button>
-                        <AnimatePresence
+                        {/* <AnimatePresence
                           initial={false}
                           exitBeforeEnter={true}
                           onExitComplete={() => null}
@@ -92,7 +90,7 @@ export default function PastAppointmentDetails({ openDetails, closeDetails }) {
                               closeModal={setOpen}
                             />
                           )}
-                        </AnimatePresence>
+                        </AnimatePresence> */}
                         
                       </div>
                     </div>

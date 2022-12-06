@@ -8,7 +8,7 @@ export default function ClientBookings({ activeTab, open }) {
   return (
     <ErrorBoundary>
       <>
-        {bookings.length > 3 ? (
+        {bookings.length > 0 ? (
           <div className={`mappedTabs ${activeTab === 1 ? "activeTab" : ""}`}>
             {bookings.map((item, id) => {
               return <BookingsCard item={item} key={id} />;

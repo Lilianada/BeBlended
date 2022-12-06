@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { AnimatePresence } from "framer-motion";
-import {ClientAppointmentDetails} from "../../../../components";
+import {PastAppointmentDetails} from "../../../../components";
 import "./BookingsCard.scss";
 
 export default function BookingsCardPast({item}) {

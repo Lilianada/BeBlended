@@ -9,7 +9,7 @@
 
         @media screen and (min-width: 500px) {
             width: 21.875rem;
-            height: 37rem;
+            height: fit-content;
         }
 
         .modalHeader {
@@ -102,7 +102,7 @@
                         border-radius: 9px;
                     }
 
-                    .rescheduleBtn {
+                    .rescheduleBtn, .paymentBtn {
                         background-color: var(--black);
                         color: var(--white);
                         border: none;

@@ -1,19 +1,19 @@
 import React from "react";
 import { IoCalendarSharp } from "react-icons/io5";
 import { pastServices } from "../../ClientAdminData";
-import { BookingsCard, ErrorBoundary } from "../../../../components";
+import { BookingsCardPast, ErrorBoundary } from "../../../../components";
 import "../ClientBookingPage/ClientBookingPage.scss";
 
 export default function PastBookings({ activeTab, open }) {
   return (
     <ErrorBoundary>
-      {pastServices.length > 3 ? (
+      {pastServices.length > 0 ? (
         <div
           className={`mappedTabs ${activeTab === 2 ? "activeTab" : ""}`}
           onClick={open}
         >
           {pastServices.map((item, id) => {
-            return <BookingsCard item={item} key={id} />;
+            return <BookingsCardPast item={item} key={id} />;
           })}
         </div>
       ) : (
