@@ -91,3 +91,17 @@ export const pastServices = [
     time: "8:00am - 12:00pm",
   },
 ];
+
+
+export const cartItems = [
+  {
+    id: 1,
+    service: "Box Braids",
+    variant: "Mid-back/Small",
+  },
+  {
+    id: 2,
+    service: "Hair Extensions",
+    variant: "2 packs",
+  },
+];

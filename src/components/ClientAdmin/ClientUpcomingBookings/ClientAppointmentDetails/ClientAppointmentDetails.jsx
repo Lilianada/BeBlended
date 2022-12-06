@@ -1,6 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Backdrop, CancelAppointment, DateReschedule } from "../../../../components";
+import {
+  Backdrop,
+  CancelAppointment,
+  DateReschedule,
+  PaymentDetailsModal,
+} from "../../../../components";
 import { AnimatePresence, motion } from "framer-motion";
 import { AiOutlineClose } from "react-icons/ai";
 import "./ClientAppointmentDetails.scss";

@@ -40,6 +40,188 @@
                     font-family: var(--font-text);
                 }
             }
+
+            .contentBody{
+                display: block;
+                margin: 3rem auto;
+                width: 100%;
+    
+                @media screen and (min-width: 900px) {
+                    width: 30rem;
+                    margin: 0 1rem;
+                }
+    
+                .cartWrap {
+                    background: #fffbff;
+                    height: fit-content;
+                    background-position: top;
+                    border: 1.5px solid #c984c2;
+                    border-radius: 1.25rem;
+    
+                    @media screen and (min-width: 900px) {
+                        margin: 0 1rem;
+                    }
+    
+                    .cart {
+                        height: 50%;
+                        margin: 1.5rem 0;
+                        display: grid;
+                        place-items: center;
+                        align-items: center;
+    
+                        .head {
+                            width: 85%;
+
+                            .headText {
+                                text-align: left;
+                                font-size: var(--twentyFour);
+                                font-weight: 500;
+                            }
+                        }
+    
+                        .body {
+                            width: 85%;
+                            margin-top: .75rem;
+    
+                            .cartItem {
+                                display: flex;
+                                align-items: flex-start;
+                                justify-content: space-between;
+                                margin-bottom: 0.5rem;
+                                width: 100%;
+    
+                                .item {
+                                    display: block;
+    
+                                    .service {
+                                        font-size: var(--eighteen);
+                                        font-weight: 600;
+                                    }
+    
+                                    .variant {
+                                        font-size: var(--sixteen);
+                                        font-style: italic;
+                                        color: var(--black);
+                                        margin: 0;
+                                        text-decoration-line: underline;
+                                    }
+                                }
+    
+                                .totalPrice {
+                                    margin-top: 0;
+                                }
+                            }
+    
+                            .subTotal {
+                                display: block;
+    
+                                .checkout {
+                                    width: 15rem;
+                                    background: var(--black);
+                                    border-radius: 10px;
+                                    color: var(--white);
+                                    text-transform: capitalize;
+                                    margin: 2rem auto 0;
+                                    padding: 0.75rem;
+                                    border: none;
+                                    outline: none;
+                                }
+    
+                                .priceList {
+                                    margin-top: 1rem;
+
+                                    .info {
+                                        font-weight: 500;
+                                        font-size: var(--twelve);
+                                        font-style: italic;
+                                        margin-bottom: 1rem;
+                                        line-height: 1rem;
+                                    }
+    
+                                    .list {
+                                        display: flex;
+                                        align-items: flex-start;
+                                        justify-content: space-between;
+                                        width: 100%;
+                                        position: relative;
+    
+                                        input {
+                                            position: absolute;
+                                            z-index: 1;
+                                            width: 1.25rem;
+                                            height: 1.125rem;
+                                            opacity: 0;
+                                        }
+    
+                                        .checkbox {
+                                            width: 1.5rem;
+                                            height: 1.125rem;
+                                            border: 2px solid #050205;
+                                            border-radius: 3px;
+                                            margin-right: 0.5rem;
+                                        }
+    
+                                        input:checked ~ .checkbox {
+                                            background: var(--black);
+                                        }
+    
+                                        input:checked ~ .checkbox::after {
+                                            content: "\2714";
+                                            font-size: 12px;
+                                            color: var(--white);
+                                            position: relative;
+                                            z-index: 0;
+                                            top: -3.5px;
+                                            left: 2.5px;
+                                        }
+    
+                                        .terms {
+                                            font-size: var(--sixteen);
+
+                                            span {
+                                                color: #3789db;
+                                                text-decoration: underline;
+                                            }
+                                            .link {
+                                                color: #3789db;
+                                                text-decoration: underline;
+                                                background: none;
+                                                border: none;
+                                                outline: none;
+                                                margin-left: 0.5rem;
+                                                font-size: var(--sixteen);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+    
+                .btnPrimary {
+                    width: 14rem;
+                    height: 2.5rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0.75rem;
+                    margin: 2rem auto 2rem;
+                    background: var(--white);
+                    color: var(--black);
+                    border: 1px solid #050205;
+                    border-radius: 10px;
+                    outline: none;
+                    font-weight: 500;
+                    font-size: var(--sixteen);
+                    cursor: pointer;
+                    
+                    @media screen and (min-width: 900px) {
+                        margin-right: 1rem;
+                        margin-left: auto;
+                    }
+                }
+            }
         }
     }
 }
