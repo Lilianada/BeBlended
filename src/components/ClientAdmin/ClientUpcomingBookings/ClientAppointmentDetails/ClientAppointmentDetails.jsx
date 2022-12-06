@@ -117,7 +117,7 @@ export default function ClientAppointmentDetails({
                         />
                       )}
                     </AnimatePresence>
-                    <button className="chatBtn">View Payment Details</button>
+                    <button className="chatBtn" onClick={() => handleModal("payment")}>View Payment Details</button>
                     <AnimatePresence
                       initial={false}
                       exitBeforeEnter={true}

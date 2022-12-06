@@ -1,4 +1,5 @@
 export { default as  PaymentDetailsModal } from "./ClientAdmin/ClientUpcomingBookings/PaymentDetailsModal/PaymentDetailsModal";
+export { default as  PastPaymentDetails } from "./ClientAdmin/ClientUpcomingBookings/PaymentDetailsModal/PastPaymentDetails";
 
 export { default as ClientAppointmentDetails } from "./ClientAdmin/ClientUpcomingBookings/ClientAppointmentDetails/ClientAppointmentDetails";
 export { default as PastAppointmentDetails } from "./ClientAdmin/ClientUpcomingBookings/ClientAppointmentDetails/PastAppointmentDetails";

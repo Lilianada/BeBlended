@@ -45,16 +45,28 @@ export default function PaymentDetailsModal({ openModal, closeModal }) {
                         <h5 className="headText">Service name:</h5>
                       </div>
                       <div className="body">
+                        <div>
                         {cartItems.map((item) => (
-                          <>
                             <div className="cartItem" key={item.id}>
                               <div className="item">
                                 <p className="service"> {item.service} </p>
                                 <p className="variant"> {item.variant} </p>
                               </div>
                             </div>
-                          </>
                         ))}
+                        </div>
+
+                        <div className="extraFee">
+                          <div className="list">
+                              <p className="service"> Service fee </p>
+                              <p className="price"> $10 </p>
+                            </div>
+                          <div className="list">
+                              <p className="service"> Deposit </p>
+                              <p className="price"> $20 </p>
+                            </div>
+                        </div>
+
                         <div className="subTotal">
                           <div className="priceList">
                             <div className="list">

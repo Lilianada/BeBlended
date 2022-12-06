@@ -36,19 +36,21 @@
 
             .contentHead {
                 text-align: center;
+
                 .head {
                     font-family: var(--font-text);
+                    font-weight: 700;
                 }
             }
 
             .contentBody{
                 display: block;
-                margin: 3rem auto;
+                margin: 1rem auto;
                 width: 100%;
     
                 @media screen and (min-width: 900px) {
-                    width: 30rem;
-                    margin: 0 1rem;
+                    width: 19.5rem;
+                    margin: 1rem auto;
                 }
     
                 .cartWrap {
@@ -57,14 +59,11 @@
                     background-position: top;
                     border: 1.5px solid #c984c2;
                     border-radius: 1.25rem;
-    
-                    @media screen and (min-width: 900px) {
-                        margin: 0 1rem;
-                    }
-    
+                    margin: 0;
+
                     .cart {
-                        height: 50%;
-                        margin: 1.5rem 0;
+                        height: fit-content;
+                        margin: 1rem auto;
                         display: grid;
                         place-items: center;
                         align-items: center;
@@ -111,6 +110,26 @@
                                     margin-top: 0;
                                 }
                             }
+
+                            .extraFee{
+                                display: block;
+                                border-top: 1px solid #DFDFDF;
+                                border-bottom: 1px solid #DFDFDF;
+                                padding: 0.3rem 0;
+                                margin: 1rem 0 .75rem;
+
+                                .list {
+                                    display: flex;
+                                    align-items: flex-start;
+                                    justify-content: space-between;
+                                    width: 100%;
+                                    position: relative;
+
+                                    .service, .price{
+                                        font-size: var(--sixteen);
+                                    }
+                                }
+                            }
     
                             .subTotal {
                                 display: block;
@@ -134,7 +153,8 @@
                                         font-weight: 500;
                                         font-size: var(--twelve);
                                         font-style: italic;
-                                        margin-bottom: 1rem;
+                                        margin-top: .35rem;
+                                        margin-bottom: .75rem;
                                         line-height: 1rem;
                                     }
     
