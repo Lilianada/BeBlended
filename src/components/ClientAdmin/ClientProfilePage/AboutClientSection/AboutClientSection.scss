@@ -1,10 +1,39 @@
 .aboutClient_Section{
     display: block;
-    margin-top: 1rem;
+    margin-top: 2rem;
 
     .aboutHead{
         font-size: var(--twentyFour);
         font-weight: 600;
         line-height: 1.75rem;
+    }
+
+    .address{
+        display: flex;
+        align-items: center;
+        margin-top: 0.5rem;
+        border-bottom: 1px solid #707070;
+        padding-bottom: 1rem;
+    }    
+
+    .hairDetails{
+        margin-top: 1rem;
+
+        .details{
+            display: flex;
+
+            .rowSpan{
+                display: block;
+
+                h5{
+                    font-size: var(--sixteen);
+                    line-height: 1.25rem;
+                }
+
+                &:first-child{
+                    margin-right: 2rem;
+                }
+            }
+        }
     }
 }

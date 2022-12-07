@@ -14,10 +14,10 @@ export default function ClientProfilePage() {
       <ClientAdminHeader />
 
       <section className="clientProfile_Section">
-        <div className="backBtn">
+        <button className="backBtn">
           <GrPrevious style={{ marginRight: ".35rem" }} stroke-opacity={0.5} />
           <p>Back</p>
-        </div>
+        </button>
 
         <div className="clientProfile_Grid">
           <div className="gridItem">
