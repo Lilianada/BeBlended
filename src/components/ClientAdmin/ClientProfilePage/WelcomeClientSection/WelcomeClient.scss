@@ -1,0 +1,26 @@
+.welcomeClient_Section{
+    width: 376px;
+    height: 270px;
+    border: 1px solid #DEDDDD;
+    border-radius: 20px;
+    position: relative;
+
+    .profilePic_Section{
+        .profilePic{
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            left: 185px;
+            top: 133px;
+            border: 1px solid #DEDDDD;
+        }
+
+        .profilePic_Text{
+            font-size: var(--eighteen);
+            text-decoration: underline;
+            border: none;
+            outline: none;
+            background: none;
+        }
+    }
+}

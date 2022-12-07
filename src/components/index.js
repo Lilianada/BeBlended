@@ -1,6 +1,9 @@
+export { default as  ClientProfilePage } from "./ClientAdmin/ClientProfilePage/ClientProfilePage";
+export { default as  WelcomeClient } from "./ClientAdmin/ClientProfilePage/WelcomeClientSection/WelcomeClient";
+
 export { default as  PaymentDetailsModal } from "./ClientAdmin/ClientUpcomingBookings/PaymentDetailsModal/PaymentDetailsModal";
 export { default as  PastPaymentDetails } from "./ClientAdmin/ClientUpcomingBookings/PaymentDetailsModal/PastPaymentDetails";
-
+//Re-exporting component
 export { default as ClientAppointmentDetails } from "./ClientAdmin/ClientUpcomingBookings/ClientAppointmentDetails/ClientAppointmentDetails";
 export { default as PastAppointmentDetails } from "./ClientAdmin/ClientUpcomingBookings/ClientAppointmentDetails/PastAppointmentDetails";
 export { default as BookingsCardPast } from "./ClientAdmin/ClientUpcomingBookings/BookingsCard/BookingsCardPast";
@@ -13,7 +16,6 @@ export { default as ClientLoginSecurity } from "./ClientAdmin/ClientLoginSecurit
 export { default as ClientPersonalInfo } from "./ClientAdmin/ClientPersonalInfo/ClientPersonalInfo";
 export { default as FavouriteCards } from "./ClientAdmin/FavouritesPage/FavouriteCards";
 export { default as FavouritesPage } from "./ClientAdmin/FavouritesPage/FavouritesPage";
-//Re-exporting component
 export { default as ClientAdminHeader } from "./ClientAdmin/ClientAdminHeader/ClientAdminHeader";
 export { default as ClientAdminHome } from "./ClientAdmin/ClientAdminHome/ClientAdminHome";
 export { default as AdminFinancePage } from "./StylistAdmin/FinancePage/FinancePage";

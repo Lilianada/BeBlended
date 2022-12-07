@@ -1,5 +1,5 @@
 import React from "react";
-import { ClientAdminHeader, BottomNavClient } from "../../../components";
+import { ClientAdminHeader, BottomNavClient, WelcomeClient } from "../../../components";
 import "./ClientProfilePage.scss";
 
 export default function ClientProfilePage() {
@@ -14,7 +14,9 @@ export default function ClientProfilePage() {
         </div>
 
         <div className="clientProfile_Grid">
-            <div className="gridItem"></div>
+            <div className="gridItem">
+                <WelcomeClient />
+            </div>
             <div className="gridItem"></div>
         </div>
       </section>
