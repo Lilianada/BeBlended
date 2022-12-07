@@ -1,4 +1,7 @@
 import React from "react";
+import { AiFillHome } from "react-icons/ai";
+import { FaPen } from "react-icons/fa";
+import "./AboutClientSection.scss";
 
 export default function AboutClientSection() {
   return (
