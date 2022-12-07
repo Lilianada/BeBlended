@@ -6,7 +6,6 @@ import {
   ClientAdminHeader,
   ClientBookings,
   PastBookings,
-  UpcomingAppointment
 } from "../../../../components";
 import "./ClientBookingPage.scss";
 
@@ -34,7 +33,7 @@ export default function ClientBookingPage() {
 
       <section className="clientBookings_Section">
         <div className="backBtn">
-          <GrPrevious style={{ marginRight: ".35rem" }} fill="#707070" />
+          <GrPrevious style={{ marginRight: ".35rem" }} fill="#707070" stroke="#707070"/>
           <p>Back</p>
         </div>
 
