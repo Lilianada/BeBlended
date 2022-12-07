@@ -1,10 +1,10 @@
-import React from "react";
+import { AnimatePresence } from "framer-motion";
+import React, {useState} from "react";
 import PicPlaceholder from "../../../../assets/Admin-Icons/Beblended-head.svg";
 import {ProfilePicture} from "../../../../components";
 import './WelcomeClient.scss';
 
 export default function WelcomeClient() {
-    
   //modal
   const [openModal, setOpenModal] = useState(false);
 
@@ -32,7 +32,11 @@ export default function WelcomeClient() {
             )}
           </AnimatePresence>
         </div>
-        <div className="welcomeMessage"></div>
+        <div className="welcomeMessage">
+            <h4 className="messageHead">Welcome back Lola</h4>
+                <p className="message">Member since June 2022</p>
+                <button className="activeBtn">Active</button>
+        </div>
     </div>
   );
 }

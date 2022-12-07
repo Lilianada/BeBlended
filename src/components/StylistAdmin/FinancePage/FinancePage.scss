@@ -379,6 +379,14 @@
                             font-size: var(--eighteen);
                             font-weight:600;
                             width: 9rem;
+                            cursor: pointer;
+                            border: none;
+                            outline: none;
+                            transition: all .2s ease-in-out;
+                            &:hover{
+                                transform: scale(.9, .9);
+                                
+                            }
                         }
                         
                         .cancelledStatus{
@@ -393,6 +401,14 @@
                             font-size: var(--eighteen);
                             font-weight:600;
                             width: 9rem;
+                            cursor: pointer;
+                            border: none;
+                            outline: none;
+                            transition: all .2s ease-in-out;
+                            &:hover{
+                                transform: scale(.9, .9);
+                                
+                            }
                         }
                     }
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { GrPrevious } from "react-icons/gr";
 import { ClientAdminHeader, BottomNavClient, WelcomeClient } from "../../../components";
 import "./ClientProfilePage.scss";
 
@@ -9,7 +10,7 @@ export default function ClientProfilePage() {
 
       <section className="clientProfile_Section">
         <div className="backBtn">
-            <GrPrevious style={{ marginRight: ".35rem" }} fill="#707070" stroke-opacity={0.5}/>
+            <GrPrevious style={{ marginRight: ".35rem" }} stroke-opacity={0.5}/>
             <p>Back</p>
         </div>
 

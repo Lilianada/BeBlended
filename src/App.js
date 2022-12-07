@@ -23,6 +23,7 @@ import {
   ClientLoginSecurity,
   ClientPayoutInformation,
   ClientBookingPage,
+  ClientProfilePage,
 } from "./components";
 
 
@@ -55,7 +56,8 @@ function App() {
       {/* <ClientPersonalInfo/> */}
       {/* <ClientLoginSecurity /> */}
       {/* <ClientPayoutInformation/> */}
-      <ClientBookingPage/>
+      {/* <ClientBookingPage/> */}
+      <ClientProfilePage/>
     </div>
   );
 }

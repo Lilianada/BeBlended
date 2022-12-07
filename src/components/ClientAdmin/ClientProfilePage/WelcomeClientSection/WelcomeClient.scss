@@ -1,18 +1,25 @@
 .welcomeClient_Section{
+    display: grid;
+    place-items: center;
     width: 376px;
-    height: 270px;
+    height: 230px;
+    padding: 2rem;
     border: 1px solid #DEDDDD;
     border-radius: 20px;
     position: relative;
 
-    .profilePic_Section{
+    .profilePic_Update{
+        display: grid;
+        place-items: center;
+
         .profilePic{
             position: absolute;
             width: 80px;
             height: 80px;
-            left: 185px;
-            top: 133px;
+            left: 150px;
+            top: -40px;
             border: 1px solid #DEDDDD;
+            border-radius: 50%;
         }
 
         .profilePic_Text{
@@ -21,6 +28,50 @@
             border: none;
             outline: none;
             background: none;
+        }
+    }
+
+    .welcomeMessage{
+        display: grid;
+        place-items: center;
+
+        .messageHead{
+            font-family: Butler;
+            font-size: var(--twentyEight);
+            font-weight: 700;
+            line-height: 2rem;
+        }
+        
+        .message{
+            font-size: var(--eighteen);
+            font-weight: 500;
+            line-height: 1.52rem;
+            margin-bottom: .75rem;
+        }
+
+        .activeBtn{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 7.5rem;
+            height: 2.5rem;
+            font-size: var(--eighteen);
+            font-weight:600;
+            background: #C5E9D3;
+            color: var(--black);
+            border-radius: 9px;
+            text-align: center;
+            margin: 0 .5rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            transition: all .2s ease-in-out;
+
+            &:hover{
+                transform: scale(.9, .9);
+                
+            }
         }
     }
 }
