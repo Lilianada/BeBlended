@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import {
     Backdrop,
-    PaymentDetailsModal
+    PastPaymentDetails
 } from "../../..";
 import { AnimatePresence, motion } from "framer-motion";
 import { AiOutlineClose } from "react-icons/ai";
@@ -86,7 +86,7 @@ export default function PastAppointmentDetails({ openDetails, closeDetails }) {
                           onExitComplete={() => null}
                         >
                           {open.payment && (
-                            <PaymentDetailsModal
+                            <PastPaymentDetails
                               openModal={open.payment}
                               closeModal={setOpen}
                             />

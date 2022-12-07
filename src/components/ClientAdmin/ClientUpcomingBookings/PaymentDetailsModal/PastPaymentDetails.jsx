@@ -6,7 +6,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import{ cartItems } from "../../ClientAdminData";
 import "./PaymentDetailsModal.scss";
 
-export default function PastPaymentDetails() {
+export default function PastPaymentDetails({openModal,closeModal}) {
     return ReactDOM.createPortal(
         <>
           {openModal ? (
@@ -57,50 +57,13 @@ export default function PastPaymentDetails() {
                                   <p className="service"> Service fee </p>
                                   <p className="price"> $10 </p>
                                 </div>
-                              <div className="list">
-                                  <p className="service"> Deposit </p>
-                                  <p className="price"> $20 </p>
-                                </div>
                             </div>
     
                             <div className="subTotal">
                               <div className="priceList">
                                 <div className="list">
-                                  <p className="service"> Paid: </p>
-                                  <p className="price"> $20 </p>
-                                </div>
-                                <div className="list">
-                                  <p className="service"> Remaining balance: </p>
-                                  <p className="price"> $10 </p>
-                                </div>
-                                <p className="info">
-                                  *This amount will be charged automatically after
-                                  your appointment
-                                </p>
-    
-                                <div className="list">
-                                  <label className="terms">
-                                    View
-                                    <button
-                                      className="link"
-                                      onClick={handleModal}
-                                    >
-                                      cancellation policy
-                                    </button>
-                                    and <span> client rules </span>.
-                                    <AnimatePresence
-                                      initial={false}
-                                      exitBeforeEnter={true}
-                                      onExitComplete={() => null}
-                                    >
-                                      {openPolicy && (
-                                        <PolicyModal
-                                          openModal={openPolicy}
-                                          closeModal={handleModal}
-                                        />
-                                      )}
-                                    </AnimatePresence>
-                                  </label>
+                                  <p className="service">Total paid: </p>
+                                  <p className="price"> $120 </p>
                                 </div>
                               </div>
                             </div>
