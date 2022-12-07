@@ -10,7 +10,7 @@ export default function ClientPersonalInfo() {
 
       <div className="wd_90">
         <div className="backBtn">
-          <GrPrevious style={{ marginRight: ".35rem" }} />
+        <GrPrevious style={{ marginRight: ".35rem" }} fill="#707070" stroke-opacity={0.5}/>
           <p>Back</p>
         </div>
 

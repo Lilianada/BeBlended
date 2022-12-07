@@ -8,7 +8,7 @@ export default function ClientPayoutInformation() {
     <main className="mainWrapper payoutInfo">
       <ClientAdminHeader />
         <div className="payoutInfo_head">
-          <GrPrevious style={{ marginRight: ".5rem" }} fill="#707070" />
+        <GrPrevious style={{ marginRight: ".35rem" }} fill="#707070" stroke-opacity={0.5}/>
           <p>Back</p>
         </div>
 

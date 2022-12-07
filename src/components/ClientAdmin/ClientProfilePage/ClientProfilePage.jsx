@@ -9,8 +9,8 @@ export default function ClientProfilePage() {
 
       <section className="clientProfile_Section">
         <div className="backBtn">
-          <GrPrevious style={{ marginRight: ".35rem" }} fill="#707070" />
-          <p>Back</p>
+            <GrPrevious style={{ marginRight: ".35rem" }} fill="#707070" stroke-opacity={0.5}/>
+            <p>Back</p>
         </div>
       </section>
 
