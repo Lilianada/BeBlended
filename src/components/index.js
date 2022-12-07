@@ -1,5 +1,5 @@
 export { default as ReviewsOfClient } from "./ClientAdmin/ClientProfilePage/ReviewsClient/ReviewsOfClient";
-export { default as ReviewsByClient } from "./ClientAdmin/ClientProfilePageBy/ReviewsClient/ReviewsByClient";
+export { default as ReviewsByClient } from "./ClientAdmin/ClientProfilePage/ReviewsClient/ReviewsByClient";
 
 export { default as AboutClientSection } from "./ClientAdmin/ClientProfilePage/AboutClientSection/AboutClientSection";
 export { default as  ClientProfilePage } from "./ClientAdmin/ClientProfilePage/ClientProfilePage";

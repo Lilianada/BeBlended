@@ -6,7 +6,7 @@ export default function ReviewByClient() {
   return (
     <section className="reviewsByClient">
       <div>
-        <p className="aboutHead">Reviews of You</p>
+        <p className="aboutHead">Reviews by You</p>
       </div>
       <div className="totalReview_Head"></div>
       {/* No REVIEW */}
