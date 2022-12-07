@@ -6,7 +6,9 @@ import "./AboutClientSection.scss";
 export default function AboutClientSection() {
   return (
     <section className="aboutClient_Section">
-        <div className="aboutHead">About</div>
+      <div>
+        <p className="aboutHead">About</p>
+      </div> 
         <div className="address">
             <AiFillHome style={{marginRight: ".5rem"}} size={18} />
             <p>Lives in Toronto, Canada</p>
