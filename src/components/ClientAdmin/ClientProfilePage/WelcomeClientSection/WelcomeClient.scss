@@ -7,24 +7,28 @@
     border: 1px solid #DEDDDD;
     border-radius: 20px;
     position: relative;
+    margin: 0 auto;
 
     @media screen and (min-width: 768px) {
         width: 23.5rem;
-        margin: 0 auto;
     }
 
-    .profilePic_Update{
-        display: grid;
-        place-items: center;
-
-        .profilePic{
-            position: absolute;
+.profilePic_Update{
+    display: grid;
+    place-items: center;
+    
+    .profilePic{
+        position: absolute;
             width: 80px;
             height: 80px;
-            left: 150px;
+            left: 120px;
             top: -40px;
             border: 1px solid #DEDDDD;
             border-radius: 50%;
+            
+            @media screen and (min-width: 768px) {
+                left: 150px;
+            }
         }
 
         .profilePic_Text{

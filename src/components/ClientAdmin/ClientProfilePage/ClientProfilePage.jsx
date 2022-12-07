@@ -6,6 +6,7 @@ import {
   WelcomeClient,
   AboutClientSection,
   ReviewsOfClient,
+  ReviewsByClient
 } from "../../../components";
 import "./ClientProfilePage.scss";
 
@@ -27,6 +28,7 @@ export default function ClientProfilePage() {
           </div>
           <div className="gridItem">
             <ReviewsOfClient />
+            <ReviewsByClient />
           </div>
         </div>
       </section>
