@@ -10,9 +10,9 @@ export default function AboutClientSection() {
         <p className="aboutHead">About</p>
       </div> 
         <div className="address">
-            <AiFillHome style={{marginRight: ".5rem"}} size={18} />
+            <AiFillHome style={{marginRight: ".75rem"}} size={18} />
             <p>Lives in Toronto, Canada</p>
-            <FaPen style={{marginLeft: ".5rem"}} />
+            <FaPen style={{marginLeft: ".75rem"}} />
         </div>
 
         <div className="hairDetails">
