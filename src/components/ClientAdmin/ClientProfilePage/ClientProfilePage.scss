@@ -1,4 +1,31 @@
 .clientProfile_Page{
+    margin-bottom: 5rem;
 
-    
+    @media screen and (min-width: 768px) {
+        margin-bottom: 2rem;
+    }
+
+    .clientProfile_Section{
+        width: 90%;
+        margin: .5rem auto;
+
+        .backBtn {
+            display: flex;
+            align-items: center;
+
+            p {
+                color: #707070;
+            }
+        }
+
+        .clientProfile_Grid{
+            display: grid;
+            grid-template-columns: 40% 60%;
+            grid-gap: 2rem;
+
+            .gridItem{
+                margin: 1rem 0;
+            }
+        }
+    }
 }
