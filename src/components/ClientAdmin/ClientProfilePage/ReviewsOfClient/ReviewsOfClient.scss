@@ -1,0 +1,23 @@
+.reviewsOfClient{
+    
+    .totalReview{
+        display: flex;
+        align-items: center;
+        border: 1px solid #DEDDDD;
+        padding-bottom: 1rem;
+
+        .ratingNumber{
+            font-size: var(--fourty);
+            font-weight: 500;
+            line-height: 2.5rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+
+        .reviewNumber{
+            font-size: var(--twentyTwo);
+            font-weight: 400;
+            line-height: 1.6rem;
+        }
+    }
+}

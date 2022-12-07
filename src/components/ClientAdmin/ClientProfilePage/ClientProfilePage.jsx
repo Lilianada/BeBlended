@@ -5,6 +5,7 @@ import {
   BottomNavClient,
   WelcomeClient,
   AboutClientSection,
+  ReviewsOfClient,
 } from "../../../components";
 import "./ClientProfilePage.scss";
 
@@ -24,7 +25,9 @@ export default function ClientProfilePage() {
             <WelcomeClient />
             <AboutClientSection />
           </div>
-          <div className="gridItem"></div>
+          <div className="gridItem">
+            <ReviewsOfClient />
+          </div>
         </div>
       </section>
 
