@@ -17,11 +17,17 @@ export default function AboutClientSection() {
           <div className="aboutHead">Hair Details</div>
           <div className="details">
             <div className="rowSpan">
+              <div className="detailCircle">
+                
+              </div>
               <h5>Hair Texture</h5>
               <p>Kinky/Coily</p>
             </div>
 
             <div className="rowSpan">
+              <div className="detailCircle">
+                
+              </div>
               <h5>Hair Structure</h5>
               <p>Coarse</p>
             </div>

@@ -35,7 +35,9 @@ export default function WelcomeClient() {
         <div className="welcomeMessage">
             <h4 className="messageHead">Welcome back Lola</h4>
                 <p className="message">Member since June 2022</p>
-                <button className="activeBtn">Active</button>
+                <button className="activeBtn btns">Active</button>
+                {/* <button className="pendingBtn btns">Pending</button> */}
+                {/* <button className="inactiveBtn btns">Inactive</button> */}
         </div>
     </div>
   );

@@ -21,13 +21,24 @@
 
         .details{
             display: flex;
+            margin-top: 1rem;
 
             .rowSpan{
                 display: block;
+                text-align: center;
+
+                .detailCircle{
+                    height: 100px;
+                    width: 100px;
+                    padding: 2rem;
+                    border: 1px solid #893583;
+                    border-radius: 50%;
+                }
 
                 h5{
                     font-size: var(--sixteen);
                     line-height: 1.25rem;
+                    margin-top: .5rem;
                 }
 
                 &:first-child{

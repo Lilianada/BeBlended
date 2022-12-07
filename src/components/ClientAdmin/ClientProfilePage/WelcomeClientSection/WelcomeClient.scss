@@ -48,14 +48,13 @@
             margin-bottom: .75rem;
         }
 
-        .activeBtn{
+        .btns{
             display: flex;
             align-items: center;
             justify-content: space-evenly;
             width: 7.5rem;
             height: 2.5rem;
             font-size: var(--eighteen);
-            background: #C5E9D3;
             color: var(--black);
             border-radius: 9px;
             text-align: center;
@@ -70,6 +69,18 @@
                 transform: scale(.9, .9);
                 
             }
+        }
+
+        .activeBtn{
+            background: #C5E9D3;
+        }
+
+        .pendingBtn{
+            background: #FF990080;
+        }
+
+        .inactiveBtn{
+            background: #FF1A1A80;
         }
     }
 }
