@@ -4,6 +4,7 @@
     .dialogContent {
         background-color: var(--white);
         width: 90%;
+        height: 30rem;
         margin: 0 auto;
         border-radius: 12px;
         position: relative;
@@ -20,7 +21,7 @@
 
         @media screen and (min-width: 900px) {
             width: 36rem;
-            height: 36rem;
+            height: 33rem;
         }
 
         .modalHeader {
@@ -54,6 +55,7 @@
                     font-family: var(--font-head);
                     color: var(--black);
                     margin-bottom: 0.5rem;
+                    line-height: 2rem;
 
                     @media screen and (min-width: 900px) {
                         font-size: var(--twentyEight);

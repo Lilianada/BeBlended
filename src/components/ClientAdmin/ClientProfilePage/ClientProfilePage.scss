@@ -24,10 +24,18 @@
             }
         }
 
-        .clientProfile_Grid{
-            display: grid;
-            grid-template-columns: 40% 60%;
-            grid-gap: 2rem;
+        .clientProfile_Grid{            
+            display: flex;
+            margin: 0 auto;
+            flex-direction: column;
+            align-content: center;
+            margin-bottom: 6rem;
+
+            @media screen and (min-width: 768px) {
+                display: grid;
+                grid-template-columns: 40% 60%;
+                grid-gap: 2rem;
+            }
 
             .gridItem{
                 margin: 1rem 0;

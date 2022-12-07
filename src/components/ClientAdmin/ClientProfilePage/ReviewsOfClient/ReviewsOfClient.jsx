@@ -14,6 +14,7 @@ export default function ReviewsOfClient() {
         <h3 className="ratingNumber">0.0</h3>
         <p className="reviewNumber">(0 reviews)</p>
       </div>
+      {/* No REVIEW */}
       <div className="noReview">
         <MdOutlineReviews size={56} />
         <p className="noReview_Head">You have no reviews in our system yet!</p>
@@ -21,6 +22,7 @@ export default function ReviewsOfClient() {
           Reviews get added once you start booking appointments.
         </p>
       </div>
+      {/* REVIEWS */}
     </section>
   );
 }

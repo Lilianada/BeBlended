@@ -1,12 +1,17 @@
 .welcomeClient_Section{
     display: grid;
     place-items: center;
-    width: 376px;
-    height: 230px;
+    width: 20rem;
+    height: 14.375rem;
     padding: 2rem;
     border: 1px solid #DEDDDD;
     border-radius: 20px;
     position: relative;
+
+    @media screen and (min-width: 768px) {
+        width: 23.5rem;
+        margin: 0 auto;
+    }
 
     .profilePic_Update{
         display: grid;

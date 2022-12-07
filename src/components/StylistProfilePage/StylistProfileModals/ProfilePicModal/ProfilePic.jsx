@@ -37,7 +37,7 @@ function ProfilePicture({ openModal, closeModal }) {
                 <DropFile/>
               </div>
               <footer className="modalFooter">
-                <button className="saveBtn">Done</button>
+                <button onClick={closeModal} className="saveBtn">Done</button>
               </footer>
             </motion.div>
           </Backdrop>
