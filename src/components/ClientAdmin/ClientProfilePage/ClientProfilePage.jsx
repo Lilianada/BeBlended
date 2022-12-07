@@ -17,6 +17,7 @@ export default function ClientProfilePage() {
         <div className="clientProfile_Grid">
             <div className="gridItem">
                 <WelcomeClient />
+                <AboutClientSection />
             </div>
             <div className="gridItem"></div>
         </div>

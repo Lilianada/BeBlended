@@ -1,6 +1,7 @@
+export { default as AboutClientSection } from "./ClientAdmin/ClientProfilePage/AboutClientSection/AboutClientSection";
+
 export { default as  ClientProfilePage } from "./ClientAdmin/ClientProfilePage/ClientProfilePage";
 export { default as  WelcomeClient } from "./ClientAdmin/ClientProfilePage/WelcomeClientSection/WelcomeClient";
-
 export { default as  PaymentDetailsModal } from "./ClientAdmin/ClientUpcomingBookings/PaymentDetailsModal/PaymentDetailsModal";
 export { default as  PastPaymentDetails } from "./ClientAdmin/ClientUpcomingBookings/PaymentDetailsModal/PastPaymentDetails";
 //Re-exporting component
