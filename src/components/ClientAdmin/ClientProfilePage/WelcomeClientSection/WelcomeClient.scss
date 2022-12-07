@@ -38,13 +38,12 @@
         .messageHead{
             font-family: Butler;
             font-size: var(--twentyEight);
-            font-weight: 700;
+            font-weight: 600;
             line-height: 2rem;
         }
         
         .message{
             font-size: var(--eighteen);
-            font-weight: 500;
             line-height: 1.52rem;
             margin-bottom: .75rem;
         }
@@ -56,7 +55,6 @@
             width: 7.5rem;
             height: 2.5rem;
             font-size: var(--eighteen);
-            font-weight:600;
             background: #C5E9D3;
             color: var(--black);
             border-radius: 9px;
