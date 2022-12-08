@@ -1,0 +1,78 @@
+.clientReviewModal{
+    .dialogContent {
+        background-color: var(--white);
+        width: 90%;
+        height: 90%;
+        margin: 0 auto;
+        overflow-y: scroll;
+
+        @media screen and (min-width: 500px) {
+            border-radius: 12px;
+            width: 90%;
+            height: fit-content;
+        }
+
+        @media screen and (min-width: 768px) {
+            width: 80%;
+            height: 80%;
+        }
+
+        @media screen and (min-width: 1000px) {
+            width: 50%;
+            height: 34.7rem;
+        }
+
+        .modalHeader {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            border-radius: 10px 10px 0 0;
+            background: #f2f2f2;
+
+            h5 {
+                font-size: var(--fourty);
+
+                @media screen and (min-width: 900px) {
+                    font-size: var(--twentyFour);
+                }
+            }
+
+            .closeButton {
+                background: none;
+                border: none;
+                outline: none;
+                cursor: pointer;
+            }
+        }
+
+        
+        .modalContent {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            margin: 2rem 1rem;
+
+            @media screen and (min-width: 768px) {
+                margin: 2rem;
+            }
+
+            .modalHead{
+                display: inline-flex;
+
+                .title{
+                    font-family: var(--font-text);
+                    font-size: var(--twentyTwo);
+                    font-weight: 400;
+                }
+                
+                .clientName{
+                    font-family: var(--font-text);
+                    font-size: var(--twentyTwo);
+                    font-weight: 700;
+                    margin-left: .5rem;
+                }
+            }
+        }
+    }
+}

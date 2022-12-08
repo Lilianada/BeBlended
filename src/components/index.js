@@ -1,6 +1,7 @@
+export { default as ClientReviewModal } from "./Client/ClientReviewModal/ClientReviewModal";
+
 export { default as ReviewsOfClient } from "./ClientAdmin/ClientProfilePage/ReviewsClient/ReviewsOfClient";
 export { default as ReviewsByClient } from "./ClientAdmin/ClientProfilePage/ReviewsClient/ReviewsByClient";
-
 export { default as AboutClientSection } from "./ClientAdmin/ClientProfilePage/AboutClientSection/AboutClientSection";
 export { default as  ClientProfilePage } from "./ClientAdmin/ClientProfilePage/ClientProfilePage";
 export { default as  WelcomeClient } from "./ClientAdmin/ClientProfilePage/WelcomeClientSection/WelcomeClient";
