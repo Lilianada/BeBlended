@@ -1,3 +1,5 @@
+import { DecadeView } from "react-calendar";
+
 export const favouriteList = [
   {
     id: 1,
@@ -55,7 +57,6 @@ export const favouriteList = [
   },
 ];
 
-
 export const bookings = [
   {
     serviceName: "Box Braids",
@@ -68,7 +69,7 @@ export const bookings = [
     clientName: "Braiders Power",
     date: "August 23, 2021",
     time: "12:10pm - 3:00pm",
-  }
+  },
 ];
 
 export const pastServices = [
@@ -92,7 +93,6 @@ export const pastServices = [
   },
 ];
 
-
 export const cartItems = [
   {
     id: 1,
@@ -108,73 +108,51 @@ export const cartItems = [
 
 export const Review = [
   {
-    comment:
+    stylistcomment:
+      "Lola came right on time for her appointment and was very lovely.",
+    clientcomment:
       "Becky was very professional in doing my hair cut.. Very well manerd and also very friendly, will be going back to hair 21. Thank you for a good service 5*****",
-    name: "Sandra",
-    defaultValue: "4",
-    timeline: "24 days ago",
+    stylistName: "Braids by Becky",
+    clientName: "Sandra",
+    rating: 4.7,
+    date: "Dec 22, 2020",
+    image:
+      "https://images.unsplash.com/photo-1657130711047-522ce815a2c9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
   },
   {
-    comment:
+    stylistcomment:
+      "Lola came right on time for her appointment and was very lovely.",
+    clientcomment:
       "I would definitely revisit the salon my haircut was great. Many thanks",
-    name: "Gary",
-    defaultValue: "4",
-    timeline: "14 days ago",
+    stylistName: "Braids by Becky",
+    clientName: "Gary",
+    rating: 4.7,
+    date: "Dec 22, 2021",
+    image:
+      "https://images.unsplash.com/photo-1663402989770-4c5bd9254896?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw2N3x8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=60",
   },
   {
-    comment:
+    stylistcomment:
+      "Lola came right on time for her appointment and was very lovely.",
+    clientcomment:
       "My first time at the salon shortly after lockdown; brilliant service and very friendly atmosphere at very reasonable prices. I booked for my next appointment immediately and have recommended this salon to all my friends",
-    name: "Anonymous",
-    defaultValue: "5",
-    timeline: "11 days ago",
+    stylistName: "Braids by Becky",
+    clientName: "Anonymous",
+    rating: 4.7,
+    date: "Nov 2, 2021",
+    image:
+      "https://images.unsplash.com/photo-1657130711047-522ce815a2c9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
   },
   {
-    comment:
+    stylistcomment:
+      "Lola came right on time for her appointment and was very lovely.",
+    clientcomment:
       "Becky is friendly, competent,accomplished she is able to help and advise on a wide variety of styles and colours for your hair also giving advice on how to care for and achieve the style she achieved in the salon.",
-    name: "Sandra",
-    defaultValue: "5",
-    timeline: "1 day ago",
-  },
-  {
-    comment:
-      "Becky is friendly, competent,accomplished she is able to help and advise on a wide variety of styles and colours for your hair also giving advice on how to care for and achieve the style she achieved in the salon.",
-    name: "Sandra",
-    defaultValue: "5",
-    timeline: "1 day ago",
-  },
-  {
-    comment:
-      "Becky is friendly, competent,accomplished she is able to help and advise on a wide variety of styles and colours for your hair also giving advice on how to care for and achieve the style she achieved in the salon.",
-    name: "Sandra",
-    defaultValue: "2",
-    timeline: "1 day ago",
-  },
-  {
-    comment:
-      "Becky is friendly, competent,accomplished she is able to help and advise on a wide variety of styles and colours for your hair also giving advice on how to care for and achieve the style she achieved in the salon.",
-    name: "Sandra",
-    defaultValue: "3",
-    timeline: "1 day ago",
-  },
-  {
-    comment:
-      "Becky is friendly, competent,accomplished she is able to help and advise on a wide variety of styles and colours for your hair also giving advice on how to care for and achieve the style she achieved in the salon.",
-    name: "Sandra",
-    defaultValue: "5",
-    timeline: "1 day ago",
-  },
-  {
-    comment:
-      "Becky is friendly, competent,accomplished she is able to help and advise on a wide variety of styles and colours for your hair also giving advice on how to care for and achieve the style she achieved in the salon.",
-    name: "Sandra",
-    defaultValue: "4",
-    timeline: "1 day ago",
-  },
-  {
-    comment:
-      "Becky is friendly, competent,accomplished she is able to help and advise on a wide variety of styles and colours for your hair also giving advice on how to care for and achieve the style she achieved in the salon.",
-    name: "Sandra",
-    defaultValue: "5",
-    timeline: "1 day ago",
+    stylistName: "Braids by Becky",
+    clientName: "Sandra",
+    rating: 4.7,
+    date: "Dec 22, 2020",
+    image:
+      "https://images.unsplash.com/photo-1662859010103-61b5735968ed?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMTJ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60",
   },
 ];
