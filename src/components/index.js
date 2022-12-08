@@ -1,5 +1,7 @@
-export { default as ClientReviewModal } from "./Client/ClientReviewModal/ClientReviewModal";
 
+export { default as RateEmoji } from "./Client/ClientReviewModal/RateEmoji";
+export { default as RateCriterias } from "./Client/ClientReviewModal/RateCriterias";
+export { default as ClientReviewModal } from "./Client/ClientReviewModal/ClientReviewModal";
 export { default as ReviewsOfClient } from "./ClientAdmin/ClientProfilePage/ReviewsClient/ReviewsOfClient";
 export { default as ReviewsByClient } from "./ClientAdmin/ClientProfilePage/ReviewsClient/ReviewsByClient";
 export { default as AboutClientSection } from "./ClientAdmin/ClientProfilePage/AboutClientSection/AboutClientSection";
