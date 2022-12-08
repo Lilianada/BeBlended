@@ -13,7 +13,7 @@
         }
 
         @media screen and (min-width: 768px) {
-            width: 80%;
+            width: 36rem;
             height: 80%;
         }
 
@@ -58,19 +58,39 @@
             }
 
             .modalHead{
-                display: inline-flex;
+                display: grid;
+                place-items: center;
+                border-bottom: 1px solid #DEDDDD;
+                padding-bottom: 1rem;
 
-                .title{
+                .clientName{
                     font-family: var(--font-text);
-                    font-size: var(--twentyTwo);
+                    font-size: var(--twentyEight);
                     font-weight: 400;
                 }
                 
-                .clientName{
+                .serviceName, .date{
                     font-family: var(--font-text);
                     font-size: var(--twentyTwo);
-                    font-weight: 700;
-                    margin-left: .5rem;
+                    font-weight: 400;
+                    // margin-top: .5rem;
+                }
+            }
+
+            .modalBody{
+                display: grid;
+                place-items: center;
+                margin-top: 1rem;
+
+                .boldText{
+                    font-size: var(--eighteen);
+                    font-weight: 600;
+                }
+
+                .rateRow{
+                    display: flex;
+                    align-items: center;
+                    margin-top: 1rem;
                 }
             }
         }
