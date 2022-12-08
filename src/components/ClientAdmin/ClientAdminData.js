@@ -105,3 +105,76 @@ export const cartItems = [
     variant: "2 packs",
   },
 ];
+
+export const Review = [
+  {
+    comment:
+      "Becky was very professional in doing my hair cut.. Very well manerd and also very friendly, will be going back to hair 21. Thank you for a good service 5*****",
+    name: "Sandra",
+    defaultValue: "4",
+    timeline: "24 days ago",
+  },
+  {
+    comment:
+      "I would definitely revisit the salon my haircut was great. Many thanks",
+    name: "Gary",
+    defaultValue: "4",
+    timeline: "14 days ago",
+  },
+  {
+    comment:
+      "My first time at the salon shortly after lockdown; brilliant service and very friendly atmosphere at very reasonable prices. I booked for my next appointment immediately and have recommended this salon to all my friends",
+    name: "Anonymous",
+    defaultValue: "5",
+    timeline: "11 days ago",
+  },
+  {
+    comment:
+      "Becky is friendly, competent,accomplished she is able to help and advise on a wide variety of styles and colours for your hair also giving advice on how to care for and achieve the style she achieved in the salon.",
+    name: "Sandra",
+    defaultValue: "5",
+    timeline: "1 day ago",
+  },
+  {
+    comment:
+      "Becky is friendly, competent,accomplished she is able to help and advise on a wide variety of styles and colours for your hair also giving advice on how to care for and achieve the style she achieved in the salon.",
+    name: "Sandra",
+    defaultValue: "5",
+    timeline: "1 day ago",
+  },
+  {
+    comment:
+      "Becky is friendly, competent,accomplished she is able to help and advise on a wide variety of styles and colours for your hair also giving advice on how to care for and achieve the style she achieved in the salon.",
+    name: "Sandra",
+    defaultValue: "2",
+    timeline: "1 day ago",
+  },
+  {
+    comment:
+      "Becky is friendly, competent,accomplished she is able to help and advise on a wide variety of styles and colours for your hair also giving advice on how to care for and achieve the style she achieved in the salon.",
+    name: "Sandra",
+    defaultValue: "3",
+    timeline: "1 day ago",
+  },
+  {
+    comment:
+      "Becky is friendly, competent,accomplished she is able to help and advise on a wide variety of styles and colours for your hair also giving advice on how to care for and achieve the style she achieved in the salon.",
+    name: "Sandra",
+    defaultValue: "5",
+    timeline: "1 day ago",
+  },
+  {
+    comment:
+      "Becky is friendly, competent,accomplished she is able to help and advise on a wide variety of styles and colours for your hair also giving advice on how to care for and achieve the style she achieved in the salon.",
+    name: "Sandra",
+    defaultValue: "4",
+    timeline: "1 day ago",
+  },
+  {
+    comment:
+      "Becky is friendly, competent,accomplished she is able to help and advise on a wide variety of styles and colours for your hair also giving advice on how to care for and achieve the style she achieved in the salon.",
+    name: "Sandra",
+    defaultValue: "5",
+    timeline: "1 day ago",
+  },
+];

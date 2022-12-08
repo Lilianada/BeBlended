@@ -23,6 +23,9 @@ export default function ReviewsOfClient() {
         </p>
       </div>
       {/* REVIEWS */}
+      <div className="reviewContent">
+        
+      </div>
     </section>
   );
 }
