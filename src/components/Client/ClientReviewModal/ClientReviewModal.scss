@@ -95,7 +95,20 @@
 
                     .emoji{
                         text-align: center;
+                        cursor: pointer;
                     }
+
+                    .emojiActive{
+                        color: var(--hotPink);
+                    }
+                }
+
+                .rateCriterias{
+                    margin-top: 1rem;
+                    display: grid;
+                    grid-template-columns:  repeat(2, 150px);
+                    grid-template-rows: repeat(2, 75px);
+                    place-items: center;
                 }
             }
         }
