@@ -1,11 +1,11 @@
 import "./index.scss";
 import 'react-calendar/dist/Calendar.css';
 import {
+  Home,
+  Client,
+  OnboardingPages,
+  Stylist,
   ClientProfile,
-  // Home,
-  // Client,
-  // OnboardingPages,
-  // Stylist,
   StylistProfile,
   StylistAdminHome,
   PersonalInfo,
@@ -57,7 +57,7 @@ function App() {
       {/* <ClientLoginSecurity /> */}
       {/* <ClientPayoutInformation/> */}
       {/* <ClientBookingPage/> */}
-      <ClientProfilePage/>
+      {/* <ClientProfilePage/> */}
     </div>
   );
 }
