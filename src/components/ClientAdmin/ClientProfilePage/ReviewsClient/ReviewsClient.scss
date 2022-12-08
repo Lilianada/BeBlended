@@ -6,7 +6,10 @@
         align-items: center;
         border-bottom: 1px solid #DEDDDD;
         padding-bottom: 1rem;
-        margin-top: 1rem;
+
+        @media screen and (min-width: 768px) {
+            margin-top: 1rem;
+        }
 
         .ratingNumber{
             font-size: var(--fourty);
