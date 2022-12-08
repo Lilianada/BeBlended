@@ -1,6 +1,8 @@
 import React from "react";
 import { AiFillHome } from "react-icons/ai";
 import { FaPen } from "react-icons/fa";
+import Kinky from "../../../../assets/KinkyHair.png";
+import Coarse from "../../../../assets/CoarseHair.png";
 import "./AboutClientSection.scss";
 
 export default function AboutClientSection() {
@@ -20,7 +22,7 @@ export default function AboutClientSection() {
           <div className="details">
             <div className="rowSpan">
               <div className="detailCircle">
-
+                <img src={Kinky} alt="Hair Detail" />
               </div>
               <h5>Hair Texture</h5>
               <p>Kinky/Coily</p>
@@ -28,7 +30,7 @@ export default function AboutClientSection() {
  
             <div className="rowSpan">
               <div className="detailCircle">
-
+                <img src={Coarse} alt="Hair Detail" />
               </div>
               <h5>Hair Structure</h5>
               <p>Coarse</p>
