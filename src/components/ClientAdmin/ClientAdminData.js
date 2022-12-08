@@ -111,7 +111,7 @@ export const Review = [
     stylistcomment:
       "Lola came right on time for her appointment and was very lovely.",
     clientcomment:
-      "Becky was very professional in doing my hair cut.. Very well manerd and also very friendly, will be going back to hair 21. Thank you for a good service 5*****",
+      "Becky was very professional in doing my hair cut.. Very well manerd and also very friendly, will be going back to hair 21.",
     stylistName: "Braids by Becky",
     clientName: "Sandra",
     rating: 4.7,
@@ -135,7 +135,7 @@ export const Review = [
     stylistcomment:
       "Lola came right on time for her appointment and was very lovely.",
     clientcomment:
-      "My first time at the salon shortly after lockdown; brilliant service and very friendly atmosphere at very reasonable prices. I booked for my next appointment immediately and have recommended this salon to all my friends",
+      "My first time at the salon shortly after lockdown; brilliant service and very friendly atmosphere at very reasonable prices.",
     stylistName: "Braids by Becky",
     clientName: "Anonymous",
     rating: 4.7,
@@ -147,7 +147,7 @@ export const Review = [
     stylistcomment:
       "Lola came right on time for her appointment and was very lovely.",
     clientcomment:
-      "Becky is friendly, competent,accomplished she is able to help and advise on a wide variety of styles and colours for your hair also giving advice on how to care for and achieve the style she achieved in the salon.",
+      "Becky is friendly, competent,accomplished she is able to help and advise on a wide variety of styles and colours for your hair.",
     stylistName: "Braids by Becky",
     clientName: "Sandra",
     rating: 4.7,

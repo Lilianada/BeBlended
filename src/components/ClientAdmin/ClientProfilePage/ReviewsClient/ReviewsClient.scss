@@ -58,11 +58,11 @@
     // REVIEW
     .reviewContent {
         display: block;
-        margin: 1.5rem;
+        margin: 1.5rem 0;
 
         .reviewRow {
-            display: flex;
-            align-items: flex-start;
+            display: grid;
+            grid-template-columns: 2.375rem 1fr;
             margin-bottom: 1.5rem;
 
             .reviewColumn {
@@ -86,7 +86,7 @@
                 .stylistDetails {
                     display: flex;
                     align-items: flex-start;
-                    margin-top: 1rem;
+                    margin-top: .75rem;
 
                     .reviewerPic {
                         height: 3.125rem;
