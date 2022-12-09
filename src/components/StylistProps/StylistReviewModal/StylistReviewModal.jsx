@@ -2,10 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { motion } from "framer-motion";
 import { AiOutlineClose } from "react-icons/ai";
-import { Backdrop, RateEmoji, RateCriterias, StylistComment } from "../../../components";
+import { Backdrop, RateEmoji, RateClientCriterias, StylistComment } from "../../../components";
 import './StylistReviewModal.scss';
 
-export default function StylistReviewModal() {
+export default function StylistReviewModal({openModal, closeModal}) {
     return ReactDOM.createPortal(
       <>
         {/* {openModal ? ( */}
@@ -54,7 +54,7 @@ export default function StylistReviewModal() {
                   </div>
                   <p className="boldText">Rate your overall experience</p>
                   <RateEmoji />
-                  <RateCriterias/>
+                  <RateClientCriterias/>
                   <StylistComment/>
                 </div>
               </div>
@@ -62,6 +62,6 @@ export default function StylistReviewModal() {
           </Backdrop>
         </div>
         {/* ) : null} */}
-        </>
+        </>, document.getElementById('modal')
   );
 }

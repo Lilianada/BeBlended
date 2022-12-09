@@ -3,20 +3,20 @@ import "./ClientReviewModal.scss";
 
 export default function RateFaces() {
   const [clicked, setClicked] = useState(false);
-  const isClicked = (index) => {
+  const isClicked = () => {
     // setClicked((prev) => {
     //     return {
     //         ...prev,
     //         [index]: !prev[index]
     //     }
     // });
-    setClicked(!clicked[index])
+    setClicked(!clicked)
   };
   return (
     <div className="rateRow">
       <div
         className={`emoji ${clicked ? "emojiActive" : ""}`}
-        onClick={() => isClicked("index")}
+        onClick={(e) => isClicked(e)}
       >
         <svg
           width="47"
@@ -45,7 +45,7 @@ export default function RateFaces() {
 
       <div
         className={`emoji ${clicked ? "emojiActive" : ""}`}
-        onClick={() => isClicked("index")}
+        onClick={(e) => isClicked(e)}
       >
         <svg
           width="47"
@@ -76,7 +76,7 @@ export default function RateFaces() {
 
       <div
         className={`emoji ${clicked ? "emojiActive" : ""}`}
-        onClick={() => isClicked("index")}
+        onClick={(e) => isClicked(e)}
       >
         <svg
           width="47"
@@ -111,7 +111,7 @@ export default function RateFaces() {
 
       <div
         className={`emoji ${clicked ? "emojiActive" : ""}`}
-        onClick={() => isClicked("index")}
+        onClick={(e) => isClicked(e)}
       >
         <svg
           width="47"
@@ -143,7 +143,7 @@ export default function RateFaces() {
 
       <div
         className={`emoji ${clicked ? "emojiActive" : ""}`}
-        onClick={() => isClicked("index")}
+        onClick={(e) => isClicked(e)}
       >
         <svg
           width="47"

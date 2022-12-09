@@ -25,6 +25,7 @@ import {
   ClientBookingPage,
   ClientProfilePage,
   ClientReviewModal,
+  StylistReviewModal,
 } from "./components";
 
 
@@ -59,7 +60,8 @@ function App() {
       {/* <ClientPayoutInformation/> */}
       {/* <ClientBookingPage/> */}
       {/* <ClientProfilePage/> */}
-      <ClientReviewModal/>
+      {/* <ClientReviewModal/> */}
+      <StylistReviewModal/>
     </div>
   );
 }

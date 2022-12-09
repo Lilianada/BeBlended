@@ -1,7 +1,10 @@
-export { default as StylistComment } from "./Client/ClientReviewModal/StylistComment";
+export { default as StylistReviewModal } from "./StylistProps/StylistReviewModal/StylistReviewModal";
+export { default as RateClientCriterias } from "./StylistProps/StylistReviewModal/RateClientCriterias";
+
+export { default as StylistComment } from "./StylistProps/StylistReviewModal/StylistComment";
 export { default as ClientComment } from "./Client/ClientReviewModal/ClientComment";
 export { default as RateEmoji } from "./Client/ClientReviewModal/RateEmoji";
-export { default as RateCriterias } from "./Client/ClientReviewModal/RateCriterias";
+export { default as RateStylistCriterias } from "./Client/ClientReviewModal/RateStylistCriterias";
 export { default as ClientReviewModal } from "./Client/ClientReviewModal/ClientReviewModal";
 export { default as ReviewsOfClient } from "./ClientAdmin/ClientProfilePage/ReviewsClient/ReviewsOfClient";
 export { default as ReviewsByClient } from "./ClientAdmin/ClientProfilePage/ReviewsClient/ReviewsByClient";

@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { motion } from "framer-motion";
 import { AiOutlineClose } from "react-icons/ai";
-import { Backdrop, RateEmoji, RateCriterias, ClientComment } from "../../../components";
+import { Backdrop, RateEmoji, RateStylistCriterias, ClientComment } from "../../../components";
 import "./ClientReviewModal.scss";
 
 export default function ClientReviewModal({ openModal, closeModal }) {
@@ -47,7 +47,7 @@ export default function ClientReviewModal({ openModal, closeModal }) {
               <div className="modalBody">
                 <p className="boldText">Rate your overall experience</p>
                 <RateEmoji />
-                <RateCriterias/>
+                <RateStylistCriterias/>
                 <ClientComment/>
               </div>
             </div>
