@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import { Rating } from "react-simple-star-rating";
-
+import './StylistReviewModal.scss';
 
 export default function RateCriterias() {
     const [rating, setRating] = useState(0);

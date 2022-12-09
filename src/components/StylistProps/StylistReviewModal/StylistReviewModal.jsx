@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { motion } from "framer-motion";
 import { AiOutlineClose } from "react-icons/ai";
-import { Backdrop, RateEmoji, RateCriterias, ClientComment } from "../../../components";
+import { Backdrop, RateEmoji, RateCriterias, StylistComment } from "../../../components";
 import './StylistReviewModal.scss';
 
 export default function StylistReviewModal() {
@@ -45,10 +45,17 @@ export default function StylistReviewModal() {
                   </h5>
                 </div>
                 <div className="modalBody">
+                  <div className="">
+                    <p>Do you want to remain anonymous? </p>
+                    <select name="" className="">
+                      <option value="">No</option>
+                      <option value="">Yes</option>
+                    </select>
+                  </div>
                   <p className="boldText">Rate your overall experience</p>
                   <RateEmoji />
                   <RateCriterias/>
-                  <ClientComment/>
+                  <StylistComment/>
                 </div>
               </div>
             </motion.div>
