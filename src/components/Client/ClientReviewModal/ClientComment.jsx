@@ -15,6 +15,7 @@ export default function ClientComment() {
         <button className="activeBtn">Yes</button>
         <button className="inactiveBtn">No</button>
       </div>
+      <button className="submitBtn">Submit Review</button>
     </form>
   );
 }

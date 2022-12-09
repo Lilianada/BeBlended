@@ -1,0 +1,192 @@
+.clientReviewModal{
+    .dialogContent {
+        background-color: var(--white);
+        width: 90%;
+        height: 90%;
+        margin: 0 auto;
+        overflow-y: scroll;
+        border-radius: 9px;
+        
+        @media screen and (min-width: 500px) {
+            border-radius: 12px;
+            width: 90%;
+            height: fit-content;
+        }
+
+        @media screen and (min-width: 768px) {
+            width: 36rem;
+            height: 80%;
+        }
+
+        @media screen and (min-width: 1000px) {
+            height: 34.7rem;
+        }
+
+        .modalHeader {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            border-radius: 10px 10px 0 0;
+            background: #f2f2f2;
+
+            h5 {
+                font-size: var(--fourty);
+
+                @media screen and (min-width: 900px) {
+                    font-size: var(--twentyFour);
+                }
+            }
+
+            .closeButton {
+                background: none;
+                border: none;
+                outline: none;
+                cursor: pointer;
+            }
+        }
+
+        
+        .modalContent {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            margin: 1rem;
+
+            @media screen and (min-width: 768px) {
+                margin: 1rem 2rem;
+            }
+
+            .modalHead{
+                display: grid;
+                place-items: center;
+                border-bottom: 1px solid #DEDDDD;
+                padding-bottom: 1rem;
+
+                .stylistName{
+                    font-family: var(--font-text);
+                    font-size: var(--twentyEight);
+                    font-weight: 400;
+                }
+                
+                .serviceName, .date{
+                    font-family: var(--font-text);
+                    font-size: var(--twentyTwo);
+                    font-weight: 400;
+                }
+            }
+
+            .modalBody{
+                display: grid;
+                place-items: center;
+                margin-top: 1rem;
+
+                .boldText{
+                    font-size: var(--eighteen);
+                    font-weight: 600;
+                }
+
+                .rateRow{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 17.5rem;
+                    margin-top: .5rem;
+
+                    @media screen and (min-width: 768px) {
+                        width: 18.75rem;
+                    }
+
+                    .emoji{
+                        text-align: center;
+                        cursor: pointer;
+                    }
+
+                    .emojiActive{
+                        color: var(--hotPink);
+                    }
+                }
+
+                .rateCriterias{
+                    margin-top: 1rem;
+                    display: grid;
+                    grid-template-columns:  repeat(2, 150px);
+                    grid-template-rows: repeat(2, 75px);
+                    place-items: center;
+                    
+                    @media screen and (min-width: 768px) {
+                        grid-template-columns:  repeat(2, 175px);
+                    }
+                }
+
+                .commentSection{
+                    display: grid;
+                    place-items: center;
+                    width: 100%;
+                    margin-top: 1rem;
+
+                    @media screen and (min-width: 768px) {
+                        width: 100%;
+                    }
+
+                    .commentArea{
+                        width: 100%;
+                        height: 7.625rem;
+                        border: 1px solid #BEBEBE;
+                        border-radius: 5px;
+                        padding: 1rem;
+                        outline: none;
+                        resize: none;
+                        color: var(--black);
+                        margin: 1rem auto 1.5rem;
+
+                        @media screen and (min-width: 768px) {
+                            width: 27.5rem;
+                        }
+                    }
+
+                    .buttonRow{
+                        margin-top: .75rem;
+
+                        .activeBtn, .inactiveBtn{
+                            width: 6.25rem;
+                            height: 2.5rem;
+                            font-size: var(--sixteen);
+                            font-weight: 500;
+                            border: none;
+                            border-radius: 9px;
+
+                            &:hover{
+                                transform: scale(.9, .9);
+                            }
+                        }
+    
+                        .activeBtn{
+                            margin-right: .75rem;
+                        }
+                    }
+
+                    .submitBtn{
+                        width: 8.75rem;
+                        height: 2.5rem;
+                        font-size: var(--sixteen);
+                        font-weight: 500;
+                        text-align: center;
+                        border: none;
+                        border-radius: 9px;
+                        background: var(--black);
+                        color: var(--white);
+                        padding: .65rem;
+                        margin-top: 3rem;
+                        margin-right: 0;
+                        margin-left: auto;
+
+                        &:hover{
+                            transform: scale(.9, .9);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
