@@ -106,9 +106,46 @@
                 .rateCriterias{
                     margin-top: 1rem;
                     display: grid;
-                    grid-template-columns:  repeat(2, 150px);
+                    grid-template-columns:  repeat(2, 175px);
                     grid-template-rows: repeat(2, 75px);
                     place-items: center;
+                }
+
+                .commentSection{
+                    margin-top: 1rem;
+                    display: grid;
+                    place-items: center;
+
+                    .commentArea{
+                        width: 27.5rem;
+                        height: 7.625rem;
+                        border: 1px solid #BEBEBE;
+                        border-radius: 5px;
+                        padding: 1rem;
+                        outline: none;
+                        resize: none;
+                        color: var(--black);
+                        margin: 1rem auto;
+                    }
+
+                    .buttonRow{
+                        margin-top: .5rem;
+                        
+                        .activeBtn, .inactiveBtn{
+                            width: 6.25rem;
+                            height: 2.5rem;
+                            font-size: var(--sixteen);
+                            font-weight: 500;
+                            border: none;
+                            border-radius: 9px;
+                            cursor: pointer;
+                        }
+    
+                        .activeBtn{
+                            margin-right: .75rem;
+                        }
+                    }
+
                 }
             }
         }

@@ -1,4 +1,4 @@
-
+export { default as ClientComment } from "./Client/ClientReviewModal/ClientComment";
 export { default as RateEmoji } from "./Client/ClientReviewModal/RateEmoji";
 export { default as RateCriterias } from "./Client/ClientReviewModal/RateCriterias";
 export { default as ClientReviewModal } from "./Client/ClientReviewModal/ClientReviewModal";
