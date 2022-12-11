@@ -50,8 +50,8 @@ function App() {
       {/* <LoginSecurity/> */}
       {/* <PayoutInfo /> */}
       {/* <AdminClientList /> */}
-      <AdminClientProfile/>
-      {/* <StylistFinancePage /> */}
+      {/* <AdminClientProfile/> */}
+      <StylistFinancePage />
 
       {/* <ClientAdminHome /> */}
       {/* <FavouritesPage /> */}

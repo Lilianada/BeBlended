@@ -102,7 +102,7 @@
             align-items: center;
             padding: 5rem 1rem 6rem;
             margin-bottom: 2rem;
-
+            
             @media screen and (min-width: 500px) {
                 width: 70%;
             }
@@ -215,10 +215,13 @@
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 gap: 1rem;
-                margin: 2rem;
+                margin: 1rem;
+                padding-bottom: 1rem;
+                border-bottom: 1px solid #dedede;
                 
                 @media screen and (min-width: 1000px) {
                     margin: 0rem;
+                    border: none;
                 }
 
                 .flexItem{
@@ -234,9 +237,10 @@
                     }
 
                     h3{
+                        font-family: var(--font-text);
                         font-size: var(--fourty);
                         font-weight: 400;
-                        line-height: 2rem;
+                        line-height: 2.5rem;
                         letter-spacing: 0em;
                         text-align: center;  
                     }
@@ -280,7 +284,7 @@
                 display: flex;
                 flex-direction: column;
                 margin: 1rem;
-                width: 85%;
+                width: 100vw;
                 overflow: scroll;
                 margin: auto;
 
@@ -296,10 +300,16 @@
                     font-weight: 500;
                     line-height: 1.875rem;
                     text-align: left;
+                    margin-left: 1rem;
+
+                    @media screen and (min-width: 768px) {
+                        margin-bottom: 1rem;
+                    }
                 }
 
                 .tableBody{
                     margin: 2rem auto 6rem;
+                    width: 42.5rem;
                     
                     @media screen and (min-width: 500px) and (max-width: 768px) {
                         margin-top: 1rem;
@@ -359,11 +369,10 @@
                                 border-radius: 5px;
                                 text-align: center;
                                 height: 2rem;
-                                margin: 0 .5rem;
                                 color: var(--black);
                                 display: flex;
                                 align-items: center;
-                                justify-content: space-evenly;
+                                padding: 0 1rem;
                                 font-size: var(--eighteen);
                                 font-weight:600;
                                 width: 9rem;
@@ -377,9 +386,9 @@
                                 height: 2rem;
                                 display: flex;
                                 align-items: center;
-                                justify-content: space-evenly;
                                 font-size: var(--eighteen);
                                 font-weight:600;
+                                padding: 0 1rem;
                                 width: 9rem;
                             }
                         }

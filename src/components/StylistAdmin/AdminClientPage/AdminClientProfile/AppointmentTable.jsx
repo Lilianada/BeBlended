@@ -10,7 +10,7 @@ export default function AppointmentTable({ data }) {
     <section className="tableBody">
         <div className="tableHead">
             <p>Date</p>
-            <p>Appointment</p>
+            <p>Appointment ID</p>
             <p>Amount</p>
             <p>Status</p>
         </div>
@@ -22,20 +22,20 @@ export default function AppointmentTable({ data }) {
                 <p className="tableData">{val.id}</p>
                 <p className="tableData">${val.amount}</p>
                 {
-                        data.status === "Completed" ? (
+                        val.status === "Completed" ? (
                             <p
                                 className="completedStatus"
                                 >
-                                    <BsCheckCircleFill />
-                                { data.status }
+                                    <BsCheckCircleFill size={16} style={{marginRight: ".5rem"}} />
+                                { val.status }
                             </p>
                         ) :
                         (
                             <p
                                 className="cancelledStatus"
                                 >
-                                    <MdCancel />
-                                { data.status }
+                                    <MdCancel size={20} style={{marginRight: ".5rem"}} />
+                                { val.status }
                             </p>
                         )
                     }

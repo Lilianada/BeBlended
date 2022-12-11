@@ -41,7 +41,7 @@ export default function TransactionSection({ data }) {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{
                 duration: 0.8,
-                delay: 0.5,
+                delay: 0.25,
                 ease: [0, 0.71, 0.2, 1.01],
                 }}
                 exit="exit"
@@ -49,27 +49,27 @@ export default function TransactionSection({ data }) {
               <label htmlFor="filter" className="filterWrap">
                 <input type="radio" name="filter-radio" className="" />
                 <div className="radioButton"></div>
-                last day
+                Last day
               </label>
               <label htmlFor="filter" className="filterWrap">
                 <input type="radio" name="filter-radio" className="" />
                 <div className="radioButton"></div>
-                last 15 days
+                Last 15 days
               </label>
               <label htmlFor="filter" className="filterWrap">
                 <input type="radio" name="filter-radio" className="" />
                 <div className="radioButton"></div>
-                last 30 days
+                Last 30 days
               </label>
               <label htmlFor="filter" className="filterWrap">
                 <input type="radio" name="filter-radio" className="" />
                 <div className="radioButton"></div>
-                last quater
+                Last quarter
               </label>
               <label htmlFor="filter" className="filterWrap">
                 <input type="radio" name="filter-radio" className="" />
                 <div className="radioButton"></div>
-                last year
+                Last year
               </label>
             </motion.div>
           )}
@@ -79,7 +79,7 @@ export default function TransactionSection({ data }) {
         <div className="tableHead">
           <p>Date</p>
           <p>Service</p>
-          <p>Appointment Id</p>
+          <p>Appointment ID</p>
           <p>Amount</p>
           <p>Status</p>
         </div>
@@ -93,12 +93,12 @@ export default function TransactionSection({ data }) {
                 <p className="tableData">${data.amount}</p>
                 {data.status === "Completed" ? (
                   <p className="completedStatus">
-                    <BsCheckCircleFill />
+                    <BsCheckCircleFill size={18} />
                     {data.status}
                   </p>
                 ) : (
                   <p className="cancelledStatus">
-                    <MdCancel />
+                    <MdCancel size={20} />
                     {data.status}
                   </p>
                 )}
