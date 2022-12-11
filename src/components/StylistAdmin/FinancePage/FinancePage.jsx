@@ -6,13 +6,13 @@ import { GrPrevious } from "react-icons/gr";
 import { tableData } from "../AdminData";
 import "./FinancePage.scss";
 
-export default function AdminFinancePage() {
+export default function StylistFinancePage() {
     return (
-        <main className="mainWrapper adminFinance_Page">
+        <main className="mainWrapper stylistFinance_Page">
             <StylistAdminHeader />
 
             <div className="wd_80">
-                <div className="adminFinance_head">
+                <div className="stylistFinance_head">
                     <button className="previousButton">
                         <GrPrevious style={{ marginRight: ".5rem" }} fill="#707070" />
                         <p>Back</p>

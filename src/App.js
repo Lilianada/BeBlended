@@ -45,7 +45,7 @@ function App() {
       
       {/* <ListingPage/> */}
 
-      {/* <StylistAdminHome /> */}
+      <StylistAdminHome />
       {/* <PersonalInfo /> */}
       {/* <LoginSecurity/> */}
       {/* <PayoutInfo /> */}
@@ -61,7 +61,7 @@ function App() {
       {/* <ClientBookingPage/> */}
       {/* <ClientProfilePage/> */}
       {/* <ClientReviewModal/> */}
-      <StylistReviewModal/>
+      {/* <StylistReviewModal/> */}
     </div>
   );
 }

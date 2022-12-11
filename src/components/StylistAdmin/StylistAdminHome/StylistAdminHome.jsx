@@ -19,7 +19,7 @@ export default function StylistAdminHome() {
       <div className="adminHead_Text">
         <h5>Your Account</h5>
         <p className="stylistName">
-          <strong>Braids by Becky</strong> - Becky Jones{" "}
+          <strong>Braids by Becky</strong> - Becky Jones
         </p>
       </div>
 
@@ -49,7 +49,7 @@ export default function StylistAdminHome() {
         <div className="menuItem">
           <img src={Finances} alt="Menu Icon" className="menuIcon" />
           <div className="menuName">
-            <Link to="/finances" className="menuLink" >Finances</Link>
+            <Link to="/stylist-finances" className="menuLink" >Finances</Link>
             <GrNext fontWeight={700} size={14} />
           </div>
           <p className="menuInfo">
@@ -60,7 +60,7 @@ export default function StylistAdminHome() {
         <div className="menuItem">
           <img src={Clients} alt="Menu Icon" className="menuIcon" />
           <div className="menuName">
-            <Link to="/clinets" className="menuLink" >Clients</Link>
+            <Link to="/clients" className="menuLink" >Clients</Link>
             <GrNext fontWeight={700} size={14} />
           </div>
           <p className="menuInfo">

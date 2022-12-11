@@ -28,7 +28,7 @@ export { default as FavouriteCards } from "./ClientAdmin/FavouritesPage/Favourit
 export { default as FavouritesPage } from "./ClientAdmin/FavouritesPage/FavouritesPage";
 export { default as ClientAdminHeader } from "./ClientAdmin/ClientAdminHeader/ClientAdminHeader";
 export { default as ClientAdminHome } from "./ClientAdmin/ClientAdminHome/ClientAdminHome";
-export { default as AdminFinancePage } from "./StylistAdmin/FinancePage/FinancePage";
+export { default as StylistFinancePage } from "./StylistAdmin/FinancePage/FinancePage";
 export { default as TransactionSection } from "./StylistAdmin/FinancePage/TransactionSection";
 export { default as AppointmentTable } from "./StylistAdmin/AdminClientPage/AdminClientProfile/AppointmentTable";
 export { default as AdminClientProfile } from "./StylistAdmin/AdminClientPage/AdminClientProfile/AdminClientProfile";
