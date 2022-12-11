@@ -16,7 +16,7 @@ import {
   PayoutInfo,
   AdminClientList,
   AdminClientProfile,
-  AdminFinancePage,
+  StylistFinancePage,
   ClientAdminHome,
   FavouritesPage,
   ClientPersonalInfo,
@@ -46,12 +46,12 @@ function App() {
       {/* <ListingPage/> */}
 
       {/* <StylistAdminHome /> */}
-      <PersonalInfo />
+      {/* <PersonalInfo /> */}
       {/* <LoginSecurity/> */}
       {/* <PayoutInfo /> */}
       {/* <AdminClientList /> */}
-      {/* <AdminClientProfile/> */}
-      {/* <AdminFinancePage /> */}
+      <AdminClientProfile/>
+      {/* <StylistFinancePage /> */}
 
       {/* <ClientAdminHome /> */}
       {/* <FavouritesPage /> */}
