@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import App from "../App";
 import {
-  AdminFinancePage,
+  AdminClientList,
   BookingPage,
   BusinessHour,
   BusinessModal,
@@ -18,6 +18,7 @@ import {
   OnboardClient,
   OnboardingStylistIntro,
   OnboardStylistForm,
+  PayoutInfo,
   PersonalInfo,
   StepFiveClient,
   StepFourClient,
@@ -27,6 +28,7 @@ import {
   StepTwoStylist,
   Stylist,
   StylistConfirmationAdvanced,
+  StylistFinancePage,
 } from "../components";
 import ReschedulePage from "../components/ClientBookingPage/ReschedulePage/ReschedulePage";
 
@@ -66,11 +68,13 @@ function RoutedPages() {
           <Route path="/reschedule-appointment" element={<ReschedulePage/>} />
           <Route path="/manage-bookings" element={<ManageBookings/>} />
         </Route>
-      {/* </Route> */}
 
       <Route>
+      {/* Stylist Admin */}
         <Route path="/personal-information" element={<PersonalInfo/>} />
-        <Route path="/stylist-finances" element={<AdminFinancePage/>} />
+        <Route path="/stylist-finances" element={<StylistFinancePage/>} />
+        <Route path="/clients-list" element={<AdminClientList/>} />
+        <Route path="/payout-info" element={<PayoutInfo/>} />
       </Route>
     </Routes>
   );

@@ -60,7 +60,7 @@ export default function StylistAdminHome() {
         <div className="menuItem">
           <img src={Clients} alt="Menu Icon" className="menuIcon" />
           <div className="menuName">
-            <Link to="/clients" className="menuLink" >Clients</Link>
+            <Link to="/clients-list" className="menuLink" >Clients</Link>
             <GrNext fontWeight={700} size={14} />
           </div>
           <p className="menuInfo">

@@ -45,10 +45,10 @@ function App() {
       
       {/* <ListingPage/> */}
 
-      <StylistAdminHome />
+      {/* <StylistAdminHome /> */}
       {/* <PersonalInfo /> */}
       {/* <LoginSecurity/> */}
-      {/* <PayoutInfo /> */}
+      <PayoutInfo />
       {/* <AdminClientList /> */}
       {/* <AdminClientProfile/> */}
       {/* <AdminFinancePage /> */}
