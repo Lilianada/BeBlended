@@ -71,7 +71,7 @@ export default function LoginSecurity() {
                 type="password"
                 className="inputField"
                 placeholder="********"
-                required
+                disabled={true}
               />
               <button
                 className="deactivate"

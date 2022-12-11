@@ -10,6 +10,12 @@ import {
 import "./PersonalInfo.scss";
 
 export default function Personalnfo() {
+  const [isEditing, setEdit] = useState(true);
+  const handleEdit = (e) => {
+    e.preventDefault();
+    setEdit(!isEditing);
+  };
+
   const [openModal, setOpenModal] = useState({
     govId: false,
     stylistLicence: false,
@@ -47,25 +53,40 @@ export default function Personalnfo() {
             <div className="formWrap">
               <label htmlFor="First-Name" className="inputWrap">
                 <p>First name*</p>
-                <button className="editBtn">Edit</button>
+                <button
+                  className={`editBtn ${!isEditing ? "edit" : "editBtn"}`}
+                  onClick={handleEdit}
+                >
+                  Edit
+                </button>
               </label>
-              <input type="text" className="inputField" />
+              <input type="text" className="inputField" disabled={isEditing} />
             </div>
 
             <div className="formWrap">
               <label htmlFor="Last-Name" className="inputWrap">
                 <p>Last name*</p>
-                <button className="editBtn">Edit</button>
+                <button
+                  className={`editBtn ${!isEditing ? "edit" : "editBtn"}`}
+                  onClick={handleEdit}
+                >
+                  Edit
+                </button>
               </label>
-              <input type="text" className="inputField" />
+              <input type="text" className="inputField" disabled={isEditing} />
             </div>
 
             <div className="formWrap">
               <label htmlFor="Email" className="inputWrap">
                 <p>Email address*</p>
-                <button className="editBtn">Edit</button>
+                <button
+                  className={`editBtn ${!isEditing ? "edit" : "editBtn"}`}
+                  onClick={handleEdit}
+                >
+                  Edit
+                </button>
               </label>
-              <input type="text" className="inputField" />
+              <input type="text" className="inputField" disabled={isEditing} />
             </div>
 
             <div className="formWrap">
@@ -91,6 +112,7 @@ export default function Personalnfo() {
                 type="text"
                 className="inputField"
                 placeholder="Provided"
+                disabled={true}
               />
             </div>
 
@@ -120,6 +142,7 @@ export default function Personalnfo() {
                 type="text"
                 className="inputField"
                 placeholder="Not Provided"
+                disabled={true}
               />
             </div>
 

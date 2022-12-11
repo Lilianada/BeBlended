@@ -46,9 +46,9 @@ function App() {
       {/* <ListingPage/> */}
 
       {/* <StylistAdminHome /> */}
-      {/* <PersonalInfo /> */}
+      <PersonalInfo />
       {/* <LoginSecurity/> */}
-      <PayoutInfo />
+      {/* <PayoutInfo /> */}
       {/* <AdminClientList /> */}
       {/* <AdminClientProfile/> */}
       {/* <AdminFinancePage /> */}
