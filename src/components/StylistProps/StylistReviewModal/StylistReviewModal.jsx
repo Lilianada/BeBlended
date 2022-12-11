@@ -45,9 +45,9 @@ export default function StylistReviewModal({openModal, closeModal}) {
                   </h5>
                 </div>
                 <div className="modalBody">
-                  <div className="">
+                  <div className="row">
                     <p>Do you want to remain anonymous? </p>
-                    <select name="" className="">
+                    <select name="" className="selectOption">
                       <option value="">No</option>
                       <option value="">Yes</option>
                     </select>

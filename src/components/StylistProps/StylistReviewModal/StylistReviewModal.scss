@@ -64,9 +64,13 @@
                 padding-bottom: 1rem;
 
                 .stylistName{
+                    font-size: var(--eighteen);
                     font-family: var(--font-text);
-                    font-size: var(--twentyEight);
                     font-weight: 400;
+
+                    @media screen and (min-width: 768px) {
+                        font-size: var(--twentyEight);
+                    }
                 }
                 
                 .serviceName, .date{
@@ -84,6 +88,17 @@
                 .boldText{
                     font-size: var(--eighteen);
                     font-weight: 600;
+                }
+
+                .row{
+                    display: flex;
+                    margin-bottom: 1rem;
+
+                    .selectOption{
+                        margin-left: 1rem;
+                        border: 1px solid #E0E0E0;
+                        width: 3.75rem;
+                    }
                 }
 
                 .rateRow{
