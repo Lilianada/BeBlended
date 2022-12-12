@@ -9,6 +9,28 @@
         margin-top: 0.5rem;
         border-bottom: 1px solid #DEDDDD;
         padding-bottom: 1rem;
+
+        .inputField {
+            font-family: var(--font-text);
+            font-size: var(--sixteen);
+            outline: none;
+            border: 0;
+            padding: 0.45rem 0;
+            margin-bottom: 0.5rem;
+            background: var(--white);
+            color: var(--black);
+
+            &::placeholder {
+                color: #bebebe;
+            }
+        }
+
+        .editBtn{
+            outline: none;
+            border: none;
+            background: none;
+            color: var(--black);
+        }
     }    
 
     .hairDetails{

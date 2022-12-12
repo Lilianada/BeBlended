@@ -58,7 +58,10 @@
     // REVIEW
     .reviewContent {
         display: block;
-        margin: 1.5rem 0;
+        margin: 1.5rem 0;        
+        max-height: 300px;
+        overflow-y: scroll;
+
 
         .reviewRow {
             display: grid;
