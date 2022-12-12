@@ -81,7 +81,7 @@
                 color: #707070;
             }
         }
-
+        
         .favouriteCards {
             display: flex;
             gap: 1rem;
@@ -115,18 +115,19 @@
                     width: 17rem;
                     height: 15.875rem;
                 }
-
+                
                 .alignedLeft{
                     display: grid;
                     grid-template-columns: 90% 10%;
                     justify-content: space-between;
                     width: 100%;
-
+                    
                     .favouriteImg {
                         width: 6rem;
                         height: 6rem;
                         border: 1px solid #f2e8f1;
                         border-radius: 50%;
+                        object-fit: cover;
                         margin: 0rem auto .75rem;
                     }
 

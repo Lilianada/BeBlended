@@ -1,16 +1,26 @@
-import React from "react";
+import React, {useState} from "react";
 import { GrNext, GrPrevious } from "react-icons/gr";
 import { ClientAdminHeader, BottomNavClient } from "../../../components";
 import "../../StylistAdmin/PersonalnfoPage/PersonalInfo.scss";
 
 export default function ClientPersonalInfo() {
+  const [isEditing, setEdit] = useState(true);
+  const handleEdit = (e) => {
+    e.preventDefault();
+    setEdit(!isEditing);
+  };
+
   return (
     <main className="mainWrapper personalInfo_page">
       <ClientAdminHeader />
 
       <div className="wd_90">
         <div className="backBtn">
-        <GrPrevious style={{ marginRight: ".35rem" }} fill="#707070" stroke-opacity={0.5}/>
+          <GrPrevious
+            style={{ marginRight: ".35rem" }}
+            fill="#707070"
+            stroke-opacity={0.5}
+          />
           <p>Back</p>
         </div>
 
@@ -27,25 +37,40 @@ export default function ClientPersonalInfo() {
             <div className="formWrap">
               <label htmlFor="First-Name" className="inputWrap">
                 <p>First name*</p>
-                <button className="editBtn">Edit</button>
+                <button
+                  className={`editBtn ${!isEditing ? "edit" : "editBtn"}`}
+                  onClick={handleEdit}
+                >
+                  Edit
+                </button>
               </label>
-              <input type="text" className="inputField" />
+              <input type="text" className="inputField" disabled={isEditing} />
             </div>
 
             <div className="formWrap">
               <label htmlFor="Last-Name" className="inputWrap">
                 <p>Last name*</p>
-                <button className="editBtn">Edit</button>
+                <button
+                  className={`editBtn ${!isEditing ? "edit" : "editBtn"}`}
+                  onClick={handleEdit}
+                >
+                  Edit
+                </button>
               </label>
-              <input type="text" className="inputField" />
+              <input type="text" className="inputField" disabled={isEditing} />
             </div>
 
             <div className="formWrap">
               <label htmlFor="Email" className="inputWrap">
                 <p>Email address*</p>
-                <button className="editBtn">Edit</button>
+                <button
+                  className={`editBtn ${!isEditing ? "edit" : "editBtn"}`}
+                  onClick={handleEdit}
+                >
+                  Edit
+                </button>
               </label>
-              <input type="text" className="inputField" />
+              <input type="text" className="inputField" disabled={isEditing} />
             </div>
 
             <div className="formWrap">
@@ -56,6 +81,7 @@ export default function ClientPersonalInfo() {
               <input
                 type="text"
                 className="inputField"
+                disabled={isEditing}
                 placeholder="Not Provided"
               />
             </div>

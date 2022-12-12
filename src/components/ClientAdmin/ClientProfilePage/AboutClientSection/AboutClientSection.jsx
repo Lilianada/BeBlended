@@ -20,6 +20,7 @@ export default function AboutClientSection() {
         <div className="hairDetails">
           <div className="aboutHead">Hair Details</div>
           <div className="details">
+            {/* This will show up based on what the user picks in the onboarding process */}
             <div className="rowSpan">
               <div className="detailCircle">
                 <img src={Kinky} alt="Hair Detail" />

@@ -33,7 +33,7 @@ export default function ClientAdminHome() {
         </div>
 
         <div className="menuItem">
-          <IoCalendarClearOutline className="menuIcon" />
+          <IoCalendarClearOutline stroke="#893583" className="menuIcon" />
           <div className="menuName">
             <Link to="/business-profile" className="menuLink">
               Bookings
@@ -83,7 +83,7 @@ export default function ClientAdminHome() {
         <div className="logoutItem">
           <div className="menuName">
             <Link to="/logout" className="menuLink">
-              Logout.
+              Logout
             </Link>
           </div>
         </div>
