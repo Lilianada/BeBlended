@@ -1,7 +1,7 @@
 import { AnimatePresence } from "framer-motion";
 import React, {useState} from "react";
 import PicPlaceholder from "../../../../assets/Admin-Icons/Beblended-head.svg";
-import {ProfilePicture} from "../../../../components";
+import {ClientProfilePic} from "../../../../components";
 import './WelcomeClient.scss';
 
 export default function WelcomeClient() {
@@ -25,7 +25,7 @@ export default function WelcomeClient() {
             onExitComplete={() => null}
           >
             {openModal && (
-              <ProfilePicture
+              <ClientProfilePic
                 openModal={openModal}
                 closeModal={handleModal}
               />

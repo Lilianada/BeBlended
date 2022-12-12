@@ -1,10 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { motion } from "framer-motion";
-import "../UploadPhotoModal/UploadPhoto.scss";
+import "../../../StylistProfilePage/StylistProfileModals/UploadPhotoModal/UploadPhoto.scss";
 import { AiOutlineClose } from "react-icons/ai";
-import { Backdrop } from "../../../../components";
-import DropFile from "../DropBoxFile/DropFile";
+import { Backdrop, DropFile } from "../../../../components";
 
 export default function ClientProfilePic({ openModal, closeModal }) {
     return ReactDOM.createPortal(

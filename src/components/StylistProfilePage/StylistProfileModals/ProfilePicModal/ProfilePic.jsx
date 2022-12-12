@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { motion } from "framer-motion";
 import "../UploadPhotoModal/UploadPhoto.scss";
 import { AiOutlineClose } from "react-icons/ai";
-import { Backdrop, DropFile } from "../../../../components";g
+import { Backdrop, DropFile } from "../../../../components";
 
 function ProfilePicture({ openModal, closeModal }) {
   return ReactDOM.createPortal(

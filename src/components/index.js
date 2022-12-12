@@ -1,6 +1,7 @@
+export {default as  ClientProfilePic} from "./ClientAdmin/ClientProfilePage/WelcomeClientSection/ClientProfilePic";
+
 export { default as StylistReviewModal } from "./StylistProps/StylistReviewModal/StylistReviewModal";
 export { default as RateClientCriterias } from "./StylistProps/StylistReviewModal/RateClientCriterias";
-
 export { default as StylistComment } from "./StylistProps/StylistReviewModal/StylistComment";
 export { default as ClientComment } from "./Client/ClientReviewModal/ClientComment";
 export { default as RateEmoji } from "./Client/ClientReviewModal/RateEmoji";
