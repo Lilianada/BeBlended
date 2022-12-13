@@ -5,7 +5,7 @@ import AdminVector from "../../../assets/Admin-Icons/AdminVector.svg";
 import Beblended from "../../../assets/Admin-Icons/Beblended-head.svg";
 import "/LoginPage.scss";
 
-export default function LoginPage() {
+export default function BeblendedLogin() {
   return (
     <main className="mainWrapper beblendedLogin">
       <img src={TopBlob} alt="Blob" />

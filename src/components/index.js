@@ -1,5 +1,6 @@
-export {default as  ClientProfilePic} from "./ClientAdmin/ClientProfilePage/WelcomeClientSection/ClientProfilePic";
+export { default as  BeblendedLogin } from "./BeblendedAdmin/BeblendedLogin/BeblendedLogin";
 
+export {default as  ClientProfilePic} from "./ClientAdmin/ClientProfilePage/WelcomeClientSection/ClientProfilePic";
 export { default as StylistReviewModal } from "./StylistProps/StylistReviewModal/StylistReviewModal";
 export { default as RateClientCriterias } from "./StylistProps/StylistReviewModal/RateClientCriterias";
 export { default as StylistComment } from "./StylistProps/StylistReviewModal/StylistComment";
