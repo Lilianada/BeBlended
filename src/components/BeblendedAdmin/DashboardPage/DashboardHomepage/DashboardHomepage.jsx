@@ -1,6 +1,7 @@
 import React from "react";
 import Logo from "../../../assets/logo-black.svg";
 import './DashboardHomepage.scss';
+import {DashboardMenu} from "../../../../components";
 
 export default function DashboardHomepage() {
   return (
@@ -11,7 +12,9 @@ export default function DashboardHomepage() {
         </header>
 
         <div className="dashboardGrid">
-            <div className="dashboardMenu"></div>
+            <div className="dashboardMenu">
+                <DashboardMenu/>
+            </div>
             <div className="dashboard"></div>
         </div>
     </main>

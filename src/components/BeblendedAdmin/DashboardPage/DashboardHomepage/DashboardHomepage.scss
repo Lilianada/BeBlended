@@ -10,5 +10,18 @@
         display: grid;
         grid-template-columns: 30% 1fr;
         grid-gap: 2rem;
+
+        .dashboardMenu{
+
+            .menuHeader{
+                display: flex;
+                align-items: center;
+                margin: 2rem;
+
+                .menuHead_Txt{
+                    display: block;
+                }
+            }
+        }
     }
 }

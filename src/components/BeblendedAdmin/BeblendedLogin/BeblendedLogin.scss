@@ -22,7 +22,6 @@
         display: grid;
         place-items: center;
         margin-top: 3rem;
-        margin-bottom: 1rem;
 
         .headText{
             font-family: var(--font-text);
@@ -89,7 +88,6 @@
             color: var(--white);
             font-size: var(--sixteen);
             font-weight: 500;
-            margin-top: 1rem;
             outline: none;
         }
     }

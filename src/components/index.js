@@ -1,5 +1,7 @@
-export { default as  BeblendedLogin } from "./BeblendedAdmin/BeblendedLogin/BeblendedLogin";
+export { default as  DashboardHomepage } from "./BeblendedAdmin/DashboardPage/DashboardHomepage/DashboardHomepage";
+export { default as  DashboardMenu } from "./BeblendedAdmin/DashboardPage/DashboardHomepage/DashboardMenu";
 
+export { default as  BeblendedLogin } from "./BeblendedAdmin/BeblendedLogin/BeblendedLogin";
 export {default as  ClientProfilePic} from "./ClientAdmin/ClientProfilePage/WelcomeClientSection/ClientProfilePic";
 export { default as StylistReviewModal } from "./StylistProps/StylistReviewModal/StylistReviewModal";
 export { default as RateClientCriterias } from "./StylistProps/StylistReviewModal/RateClientCriterias";
