@@ -1,23 +1,50 @@
 .beblendedLogin{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: var(--white);
+
     .beblendedHeader{
         background: #FCFCFC;
         padding: 2rem;
         border-bottom: 1px solid #EAEAEA;
     }
 
+    .topBlob{
+        position: absolute;
+        right: 0;
+        top: 6rem;
+    }
+
     .formhead{
         display: grid;
         place-items: center;
+        margin-top: 3rem;
+        margin-bottom: 1.5rem;
+
+        .headText{
+            font-family: var(--font-text);
+            font-size: var(--twentyTwo);
+            font-weight: 600;
+            text-align: center;
+        }
     }
 
     .loginForm{
+        margin: auto;
+
         .formWrap{
             margin-bottom: 1rem;
+            display: flex;
+            flex-direction: column;
+            position: relative;
 
             .formLabel{
                 font-size: var(--sixteen);
                 color: var(--black);
-                margin-top: .75rem;
+                margin-bottom: .75rem;
                 line-height: 1.25rem;
             }
 
@@ -30,11 +57,24 @@
                 font-size: var(--sixteen);   
                 padding: .5rem;  
                 outline: none;
+                position: relative;
                 
                 &::placeholder{
                     font-size: var(--sixteen);
                     color: var(--black);
                 }
+
+            }
+
+            .showBtn{
+                position: absolute;
+                top: 3.45rem;
+                right: 1rem;
+                background: none;
+                outline: none;
+                border: none;
+                color: var(--black);
+                font-size: var(--sixteen);
             }
         }
 

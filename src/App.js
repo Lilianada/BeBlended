@@ -26,6 +26,7 @@ import {
   ClientProfilePage,
   ClientReviewModal,
   StylistReviewModal,
+  BeblendedLogin,
 } from "./components";
 
 
@@ -62,6 +63,8 @@ function App() {
       {/* <ClientProfilePage/> */}
       {/* <ClientReviewModal/> */}
       {/* <StylistReviewModal/> */}
+
+      <BeblendedLogin/>
     </div>
   );
 }

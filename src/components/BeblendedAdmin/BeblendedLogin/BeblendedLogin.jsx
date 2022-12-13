@@ -1,17 +1,22 @@
 import React from "react";
 import Logo from "../../../assets/logo-black.svg";
 import TopBlob from "../../../assets/TopBlob2.svg";
-import AdminVector from "../../../assets/Admin-Icons/AdminVector.svg";
+import AdminVector from "../../../assets/AdminVector.svg";
 import Beblended from "../../../assets/Admin-Icons/Beblended-head.svg";
-import "/LoginPage.scss";
+import "./BeblendedLogin.scss";
 
 export default function BeblendedLogin() {
+  const [show, setShow] = React.useState(false);
+  const isShow = () => {
+    setShow(!show);
+  }
+
   return (
-    <main className="mainWrapper beblendedLogin">
-      <img src={TopBlob} alt="Blob" />
+    <main className="beblendedLogin">
       <header className="beblendedHeader">
-        <img src={Logo} alt="Logo" />
+        <img src={Logo} alt="Logo"/>
       </header>
+      <img src={TopBlob} alt="Blob"  className="topBlob" />
       <div className="formhead">
         <img src={Beblended} alt="Beblended head" />
         <h5 className="headText">
@@ -35,7 +40,7 @@ export default function BeblendedLogin() {
             placeholder="xxxxxxxxx"
             required
           />
-          <p>Show</p>
+          <button className="showBtn">Show</button>
         </div>
         <button className="submitBtn">Login</button>
       </form>
