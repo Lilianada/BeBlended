@@ -51,7 +51,7 @@ function App() {
       {/* <PayoutInfo /> */}
       {/* <AdminClientList /> */}
       {/* <AdminClientProfile/> */}
-      <StylistFinancePage />
+      {/* <StylistFinancePage /> */}
 
       {/* <ClientAdminHome /> */}
       {/* <FavouritesPage /> */}
