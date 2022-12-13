@@ -6,9 +6,10 @@ import Beblended from "../../../assets/Admin-Icons/Beblended-head.svg";
 import "./BeblendedLogin.scss";
 
 export default function BeblendedLogin() {
-  const [show, setShow] = React.useState(false);
-  const isShow = () => {
-    setShow(!show);
+  const [passwordShown, setPasswordShown] = React.useState(false);
+  const isShow = (e) => {
+    e.preventDefault();
+    setPasswordShown(!passwordShown);
   }
 
   return (
@@ -35,12 +36,12 @@ export default function BeblendedLogin() {
             Password*
           </label>
           <input
-            type="password"
+            type={passwordShown ? "text" : "password"}
             className="formInput"
             placeholder="xxxxxxxxx"
             required
           />
-          <button className="showBtn">Show</button>
+          <button className="showBtn" onClick={isShow}> Show</button>
         </div>
         <button className="submitBtn">Login</button>
       </form>
