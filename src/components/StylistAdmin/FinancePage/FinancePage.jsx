@@ -14,7 +14,7 @@ export default function StylistFinancePage() {
             <div className="wd_80">
                 <div className="stylistFinance_head">
                     <button className="previousButton">
-                        <GrPrevious style={{ marginRight: ".5rem" }} fill="#707070" />
+                        <GrPrevious style={{ marginRight: ".5rem" }} strokeOpacity={ 0.5 } />
                         <p>Back</p>
                     </button>
                 </div>

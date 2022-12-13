@@ -51,7 +51,7 @@ function App() {
       {/* <PayoutInfo /> */}
       {/* <AdminClientList /> */}
       {/* <AdminClientProfile/> */}
-      {/* <StylistFinancePage /> */}
+      <StylistFinancePage />
 
       {/* <ClientAdminHome /> */}
       {/* <FavouritesPage /> */}
@@ -59,7 +59,7 @@ function App() {
       {/* <ClientLoginSecurity /> */}
       {/* <ClientPayoutInformation/> */}
       {/* <ClientBookingPage/> */}
-      <ClientProfilePage/>
+      {/* <ClientProfilePage/> */}
       {/* <ClientReviewModal/> */}
       {/* <StylistReviewModal/> */}
     </div>

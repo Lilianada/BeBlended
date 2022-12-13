@@ -17,7 +17,7 @@ export default function ClientProfilePage() {
 
       <section className="clientProfile_Section">
         <button className="backBtn">
-          <GrPrevious style={{ marginRight: ".35rem" }} stroke-opacity={0.5} />
+          <GrPrevious style={{ marginRight: ".35rem" }} strokeOpacity={0.5} />
           <p>Back</p>
         </button>
 
