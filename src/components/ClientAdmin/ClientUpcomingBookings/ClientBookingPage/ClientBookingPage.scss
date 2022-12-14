@@ -7,18 +7,69 @@
 
     .clientBookings_Section {
         width: 90%;
-        margin: .5rem auto;
+        margin: 0.5rem auto;
 
-        .backBtn {
-            display: flex;
+        .sectionHead {
+            display: grid;
+            grid-template-columns: 30% 69%;
             align-items: center;
+            margin: 1rem 0 2rem;
 
-            p {
-                color: #707070;
+            @media screen and (min-width: 768px) {
+                display: none;
+            }
+
+            .backBtn {
+                display: flex;
+                align-items: center;
+                margin: 0;
+
+                p {
+                    color: #707070;
+                }
+            }
+
+            .searchWrap {
+                margin-left: 1rem;
+
+                .searchButton {
+                    border: none;
+                    background: none;
+                    outline: none;
+                    cursor: pointer;
+                }
+
+                .searchBar {
+                    display: flex;
+                    align-items: center;
+                    height: 3rem;
+                    background: #fbfbfb;
+                    border: 1px solid #dfdfdf;
+                    border-radius: 10px;
+                    padding: 0.5rem 0.75rem;
+                    cursor: text;
+
+                    .searchInput {
+                        height: 2.5rem;
+                        padding: 0 1rem;
+                        outline: none;
+                        font-size: var(--sixteen);
+                        color: var(--black);
+                        border: none;
+                        outline: none;
+                        background: none;
+                        margin-left: 1rem;
+                        position: absolute;
+
+                        &::placeholder {
+                            color: #bebebe;
+                        }
+                    }
+                }
             }
         }
 
-        .sectionHead {
+        .sectionSubhead {
             text-align: center;
 
             .sectionTitle {
@@ -33,7 +84,6 @@
         }
 
         .sectionTabs {
-
             .tabHead {
                 display: flex;
                 justify-content: center;
@@ -134,7 +184,7 @@
                         text-align: center;
                     }
 
-                    .btn-secondary{
+                    .btn-secondary {
                         width: 14.75rem;
                         height: 2.75rem;
                         text-align: center;

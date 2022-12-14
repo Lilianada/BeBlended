@@ -60,8 +60,8 @@ function App() {
       {/* <ClientPersonalInfo/> */}
       {/* <ClientLoginSecurity /> */}
       {/* <ClientPayoutInformation/> */}
-      {/* <ClientBookingPage/> */}
-      <ClientProfilePage/>
+      <ClientBookingPage/>
+      {/* <ClientProfilePage/> */}
       {/* <ClientReviewModal/> */}
       {/* <StylistReviewModal/> */}
 

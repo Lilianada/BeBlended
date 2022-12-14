@@ -7,6 +7,7 @@ import {
   ClientBookings,
   PastBookings,
 } from "../../../../components";
+import { FaSearch } from "react-icons/fa";
 import "./ClientBookingPage.scss";
 
 export default function ClientBookingPage() {
@@ -32,12 +33,31 @@ export default function ClientBookingPage() {
       <ClientAdminHeader />
 
       <section className="clientBookings_Section">
-        <div className="backBtn">
-          <GrPrevious style={{ marginRight: ".35rem" }} fill="#707070" stroke-opacity={0.5}/>
-          <p>Back</p>
+        <div className="sectionHead">
+          <div className="backBtn">
+            <GrPrevious
+              style={{ marginRight: ".35rem" }}
+              strokeOpacity={0.5}
+            />
+            <p>Back</p>
+          </div>
+
+          <div className="searchWrap">
+            <div className="searchBar">
+            <button className="searchButton">
+              <FaSearch size={18} fill="#907D7D" stroke="#907D7D" />
+            </button>
+              <input
+                type="search"
+                name="search-bar"
+                placeholder="Search"
+                className="searchInput"
+              />
+            </div>
+          </div>
         </div>
 
-        <div className="sectionHead">
+        <div className="sectionSubhead">
           <h4 className="sectionTitle"> My Bookings </h4>
         </div>
         <div className="sectionTabs">
@@ -77,10 +97,7 @@ export default function ClientBookingPage() {
           </div>
 
           <div className="tabFlex">
-            <ClientBookings
-              activeTab={activeTab}
-              open={isOpen.upcoming}
-            />
+            <ClientBookings activeTab={activeTab} open={isOpen.upcoming} />
             <PastBookings activeTab={activeTab} open={isOpen.past} />
           </div>
         </div>
