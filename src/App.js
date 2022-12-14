@@ -61,12 +61,12 @@ function App() {
       {/* <ClientLoginSecurity /> */}
       {/* <ClientPayoutInformation/> */}
       {/* <ClientBookingPage/> */}
-      {/* <ClientProfilePage/> */}
+      <ClientProfilePage/>
       {/* <ClientReviewModal/> */}
       {/* <StylistReviewModal/> */}
 
       {/* <BeblendedLogin/> */}
-      <DashboardHomepage/>
+      {/* <DashboardHomepage/> */}
     </div>
   );
 }

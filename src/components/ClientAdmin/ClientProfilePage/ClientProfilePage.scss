@@ -1,34 +1,53 @@
-.clientProfile_Page{
+.clientProfile_Page {
     margin-bottom: 3rem;
 
     @media screen and (min-width: 768px) {
         margin-bottom: 2rem;
     }
 
-    .clientProfile_Section{
-        width: 85%;
-        margin: .5rem auto;
+    .clientProfile_Section {
+        margin: 0.5rem auto;
 
         @media screen and (min-width: 768px) {
             width: 90%;
         }
 
-        .backBtn {
-            display: flex;
-            align-items: center;
-            height: fit-content;
-            margin: 1rem 0 2rem;
-            background: none;
-            outline: none;
-            border: none;
+        .sectionTitle {
+            font-size: 1.5rem;
             font-weight: 600;
+            text-align: center;
+            line-height: 1.75rem;
+            margin-top: 1.5rem;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #dfdfdf;
 
-            p {
-                color: #707070;
+            @media screen and (min-width: 768px) {
+                display: none;
             }
         }
 
-        .clientProfile_Grid{            
+        .backBtn {
+            display: none;
+
+            @media screen and (min-width: 768px) {
+                display: flex;
+                align-items: center;
+                height: fit-content;
+                margin: 1rem 0 2rem;
+                background: none;
+                outline: none;
+                border: none;
+                font-weight: 600;
+
+                p {
+                    color: #707070;
+                }
+            }
+        }
+
+        .clientProfile_Grid {
+            width: 85%;
             display: flex;
             margin: 0 auto;
             flex-direction: column;
@@ -40,15 +59,16 @@
                 grid-template-columns: 1fr 2fr;
                 grid-gap: 3rem;
                 margin-bottom: 0rem;
+                width: 100%;
             }
 
-            .gridItem{
+            .gridItem {
                 margin: 1rem 0;
             }
         }
     }
 
-    .aboutHead{
+    .aboutHead {
         font-size: var(--thirtyEight);
         font-weight: 600;
         line-height: 1.75rem;
@@ -57,5 +77,4 @@
             font-size: var(--twentyFour);
         }
     }
-
 }

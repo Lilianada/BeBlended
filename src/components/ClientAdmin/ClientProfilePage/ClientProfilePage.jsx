@@ -21,6 +21,8 @@ export default function ClientProfilePage() {
           <p>Back</p>
         </button>
 
+        <h6 className="sectionTitle"><strong>My Profile</strong></h6>
+
         <div className="clientProfile_Grid">
           <div className="gridItem">
             <WelcomeClient />
