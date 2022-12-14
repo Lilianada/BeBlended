@@ -26,7 +26,7 @@ const isActive = (index) => {
           <ul className="menuList">
             <li>
               <NavLink
-                to="/dashboard" 
+                to="/" 
                 className={`menuLink ${activeLink === 1 ? "activeLink" : ""}`}
                 onClick={() => isActive(1)}
               >

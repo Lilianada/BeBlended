@@ -60,13 +60,13 @@ function App() {
       {/* <ClientPersonalInfo/> */}
       {/* <ClientLoginSecurity /> */}
       {/* <ClientPayoutInformation/> */}
-      <ClientBookingPage/>
+      {/* <ClientBookingPage/> */}
       {/* <ClientProfilePage/> */}
       {/* <ClientReviewModal/> */}
       {/* <StylistReviewModal/> */}
 
       {/* <BeblendedLogin/> */}
-      {/* <DashboardHomepage/> */}
+      <DashboardHomepage/>
     </div>
   );
 }
