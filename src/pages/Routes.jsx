@@ -9,6 +9,8 @@ import {
   BusinessPage,
   Client,
   CompletedStylist,
+  DashboardHomepage,
+  DashboardPage,
   ErrorPage,
   Home,
   IdUpload,
@@ -75,6 +77,12 @@ function RoutedPages() {
         <Route path="/stylist-finances" element={<StylistFinancePage/>} />
         <Route path="/clients-list" element={<AdminClientList/>} />
         <Route path="/payout-info" element={<PayoutInfo/>} />
+      </Route>
+
+      <Route>
+        {/* Dashboard Routes */}
+        <Route path="/dashboard-home" element={<DashboardHomepage/>}/>
+        <Route path="/dashboard" element={<DashboardPage/>}/>
       </Route>
     </Routes>
   );

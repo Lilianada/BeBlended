@@ -13,7 +13,11 @@ export default function DashboardHomepage() {
 
         <div className="dashboardGrid">
             <DashboardMenu/>
-            <div className="dashboard">Grace</div>
+            <div className="dashboard">
+              <Routes>
+                
+              </Routes>
+            </div>
         </div>
     </main>
   );

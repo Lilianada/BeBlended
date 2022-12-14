@@ -5,10 +5,6 @@ import { AiFillSetting } from "react-icons/ai";
 import { IoPerson } from "react-icons/io5";
 import { NavLink, Route, Router, Routes } from "react-router-dom";
 import "./DashboardHomepage.scss";
-// import Client from "../../../../pages/Client";
-// import DashboardHomepage from "./DashboardHomepage";
-// import HairstylistLicenseModal from "../../../StylistAdmin/PersonalnfoPage/IdandLicense/HairstylistLicenseModal";
-// import { Settings } from "@mui/icons-material";
 
 export default function DashboardMenu() {
   const [activeLink, setActiveLink] = useState(1);
