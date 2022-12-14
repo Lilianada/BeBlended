@@ -3,17 +3,11 @@ import Beblended from "../../../../assets/Admin-Icons/Beblended-head.svg";
 import { HiOutlineArrowTrendingUp } from "react-icons/hi2";
 import { AiFillSetting } from "react-icons/ai";
 import { IoPerson } from "react-icons/io5";
-import { NavLink, Route, Router, Routes } from "react-router-dom";
+import { NavLink} from "react-router-dom";
 import "./DashboardHomepage.scss";
 
 export default function DashboardMenu() {
   const [activeLink, setActiveLink] = useState(1);
-//   const isActive = (index) => {
-//     setActiveLink(state => ({
-//         ...state, 
-//         [index]: !state[index]
-//     }));
-//   };
 const isActive = (index) => {
     setActiveLink(index);
 }

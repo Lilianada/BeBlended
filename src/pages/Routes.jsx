@@ -82,7 +82,6 @@ function RoutedPages() {
       <Route>
         {/* Dashboard Routes */}
         <Route path="/dashboard-home" element={<DashboardHomepage/>}/>
-        <Route path="/dashboard" element={<DashboardPage/>}/>
       </Route>
     </Routes>
   );
