@@ -1,5 +1,6 @@
-export { default as  DashboardPage } from "./BeblendedAdmin/DashboardPage/DashboardMenuPages/DashboardPage/DashboardPage";
+import ClientDashboard from "./BeblendedAdmin/DashboardPage/DashboardMenuPages/ClientDashboardPage/ClientDashboard";
 
+export { default as  DashboardPage } from "./BeblendedAdmin/DashboardPage/DashboardMenuPages/DashboardPage/DashboardPage";
 export { default as  DashboardHomepage } from "./BeblendedAdmin/DashboardPage/DashboardHomepage/DashboardHomepage";
 export { default as  DashboardMenu } from "./BeblendedAdmin/DashboardPage/DashboardHomepage/DashboardMenu";
 export { default as  BeblendedLogin } from "./BeblendedAdmin/BeblendedLogin/BeblendedLogin";
