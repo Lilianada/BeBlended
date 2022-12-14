@@ -2,21 +2,15 @@ import React, { useState } from "react";
 import "./ClientReviewModal.scss";
 
 export default function RateFaces() {
-  const [clicked, setClicked] = useState(false);
-  const isClicked = () => {
-    // setClicked((prev) => {
-    //     return {
-    //         ...prev,
-    //         [index]: !prev[index]
-    //     }
-    // });
-    setClicked(!clicked)
+  const [clicked, setClicked] = useState(1);
+  const isClicked = (index) => {
+    setClicked(index)
   };
   return (
     <div className="rateRow">
       <div
-        className={`emoji ${clicked ? "emojiActive" : ""}`}
-        onClick={(e) => isClicked(e)}
+        className={`emoji ${clicked === 1 ? "emojiActive" : ""}`}
+        onClick={() => isClicked(1)}
       >
         <svg
           width="47"
@@ -40,12 +34,12 @@ export default function RateFaces() {
             fill="currentColor"
           />
         </svg>
-        <p className={`boldText ${clicked ? "emojiActive" : ""}`}>Terrible</p>
+        <p className={`boldText ${clicked === 1 ? "emojiActive" : ""}`}>Terrible</p>
       </div>
 
       <div
-        className={`emoji ${clicked ? "emojiActive" : ""}`}
-        onClick={(e) => isClicked(e)}
+        className={`emoji ${clicked === 2? "emojiActive" : ""}`}
+        onClick={() => isClicked(2)}
       >
         <svg
           width="47"
@@ -71,12 +65,12 @@ export default function RateFaces() {
             strokeLinecap="round"
           />
         </svg>
-        <p className={`boldText ${clicked ? "emojiActive" : ""}`}>Sad</p>
+        <p className={`boldText ${clicked === 2 ? "emojiActive" : ""}`}>Sad</p>
       </div>
 
       <div
-        className={`emoji ${clicked ? "emojiActive" : ""}`}
-        onClick={(e) => isClicked(e)}
+        className={`emoji ${clicked === 3 ? "emojiActive" : ""}`}
+        onClick={() => isClicked(3)}
       >
         <svg
           width="47"
@@ -106,12 +100,12 @@ export default function RateFaces() {
             strokeLinecap="round"
           />
         </svg>
-        <p className={`boldText ${clicked ? "emojiActive" : ""}`}>Okay</p>
+        <p className={`boldText ${clicked === 3 ? "emojiActive" : ""}`}>Okay</p>
       </div>
 
       <div
-        className={`emoji ${clicked ? "emojiActive" : ""}`}
-        onClick={(e) => isClicked(e)}
+        className={`emoji ${clicked === 4 ? "emojiActive" : ""}`}
+        onClick={() => isClicked(4)}
       >
         <svg
           width="47"
@@ -138,12 +132,12 @@ export default function RateFaces() {
             strokeLinecap="round"
           />
         </svg>
-        <p className={`boldText ${clicked ? "emojiActive" : ""}`}>Good</p>
+        <p className={`boldText ${clicked === 4 ? "emojiActive" : ""}`}>Good</p>
       </div>
 
       <div
-        className={`emoji ${clicked ? "emojiActive" : ""}`}
-        onClick={(e) => isClicked(e)}
+        className={`emoji ${clicked === 5 ? "emojiActive" : ""}`}
+        onClick={() => isClicked(5)}
       >
         <svg
           width="47"
@@ -168,7 +162,7 @@ export default function RateFaces() {
             fill="currentColor"
           />
         </svg>
-        <p className={`boldText ${clicked ? "emojiActive" : ""}`}>Great</p>
+        <p className={`boldText ${clicked === 5 ? "emojiActive" : ""}`}>Great</p>
       </div>
     </div>
   );

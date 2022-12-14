@@ -89,6 +89,13 @@
 
             .activeLink{
                 background: var(--hotPink) !important;
+                color: var(--white) !important;
+
+                .icon{
+                    border: 1px solid white !important;
+                    stroke: white !important;
+                    fill: white !important;
+                }
             }
         }
     }

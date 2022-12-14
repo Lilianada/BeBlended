@@ -112,7 +112,6 @@ export default function ListingCard({ openModal, closeModal }) {
                       <div className="infoHead">
                         {/* This should link to stylist page */}
                         <h5 className="title">
-                          {" "}
                           {ListingData[dataIndex].stylistName}
                         </h5>
                         <div
@@ -127,8 +126,7 @@ export default function ListingCard({ openModal, closeModal }) {
                         </div>
                       </div>
                       <p className="location">
-                        {" "}
-                        {ListingData[dataIndex].address}{" "}
+                        {ListingData[dataIndex].address}
                       </p>
                       <div className="ratingReviews">
                         <AiFillStar
@@ -137,27 +135,23 @@ export default function ListingCard({ openModal, closeModal }) {
                           fill="#893583"
                         />
                         <p className="rating">
-                          {" "}
-                          {ListingData[dataIndex].rating}{" "}
+                          {ListingData[dataIndex].rating}
                         </p>
                         <p className="review">
-                          {" "}
-                          ({ListingData[dataIndex].reviews} reviews){" "}
+                          ({ListingData[dataIndex].reviews} reviews)
                         </p>
                       </div>
                       <div className="tags">
                         {ListingData[dataIndex].tags.map((tag, id) => (
                           <p className="tag" key={id}>
-                            {" "}
-                            {tag}{" "}
+                            {tag}
                           </p>
                         ))}
                       </div>
                       <div className="services">
                         <p className="serviceTitle">Services provided:</p>
                         <p className="serviceLists">
-                          {" "}
-                          {ListingData[dataIndex].services}{" "}
+                          {ListingData[dataIndex].services}
                         </p>
                       </div>
                     </div>
