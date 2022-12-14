@@ -38,7 +38,7 @@ const isActive = (index) => {
             <li
             >
               <NavLink
-                to="/hairstylists"
+                to="/hairstylists-dashboard"
                 className={`menuLink ${activeLink === 2 ? "activeLink" : ""}`}
                 onClick={() => isActive(2)}
               >
@@ -65,7 +65,7 @@ const isActive = (index) => {
             <li
             >
               <NavLink
-                to="/clients"
+                to="/clients-dashboard"
                 className={`menuLink ${activeLink === 3 ? "activeLink" : ""}`}
                 onClick={() => isActive(3)}
               >
@@ -76,7 +76,7 @@ const isActive = (index) => {
             <li
             >
               <NavLink
-                to="/settings"
+                to="/settings-dashboard"
                 className={`menuLink ${activeLink === 4 ? "activeLink" : ""}`}
                 onClick={() => isActive(4)}
               >

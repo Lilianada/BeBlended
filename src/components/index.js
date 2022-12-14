@@ -1,10 +1,11 @@
-import ClientDashboard from "./BeblendedAdmin/DashboardPage/DashboardMenuPages/ClientDashboardPage/ClientDashboard";
-
-export { default as  DashboardPage } from "./BeblendedAdmin/DashboardPage/DashboardMenuPages/DashboardPage/DashboardPage";
-export { default as  DashboardHomepage } from "./BeblendedAdmin/DashboardPage/DashboardHomepage/DashboardHomepage";
-export { default as  DashboardMenu } from "./BeblendedAdmin/DashboardPage/DashboardHomepage/DashboardMenu";
-export { default as  BeblendedLogin } from "./BeblendedAdmin/BeblendedLogin/BeblendedLogin";
-export {default as  ClientProfilePic} from "./ClientAdmin/ClientProfilePage/WelcomeClientSection/ClientProfilePic";
+export { default as ClientDashboard } from "./BeblendedAdmin/DashboardPage/DashboardMenuPages/ClientDashboardPage/ClientDashboard";
+export { default as HairStylistDashboard } from "./BeblendedAdmin/DashboardPage/DashboardMenuPages/HairStylistDashboardPage/HairStylistDashboard";
+export { default as SettingsDashboard } from "./BeblendedAdmin/DashboardPage/DashboardMenuPages/SettingsDashboardPage/SettingsDashboard";
+export { default as DashboardPage } from "./BeblendedAdmin/DashboardPage/DashboardMenuPages/DashboardPage/DashboardPage";
+export { default as DashboardHomepage } from "./BeblendedAdmin/DashboardPage/DashboardHomepage/DashboardHomepage";
+export { default as DashboardMenu } from "./BeblendedAdmin/DashboardPage/DashboardHomepage/DashboardMenu";
+export { default as BeblendedLogin } from "./BeblendedAdmin/BeblendedLogin/BeblendedLogin";
+export { default as ClientProfilePic } from "./ClientAdmin/ClientProfilePage/WelcomeClientSection/ClientProfilePic";
 export { default as StylistReviewModal } from "./StylistProps/StylistReviewModal/StylistReviewModal";
 export { default as RateClientCriterias } from "./StylistProps/StylistReviewModal/RateClientCriterias";
 export { default as StylistComment } from "./StylistProps/StylistReviewModal/StylistComment";
@@ -15,10 +16,10 @@ export { default as ClientReviewModal } from "./Client/ClientReviewModal/ClientR
 export { default as ReviewsOfClient } from "./ClientAdmin/ClientProfilePage/ReviewsClient/ReviewsOfClient";
 export { default as ReviewsByClient } from "./ClientAdmin/ClientProfilePage/ReviewsClient/ReviewsByClient";
 export { default as AboutClientSection } from "./ClientAdmin/ClientProfilePage/AboutClientSection/AboutClientSection";
-export { default as  ClientProfilePage } from "./ClientAdmin/ClientProfilePage/ClientProfilePage";
-export { default as  WelcomeClient } from "./ClientAdmin/ClientProfilePage/WelcomeClientSection/WelcomeClient";
-export { default as  PaymentDetailsModal } from "./ClientAdmin/ClientUpcomingBookings/PaymentDetailsModal/PaymentDetailsModal";
-export { default as  PastPaymentDetails } from "./ClientAdmin/ClientUpcomingBookings/PaymentDetailsModal/PastPaymentDetails";
+export { default as ClientProfilePage } from "./ClientAdmin/ClientProfilePage/ClientProfilePage";
+export { default as WelcomeClient } from "./ClientAdmin/ClientProfilePage/WelcomeClientSection/WelcomeClient";
+export { default as PaymentDetailsModal } from "./ClientAdmin/ClientUpcomingBookings/PaymentDetailsModal/PaymentDetailsModal";
+export { default as PastPaymentDetails } from "./ClientAdmin/ClientUpcomingBookings/PaymentDetailsModal/PastPaymentDetails";
 //Re-exporting component
 export { default as ClientAppointmentDetails } from "./ClientAdmin/ClientUpcomingBookings/ClientAppointmentDetails/ClientAppointmentDetails";
 export { default as PastAppointmentDetails } from "./ClientAdmin/ClientUpcomingBookings/ClientAppointmentDetails/PastAppointmentDetails";

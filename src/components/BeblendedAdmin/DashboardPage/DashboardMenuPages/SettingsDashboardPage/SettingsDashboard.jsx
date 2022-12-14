@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function SettingsPage() {
+export default function SettingsDashboard() {
   return <div>SettingsPage</div>;
 }
