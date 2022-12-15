@@ -9,7 +9,7 @@ export default function StylistReviewModal({openModal, closeModal}) {
     return ReactDOM.createPortal(
       <>
         {/* {openModal ? ( */}
-        <div className="clientReviewModal">
+        <div className="stylistReviewModal">
           <Backdrop onClick={closeModal}>
             <motion.div
               className="dialogContent"

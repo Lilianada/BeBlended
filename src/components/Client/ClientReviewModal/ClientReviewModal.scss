@@ -153,24 +153,6 @@
                     .buttonRow{
                         margin-top: .75rem;
 
-                        .activeBtn{
-                            width: 6.25rem;
-                            height: 2.5rem;
-                            font-size: var(--sixteen);
-                            font-weight: 500;
-                            border: none;
-                            border-radius: 9px;
-                            background: var(--black);
-
-                            &:hover{
-                                transform: scale(.9, .9);
-                            }
-
-                            &:nth-child(2){
-                                margin-right: .75rem;
-                            }
-                        }
-    
                         .inactiveBtn{
                             width: 6.25rem;
                             height: 2.5rem;
@@ -188,6 +170,11 @@
                                 margin-left: .75rem;
                             }
                         }
+                        
+                        .activeBtn{
+                            background: var(--black) !important;
+                        }
+    
                     }
 
                     .submitBtn{

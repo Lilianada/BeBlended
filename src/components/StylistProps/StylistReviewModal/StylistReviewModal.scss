@@ -1,4 +1,4 @@
-.clientReviewModal{
+.stylistReviewModal{
     .dialogContent {
         background-color: var(--white);
         width: 90%;
@@ -170,21 +170,7 @@
                         margin-top: .75rem;
 
                         .activeBtn{
-                            width: 6.25rem;
-                            height: 2.5rem;
-                            font-size: var(--sixteen);
-                            font-weight: 500;
-                            border: none;
-                            border-radius: 9px;
-                            background: var(--black);
-
-                            &:hover{
-                                transform: scale(.9, .9);
-                            }
-
-                            &:nth-child(2){
-                                margin-right: .75rem;
-                            }
+                            background: var(--black) !important;
                         }
     
                         .inactiveBtn{

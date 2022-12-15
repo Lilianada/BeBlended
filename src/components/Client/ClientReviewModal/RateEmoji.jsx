@@ -38,7 +38,7 @@ export default function RateFaces() {
       </div>
 
       <div
-        className={`emoji ${clicked === 2? "emojiActive" : ""}`}
+        className={`emoji ${clicked === 2 ? "emojiActive" : ""}`}
         onClick={() => isClicked(2)}
       >
         <svg
