@@ -3,15 +3,8 @@ import "./ClientReviewModal.scss";
 
 export default function ClientComment() {
   const [active, setActive] = useState(0);
-  const isActive = (index, e) => {
-    e.preventDefault(e);
+  const isActive = (index) => {
     setActive(index)
-    // setActive(state => {
-    //   return{
-    //     ...state,
-    //     [index]: !state[index]
-    //   }
-    // });
   }
   return (
     <form action="" className="commentSection">
@@ -21,6 +14,7 @@ export default function ClientComment() {
         className="commentArea"
         cols="30"
         rows="10"
+        placeholder="Good or bad, describe your experience here!"
       ></textarea>
       <p className="boldText">Was Lola Adeyemi a good client? </p>
       <div className="buttonRow">

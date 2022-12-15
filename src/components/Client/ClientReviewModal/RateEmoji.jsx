@@ -65,7 +65,7 @@ export default function RateFaces() {
             strokeLinecap="round"
           />
         </svg>
-        <p className={`boldText ${clicked === 2 ? "emojiActive" : ""}`}>Sad</p>
+        <p className={`boldText ${clicked === 2 ? "emojiActive" : ""}`}>Bad</p>
       </div>
 
       <div

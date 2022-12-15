@@ -4,7 +4,6 @@ import './StylistReviewModal.scss';
 export default function ClientComment() {
   const [active, setActive] = useState(0);
   const isActive = (index) => {
-    // e.preventDefault(e);
     setActive(index);
   }
   return (
