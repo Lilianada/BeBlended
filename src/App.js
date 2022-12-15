@@ -63,7 +63,7 @@ function App() {
       {/* <ClientBookingPage/> */}
       {/* <ClientProfilePage/> */}
       <ClientReviewModal/>
-      <StylistReviewModal/>
+      {/* <StylistReviewModal/> */}
 
       {/* <BeblendedLogin/> */}
       {/* <DashboardHomepage/> */}

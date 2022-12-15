@@ -1,4 +1,4 @@
-.stylistReviewModal{
+.stylistReviewModal {
     .dialogContent {
         background-color: var(--white);
         width: 90%;
@@ -6,7 +6,7 @@
         margin: 0 auto;
         overflow-y: scroll;
         border-radius: 9px;
-        
+
         @media screen and (min-width: 500px) {
             border-radius: 12px;
             width: 90%;
@@ -46,7 +46,6 @@
             }
         }
 
-        
         .modalContent {
             display: flex;
             flex-direction: column;
@@ -57,13 +56,13 @@
                 margin: 1rem 2rem;
             }
 
-            .modalHead{
+            .modalHead {
                 display: grid;
                 place-items: center;
-                border-bottom: 1px solid #DEDDDD;
+                border-bottom: 1px solid #dedddd;
                 padding-bottom: 1rem;
 
-                .stylistName{
+                .stylistName {
                     font-size: var(--eighteen);
                     font-family: var(--font-text);
                     font-weight: 400;
@@ -72,71 +71,72 @@
                         font-size: var(--twentyEight);
                     }
                 }
-                
-                .serviceName, .date{
+
+                .serviceName,
+                .date {
                     font-family: var(--font-text);
                     font-size: var(--twentyTwo);
                     font-weight: 400;
-                    margin-top: .5rem;
+                    margin-top: 0.5rem;
                 }
             }
 
-            .modalBody{
+            .modalBody {
                 display: grid;
                 place-items: center;
                 margin-top: 1rem;
 
-                .boldText{
+                .boldText {
                     font-size: var(--eighteen);
                     font-weight: 600;
                 }
 
-                .row{
+                .row {
                     display: flex;
                     margin-bottom: 1rem;
 
-                    .selectOption{
+                    .selectOption {
                         margin-left: 1rem;
-                        border: 1px solid #E0E0E0;
+                        border: 1px solid #e0e0e0;
                         width: 3.75rem;
                     }
                 }
 
-                .rateRow{
+                .rateRow {
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
                     width: 17.5rem;
-                    margin-top: .5rem;
+                    margin-top: 0.5rem;
 
                     @media screen and (min-width: 768px) {
                         width: 18.75rem;
                     }
 
-                    .emoji{
+                    .emoji {
                         text-align: center;
                         cursor: pointer;
                     }
 
-                    .emojiActive{
+                    .emojiActive {
                         color: var(--hotPink);
                     }
                 }
 
-                .rateCriterias{
+                .rateCriterias {
                     margin-top: 1rem;
                     display: grid;
-                    grid-template-columns:  repeat(2, 150px);
+                    grid-template-columns: repeat(2, 150px);
                     grid-template-rows: repeat(3, 75px);
                     place-items: flex-start;
                     margin-left: 1rem;
-                    
+
                     @media screen and (min-width: 768px) {
-                        grid-template-columns:  repeat(2, 175px);
+                        grid-template-columns: repeat(2, 175px);
                     }
                 }
 
-                .commentSection{
+                .commentSection {
                     display: grid;
                     place-items: center;
                     width: 100%;
@@ -146,10 +146,10 @@
                         width: 100%;
                     }
 
-                    .commentArea{
+                    .commentArea {
                         width: 100%;
                         height: 7.625rem;
-                        border: 1px solid #BEBEBE;
+                        border: 1px solid #bebebe;
                         border-radius: 5px;
                         padding: 1rem;
                         outline: none;
@@ -157,8 +157,8 @@
                         color: var(--black);
                         margin: 1rem auto 1.5rem;
 
-                        &:placeholder{
-                            color: #B7B3B3;
+                        &:placeholder {
+                            color: #b7b3b3;
                         }
 
                         @media screen and (min-width: 768px) {
@@ -166,33 +166,35 @@
                         }
                     }
 
-                    .buttonRow{
-                        margin-top: .75rem;
-
-                        .activeBtn{
-                            background: var(--black) !important;
-                        }
-    
-                        .inactiveBtn{
+                    .buttonRow {
+                        display: flex;
+                        margin-top: 0.75rem;
+                        .inactiveBtn {
                             width: 6.25rem;
                             height: 2.5rem;
+                            display: grid;
+                            place-items: center;
                             font-size: var(--sixteen);
                             font-weight: 500;
                             border: none;
                             border-radius: 9px;
-                            background:#BEBEBE;
+                            background: #bebebe;
 
-                            &:hover{
-                                transform: scale(.9, .9);
+                            &:hover {
+                                transform: scale(0.9, 0.9);
                             }
 
-                            &:nth-child(2){
-                                margin-left: .75rem;
+                            &:nth-child(2) {
+                                margin-left: 0.75rem;
                             }
+                        }
+
+                        .activeBtn {
+                            background: var(--black) !important;
                         }
                     }
 
-                    .submitBtn{
+                    .submitBtn {
                         width: 8.75rem;
                         height: 2.5rem;
                         font-size: var(--sixteen);
@@ -202,13 +204,13 @@
                         border-radius: 9px;
                         background: var(--black);
                         color: var(--white);
-                        padding: .65rem;
+                        padding: 0.65rem;
                         margin-top: 3rem;
                         margin-right: 0;
                         margin-left: auto;
 
-                        &:hover{
-                            transform: scale(.9, .9);
+                        &:hover {
+                            transform: scale(0.9, 0.9);
                         }
                     }
                 }

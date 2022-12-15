@@ -24,8 +24,8 @@ export default function ClientComment() {
       ></textarea>
       <p className="boldText">Was Lola Adeyemi a good client? </p>
       <div className="buttonRow">
-        <button className={`inactiveBtn ${active === 1 ? "activeBtn" : ""}`} onClick={() => isActive (1)} >Yes</button>
-        <button className={`inactiveBtn ${active === 2 ? "activeBtn" : ""}`} onClick={() => isActive (2)} >No</button>
+        <div className={`inactiveBtn ${active === 1 ? "activeBtn" : ""}`} onClick={() => isActive (1)} >Yes</div>
+        <div className={`inactiveBtn ${active === 2 ? "activeBtn" : ""}`} onClick={() => isActive (2)} >No</div>
       </div>
       <button className="submitBtn">Submit Review</button>
     </form>

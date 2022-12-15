@@ -152,10 +152,13 @@
 
                     .buttonRow{
                         margin-top: .75rem;
+                        display: flex;
 
                         .inactiveBtn{
                             width: 6.25rem;
                             height: 2.5rem;
+                            display: grid;
+                            place-items: center;
                             font-size: var(--sixteen);
                             font-weight: 500;
                             border: none;
@@ -170,7 +173,7 @@
                                 margin-left: .75rem;
                             }
                         }
-                        
+
                         .activeBtn{
                             background: var(--black) !important;
                         }

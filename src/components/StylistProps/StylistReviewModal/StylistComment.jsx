@@ -2,16 +2,10 @@ import React, { useState } from "react";
 import './StylistReviewModal.scss';
 
 export default function ClientComment() {
-  const [active, setActive] = useState(1);
+  const [active, setActive] = useState(0);
   const isActive = (index) => {
     // e.preventDefault(e);
-    setActive(index)
-    // setActive(state => {
-    //   return{
-    //     ...state,
-    //     [index]: !state[index]
-    //   }
-    // });
+    setActive(index);
   }
   return (
     <form action="" className="commentSection">
@@ -25,8 +19,8 @@ export default function ClientComment() {
       ></textarea>
       <p className="boldText">Would you recommend Braids by Becky? </p>
       <div className="buttonRow">
-        <button className={`inactiveBtn ${active ? "activeBtn" : ""}`} onClick={() => isActive(1)} >Yes</button>
-        <button className={`inactiveBtn ${active ? "activeBtn" : ""}`} onClick={() => isActive(2)} >No</button>
+        <div className={`inactiveBtn ${active === 1 ? "activeBtn" : ""}`} onClick={() => isActive(1)} >Yes</div>
+        <div className={`inactiveBtn ${active === 2 ? "activeBtn" : ""}`} onClick={() => isActive(2)} >No</div>
       </div>
       <button className="submitBtn">Submit Review</button>
     </form>
