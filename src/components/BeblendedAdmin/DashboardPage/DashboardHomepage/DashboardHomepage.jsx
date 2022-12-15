@@ -20,7 +20,7 @@ export default function DashboardHomepage() {
 
       <div className="dashboardGrid">
         <DashboardMenu />
-        <div className="dashboard">
+        <div className="dashboardRoutes">
           <Routes>
             <Route path="/" element={<DashboardPage />} />
             <Route

@@ -19,6 +19,7 @@
             background: none;
             border: none;
             outline: none;
+            font-size: var(--eighteen);
             font-weight: 600;
             color: var(--black);
         }
@@ -28,6 +29,11 @@
         display: grid;
         grid-template-columns: 19.7rem 1fr;
         grid-gap: 2rem;
+    }
+
+    .dashboardRoutes{
+        width: 100%;
+        overflow-x: hidden;
     }
 }
 
