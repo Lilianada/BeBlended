@@ -40,7 +40,7 @@ export default function ClientReviewModal({ openModal, closeModal }) {
                   Box Braids
                 </h5>
                 <h5 className="date">
-                  <strong>Date:</strong>
+                  <strong>Date: </strong>
                   Dec 12, 2022
                 </h5>
               </div>

@@ -62,11 +62,11 @@ function App() {
       {/* <ClientPayoutInformation/> */}
       {/* <ClientBookingPage/> */}
       {/* <ClientProfilePage/> */}
-      {/* <ClientReviewModal/> */}
-      {/* <StylistReviewModal/> */}
+      <ClientReviewModal/>
+      <StylistReviewModal/>
 
       {/* <BeblendedLogin/> */}
-      <DashboardHomepage/>
+      {/* <DashboardHomepage/> */}
     </div>
   );
 }
