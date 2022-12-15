@@ -1,4 +1,4 @@
-export const tableData = [
+export const hairstylistData = [
   {
     id: 1,
     fullName: "Amancio Ortega",
@@ -78,5 +78,89 @@ export const tableData = [
     status: "Active",
     size: 350,
     earnings: "2000.00",
+  },
+];
+
+
+export const clientData = [
+  {
+    id: 1,
+    fullName: "Amancio Ortega",
+    email: "Lolaadey@gmail.com",
+    status: "Active",
+    phone: "+ 1 (416) 555 3451",
+    spent: "1800.00",
+  },
+  {
+    id: 2,
+    fullName: "Bernard Arnault",
+    email: "Lolaadey@gmail.com",
+    status: "Active",
+    phone: "+ 1 (416) 555 3451",    
+    spent: "1850.00",
+  },
+  {
+    id: 3,
+    fullName: "Bill Gates",
+    email: "Lolaadey@gmail.com",
+    status: "Active",
+    phone: "+ 1 (416) 555 3451",
+    spent: "2800.00",
+  },
+  {
+    id: 4,
+    fullName: "Carlos Sim Helu",
+    email: "Lolaadey@gmail.com",
+    status: "Active",
+    phone: "+ 1 (416) 555 3451",
+    spent: "1500.00",
+  },
+  {
+    id: 5,
+    fullName: "Jeff Bezos",
+    email: "Lolaadey@gmail.com",
+    status: "Active",
+    phone: "+ 1 (416) 555 3451",
+    spent: "3000.00",
+  },
+  {
+    id: 6,
+    fullName: "Larry Ellison",
+    email: "Lolaadey@gmail.com",
+    status: "Active",
+    phone: "+ 1 (416) 555 3451",
+    spent: "1200.00",
+  },
+  {
+    id: 7,
+    fullName: "Larry Page",
+    email: "Lolaadey@gmail.com",
+    status: "Active",
+    phone: "+ 1 (416) 555 3451",
+    spent: "1800.00",
+  },
+  {
+    id: 8,
+    fullName: "Mark Zuckerberg",
+    email: "Lolaadey@gmail.com",
+    status: "Active",
+    phone: "+ 1 (416) 555 3451",    
+    spent: "1800.00",
+  },
+  {
+    id: 9,
+    fullName: "Michael Bloomberg",
+    email: "Lolaadey@gmail.com",
+    status: "Active",
+    phone: "+ 1 (416) 555 3451",
+    spent: "1000.00",
+  },
+  {
+    id: 10,
+    fullName: "Warren Buffet",
+    email: "Lolaadey@gmail.com",
+    status: "Active",
+    phone: "+ 1 (416) 555 3451",
+    spent: "2000.00",
   },
 ];
