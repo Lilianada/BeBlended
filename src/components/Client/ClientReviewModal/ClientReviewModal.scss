@@ -112,10 +112,15 @@
                     display: grid;
                     grid-template-columns:  repeat(2, 150px);
                     grid-template-rows: repeat(2, 75px);
-                    place-items: center;
+                    place-items: flex-start;
+                    margin-left: 1rem;
                     
                     @media screen and (min-width: 768px) {
                         grid-template-columns:  repeat(2, 175px);
+                    }
+
+                    .criteria{
+                        margin-left: 1rem;
                     }
                 }
 
@@ -148,21 +153,40 @@
                     .buttonRow{
                         margin-top: .75rem;
 
-                        .activeBtn, .inactiveBtn{
+                        .activeBtn{
                             width: 6.25rem;
                             height: 2.5rem;
                             font-size: var(--sixteen);
                             font-weight: 500;
                             border: none;
                             border-radius: 9px;
+                            background: var(--black);
 
                             &:hover{
                                 transform: scale(.9, .9);
                             }
+
+                            &:nth-child(2){
+                                margin-right: .75rem;
+                            }
                         }
     
-                        .activeBtn{
-                            margin-right: .75rem;
+                        .inactiveBtn{
+                            width: 6.25rem;
+                            height: 2.5rem;
+                            font-size: var(--sixteen);
+                            font-weight: 500;
+                            border: none;
+                            border-radius: 9px;
+                            background:#BEBEBE;
+
+                            &:hover{
+                                transform: scale(.9, .9);
+                            }
+
+                            &:nth-child(2){
+                                margin-left: .75rem;
+                            }
                         }
                     }
 
