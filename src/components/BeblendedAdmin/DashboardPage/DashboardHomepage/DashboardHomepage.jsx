@@ -27,6 +27,10 @@ export default function DashboardHomepage() {
               path="/hairstylists-dashboard"
               element={<HairStylistDashboard />}
             />
+            <Route
+              path="/hairstylist-profile"
+              element={<HairStylistDashboardProfile />}
+            />
             <Route path="/clients-dashboard" element={<ClientDashboard />} />
             <Route path="/settings-dashboard" element={<SettingsDashboard />} />
           </Routes>
