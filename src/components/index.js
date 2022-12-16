@@ -1,4 +1,5 @@
 export { default as HairStylistDashboardProfile } from "./BeblendedAdmin/DashboardPage/DashboardMenuPages/HairStylistDashboardPage/HairStylistDashboardProfile/HairStylistDashboardProfile";
+export { default as HairStylistAppointmentTable } from "./BeblendedAdmin/DashboardPage/DashboardMenuPages/HairStylistDashboardPage/HairStylistDashboardProfile/HairStylistAppointmentTable";
 
 export { default as HairStylistTable } from "./BeblendedAdmin/DashboardPage/DashboardMenuPages/HairStylistDashboardPage/HairStylistTable";
 export { default as ClientTable } from "./BeblendedAdmin/DashboardPage/DashboardMenuPages/ClientDashboardPage/ClientTable";
