@@ -5,6 +5,7 @@ import {
   DashboardMenu,
   DashboardPage,
   HairStylistDashboard,
+  HairStylistDashboardProfile,
   ClientDashboard,
   SettingsDashboard,
 } from "../../../../components";
