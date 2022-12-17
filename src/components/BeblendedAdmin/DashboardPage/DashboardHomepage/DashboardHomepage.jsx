@@ -7,6 +7,7 @@ import {
   HairStylistDashboard,
   HairStylistDashboardProfile,
   ClientDashboard,
+  ClientDashboardProfile,
   SettingsDashboard,
 } from "../../../../components";
 import { Route, Routes } from "react-router-dom";
@@ -31,6 +32,10 @@ export default function DashboardHomepage() {
             <Route
               path="/hairstylist-profile"
               element={<HairStylistDashboardProfile />}
+            />
+            <Route
+              path="/client-profile"
+              element={<ClientDashboardProfile />}
             />
             <Route path="/clients-dashboard" element={<ClientDashboard />} />
             <Route path="/settings-dashboard" element={<SettingsDashboard />} />

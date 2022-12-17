@@ -17,7 +17,9 @@ export default function ClientTable({ data }) {
           return (
             <div key={data.id} className="tableRow">
               <p className="tableData">#{data.id}</p>
-              <p className="tableData">{data.fullName}</p>
+              <p className="tableData">
+                <Link to="/client-profile">{data.fullName}</Link>
+              </p>
               <p className="tableData">{data.email}</p>
               <p className="tableData">{data.phone}</p>
               <p className="completedStatus">{data.status}</p>

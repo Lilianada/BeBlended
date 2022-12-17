@@ -238,3 +238,77 @@ export const hairstylistAppointmentTable = [
     amount: 180,
   },
 ]
+
+
+export const clientAppointmentTable = [
+  {
+    id: 123445,
+    date: "02/11/2021",
+    service: "Classic Box Braids",
+    status: "Completed",
+    amount: 180,
+  },
+  {
+    id: 123446,
+    date: "02/11/2021",
+    service: "Classic Box Braids",
+    status: "Completed",
+    amount: 180,
+  },
+  {
+    id: 123447,
+    date: "02/11/2021",
+    service: "Classic Box Braids",
+    status: "Cancelled",
+    amount: 180,
+  },
+  {
+    id: 123448,
+    date: "02/11/2021",
+    service: "Classic Box Braids",
+    status: "Completed",
+    amount: 180,
+  },
+  {
+    id: 123449,
+    date: "02/11/2021",
+    service: "Classic Box Braids",
+    status: "Cancelled",
+    amount: 180,
+  },
+  {
+    id: 123450,
+    date: "02/11/2021",
+    service: "Classic Box Braids",
+    status: "Completed",
+    amount: 180,
+  },
+  {
+    id: 123451,
+    date: "02/11/2021",
+    service: "Classic Box Braids",
+    status: "Cancelled",
+    amount: 180,
+  },
+  {
+    id: 123452,
+    date: "02/11/2021",
+    service: "Classic Box Braids",
+    status: "Completed",
+    amount: 180,
+  },
+  {
+    id: 123453,
+    date: "02/11/2021",
+    service: "Classic Box Braids",
+    status: "Cancelled",
+    amount: 180,
+  },
+  {
+    id: 123454,
+    date: "02/11/2021",
+    service: "Classic Box Braids",
+    status: "Completed",
+    amount: 180,
+  },
+]
