@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Backdrop } from "../../../../../../components";
 import { motion } from "framer-motion";
-import { MdCancel } from "react-icons/md";
+import { AiOutlineClose } from "react-icons/ai";
 import './DeactivateSuspend.scss';
 
 export default function DeactivtionModal({ openModal, closeModal }) {
@@ -25,17 +25,17 @@ export default function DeactivtionModal({ openModal, closeModal }) {
             >
               <div className="dialogHeader">
                 <p className="boldText">Confirm Account Deactivation</p>
-                
+                <AiOutlineClose size={18} onClick={closeModal} />
               </div>
               <div className="dialogBody">
                 <p>Are you sure you would like to deactivate this account?</p>
-                <MdCancel size={18} />
               </div>
               <div className="dialogFooter">
                 <button
                   className="btn-primary"
                   type="button"
                   data-dismiss="deleteModal"
+                  onClick={closeModal}
                 >
                   No, Cancel
                 </button>

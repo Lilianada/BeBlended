@@ -11,15 +11,17 @@
         border-radius: 12px;
 
         @media screen and (min-width: 500px) {
-            width: 21.875rem;
-            height: 13rem;
+            width: 29.75rem;
+            height: 10.375rem;
         }
 
         .dialogHeader {
             display: flex;
             justify-content: space-between;
+            align-items: center;
+            border-radius: 10px 10px 0px 0px;
             background: #EEEEEE;
-            padding: 1rem 2rem;
+            padding: .5rem 2rem;
 
             .boldText{
                 font-weight: 700;
@@ -29,24 +31,28 @@
         .dialogBody {
             display: block;
             text-align: center;
-            padding: 1rem;
+            padding: 1rem 1rem .5rem;
 
             p {
-                font-size: var(--twenty);
+                font-size: var(--sixteen);
                 font-weight: 500;
             }
         }
 
         .dialogFooter {
-            display: block;
+            display: flex;
             text-align: center;
             margin: 0rem auto 1rem;
 
             .btn-primary {
+                width: 9.375rem;
+                height: 2rem;
                 background-color: #893583;
                 color: var(--white);
+                font-size: var(--sixteen);
+                font-weight: 400;
+                text-transform: uppercase;
                 border: none;
-                width: 12rem;
                 transition: 0.5s all;
 
                 &:hover {
@@ -55,11 +61,16 @@
             }
 
             .btn-secondary {
-                background-color: var(--white);
+                width: 9.375rem;
+                height: 2rem;
                 color: var(--black);
-                border: 1.5px solid #B8B8B8;
-                width: 12rem;
-                margin-right: 1rem;
+                border: none;
+                background: #B8B8B8;
+                border-radius: 9px;
+                font-size: var(--sixteen);
+                font-weight: 400;
+                text-transform: uppercase;
+                margin-left: 1rem;
                 transition: 0.5s all;
 
                 &:hover {

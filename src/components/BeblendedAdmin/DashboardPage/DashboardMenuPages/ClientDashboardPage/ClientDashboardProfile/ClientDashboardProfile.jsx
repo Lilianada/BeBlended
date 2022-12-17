@@ -1,3 +1,4 @@
+import { AnimatePresence } from "framer-motion";
 import React, { useState } from "react";
 import { GrPrevious } from "react-icons/gr";
 import { ClientAppointmentTable, SuspensionModal, DeactivtionModal } from "../../../../../../components";
