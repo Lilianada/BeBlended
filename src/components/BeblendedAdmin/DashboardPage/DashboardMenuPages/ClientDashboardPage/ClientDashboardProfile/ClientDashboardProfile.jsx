@@ -18,7 +18,7 @@ export default function ClientDashboardProfile() {
     
           <div className="profileContainer">
             <div className="profileContainer_Head">
-              <h4 className="headText">Braids by Becky</h4>
+              <h4 className="headText">Lola Adeyemi</h4>
               <p className="profileActive">Active</p>
               {/* <p className="profileDeactivate">Deactivate</p>
               <p className="profileSuspended">Suspended</p> */}
@@ -26,43 +26,35 @@ export default function ClientDashboardProfile() {
             <div className="profileContainer_Details">
               <div className="textFlex">
                 <p className="boldText">Full name: </p>
-                <p className="normalText">Becky Jones</p>
+                <p className="normalText">Lola Adeyemi</p>
+              </div>
+              <div className="textFlex">
+                <p className="boldText">$ Spent to Date: </p>
+                <p className="normalText">$290.56</p>
+              </div>
+              <div className="textFlex">
+                <p className="boldText">Email Address: </p>
+                <p className="normalText">lolaadey@gmail.com</p>
+              </div>
+              <div className="textFlex">
+                <p className="boldText">Total # Bookings: </p>
+                <p className="normalText">4</p>
+              </div>
+              <div className="textFlex">
+                <p className="boldText">Phone Number: </p>
+                <p className="normalText">(647) 355 1220</p>
+              </div>
+              <div className="textFlex">
+                <p className="boldText">Hair Structure: </p>
+                <p className="normalText">Coarse</p>
               </div>
               <div className="textFlex">
                 <p className="boldText">Member Since: </p>
                 <p className="normalText">June 2022</p>
               </div>
               <div className="textFlex">
-                <p className="boldText">Business Name: </p>
-                <p className="normalText">Braids by Becky</p>
-              </div>
-              <div className="textFlex">
-                <p className="boldText">Clientele Size: </p>
-                <p className="normalText">20</p>
-              </div>
-              <div className="textFlex">
-                <p className="boldText">Email Address: </p>
-                <p className="normalText">braidsbybecky@gmail.com</p>
-              </div>
-              <div className="textFlex">
-                <p className="boldText">Earnings to Date: </p>
-                <p className="normalText">$11,200.56</p>
-              </div>
-              <div className="textFlex">
-                <p className="boldText">Business Address: </p>
-                <p className="normalText">8000 Wallaby Way, Sydney, Australia</p>
-              </div>
-              <div className="textFlex">
-                <p className="boldText">Total # Bookings: </p>
-                <p className="normalText">120 / 123</p>
-              </div>
-              <div className="textFlex">
-                <p className="boldText">Phone Number: </p>
-                <p className="normalText">(416) 355 1220</p>
-              </div>
-              <div className="textFlex">
-                <p className="boldText">  </p>
-                <p className="normalText"></p>
+                <p className="boldText">Hair Texture: </p>
+                <p className="normalText">Kinky</p>
               </div>
             </div>
     
