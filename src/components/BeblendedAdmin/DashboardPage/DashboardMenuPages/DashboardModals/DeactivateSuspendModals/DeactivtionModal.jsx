@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Backdrop } from "../../../../../../components";
-import { AiFillDelete } from "react-icons/ai";
 import { motion } from "framer-motion";
+import { MdCancel } from "react-icons/md";
 import './DeactivateSuspend.scss';
 
 export default function DeactivtionModal({ openModal, closeModal }) {
@@ -25,31 +25,32 @@ export default function DeactivtionModal({ openModal, closeModal }) {
             >
               <div className="dialogHeader">
                 <p className="boldText">Confirm Account Deactivation</p>
-                <AiFillDelete size={35} />
+                
               </div>
               <div className="dialogBody">
                 <p>Are you sure you would like to deactivate this account?</p>
+                <MdCancel size={18} />
               </div>
               <div className="dialogFooter">
                 <button
-                  className="btn-secondary"
+                  className="btn-primary"
                   type="button"
                   data-dismiss="deleteModal"
                 >
-                  Yes
+                  No, Cancel
                 </button>
                 <button
-                  className="btn-primary"
+                  className="btn-secondary"
                   type="button"
                   onClick={closeModal}
                 >
-                  No
+                  Yes, Continue
                 </button>
               </div>
             </motion.div>
           </Backdrop>
         </div>
-      ) : null}{" "}
+      ) : null}
     </>,
     document.getElementById("modal")
   );}
