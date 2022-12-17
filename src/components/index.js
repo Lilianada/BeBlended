@@ -1,8 +1,10 @@
+export { default as DeactivtionModal } from "./BeblendedAdmin/DashboardPage/DashboardMenuPages/DashboardModals/DeactivateSuspendModals/DeactivtionModal";
+export { default as SuspensionModal } from "./BeblendedAdmin/DashboardPage/DashboardMenuPages/DashboardModals/DeactivateSuspendModals/SuspensionModal";
+
 export { default as HairStylistDashboardProfile } from "./BeblendedAdmin/DashboardPage/DashboardMenuPages/HairStylistDashboardPage/HairStylistDashboardProfile/HairStylistDashboardProfile";
 export { default as HairStylistAppointmentTable } from "./BeblendedAdmin/DashboardPage/DashboardMenuPages/HairStylistDashboardPage/HairStylistDashboardProfile/HairStylistAppointmentTable";
 export { default as ClientDashboardProfile } from "./BeblendedAdmin/DashboardPage/DashboardMenuPages/ClientDashboardPage/ClientDashboardProfile/ClientDashboardProfile";
 export { default as ClientAppointmentTable } from "./BeblendedAdmin/DashboardPage/DashboardMenuPages/ClientDashboardPage/ClientDashboardProfile/ClientAppointmentTable";
-
 export { default as HairStylistTable } from "./BeblendedAdmin/DashboardPage/DashboardMenuPages/HairStylistDashboardPage/HairStylistTable";
 export { default as ClientTable } from "./BeblendedAdmin/DashboardPage/DashboardMenuPages/ClientDashboardPage/ClientTable";
 export { default as ClientDashboard } from "./BeblendedAdmin/DashboardPage/DashboardMenuPages/ClientDashboardPage/ClientDashboard";

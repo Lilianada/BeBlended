@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./DeactivateAccount.scss";
 import { Backdrop } from "../../../../components";
 import { AiFillDelete } from "react-icons/ai";
 import { motion } from "framer-motion";
+import "./DeactivateAccount.scss";
 
 export default function DeactivateAccount({ openModal, closeModal }) {
   return ReactDOM.createPortal(
