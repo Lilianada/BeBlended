@@ -48,7 +48,7 @@ function App() {
       {/* <ListingPage/> */}
 
       {/* <StylistAdminHome /> */}
-      {/* <PersonalInfo /> */}
+      <PersonalInfo />
       {/* <LoginSecurity/> */}
       {/* <PayoutInfo /> */}
       {/* <AdminClientList /> */}
@@ -66,7 +66,7 @@ function App() {
       {/* <StylistReviewModal/> */}
 
       {/* <BeblendedLogin/> */}
-      <DashboardHomepage/>
+      {/* <DashboardHomepage/> */}
     </div>
   );
 }

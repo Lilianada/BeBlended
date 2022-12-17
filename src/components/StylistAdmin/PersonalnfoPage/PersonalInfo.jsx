@@ -10,10 +10,9 @@ import {
 import "./PersonalInfo.scss";
 
 export default function Personalnfo() {
-  const [isEditing, setEdit] = useState(true);
-  const handleEdit = (e) => {
-    e.preventDefault();
-    setEdit(!isEditing);
+  const [isEditing, setEdit] = useState(1);
+  const handleEdit = (index) => {
+    setEdit(index);
   };
 
   const [openModal, setOpenModal] = useState({
@@ -54,8 +53,8 @@ export default function Personalnfo() {
               <label htmlFor="First-Name" className="inputWrap">
                 <p>First name*</p>
                 <button
-                  className={`editBtn ${!isEditing ? "edit" : "editBtn"}`}
-                  onClick={handleEdit}
+                  className={`editBtn ${!isEditing === 1 ? "edit" : "editBtn"}`}
+                  onClick={() => handleEdit(1)}
                 >
                   Edit
                 </button>
@@ -67,8 +66,8 @@ export default function Personalnfo() {
               <label htmlFor="Last-Name" className="inputWrap">
                 <p>Last name*</p>
                 <button
-                  className={`editBtn ${!isEditing ? "edit" : "editBtn"}`}
-                  onClick={handleEdit}
+                  className={`editBtn ${!isEditing === 2 ? "edit" : "editBtn"}`}
+                  onClick={() => handleEdit(2)}
                 >
                   Edit
                 </button>
@@ -80,8 +79,8 @@ export default function Personalnfo() {
               <label htmlFor="Email" className="inputWrap">
                 <p>Email address*</p>
                 <button
-                  className={`editBtn ${!isEditing ? "edit" : "editBtn"}`}
-                  onClick={handleEdit}
+                  className={`editBtn ${!isEditing === 3 ? "edit" : "editBtn"}`}
+                  onClick={() => handleEdit(3)}
                 >
                   Edit
                 </button>
