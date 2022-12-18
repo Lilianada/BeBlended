@@ -10,25 +10,26 @@ import {
 import "./PersonalInfo.scss";
 
 export default function Personalnfo() {
-  const [isEditing, setEdit] = useState(1);
-  const handleEdit = (index) => {
-    setEdit(index);
+  const [isEditing, setEdit] = useState(true);
+  const handleEdit = () => {
+    setEdit(!isEditing);
+    console.log("clicked")
   };
 
   const [openModal, setOpenModal] = useState({
     govId: false,
-    stylistLicence: false,
+    stylistLicense: false,
   });
-
-  const handleModal = (govId, stylistLicence) => {
+  const handleModal = (govId, stylistLicense) => {
     setOpenModal((prev) => {
       return {
         ...prev,
         [govId]: !prev[govId],
-        [stylistLicence]: !prev[stylistLicence],
+        [stylistLicense]: !prev[stylistLicense],
       };
     });
   };
+  
   return (
     <main className="mainWrapper personalInfo_page">
       <StylistAdminHeader />
@@ -53,8 +54,9 @@ export default function Personalnfo() {
               <label htmlFor="First-Name" className="inputWrap">
                 <p>First name*</p>
                 <button
-                  className={`editBtn ${!isEditing === 1 ? "edit" : "editBtn"}`}
-                  onClick={() => handleEdit(1)}
+                  className={`editBtn ${!isEditing ? "edit" : "editBtn"}`}
+                  onClick={handleEdit}
+                  type="button"
                 >
                   Edit
                 </button>
@@ -66,8 +68,9 @@ export default function Personalnfo() {
               <label htmlFor="Last-Name" className="inputWrap">
                 <p>Last name*</p>
                 <button
-                  className={`editBtn ${!isEditing === 2 ? "edit" : "editBtn"}`}
-                  onClick={() => handleEdit(2)}
+                  className={`editBtn ${!isEditing ? "edit" : "editBtn"}`}
+                  onClick={handleEdit}
+                  type="button"
                 >
                   Edit
                 </button>
@@ -79,8 +82,9 @@ export default function Personalnfo() {
               <label htmlFor="Email" className="inputWrap">
                 <p>Email address*</p>
                 <button
-                  className={`editBtn ${!isEditing === 3 ? "edit" : "editBtn"}`}
-                  onClick={() => handleEdit(3)}
+                  className={`editBtn ${!isEditing ? "edit" : "editBtn"}`}
+                  onClick={handleEdit}
+                  type="button"
                 >
                   Edit
                 </button>
@@ -91,9 +95,9 @@ export default function Personalnfo() {
             <div className="formWrap">
               <label htmlFor="Government-id" className="inputWrap">
                 <p>Government ID*</p>
-                <div className="updateBtn" onClick={() => handleModal("govId")}>
+                <button className="updateBtn" onClick={() => handleModal("govId")} type="button" >
                   Update
-                </div>
+                </button>
                 <AnimatePresence
                   initial={false}
                   exitBeforeEnter={true}
@@ -118,20 +122,21 @@ export default function Personalnfo() {
             <div className="formWrap">
               <label htmlFor="Name" className="inputWrap">
                 <p>Hairstylist License</p>
-                <div
+                <button
                   className="updateBtn"
-                  onClick={() => handleModal("stylistLicence")}
+                  onClick={() => handleModal("stylistLicense")}
+                  type="button"
                 >
                   Add
-                </div>
+                </button>
                 <AnimatePresence
                   initial={false}
                   exitBeforeEnter={true}
                   onExitComplete={() => null}
                 >
-                  {openModal.stylistLicence && (
+                  {openModal.stylistLicense && (
                     <HairstylistLicenseModal
-                      openModal={openModal.stylistLicence}
+                      openModal={openModal.stylistLicense}
                       closeModal={setOpenModal}
                     />
                   )}
@@ -145,7 +150,7 @@ export default function Personalnfo() {
               />
             </div>
 
-            <button className="saveBtn">Save Changes</button>
+            <button className="saveBtn" type="button">Save Changes</button>
           </form>
         </div>
       </div>

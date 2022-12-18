@@ -51,6 +51,7 @@ export default function LoginSecurity() {
                 <button
                   className="updateBtn"
                   onClick={() => handleModal("password")}
+                  type="button"
                 >
                   Update
                 </button>
@@ -76,6 +77,7 @@ export default function LoginSecurity() {
               <button
                 className="deactivate"
                 onClick={() => handleModal("deactivate")}
+                type="button"
               >
                 Deactivate Account
               </button>

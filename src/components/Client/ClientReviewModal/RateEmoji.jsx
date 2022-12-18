@@ -4,7 +4,7 @@ import "./ClientReviewModal.scss";
 export default function RateFaces() {
   const [clicked, setClicked] = useState(1);
   const isClicked = (index) => {
-    setClicked(index)
+    setClicked(index);
   };
   return (
     <div className="rateRow">

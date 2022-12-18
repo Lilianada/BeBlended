@@ -48,8 +48,8 @@ function App() {
       {/* <ListingPage/> */}
 
       {/* <StylistAdminHome /> */}
-      <PersonalInfo />
-      {/* <LoginSecurity/> */}
+      {/* <PersonalInfo /> */}
+      <LoginSecurity/>
       {/* <PayoutInfo /> */}
       {/* <AdminClientList /> */}
       {/* <AdminClientProfile/> */}
