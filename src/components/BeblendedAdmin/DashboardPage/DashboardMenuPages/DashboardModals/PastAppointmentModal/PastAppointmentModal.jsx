@@ -1,9 +1,15 @@
 import React from "react";
+import ReactDOM from "react-dom";
+import { motion } from "framer-motion";
+import { AiOutlineClose } from "react-icons/ai";
+import {Backdrop} from "../../../../../../components";
+import{ cartItems } from "../../DashboardData";
+import './PastAppointmentModal.scss';
 
-export default function PastAppointmentModal() {
+export default function PastAppointmentModal({openModal, closeModal}) {
   return ReactDOM.createPortal(
     <>
-      {openDetails ? (
+      {openModal ? (
         <section className="clientAppointment_Details">
           <Backdrop>
             <motion.div
@@ -19,7 +25,7 @@ export default function PastAppointmentModal() {
               exit="exit"
             >
               <header className="modalHeader">
-                <button className="closeButton" onClick={closeDetails}>
+                <button className="closeButton" onClick={closeModal}>
                   <AiOutlineClose size={26} />
                 </button>
               </header>
@@ -69,56 +75,18 @@ export default function PastAppointmentModal() {
                               <p className="service"> Service fee </p>
                               <p className="price"> $10 </p>
                             </div>
-                          <div className="list">
-                              <p className="service"> Deposit </p>
+                            <div className="list">
+                              <p className="service"> Total Paid: </p>
                               <p className="price"> $20 </p>
                             </div>
-                        </div>
-
-                        <div className="subTotal">
-                          <div className="priceList">
-                            <div className="list">
-                              <p className="service"> Paid: </p>
-                              <p className="price"> $20 </p>
+                          {/* <div className="subTotal">
+                            <div className="priceList">
                             </div>
-                            <div className="list">
-                              <p className="service"> Remaining balance: </p>
-                              <p className="price"> $10 </p>
-                            </div>
-                            <p className="info">
-                              *This amount will be charged automatically after
-                              your appointment
-                            </p>
-
-                            <div className="list">
-                              <label className="terms">
-                                View
-                                <button
-                                  className="link"
-                                  onClick={handleModal}
-                                >
-                                  cancellation policy
-                                </button>
-                                and <span> client rules </span>.
-                                <AnimatePresence
-                                  initial={false}
-                                  exitBeforeEnter={true}
-                                  onExitComplete={() => null}
-                                >
-                                  {openPolicy && (
-                                    <PolicyModal
-                                      openModal={openPolicy}
-                                      closeModal={handleModal}
-                                    />
-                                  )}
-                                </AnimatePresence>
-                              </label>
-                            </div>
-                          </div>
-                        </div>
+                          </div> */}
                       </div>
                     </div>
                   </div>
+                  </div> 
               </div>
             </motion.div>
           </Backdrop>

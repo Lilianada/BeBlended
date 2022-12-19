@@ -312,3 +312,16 @@ export const clientAppointmentTable = [
     amount: 180,
   },
 ]
+
+export const cartItems = [
+  {
+    id: 1,
+    service: "Box Braids",
+    variant: "Mid-back/Small",
+  },
+  {
+    id: 2,
+    service: "Hair Extensions",
+    variant: "2 packs",
+  },
+];

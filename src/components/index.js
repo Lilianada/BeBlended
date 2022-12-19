@@ -1,6 +1,8 @@
+export { default as PastAppointmentModal } from "./BeblendedAdmin/DashboardPage/DashboardMenuPages/DashboardModals/PastAppointmentModal/PastAppointmentModal";
+export { default as UpcomingAppointmentModal } from "./BeblendedAdmin/DashboardPage/DashboardMenuPages/DashboardModals/UpcomingAppointmentModal/UpcomingAppointmentModal";
+
 export { default as DeactivtionModal } from "./BeblendedAdmin/DashboardPage/DashboardMenuPages/DashboardModals/DeactivateSuspendModals/DeactivtionModal";
 export { default as SuspensionModal } from "./BeblendedAdmin/DashboardPage/DashboardMenuPages/DashboardModals/DeactivateSuspendModals/SuspensionModal";
-
 export { default as HairStylistDashboardProfile } from "./BeblendedAdmin/DashboardPage/DashboardMenuPages/HairStylistDashboardPage/HairStylistDashboardProfile/HairStylistDashboardProfile";
 export { default as HairStylistAppointmentTable } from "./BeblendedAdmin/DashboardPage/DashboardMenuPages/HairStylistDashboardPage/HairStylistDashboardProfile/HairStylistAppointmentTable";
 export { default as ClientDashboardProfile } from "./BeblendedAdmin/DashboardPage/DashboardMenuPages/ClientDashboardPage/ClientDashboardProfile/ClientDashboardProfile";
