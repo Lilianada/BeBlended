@@ -19,7 +19,7 @@ export default function ClientPersonalInfo() {
           <GrPrevious
             style={{ marginRight: ".35rem" }}
             fill="#707070"
-            stroke-opacity={0.5}
+            strokeOpacity={0.5}
           />
           <p>Back</p>
         </div>

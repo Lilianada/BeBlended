@@ -16,12 +16,11 @@
 
         @media screen and (min-width: 768px) {
             width: 32rem;
-            height: 35rem;
+            height: fit-content;
         }
 
         @media screen and (min-width: 900px) {
             width: 36rem;
-            height: 33rem;
         }
 
         .modalHeader {
