@@ -124,9 +124,13 @@
                                     justify-content: space-between;
                                     width: 100%;
                                     position: relative;
-
-                                    .service, .price{
+                                
+                                    .service{
                                         font-size: var(--sixteen);
+                                    }
+
+                                    .price{
+                                        font-size: var(--eighteen);
                                     }
                                 }
                             }

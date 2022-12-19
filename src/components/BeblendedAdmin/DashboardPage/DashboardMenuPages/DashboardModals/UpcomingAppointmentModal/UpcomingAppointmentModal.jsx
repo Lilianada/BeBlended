@@ -60,7 +60,7 @@ export default function UpcomingAppointmentModal({openModal, closeModal}) {
                 <div className="cartWrap">
                     <div className="cart">
                       <div className="head">
-                        <h5 className="headText">Service name:</h5>
+                        <h5 className="headText">Service Details:</h5>
                       </div>
                       <div className="body">
                         <div>

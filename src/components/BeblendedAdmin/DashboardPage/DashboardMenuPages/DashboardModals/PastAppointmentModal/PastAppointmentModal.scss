@@ -44,6 +44,8 @@
 
             .contentDetails {
                 margin-top: 0.75rem;
+                padding-bottom: 1rem;
+                border-bottom: 1px solid #bebebe;
             }
 
             .cartWrap {
@@ -52,7 +54,7 @@
                     background-position: top;
                     border: 1.5px solid #c984c2;
                     border-radius: 1.25rem;
-                    margin: 0;
+                    margin-top: 2rem;
 
                     .cart {
                         height: fit-content;
@@ -66,7 +68,7 @@
 
                             .headText {
                                 text-align: left;
-                                font-size: var(--twentyFour);
+                                font-size: var(--eighteen);
                                 font-weight: 500;
                             }
                         }
@@ -108,7 +110,7 @@
                                 display: block;
                                 border-top: 1px solid #DFDFDF;
                                 border-bottom: 1px solid #DFDFDF;
-                                padding: 0.3rem 0;
+                                padding: 0.5rem 0;
                                 margin: 1rem 0 .75rem;
 
                                 .list {
@@ -118,8 +120,12 @@
                                     width: 100%;
                                     position: relative;
 
-                                    .service, .price{
+                                    .service{
                                         font-size: var(--sixteen);
+                                    }
+
+                                    .price{
+                                        font-size: var(--eighteen);
                                     }
                                 }
                             }

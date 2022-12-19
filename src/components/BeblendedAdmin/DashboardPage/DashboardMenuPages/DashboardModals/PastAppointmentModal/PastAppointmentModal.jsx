@@ -56,7 +56,7 @@ export default function PastAppointmentModal({openModal, closeModal}) {
                 <div className="cartWrap">
                     <div className="cart">
                       <div className="head">
-                        <h5 className="headText">Service name:</h5>
+                        <h5 className="headText">Service Details:</h5>
                       </div>
                       <div className="body">
                         <div>
@@ -66,6 +66,7 @@ export default function PastAppointmentModal({openModal, closeModal}) {
                                 <p className="service"> {item.service} </p>
                                 <p className="variant"> {item.variant} </p>
                               </div>
+                            <p className="price"> ${item.price} </p>
                             </div>
                         ))}
                         </div>
