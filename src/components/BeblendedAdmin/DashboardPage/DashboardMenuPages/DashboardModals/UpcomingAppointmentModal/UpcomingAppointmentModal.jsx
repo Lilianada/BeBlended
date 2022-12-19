@@ -70,6 +70,7 @@ export default function UpcomingAppointmentModal({openModal, closeModal}) {
                                 <p className="service"> {item.service} </p>
                                 <p className="variant"> {item.variant} </p>
                               </div>
+                              <p className="price"> ${item.price} </p>
                             </div>
                         ))}
                         </div>

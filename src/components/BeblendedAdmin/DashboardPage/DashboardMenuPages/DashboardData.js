@@ -318,10 +318,12 @@ export const cartItems = [
     id: 1,
     service: "Box Braids",
     variant: "Mid-back/Small",
+    price: 120
   },
   {
     id: 2,
     service: "Hair Extensions",
     variant: "2 packs",
+    price: 200
   },
 ];
