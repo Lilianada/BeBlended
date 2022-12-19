@@ -9,11 +9,11 @@ import {
 import BeblendedHead from "../../../../assets/Admin-Icons/Beblended-head.svg";
 import Kinky from "../../../../assets/KinkyHair.png";
 import Coarse from "../../../../assets/CoarseHair.png";
-import "./AdminClientProfile.scss";
 import { BsChat } from "react-icons/bs";
-import { HiOutlineMinus } from "react-icons/hi";
 import { tableData } from "../../AdminData";
+import { HiOutlineMinus } from "react-icons/hi";
 import { AnimatePresence } from "framer-motion";
+import "./AdminClientProfile.scss";
 
 export default function AdminClientProfile() {
   const [openModal, setOpenModal] = useState(false);

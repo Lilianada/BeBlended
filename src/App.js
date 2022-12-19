@@ -49,7 +49,7 @@ function App() {
 
       {/* <StylistAdminHome /> */}
       {/* <PersonalInfo /> */}
-      <LoginSecurity/>
+      {/* <LoginSecurity/> */}
       {/* <PayoutInfo /> */}
       {/* <AdminClientList /> */}
       {/* <AdminClientProfile/> */}
@@ -66,7 +66,7 @@ function App() {
       {/* <StylistReviewModal/> */}
 
       {/* <BeblendedLogin/> */}
-      {/* <DashboardHomepage/> */}
+      <DashboardHomepage/>
     </div>
   );
 }
