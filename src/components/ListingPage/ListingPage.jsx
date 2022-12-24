@@ -7,9 +7,9 @@ import { BottomNavClient, Footer } from "../../components";
 import DistanceModal from "./DistanceModal/DistanceModal";
 import ListingCard from "./ListingCard";
 import ListingHead from "./ListingHead/ListingHead";
-import "./ListingPage.scss";
 import Listings from "./Listings";
 import PriceRangeModal from "./PriceRangeModal/PriceRangeModal";
+import "./ListingPage.scss";
 
 export default function ListingPage() {
   const [openModal, setOpenModal] = useState({
