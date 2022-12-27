@@ -34,6 +34,7 @@ export default function ClientPersonalInfo() {
           <h4 className="formHead">Personal Information</h4>
 
           <form action="" className="personalInfo_form">
+            {/* Change the value in the inputs to show the clients info */}
             <div className="formWrap">
               <label htmlFor="First-Name" className="inputWrap">
                 <p>First name*</p>
@@ -44,7 +45,7 @@ export default function ClientPersonalInfo() {
                   Edit
                 </button>
               </label>
-              <input type="text" className="inputField" disabled={isEditing} />
+              <input type="text" className="inputField" disabled={isEditing} value="Aileen" />
             </div>
 
             <div className="formWrap">
@@ -57,7 +58,7 @@ export default function ClientPersonalInfo() {
                   Edit
                 </button>
               </label>
-              <input type="text" className="inputField" disabled={isEditing} />
+              <input type="text" className="inputField" disabled={isEditing} value="Stark" />
             </div>
 
             <div className="formWrap">
@@ -70,13 +71,18 @@ export default function ClientPersonalInfo() {
                   Edit
                 </button>
               </label>
-              <input type="text" className="inputField" disabled={isEditing} />
+              <input type="text" className="inputField" disabled={isEditing} value="Aileenstark@yahoo.com" />
             </div>
 
             <div className="formWrap">
               <label htmlFor="Government-id" className="inputWrap">
                 <p>Address*</p>
-                <div className="updateBtn">Edit</div>
+                <button
+                  className={`updateBtn ${!isEditing ? "edit" : ""}`}
+                  onClick={handleEdit}
+                >
+                  Edit
+                </button>
               </label>
               <input
                 type="text"

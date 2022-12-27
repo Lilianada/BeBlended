@@ -50,6 +50,7 @@ export default function Personalnfo() {
           <h4 className="formHead">Personal Information</h4>
 
           <form action="" className="personalInfo_form">
+            {/* Show original info of the client once loaded */}
             <div className="formWrap">
               <label htmlFor="First-Name" className="inputWrap">
                 <p>First name*</p>
@@ -61,7 +62,7 @@ export default function Personalnfo() {
                   Edit
                 </button>
               </label>
-              <input type="text" className="inputField" disabled={isEditing} />
+              <input type="text" className="inputField" disabled={isEditing} value="Lilian" />
             </div>
 
             <div className="formWrap">
@@ -75,7 +76,7 @@ export default function Personalnfo() {
                   Edit
                 </button>
               </label>
-              <input type="text" className="inputField" disabled={isEditing} />
+              <input type="text" className="inputField" disabled={isEditing} value="Stark" />
             </div>
 
             <div className="formWrap">
@@ -89,7 +90,7 @@ export default function Personalnfo() {
                   Edit
                 </button>
               </label>
-              <input type="text" className="inputField" disabled={isEditing} />
+              <input type="text" className="inputField" disabled={isEditing} value="Lilianstarke@gmail.com" />
             </div>
 
             <div className="formWrap">

@@ -14,7 +14,7 @@ export default function ClientAdminHome() {
       <div className="adminHead_Text">
         <h5>Your Account</h5>
         <p className="stylistName">
-          Lola Adeyemi - <strong><u> View your profile </u> </strong> 
+          Lola Adeyemi - <strong><u style={{marginLeft: ".35rem"}}>View your profile </u> </strong> 
         </p>
       </div>
 

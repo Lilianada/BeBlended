@@ -33,7 +33,7 @@ export default function DashboardPage() {
                     <h5 className="totalTransactions_Number">0</h5>
                 </div>
                 <div className="totalTransactions">
-                    <p className="totalTransactions_Title">Total hairstylist earnings to date:s</p>
+                    <p className="totalTransactions_Title">Total hairstylist earnings to date:</p>
                     <h5 className="totalTransactions_Number">$0.00</h5>
                 </div>
             </div>

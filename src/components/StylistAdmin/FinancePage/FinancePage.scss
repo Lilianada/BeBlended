@@ -248,7 +248,7 @@
                     display: block;
                     padding: 1.5rem 1rem;
                     position: absolute;
-                    z-index: 2;
+                    z-index: 0;
                     right: 0;
                     top: 3rem;
                     
@@ -310,12 +310,7 @@
 
                     @media screen and (min-width: 768px) {
                         grid-template-columns: 
-                        minmax(150px, 1fr)    
-                            minmax(150px, 1.67fr)    
-                            minmax(100px, 1.5fr)    
-                            minmax(100px, 1fr)    
-                            minmax(150px, 1fr)    
-                            minmax(80px, 1fr)
+                        minmax(150px, 1fr) minmax(150px, 1.67fr) minmax(150px, 1fr) minmax(100px, 1fr) minmax(150px, 1fr) minmax(80px, 1fr)
                         ;
                     }
 
@@ -347,7 +342,7 @@
                             grid-template-columns: 
                                 minmax(150px, 1fr)    
                                 minmax(150px, 1.67fr)    
-                                minmax(100px, 1fr)    
+                                minmax(150px, 1fr)    
                                 minmax(100px, 1fr)    
                                 minmax(150px, 1fr)    
                                 minmax(80px, 1fr)

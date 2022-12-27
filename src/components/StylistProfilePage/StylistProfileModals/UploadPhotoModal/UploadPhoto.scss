@@ -40,7 +40,8 @@
         }
 
         .modalContent {
-            display: block;
+            display: flex;
+            flex-direction: column;
 
             .modalContent_Head {
                 display: block;
