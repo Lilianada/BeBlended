@@ -6,9 +6,9 @@ export default function Listings() {
   //like button
   const [isliked, setIsLiked] = useState({});
   const handleLike = (index) => {
-    setIsLiked(prev => ({
+    setIsLiked((prev) => ({
       ...prev,
-      [index]: !prev[index]
+      [index]: !prev[index],
     }));
   };
   return (
@@ -34,8 +34,7 @@ export default function Listings() {
               <div className="tags">
                 {item.tags.map((tag, id) => (
                   <p className="tag" key={id}>
-                    {" "}
-                    {tag}{" "}
+                    {tag}
                   </p>
                 ))}
               </div>
@@ -46,7 +45,11 @@ export default function Listings() {
             </div>
           </div>
           <div className="like" onClick={() => handleLike(index)}>
-            {isliked[index] ? <AiOutlineHeart size={24} /> : <AiFillHeart size={24} />}
+            {isliked[index] ? (
+              <AiOutlineHeart size={24} />
+            ) : (
+              <AiFillHeart size={24} />
+            )}
           </div>
         </div>
       ))}
