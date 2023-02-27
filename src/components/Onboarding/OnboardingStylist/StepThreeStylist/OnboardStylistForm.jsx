@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "../../../../assets/logo-black.svg";
 import { FaAngleLeft } from "react-icons/fa";
 import BlobMB from "../../../../assets/mobileBlob.svg";

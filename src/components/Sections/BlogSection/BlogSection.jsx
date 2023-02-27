@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React from "react";
 import "./BlogSection.scss";
 import AfroScarf from "../../../assets/AfroScarf.png";
 import Braids from "../../../assets/BraidedLady.png";
