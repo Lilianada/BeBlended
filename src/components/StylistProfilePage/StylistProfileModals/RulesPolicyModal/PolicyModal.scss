@@ -15,6 +15,7 @@
         @media screen and (min-width: 768px) {
             width: 80%;
             height: 80%;
+            max-width: 37.375rem;
         }
 
         @media screen and (min-width: 1000px) {
@@ -29,19 +30,14 @@
             padding: 1rem;
             border-radius: 10px 10px 0 0;
             background: #f2f2f2;
-
-            h5 {
-                font-size: var(--fourty);
-
-                @media screen and (min-width: 900px) {
-                    font-size: var(--twentyFour);
-                }
-            }
+            
 
             .closeButton {
                 background: none;
                 border: none;
                 outline: none;
+                line-height: 0;
+                margin: 0 0 0 auto;
                 cursor: pointer;
             }
         }
@@ -118,6 +114,10 @@
                     list-style: disc;
                 }
 
+                .additionalInfo{
+                    font-size: var(--eighteen);
+                }
+
                 .textArea {
                     font-family: var(--font-text);
                     padding: 1rem;
@@ -127,6 +127,11 @@
                     outline: none;
                     margin-top: 0.75rem;
                     font-size: var(--eighteen);
+
+                    &::placeholder{
+                        font-size: var(--eighteen);
+                        font-family: var(--font-text);
+                    }
                 }
             }
 

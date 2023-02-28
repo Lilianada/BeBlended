@@ -7,16 +7,7 @@ import CurrencyInput from "react-currency-input-field";
 import { Backdrop } from "../../../../components";
 
 function PolicyModal({ openModal, closeModal }) {
-  const options = [
-    { value: 1, text: "Flexible" },
-    { value: 2, text: "Moderate" },
-    { value: 3, text: "Strict" },
-  ];
-  const [isClicked, setIsClicked] = useState(options[0].value);
-  const handleChange = (event) => {
-    const selected = event.target.value;
-    setIsClicked(selected);
-  };
+
   return ReactDOM.createPortal(
     <>
       {" "}
@@ -35,108 +26,106 @@ function PolicyModal({ openModal, closeModal }) {
               }}
             >
               <header className="modalHeader" onClick={closeModal}>
-                <h5></h5>
                 <button className="closeButton">
-                  <AiOutlineClose size={24} />
+                  <AiOutlineClose size={24} stroke="#000" />
                 </button>
               </header>
 
               <div className="modalContent">
                 <h4 className="title">Rules & Cancellation Policy</h4>
-                <div className="rowItems">
-                  <label htmlFor="Select" style={{ marginRight: ".75rem" }}>
-                    Select cancellation policy:
-                  </label>
-                  <select
-                    // value={setIsClicked}
-                    className="selectOption"
-                    onChange={handleChange}
-                  >
-                    {options.map((option, id) => (
-                      <option value={option.value} key={id}>
-                        {option.text}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-                { isClicked === options[0].value && (
+
+                <ul className="listItems">
+                  <li>
+                    Charge clients a late fee of 
+                    <CurrencyInput
+                      name="price"
+                      className="lateFee"
+                      placeholder="$0"
+                      prefix="$"
+                      disableGroupSeparators={true}
+                      onValueChange={(value, name) => console.log(value, name)}
+                      required={false}
+                    />
+                    after
+                    <input
+                      type="number"
+                      name="text|number"
+                      className="lateFee"
+                      placeholder="0"
+                    />
+                    minutes.
+                  </li>
+
+                  <li>
+                    Cancel appointment after waiting for
+                    <input
+                      type="number" 
+                      name="text|number"
+                      className="lateFee"
+                      placeholder="0"
+                    />  
+                    minutes.
+                  </li>
+
+                  <li>
+                    Deposits can be transferable 
+                    <input
+                      type="checkbox"
+                      name="text|number"
+                      className="lateFee"
+                      placeholder="0"
+                    />
+                    time(s).
+                  </li>
+                </ul>
+
                 <div className="colShow">
-                  <h6 className="colHead">Flexible Cancellation Policy:</h6>
-                  <ul className="colList">
-                    <li>You recieve your non-refundable deposit.</li>
-                    <li>
-                      cels atleast 24 hours before the appointment start time.
+                  <h6 className="colHead">Cancellation Information:</h6>
+                  <div className="colWrap">
+                    <ul className="colList">
+                      <li className="dot"></li>
+                      <li className="bar"></li>
+                      <li className="dot"></li>
+                    </ul>
+
+                    <ul className="colList">
+                      <li className="text">Full refund:</li>
+                      <li className=""></li>
+                      <li className="text">
+                        <CurrencyInput
+                          name="percent"
+                          className="lateFee"
+                          placeholder="%0"
+                          prefix="%"
+                          disableGroupSeparators={true}
+                          onValueChange={(value, name) => console.log(value, name)}
+                          required={false}
+                        />                      
+                      </li>
+                    </ul>
+
+                    <ul className="colList">
+                    <li class="row">
+                      <input type="number" name="deposit" class="serviceInput" placeholder="0" min="0"/>
+                      <div class="selectwrap">
+                        <button class="dollarBtn dollarBtn activeBtn" type="button">Hours</button>
+                        <button class="percentBtn " type="button">Days</button>
+                      </div>
                     </li>
-                    <li>
-                      You get paid half the appoitnment cost if a client cancels
-                      within 24 hours of the appointment start time.
-                    </li>
-                    <li>
-                      Clients have 1 opportunity to reschedule an appointment.
-                    </li>
-                  </ul>
-                </div>
-                )}
-                { isClicked === options[1].value && (
+                    <li></li>
+                    <li class="row">
+                      <input type="number" name="deposit" class="serviceInput" placeholder="0" min="0"/>
+                      <div class="selectwrap">
+                        <button class="percentBtn percentBtn activeBtn" type="button">Hours</button>
+                        <button class="dollarBtn" type="button">Days</button>
+                      </div>
+                      </li>
+                    </ul>
+                  </div>
+
+              </div>
                 <div className="colShow">
-                  <h6 className="colHead">Moderate Cancellation Policy:</h6>
-                  <ul className="colList">
-                    <li>You recieve your non-refundable deposit.</li>
-                    <li>
-                      cels atleast 24 hours before the appointment start time.
-                    </li>
-                    <li>
-                      You get paid half the appoitnment cost if a client cancels
-                      within 24 hours of the appointment start time.
-                    </li>
-                    <li>
-                      Clients have 1 opportunity to reschedule an appointment.
-                    </li>
-                  </ul>
-                </div>
-                )}
-                { isClicked === options[2].value && (
-                <div className="colShow">
-                  <h6 className="colHead">Strict Cancellation Policy:</h6>
-                  <ul className="colList">
-                    <li>You recieve your non-refundable deposit.</li>
-                    <li>
-                      cels atleast 24 hours before the appointment start time.
-                    </li>
-                    <li>
-                      You get paid half the appoitnment cost if a client cancels
-                      within 24 hours of the appointment start time.
-                    </li>
-                    <li>
-                      Clients have 1 opportunity to reschedule an appointment.
-                    </li>
-                  </ul>
-                </div>
-                )}
-                <div className="rowItems">
-                  <label htmlFor="late-fee">
-                    Charge clients a late fee of{" "}
-                  </label>
-                  <CurrencyInput
-                    name="price"
-                    className="lateFee"
-                    placeholder="$0"
-                    prefix="$"
-                    disableGroupSeparators={true}
-                    onValueChange={(value, name) => console.log(value, name)}
-                    required={false}
-                  />
-                  <label htmlFor="late-fee"> after </label>
-                  <input
-                    type="number"
-                    name="text|number"
-                    className="lateFee"
-                    placeholder="0"
-                  />
-                  <label htmlFor="minutes"> minutes.</label>
-                </div>
-                <div className="colShow">
-                  <label htmlFor="additional-info">
+                  <label htmlFor="additional-info" className="additionalInfo">
                     Additional Information?
                   </label>
                   <textarea
@@ -159,3 +148,6 @@ function PolicyModal({ openModal, closeModal }) {
 }
 
 export default PolicyModal;
+
+
+              
