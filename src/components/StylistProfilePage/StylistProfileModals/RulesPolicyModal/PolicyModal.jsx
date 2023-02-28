@@ -35,7 +35,7 @@ function PolicyModal({ openModal, closeModal }) {
                 <h4 className="title">Rules & Cancellation Policy</h4>
 
                 <ul className="listItems">
-                  <li>
+                  <li className="listItem">
                     Charge clients a late fee of 
                     <CurrencyInput
                       name="price"
@@ -56,7 +56,7 @@ function PolicyModal({ openModal, closeModal }) {
                     minutes.
                   </li>
 
-                  <li>
+                  <li className="listItem">
                     Cancel appointment after waiting for
                     <input
                       type="number" 
@@ -67,10 +67,10 @@ function PolicyModal({ openModal, closeModal }) {
                     minutes.
                   </li>
 
-                  <li>
+                  <li className="listItem">
                     Deposits can be transferable 
                     <input
-                      type="checkbox"
+                      type="number"
                       name="text|number"
                       className="lateFee"
                       placeholder="0"
@@ -90,7 +90,7 @@ function PolicyModal({ openModal, closeModal }) {
 
                     <ul className="colList">
                       <li className="text">Full refund:</li>
-                      <li className=""></li>
+                      <li className="text"></li>
                       <li className="text">
                         <CurrencyInput
                           name="percent"
@@ -100,30 +100,64 @@ function PolicyModal({ openModal, closeModal }) {
                           disableGroupSeparators={true}
                           onValueChange={(value, name) => console.log(value, name)}
                           required={false}
-                        />                      
+                        />                 
+                        partial refund:     
                       </li>
                     </ul>
 
                     <ul className="colList">
-                    <li class="row">
-                      <input type="number" name="deposit" class="serviceInput" placeholder="0" min="0"/>
-                      <div class="selectwrap">
-                        <button class="dollarBtn dollarBtn activeBtn" type="button">Hours</button>
-                        <button class="percentBtn " type="button">Days</button>
-                      </div>
-                    </li>
-                    <li></li>
-                    <li class="row">
-                      <input type="number" name="deposit" class="serviceInput" placeholder="0" min="0"/>
-                      <div class="selectwrap">
-                        <button class="percentBtn percentBtn activeBtn" type="button">Hours</button>
-                        <button class="dollarBtn" type="button">Days</button>
-                      </div>
+                      <li className="row">
+                        <input type="number" name="deposit" className="serviceInput" placeholder="0" min="0"/>
+                        <select className="selectWrap">
+                          <option className="dollarBtn  activeBtn" type="button">Days</option>
+                          <option className="percentBtn " type="button">Hours</option>
+                        </select>
                       </li>
+                      <li className="row"></li>
+                      <li className="row">
+                        <input type="number" name="deposit" className="serviceInput" placeholder="0" min="0"/>
+                        <select className="selectWrap">
+                          <option className="percentBtn percentBtn activeBtn" type="button">Hours</option>
+                          <option className="dollarBtn" type="button">Days</option>
+                        </select>
+                      </li>
+                    </ul>
+
+                    <ul className="colList">
+                      <li className="text">Before Appointment</li>
+                      <li className="text"></li>
+                      <li className="text">Before Appointment</li>
                     </ul>
                   </div>
 
-              </div>
+                  <div className="colShow">
+                    <h6 className="colHead">Rescheduling Information:</h6>
+                    <div className="colWrap">
+                      <ul className="colList">
+                        <li className="dot"></li>
+                      </ul>
+
+                      <ul className="colList">
+                        <li className="text">Clients can reschedule up to:</li>
+                      </ul>
+
+                      <ul className="colList">
+                       <li className="row">
+                          <input type="number" name="deposit" className="serviceInput" placeholder="0" min="0"/>
+                          <select className="selectWrap">
+                            <option className="percentBtn percentBtn activeBtn" type="button">Hours</option>
+                            <option className="dollarBtn" type="button">Days</option>
+                          </select>
+                        </li>
+                      </ul>
+
+                      <ul className="colList">
+                      <li className="text">Before Appointment</li>
+                    </ul>
+                    </div>
+                  </div>
+                </div>
+
                 <div className="colShow">
                   <label htmlFor="additional-info" className="additionalInfo">
                     Additional Information?
