@@ -17,9 +17,9 @@
             max-width: 37.375rem;
         }
 
-        @media screen and (min-width: 1000px) {
-            width: 60%;
+        @media screen and (min-width: 800px) {
             height: 34.7rem;
+            width: 60%;
         }
 
         .modalHeader {
@@ -51,12 +51,7 @@
 
             @media screen and (min-width: 768px) {
                 padding: 2rem;
-                height: 80%;
                 gap: 0;
-            }
-    
-            @media screen and (min-width: 1000px) {
-                height: 34.7rem;
             }
 
             .title {
