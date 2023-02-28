@@ -36,7 +36,7 @@ function PolicyModal({ openModal, closeModal }) {
 
                 <ul className="listItems">
                   <li className="listItem">
-                    Charge clients a late fee of 
+                    Charge clients a late fee of
                     <CurrencyInput
                       name="price"
                       className="lateFee"
@@ -52,6 +52,7 @@ function PolicyModal({ openModal, closeModal }) {
                       name="text|number"
                       className="lateFee"
                       placeholder="0"
+                      min="0"
                     />
                     minutes.
                   </li>
@@ -59,21 +60,23 @@ function PolicyModal({ openModal, closeModal }) {
                   <li className="listItem">
                     Cancel appointment after waiting for
                     <input
-                      type="number" 
+                      type="number"
                       name="text|number"
                       className="lateFee"
                       placeholder="0"
-                    />  
+                      min="0"
+                    />
                     minutes.
                   </li>
 
                   <li className="listItem">
-                    Deposits can be transferable 
+                    Deposits can be transferable
                     <input
                       type="number"
                       name="text|number"
                       className="lateFee"
                       placeholder="0"
+                      min="0"
                     />
                     time(s).
                   </li>
@@ -98,27 +101,55 @@ function PolicyModal({ openModal, closeModal }) {
                           placeholder="%0"
                           prefix="%"
                           disableGroupSeparators={true}
-                          onValueChange={(value, name) => console.log(value, name)}
+                          onValueChange={(value, name) =>
+                            console.log(value, name)
+                          }
                           required={false}
-                        />                 
-                        partial refund:     
+                        />
+                        partial refund:
                       </li>
                     </ul>
 
                     <ul className="colList">
                       <li className="row">
-                        <input type="number" name="deposit" className="serviceInput" placeholder="0" min="0"/>
+                        <input
+                          type="number"
+                          name="deposit"
+                          className="serviceInput"
+                          placeholder="0"
+                          min="0"
+                        />
                         <select className="selectWrap">
-                          <option className="dollarBtn  activeBtn" type="button">Days</option>
-                          <option className="percentBtn " type="button">Hours</option>
+                          <option
+                            className="dollarBtn  activeBtn"
+                            type="button"
+                          >
+                            Days
+                          </option>
+                          <option className="percentBtn " type="button">
+                            Hours
+                          </option>
                         </select>
                       </li>
                       <li className="row"></li>
                       <li className="row">
-                        <input type="number" name="deposit" className="serviceInput" placeholder="0" min="0"/>
+                        <input
+                          type="number"
+                          name="deposit"
+                          className="serviceInput"
+                          placeholder="0"
+                          min="0"
+                        />
                         <select className="selectWrap">
-                          <option className="percentBtn percentBtn activeBtn" type="button">Hours</option>
-                          <option className="dollarBtn" type="button">Days</option>
+                          <option
+                            className="percentBtn percentBtn activeBtn"
+                            type="button"
+                          >
+                            Hours
+                          </option>
+                          <option className="dollarBtn" type="button">
+                            Days
+                          </option>
                         </select>
                       </li>
                     </ul>
@@ -129,32 +160,45 @@ function PolicyModal({ openModal, closeModal }) {
                       <li className="text">Before Appointment</li>
                     </ul>
                   </div>
+                </div>
 
-                  <div className="colShow">
-                    <h6 className="colHead">Rescheduling Information:</h6>
-                    <div className="colWrap">
-                      <ul className="colList">
-                        <li className="dot"></li>
-                      </ul>
+                <div className="colShow">
+                  <h6 className="colHead">Rescheduling Information:</h6>
+                  <div className="colWrap">
+                    <ul className="colList">
+                      <li className="dot"></li>
+                    </ul>
 
-                      <ul className="colList">
-                        <li className="text">Clients can reschedule up to:</li>
-                      </ul>
+                    <ul className="colList">
+                      <li className="text">Clients can reschedule up to:</li>
+                    </ul>
 
-                      <ul className="colList">
-                       <li className="row">
-                          <input type="number" name="deposit" className="serviceInput" placeholder="0" min="0"/>
-                          <select className="selectWrap">
-                            <option className="percentBtn percentBtn activeBtn" type="button">Hours</option>
-                            <option className="dollarBtn" type="button">Days</option>
-                          </select>
-                        </li>
-                      </ul>
+                    <ul className="colList">
+                      <li className="row">
+                        <input
+                          type="number"
+                          name="deposit"
+                          className="serviceInput"
+                          placeholder="0"
+                          min="0"
+                        />
+                        <select className="selectWrap">
+                          <option
+                            className="percentBtn percentBtn activeBtn"
+                            type="button"
+                          >
+                            Hours
+                          </option>
+                          <option className="dollarBtn" type="button">
+                            Days
+                          </option>
+                        </select>
+                      </li>
+                    </ul>
 
-                      <ul className="colList">
+                    <ul className="colList">
                       <li className="text">Before Appointment</li>
                     </ul>
-                    </div>
                   </div>
                 </div>
 

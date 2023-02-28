@@ -47,10 +47,16 @@
             padding: 2rem 1rem;
             overflow-y: scroll;
             height: 90%;
+            gap: 1rem;
 
-            @media screen and (min-width: 700px) {
+            @media screen and (min-width: 768px) {
                 padding: 2rem;
                 height: 80%;
+                gap: 0;
+            }
+    
+            @media screen and (min-width: 1000px) {
+                height: 34.7rem;
             }
 
             .title {
@@ -114,8 +120,18 @@
                         flex-direction: column;
                         margin-top: 1rem;
 
-                        &:nth-last-of-type(3){
 
+                        &:nth-last-of-type(4){
+                            display: none;
+                        }
+
+                        @media screen and (min-width: 500px) {
+                            &:nth-last-of-type(4){
+                                display: none;
+                            }
+                        }
+                        
+                        &:nth-last-of-type(3){
                             :nth-last-of-type(2){
                                 height: 18px;
                             }
@@ -184,13 +200,17 @@
 
                         .row {
                             height: 38px;
-                            width: 144px;
+                            width: 100px;
                             display: flex;
                             border-radius: 10px;
 
+                            @media screen and (min-width: 500px) {
+                                width: 144px;
+                            }
+
                             .serviceInput {
                                 border: 1px solid #dedddd;
-                                width: 30%;
+                                width: 40%;
                                 border-radius: 10px 0px 0 10px;
                                 padding: 6px;
                                 font-family: var(--font-text);
@@ -204,13 +224,26 @@
                                     font-weight: 700;
                                     color: var(--black);
                                 }
+
+                                &:focus {
+                                    outline: none;
+                                }
+
+                                @media screen and (min-width: 500px) {
+                                    width: 30%;
+                                }
                             }
 
                             .selectWrap {
-                                width: 70%;
-                                padding: 10px;
+                                width: 60%;
+                                padding: 0px;
                                 border-radius: 0px 10px 10px 0px;
                                 border: 1px solid #dedddd;
+
+                                @media screen and (min-width: 500px) {
+                                    width: 70%;
+                                    padding: 10px;
+                                }
                             }
                         }
                     }
